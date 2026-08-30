@@ -1,4 +1,4 @@
-# ⚡ PromptHub — Biblioteca Interactiva de Prompts Maestros para IA
+# ⚡ PromptsWorld — Biblioteca Interactiva de Prompts Maestros para IA
 
 <div align="center">
 
@@ -8,9 +8,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Design-Mobile--First%20%7C%20Dark%20Mode-6366F1?style=for-the-badge)
 
-**Un catálogo interactivo, moderno y de alto impacto con los mejores prompts curados y estructurados para ChatGPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro y DeepSeek.**
+**Un catálogo interactivo de 280+ prompts curados y estructurados para ChatGPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, DeepSeek, Midjourney, Suno y Runway.**
 
-[🚀 Demo en Vivo](#) • [✨ Características](#-características-principales) • [📚 Categorías](#-categorías-incluidas) • [🛠️ Uso y Personalización](#-cómo-usar-el-personalizador-de-variables) • [🤝 Contribución](#-cómo-contribuir)
+[🚀 Ver en GitHub](https://github.com/rodrigoquezadab/PromptsWorld) • [✨ Características](#-características-principales) • [📚 Categorías](#-categorías-incluidas) • [🛠️ Uso y Personalización](#-cómo-usar-el-personalizador-de-variables) • [🤝 Contribución](#-cómo-contribuir)
 
 </div>
 
@@ -18,11 +18,11 @@
 
 ## 📖 Contexto del Proyecto
 
-Con el avance exponencial de los Modelos de Lenguaje Grande (LLMs), la diferencia entre una respuesta mediocre y una solución de nivel profesional radica en la **Ingeniería de Prompts (Prompt Engineering)**. 
+Con el avance exponencial de los Modelos de Lenguaje Grande (LLMs) e IA Generativa de video, audio e imágenes, la diferencia entre una respuesta mediocre y una solución de nivel profesional radica en la **Ingeniería de Prompts (Prompt Engineering)**. 
 
 Muchos usuarios y desarrolladores pierden tiempo redactando instrucciones genéricas que generan alucinaciones, respuestas superficiales o código con errores. 
 
-**PromptHub** nace con la misión de democratizar y centralizar los **Mega-Prompts más efectivos y testeados del ecosistema**, estructurados bajo principios de diseño de instrucciones de élite:
+**PromptsWorld** nace con la misión de democratizar y centralizar los **Mega-Prompts más efectivos y testeados del ecosistema**, estructurados bajo principios de diseño de instrucciones de élite:
 - **Asignación de Roles Específicos (Role Prompting)**.
 - **Técnicas de Cadena de Pensamiento (Chain of Thought)**.
 - **Restricciones Negativas y Guardrails**.
