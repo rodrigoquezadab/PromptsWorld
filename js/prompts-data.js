@@ -8,6 +8,33 @@ const PROMPTS_DATA = [
   // 1. DESARROLLO & PROGRAMACIÓN
   // ==========================================
   {
+    id: "dev-web-init",
+    title: "Creación de Proyecto Web Frontend + Git & README",
+    category: "desarrollo",
+    categoryLabel: "Desarrollo",
+    icon: "code",
+    tags: ["HTML5", "CSS3", "JavaScript", "Mobile-First", "Dark Mode", "Git", "README", "GitHub"],
+    models: ["Claude 3.5 Sonnet", "ChatGPT-4o", "DeepSeek-V3"],
+    description: "Crea sitios web modernos en HTML/JS/CSS con enfoque mobile-first, dark mode por defecto, README profesional para GitHub e inicialización de Git.",
+    variables: [
+      { name: "PROPOSITO_SITIO", label: "Temática o Propósito del Sitio", placeholder: "ej. Catálogo de prompts para diversas tareas y necesidades con categorías y buscador" },
+      { name: "REQUISITOS_ESTILO", label: "Estilo y UI", placeholder: "ej. Responsive, mobile-first y modo oscuro por defecto" },
+      { name: "DOCUMENTACION", label: "Documentación y Git", placeholder: "ej. README completo con contexto, descripción para GitHub e inicialización de Git" }
+    ],
+    template: `Vamos a crear un sitio web usando HTML, JS y CSS.
+
+Propósito y temática: [PROPOSITO_SITIO].
+Requisitos de diseño: [REQUISITOS_ESTILO].
+Documentación y control de versiones: [DOCUMENTACION].
+
+Instrucciones detalladas de ejecución:
+1. Diseña una interfaz moderna y atractiva con modo oscuro por defecto, arquitectura Mobile-First y total responsividad.
+2. Organiza el contenido en categorías claras con búsqueda y filtros interactivos.
+3. Busca y recopila las mejores opciones y prácticas reales para cada necesidad.
+4. Genera un archivo README.md profesional que incluya: contexto del proyecto, badges, tabla de categorías, guía de uso y descripción orientada al usuario final para GitHub.
+5. Inicializa el repositorio Git (git init) y realiza el commit inicial estructurado.`
+  },
+  {
     id: "dev-01",
     title: "Revisor y Auditor de Código Senior",
     category: "desarrollo",

@@ -26,11 +26,16 @@
   };
 
   // --- State ---
+  const initialFavs = JSON.parse(localStorage.getItem('prompthub_favorites') || '["dev-web-init"]');
+  if (!initialFavs.includes('dev-web-init')) {
+    initialFavs.unshift('dev-web-init');
+  }
+
   const state = {
     activeCategory: 'all',
     searchQuery: '',
     onlyFavorites: false,
-    favorites: JSON.parse(localStorage.getItem('prompthub_favorites') || '[]'),
+    favorites: initialFavs,
     activeModalPrompt: null
   };
 
