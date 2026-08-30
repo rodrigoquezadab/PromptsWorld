@@ -111,7 +111,16 @@ Prompts/
 │   ├── style.css       # Sistema de diseño: variables CSS, modo oscuro, layout mobile-first
 │   └── animations.css  # Animaciones, transiciones, toasts y microinteracciones
 ├── js/
-│   ├── prompts-data.js # Base de datos estructurada de prompts y categorías
+│   ├── data/           # Módulos de prompts estructurados (20 por categoría = 160+ total)
+│   │   ├── desarrollo.js     # 20 prompts de Programación, DevOps y Arquitectura
+│   │   ├── redaccion.js      # 20 prompts de Copywriting, SEO, Guiones y Storytelling
+│   │   ├── marketing.js      # 20 prompts de Estrategia B2B/B2C, Ads, Funnels y Ventas
+│   │   ├── productividad.js  # 20 prompts de Gestión, Automatización, Minutas y Foco
+│   │   ├── aprendizaje.js    # 20 prompts de Pedagogía, Métodos de Estudio y Roleplay
+│   │   ├── creatividad.js    # 20 prompts de Brainstorming, SCAMPER e Ideación
+│   │   ├── metaprompt.js     # 20 prompts de Prompt Engineering y System Prompts
+│   │   └── datos.js          # 20 prompts de Análisis Cuantitativo, SQL, Excel y Finanzas
+│   ├── prompts-data.js # Unificador del catálogo global y categorías
 │   └── app.js          # Lógica interactiva (búsqueda, filtros, personalizador, favoritos)
 ├── .gitignore          # Archivos y carpetas ignorados por Git
 └── README.md           # Documentación detallada del proyecto
@@ -125,7 +134,7 @@ Prompts/
 
 1. Haz un **Fork** del proyecto.
 2. Crea una rama para tu feature (`git checkout -b feature/nuevo-prompt`).
-3. Agrega tu prompt al archivo [js/prompts-data.js](js/prompts-data.js) siguiendo la estructura de objetos existente.
+3. Agrega tu prompt en el archivo de categoría correspondiente dentro de `js/data/<categoria>.js` siguiendo la estructura de objetos existente.
 4. Haz commit de tus cambios (`git commit -m 'feat: agrega prompt para optimización de Dockerfiles'`).
 5. Haz push a la rama (`git push origin feature/nuevo-prompt`).
 6. Abre un **Pull Request**.
