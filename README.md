@@ -44,61 +44,24 @@ Muchos usuarios y desarrolladores pierden tiempo redactando instrucciones genér
 
 ## 📚 Categorías Incluidas
 
-El repositorio incluye prompts organizados en 8 áreas de alta demanda:
+El repositorio incluye prompts organizados en 14 áreas de alta demanda (20 prompts por categoría = **280 prompts curados** en total):
 
 | Categoría | Casos de Uso Destacados | Modelos Recomendados |
 | :--- | :--- | :--- |
-| 💻 **Desarrollo & Programación** | Auditoría y Code Review senior, Generación de suites de tests (TDD/Edge cases), Arquitectura de sistemas distribuidos con diagramas Mermaid, Optimización y refactorización de consultas SQL. | Claude 3.5 Sonnet, ChatGPT-4o, DeepSeek-V3 |
-| ✍️ **Redacción & Contenido** | Artículos SEO con estilo humano libre de clichés de IA, Hilos virales para X/LinkedIn, Guiones de video para YouTube/Reels basados en retención. | ChatGPT-4o, Claude 3.5 Sonnet |
-| 🎯 **Marketing & Negocios** | Buyer Personas con mapa de empatía y objeciones profundas, Secuencias de Cold Outreach B2B de 3 pasos, Propuestas de Valor (Framework Steve Blank). | Claude 3.5 Sonnet, ChatGPT-4o |
-| ⏱️ **Productividad & Gestión** | Sintetizador de minutas de reuniones con matriz de tareas accionables, Priorizador con Matriz de Eisenhower y Principio de Pareto (80/20). | ChatGPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro |
-| 🎓 **Aprendizaje & Estudio** | Tutor pedagógico con Método Feynman y analogías cotidianas, Simulador interactivo de entrevistas laborales paso a paso con feedback STAR. | ChatGPT-4o, Gemini 1.5 Pro |
-| 💡 **Creatividad & Brainstorming** | Ideación de modelos de negocio disruptivos mediante pensamiento lateral y metodología SCAMPER. | Claude 3.5 Sonnet, ChatGPT-4o |
-| ⚙️ **Meta-Prompts & Prompt Engineering** | Optimizador universal de prompts (transforma ideas simples en mega-prompts), Arquitecto de System Prompts y Custom GPTs con personalidad consistente. | Claude 3.5 Sonnet, ChatGPT-4o, DeepSeek-R1 |
-| 📊 **Análisis de Datos & Finanzas** | Generador de fórmulas complejas de Excel / Google Sheets / Apps Script, Matriz FODA/DAFO estratégica cuantificada con planes de acción. | ChatGPT-4o, DeepSeek-V3 |
-
----
-
-## 🛠️ Cómo Usar el Personalizador de Variables
-
-1. Explora el catálogo o usa la barra de búsqueda (puedes presionar la tecla `/` en cualquier momento para enfocar el buscador).
-2. Haz clic en el botón **"Personalizar"** en la tarjeta del prompt que desees utilizar.
-3. Rellena los campos con tus datos específicos (por ejemplo: tu lenguaje de programación, fragmento de código, tema o audiencia).
-4. Observa cómo la **Vista Previa** se actualiza en tiempo real.
-5. Pulsa **"Copiar Prompt Personalizado"** y pégalo directamente en ChatGPT, Claude, Gemini o tu cliente de IA preferido.
-
----
-
-## 🚀 Instalación y Despliegue Local
-
-No requiere NodeJS, npm ni compiladores. Solo necesitas clonar el repositorio y abrir `index.html` en tu navegador:
-
-```bash
-# 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/prompthub.git
-
-# 2. Navegar al directorio
-cd prompthub
-
-# 3. Abrir en tu navegador
-# En Windows:
-start index.html
-
-# En macOS:
-open index.html
-
-# En Linux:
-xdg-open index.html
-```
-
-Si prefieres usar un servidor local de desarrollo (Live Server):
-```bash
-# Usando Python 3
-python -m http.server 8000
-
-# Usando npx serve
-npx serve .
-```
+| 💻 **Desarrollo & Programación** | Auditoría y Code Review senior, Testing (TDD/Edge cases), Arquitectura Cloud con Mermaid, optimización SQL, Docker multi-stage, TypeScript refactor, Regex, OpenAPI. | Claude 3.5 Sonnet, ChatGPT-4o, DeepSeek-V3 |
+| ✍️ **Redacción & Contenido** | Artículos SEO sin clichés de IA, Hilos virales X/LinkedIn, Guiones de retención, Newsletters, Humanizador anti-IA, Landing PAS/AIDA, Case Studies. | ChatGPT-4o, Claude 3.5 Sonnet |
+| 🎯 **Marketing & Negocios** | Buyer Personas profundos, Cold outreach B2B, Framework Steve Blank, Embudos TOFU/MOFU/BOFU, Lanzamientos Product Hunt, Ofertas Hormozi, CRO. | Claude 3.5 Sonnet, ChatGPT-4o |
+| ⏱️ **Productividad & Gestión** | Minutas ejecutivas accionables, Matriz Eisenhower 80/20, Automatizaciones Make/Zapier, Deep Work, OKRs, Inbox Zero, SOPs, Hábitos atómicos. | ChatGPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro |
+| 🎓 **Aprendizaje & Estudio** | Método Feynman, Simulador de entrevistas STAR, Diálogo socrático, Tarjetas Anki, Tutor de idiomas, Mapas conceptuales Mermaid, Modelos mentales. | ChatGPT-4o, Gemini 1.5 Pro |
+| 💡 **Creatividad & Brainstorming** | Metodología SCAMPER, Seis Sombreros de De Bono, Naming Studio, Reverse Brainstorming, Worldbuilding, Gamificación Octalysis, Micro-SaaS. | Claude 3.5 Sonnet, ChatGPT-4o |
+| ⚙️ **Meta-Prompts & Engineering** | Optimizador universal, System Prompts para Custom GPTs, Few-Shot, Chain of Thought `<thinking>`, Blindaje anti-inyección, Structured Outputs JSON Schema. | Claude 3.5 Sonnet, ChatGPT-4o, DeepSeek-R1 |
+| 📊 **Análisis de Datos & Finanzas** | Fórmulas Excel/Sheets/Apps Script, FODA/DAFO, Ratios financieros (EBITDA, ROE), EDA en Python/Pandas, Dashboards Power BI DAX, Modelos DCF, Cohortes SQL. | ChatGPT-4o, DeepSeek-V3 |
+| 🎨 **Imágenes & Arte Visual** | Retratos 35mm cinematográficos, Renders arquitectónicos minimalistas, Logos vectoriales, Fotografía de producto, Ilustraciones 3D Isométricas, Anime Niji. | Midjourney v6, Flux.1, DALL-E 3 |
+| 🎵 **Música & Audio IA** | Prompts y metatags para Suno v3.5/v4, Udio AI, Letras con rima y hooks métricos, Sound Design Foley, Cadenas de Mezcla/Mastering, Beats Lo-Fi, Sintetizadores. | Suno v3.5/v4, Udio, Claude 3.5 Sonnet |
+| 🎬 **Video & Animación IA** | Prompts con movimiento de cámara para Runway Gen-3 / Sora / Luma, Storyboards técnicos, Videos explicativos 2D, Edición de alta retención, FPV Drones. | Runway Gen-3, Sora, Luma, Kling |
+| 🛡️ **Ciberseguridad & Pentesting** | Auditoría OWASP Top 10, Modelado de amenazas STRIDE, Playbooks de Respuesta a Incidentes, Auditoría Smart Contracts Solidity, Hardening Linux, Forense RAM. | Claude 3.5 Sonnet, ChatGPT-4o, DeepSeek-V3 |
+| ⚖️ **Legal & Compliance** | Contratos de confidencialidad (NDA), Auditoría RGPD/GDPR, Master Services Agreement (MSA), Términos SaaS (ToS), Pactos de Socios Vesting, EU AI Act. | Claude 3.5 Sonnet, ChatGPT-4o |
+| 🏃 **Salud & Bienestar** | Planes de fuerza e hipertrofia, Cálculo de macros IIFYM, Protocolos de sueño circadiano, Ergonomía de escritorio, Longevidad (Peter Attia), Mindfulness. | Claude 3.5 Sonnet, ChatGPT-4o |
 
 ---
 
@@ -111,7 +74,7 @@ Prompts/
 │   ├── style.css       # Sistema de diseño: variables CSS, modo oscuro, layout mobile-first
 │   └── animations.css  # Animaciones, transiciones, toasts y microinteracciones
 ├── js/
-│   ├── data/           # Módulos de prompts estructurados (20 por categoría = 160+ total)
+│   ├── data/           # Módulos de prompts estructurados (20 por categoría = 280 total)
 │   │   ├── desarrollo.js     # 20 prompts de Programación, DevOps y Arquitectura
 │   │   ├── redaccion.js      # 20 prompts de Copywriting, SEO, Guiones y Storytelling
 │   │   ├── marketing.js      # 20 prompts de Estrategia B2B/B2C, Ads, Funnels y Ventas
@@ -119,7 +82,13 @@ Prompts/
 │   │   ├── aprendizaje.js    # 20 prompts de Pedagogía, Métodos de Estudio y Roleplay
 │   │   ├── creatividad.js    # 20 prompts de Brainstorming, SCAMPER e Ideación
 │   │   ├── metaprompt.js     # 20 prompts de Prompt Engineering y System Prompts
-│   │   └── datos.js          # 20 prompts de Análisis Cuantitativo, SQL, Excel y Finanzas
+│   │   ├── datos.js          # 20 prompts de Análisis Cuantitativo, SQL, Excel y Finanzas
+│   │   ├── imagenes.js       # 20 prompts de Generación Visual (Midjourney, Flux, DALL-E)
+│   │   ├── musica.js         # 20 prompts de Audio y Música IA (Suno, Udio, Producción)
+│   │   ├── video.js          # 20 prompts de Video y Animación (Runway, Sora, Luma)
+│   │   ├── ciberseguridad.js # 20 prompts de Hacking Ético, Pentesting y Hardening
+│   │   ├── legal.js          # 20 prompts de Contratos, Privacidad y Compliance
+│   │   └── bienestar.js      # 20 prompts de Fitness, Nutrición, Sueño y Longevidad
 │   ├── prompts-data.js # Unificador del catálogo global y categorías
 │   └── app.js          # Lógica interactiva (búsqueda, filtros, personalizador, favoritos)
 ├── .gitignore          # Archivos y carpetas ignorados por Git

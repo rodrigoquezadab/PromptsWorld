@@ -1,6 +1,6 @@
 /**
- * PromptHub - Catálogo de Prompts Profesionales Curados (160+ Prompts)
- * Unifica las 8 categorías modulares de datos.
+ * PromptHub - Catálogo de Prompts Profesionales Curados (280+ Prompts)
+ * Unifica las 14 categorías modulares de datos.
  */
 
 const CATEGORIES_DATA = [
@@ -12,7 +12,13 @@ const CATEGORIES_DATA = [
   { id: "aprendizaje", label: "Aprendizaje", icon: "book-open" },
   { id: "creatividad", label: "Creatividad", icon: "lightbulb" },
   { id: "metaprompt", label: "Meta-Prompts", icon: "terminal" },
-  { id: "datos", label: "Datos & Finanzas", icon: "table" }
+  { id: "datos", label: "Datos & Finanzas", icon: "table" },
+  { id: "imagenes", label: "Imágenes & Arte", icon: "image" },
+  { id: "musica", label: "Música & Audio", icon: "music" },
+  { id: "video", label: "Video & Animación", icon: "video" },
+  { id: "ciberseguridad", label: "Ciberseguridad", icon: "shield" },
+  { id: "legal", label: "Legal & Compliance", icon: "scale" },
+  { id: "bienestar", label: "Salud & Bienestar", icon: "activity" }
 ];
 
 const PROMPTS_DATA = [
@@ -23,5 +29,11 @@ const PROMPTS_DATA = [
   ...(typeof PROMPTS_APRENDIZAJE !== 'undefined' ? PROMPTS_APRENDIZAJE : []),
   ...(typeof PROMPTS_CREATIVIDAD !== 'undefined' ? PROMPTS_CREATIVIDAD : []),
   ...(typeof PROMPTS_METAPROMPT !== 'undefined' ? PROMPTS_METAPROMPT : []),
-  ...(typeof PROMPTS_DATOS !== 'undefined' ? PROMPTS_DATOS : [])
+  ...(typeof PROMPTS_DATOS !== 'undefined' ? PROMPTS_DATOS : []),
+  ...(typeof PROMPTS_IMAGENES !== 'undefined' ? PROMPTS_IMAGENES : []),
+  ...(typeof PROMPTS_MUSICA !== 'undefined' ? PROMPTS_MUSICA : []),
+  ...(typeof PROMPTS_VIDEO !== 'undefined' ? PROMPTS_VIDEO : []),
+  ...(typeof PROMPTS_CIBERSEGURIDAD !== 'undefined' ? PROMPTS_CIBERSEGURIDAD : []),
+  ...(typeof PROMPTS_LEGAL !== 'undefined' ? PROMPTS_LEGAL : []),
+  ...(typeof PROMPTS_BIENESTAR !== 'undefined' ? PROMPTS_BIENESTAR : [])
 ];
