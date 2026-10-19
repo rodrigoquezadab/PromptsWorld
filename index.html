@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PromptHub — Los Mejores Prompts de IA para Desarrolladores y Creadores</title>
-  <meta name="description" content="Catálogo curado de prompts de Inteligencia Artificial para ChatGPT, Claude, Gemini y DeepSeek. Especializado en desarrollo, marketing, productividad y análisis.">
-  <meta name="keywords" content="prompts IA, chatgpt prompts, claude prompts, prompt engineering, desarrollo, productividad, marketing">
+  <meta name="description"
+    content="Catálogo curado de prompts de Inteligencia Artificial para ChatGPT, Claude, Gemini y DeepSeek. Especializado en desarrollo, marketing, productividad y análisis.">
+  <meta name="keywords"
+    content="prompts IA, chatgpt prompts, claude prompts, prompt engineering, desarrollo, productividad, marketing">
   <meta name="theme-color" content="#0a0d14">
 
   <!-- OpenGraph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="PromptHub — Catálogo de Prompts de Inteligencia Artificial">
-  <meta property="og:description" content="Explora, personaliza con variables interactivas y copia los mejores prompts para ChatGPT, Claude y Gemini.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:description"
+    content="Explora, personaliza con variables interactivas y copia los mejores prompts para ChatGPT, Claude y Gemini.">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80">
 
   <!-- Google Fonts: Outfit & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
+
 <body>
 
   <!-- Top Header / Navbar -->
@@ -30,7 +38,8 @@
     <div class="container header-inner">
       <a href="#" class="brand" aria-label="Ir al inicio de PromptHub">
         <div class="brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
           </svg>
         </div>
@@ -43,23 +52,28 @@
       <!-- Navigation Tabs Switcher -->
       <nav class="header-nav-tabs" aria-label="Secciones">
         <button id="navTabPrompts" class="nav-tab active" data-view="prompts" aria-pressed="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
           </svg>
           <span>Prompts</span>
           <span class="nav-count-badge">280+</span>
         </button>
         <button id="navTabGemini" class="nav-tab" data-view="gemini" aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
             <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"></path>
           </svg>
           <span>Códigos Gemini</span>
           <span class="nav-count-badge badge-gemini">100 Atajos</span>
         </button>
         <button id="navTabConfig" class="nav-tab" data-view="config" aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
             <circle cx="12" cy="12" r="3"></circle>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
           </svg>
           <span>Instrucciones Gemini</span>
           <span class="nav-count-badge badge-config">Configuración</span>
@@ -67,8 +81,10 @@
       </nav>
 
       <div class="header-actions">
-        <button id="headerDbBtn" class="btn-db-header" aria-label="Base de datos JSON" title="Gestionar Base de Datos JSON (Descargar / Reemplazar)">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button id="headerDbBtn" class="btn-db-header" aria-label="Base de datos JSON"
+          title="Gestionar Base de Datos JSON (Descargar / Reemplazar)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
             <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
             <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
@@ -78,15 +94,20 @@
         </button>
 
         <button id="headerFavBtn" class="btn-icon" aria-label="Ver prompts favoritos" title="Ver Favoritos">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
           </svg>
           <span id="headerFavCount" class="favorites-badge" style="display: none;">0</span>
         </button>
 
-        <a href="https://github.com/rodrigoquezadab/PromptsWorld" target="_blank" rel="noopener noreferrer" class="btn-github" aria-label="Ver repositorio en GitHub">
+        <a href="https://github.com/rodrigoquezadab/PromptsWorld" target="_blank" rel="noopener noreferrer"
+          class="btn-github" aria-label="Ver repositorio en GitHub">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
           </svg>
           <span>GitHub</span>
         </a>
@@ -96,12 +117,12 @@
 
   <!-- Main Content Container -->
   <main class="container">
-    
+
     <!-- ================================================================
          SECCIÓN 1: BIBLIOTECA DE PROMPTS MAESTROS (280+ PROMPTS)
          ================================================================ -->
     <div id="sectionPrompts" class="app-section active">
-      
+
       <!-- Hero Banner Prompts -->
       <section class="hero">
         <div class="hero-pill">
@@ -112,31 +133,29 @@
           Domina la IA con <span class="gradient-text">Prompts Maestros</span>
         </h1>
         <p class="hero-description">
-          Plantillas profesionales probadas para ChatGPT-4o, Claude 3.5, Gemini 1.5 Pro y DeepSeek. Rellena variables en vivo y optimiza tu flujo de trabajo al instante.
+          Plantillas profesionales probadas para ChatGPT-4o, Claude 3.5, Gemini 1.5 Pro y DeepSeek. Rellena variables en
+          vivo y optimiza tu flujo de trabajo al instante.
         </p>
       </section>
 
       <!-- Search & Filter Controls Prompts -->
       <section class="search-section" aria-label="Búsqueda y Filtros de Prompts">
-        
+
         <!-- Instant Search Input -->
         <div class="search-bar-wrapper">
           <span class="search-icon-left" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </span>
-          <input 
-            type="text" 
-            id="searchInput" 
-            class="search-input" 
-            placeholder="Buscar por tarea, etiqueta o modelo (ej. 'Code Review', 'SEO', 'SQL')..." 
-            autocomplete="off"
-            aria-label="Buscar prompts por palabras clave"
-          >
+          <input type="text" id="searchInput" class="search-input"
+            placeholder="Buscar por tarea, etiqueta o modelo (ej. 'Code Review', 'SEO', 'SQL')..." autocomplete="off"
+            aria-label="Buscar prompts por palabras clave">
           <button id="searchClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -157,8 +176,11 @@
           </div>
           <div class="filter-pills">
             <button id="favFilterBtn" class="filter-pill-fav" aria-label="Filtrar solo favoritos">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
               </svg>
               <span>Solo Favoritos</span>
             </button>
@@ -178,7 +200,7 @@
          SECCIÓN 2: CÓDIGOS SECRETOS PARA GEMINI (100 CÓDIGOS DE MAVERICK)
          ================================================================ -->
     <div id="sectionGemini" class="app-section" style="display: none;">
-      
+
       <!-- Hero Banner Gemini -->
       <section class="hero hero-gemini">
         <div class="hero-pill gemini-pill">
@@ -189,7 +211,8 @@
           Atajos Maestros & <span class="gradient-gemini">Códigos Secretos</span>
         </h1>
         <p class="hero-description">
-          100 atajos y modificadores organizados en 9 categorías. Cada código cambia la forma en que Gemini responde al forzar un modo de ejecución, formato estructurado o patrón de razonamiento específico.
+          100 atajos y modificadores organizados en 9 categorías. Cada código cambia la forma en que Gemini responde al
+          forzar un modo de ejecución, formato estructurado o patrón de razonamiento específico.
         </p>
 
         <!-- Quick Syntax Guide Pills -->
@@ -220,25 +243,22 @@
 
       <!-- Search & Filter Controls Gemini -->
       <section class="search-section" aria-label="Búsqueda y Filtros de Códigos Gemini">
-        
+
         <!-- Search Input Gemini -->
         <div class="search-bar-wrapper">
           <span class="search-icon-left" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </span>
-          <input 
-            type="text" 
-            id="searchGeminiInput" 
-            class="search-input" 
-            placeholder="Buscar códigos por nombre, función o caso de uso (ej. '/factcheck', '@Gmail', 'MATRIX')..." 
-            autocomplete="off"
-            aria-label="Buscar códigos de Gemini por palabras clave"
-          >
+          <input type="text" id="searchGeminiInput" class="search-input"
+            placeholder="Buscar códigos por nombre, función o caso de uso (ej. '/factcheck', '@Gmail', 'MATRIX')..."
+            autocomplete="off" aria-label="Buscar códigos de Gemini por palabras clave">
           <button id="searchGeminiClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda de códigos">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
@@ -276,8 +296,11 @@
           </div>
           <div class="filter-pills">
             <button id="geminiFavFilterBtn" class="filter-pill-fav" aria-label="Filtrar solo códigos favoritos">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                </path>
               </svg>
               <span>Solo Favoritos</span>
             </button>
@@ -297,7 +320,7 @@
          SECCIÓN 3: CONFIGURACIÓN & INSTRUCCIONES PARA GEMINI
          ================================================================ -->
     <div id="sectionConfig" class="app-section" style="display: none;">
-      
+
       <!-- Hero Banner Config -->
       <section class="hero hero-config">
         <div class="hero-pill config-pill">
@@ -308,13 +331,15 @@
           Ruta de Configuración: <span class="gradient-gemini">Instrucciones para Gemini</span>
         </h1>
         <p class="hero-description">
-          Configura tus instrucciones permanentes en Google Gemini para que el modelo recuerde siempre tu profesión, tono preferido, restricciones y formato sin tener que repetirlo en cada nuevo chat.
+          Configura tus instrucciones permanentes en Google Gemini para que el modelo recuerde siempre tu profesión,
+          tono preferido, restricciones y formato sin tener que repetirlo en cada nuevo chat.
         </p>
 
         <!-- Official Path Banner (Ruta Oficial Solicitada) -->
         <div class="gemini-path-banner">
           <div class="gemini-path-label">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
@@ -322,22 +347,38 @@
           </div>
           <div class="gemini-path-breadcrumbs">
             <span class="path-step">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+              </svg>
               Configuración
             </span>
             <span class="path-arrow">➔</span>
             <span class="path-step">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
               Contexto personal
             </span>
             <span class="path-arrow">➔</span>
             <span class="path-step highlight">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
               "Instrucciones para Gemini"
             </span>
           </div>
-          <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="btn-action-primary path-btn-open">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"
+            class="btn-action-primary path-btn-open">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
             <span>Abrir Google Gemini</span>
           </a>
         </div>
@@ -346,16 +387,20 @@
       <!-- Step by Step Visual Flow -->
       <section class="config-steps-section">
         <h2 class="config-section-title">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 11 12 14 22 4"></polyline>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
           Paso a Paso para Acceder en Google Gemini
         </h2>
         <div class="config-steps-grid">
-          
+
           <div class="config-step-card">
             <div class="config-step-number">1</div>
             <div class="config-step-content">
               <h3>Ingresa a Gemini</h3>
-              <p>Abre <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="inline-link">gemini.google.com</a> e inicia sesión con tu cuenta de Google.</p>
+              <p>Abre <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"
+                  class="inline-link">gemini.google.com</a> e inicia sesión con tu cuenta de Google.</p>
             </div>
           </div>
 
@@ -363,7 +408,8 @@
             <div class="config-step-number">2</div>
             <div class="config-step-content">
               <h3>Haz clic en Configuración</h3>
-              <p>Ubica el menú lateral izquierdo y haz clic en el ícono de <strong>⚙️ Configuración</strong> (abajo a la izquierda).</p>
+              <p>Ubica el menú lateral izquierdo y haz clic en el ícono de <strong>⚙️ Configuración</strong> (abajo a la
+                izquierda).</p>
             </div>
           </div>
 
@@ -379,7 +425,8 @@
             <div class="config-step-number">4</div>
             <div class="config-step-content">
               <h3>Elige "Instrucciones para Gemini"</h3>
-              <p>Accede a la opción <strong>📝 "Instrucciones para Gemini"</strong> para abrir el editor de directrices fijas.</p>
+              <p>Accede a la opción <strong>📝 "Instrucciones para Gemini"</strong> para abrir el editor de directrices
+                fijas.</p>
             </div>
           </div>
 
@@ -387,7 +434,8 @@
             <div class="config-step-number">5</div>
             <div class="config-step-content">
               <h3>Pega tu Configuración y Guarda</h3>
-              <p>Pega tu instrucción personalizada generada o una de las plantillas de abajo y presiona <strong>Guardar</strong>.</p>
+              <p>Pega tu instrucción personalizada generada o una de las plantillas de abajo y presiona
+                <strong>Guardar</strong>.</p>
             </div>
           </div>
 
@@ -399,12 +447,13 @@
         <div class="builder-header">
           <div class="builder-badge">Generador Interactivo</div>
           <h2 class="config-section-title">Genera tus Instrucciones para Gemini a Medida</h2>
-          <p class="config-section-desc">Personaliza tus reglas clave y copia el bloque de texto exacto listo para pegar en tu contexto personal.</p>
+          <p class="config-section-desc">Personaliza tus reglas clave y copia el bloque de texto exacto listo para pegar
+            en tu contexto personal.</p>
         </div>
 
         <div class="builder-card">
           <div class="builder-form-grid">
-            
+
             <div class="builder-field">
               <label class="form-label" for="builderRole">Tu Perfil o Profesión:</label>
               <select id="builderRole" class="form-input">
@@ -467,7 +516,10 @@
                 <span class="preview-badge-status" id="builderCharCount">0 caracteres</span>
               </div>
               <button id="builderCopyBtn" class="btn-action-primary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
                 <span>Copiar Instrucciones</span>
               </button>
             </div>
@@ -479,10 +531,17 @@
       <!-- Ready-to-Use Templates for Gemini Instructions -->
       <section class="instructions-templates-section">
         <h2 class="config-section-title">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
           Plantillas Maestras Recomendadas
         </h2>
-        <p class="config-section-desc">Plantillas completas testeadas para copiar con 1 solo clic y guardar en tu contexto personal:</p>
+        <p class="config-section-desc">Plantillas completas testeadas para copiar con 1 solo clic y guardar en tu
+          contexto personal:</p>
 
         <div class="templates-grid" id="geminiInstructionsTemplates">
           <!-- Rendered dynamically by app.js -->
@@ -493,20 +552,33 @@
       <section class="config-db-card">
         <div class="config-db-card-header">
           <div class="config-db-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
           </div>
           <div>
             <h3>Base de Datos JSON Desacoplada</h3>
-            <p>Todos los prompts e instrucciones se gestionan en <code>data/prompts-database.json</code>. Puedes descargar la base de datos completa o cargar un archivo para actualizar o reemplazar el catálogo.</p>
+            <p>Todos los prompts e instrucciones se gestionan en <code>data/prompts-database.json</code>. Puedes
+              descargar la base de datos completa o cargar un archivo para actualizar o reemplazar el catálogo.</p>
           </div>
         </div>
         <div class="config-db-card-actions">
           <button class="btn-action-primary" id="configDbOpenBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
             <span>Gestionar Base de Datos JSON</span>
           </button>
           <button class="btn-action-secondary" id="configDbDownloadBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
             <span>Descargar JSON</span>
           </button>
         </div>
@@ -519,14 +591,15 @@
   <!-- Modal: Variable Customizer -->
   <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-dialog">
-      
+
       <div class="modal-header">
         <div class="modal-header-text">
           <h3 id="modalTitle">Personalizar Prompt</h3>
           <p id="modalDesc">Completa las variables para generar tu prompt listo para producción.</p>
         </div>
         <button id="modalCloseBtn" class="modal-close-btn" aria-label="Cerrar modal">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
@@ -538,7 +611,8 @@
         <div class="modal-col-form">
           <div class="modal-section-header">
             <span class="modal-section-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 20h9"></path>
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
               </svg>
@@ -555,7 +629,8 @@
         <div class="modal-col-preview">
           <div class="modal-section-header">
             <span class="modal-section-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
@@ -572,7 +647,8 @@
       <div class="modal-footer">
         <button type="button" class="btn-action-secondary" id="modalCancelBtn">Cancelar</button>
         <button type="button" class="btn-action-primary" id="modalCopyBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
           <span>Copiar Prompt Personalizado</span>
@@ -585,23 +661,30 @@
   <!-- Modal: Gestión de Base de Datos JSON (Desacoplada) -->
   <div class="modal-backdrop" id="dbModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="dbModalTitle">
     <div class="modal-dialog db-modal-dialog">
-      
+
       <div class="modal-header">
         <div class="modal-header-text">
           <div class="db-modal-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
             <span>Base de Datos Desacoplada</span>
           </div>
           <h3 id="dbModalTitle">Gestión de Base de Datos JSON</h3>
           <p>Todos los prompts e instrucciones se gestionan en un único archivo JSON desacoplado del código.</p>
         </div>
         <button class="modal-close-btn" id="dbModalCloseBtn" aria-label="Cerrar modal de base de datos">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
       </div>
 
       <div class="modal-body db-modal-body">
-        
+
         <!-- Estado Actual de la Base de Datos -->
         <div class="db-status-banner">
           <div class="db-status-info">
@@ -633,16 +716,25 @@
 
         <!-- Acciones Principales: Descargar / Actualizar / Restablecer -->
         <div class="db-actions-grid">
-          
+
           <!-- Card Descargar -->
           <div class="db-action-card">
             <div class="db-action-icon download-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
             </div>
             <h4>Descargar Base de Datos</h4>
-            <p>Descarga el archivo <code>prompts-database.json</code> con la biblioteca completa de prompts, códigos e instrucciones actualizadas para respaldar o modificar fuera del navegador.</p>
+            <p>Descarga el archivo <code>prompts-database.json</code> con la biblioteca completa de prompts, códigos e
+              instrucciones actualizadas para respaldar o modificar fuera del navegador.</p>
             <button class="btn-action-primary db-btn-wide" id="dbDownloadBtn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
               <span>Descargar prompts-database.json</span>
             </button>
           </div>
@@ -650,12 +742,21 @@
           <!-- Card Importar / Reemplazar -->
           <div class="db-action-card">
             <div class="db-action-icon upload-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
             </div>
             <h4>Actualizar o Reemplazar</h4>
-            <p>Sube un archivo <code>.json</code> modificado para reemplazar o actualizar instantáneamente todo el catálogo en tu navegador sin tocar una sola línea de código.</p>
+            <p>Sube un archivo <code>.json</code> modificado para reemplazar o actualizar instantáneamente todo el
+              catálogo en tu navegador sin tocar una sola línea de código.</p>
             <label class="btn-action-primary db-btn-wide btn-upload-label" for="dbFileInput">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
               <span>Seleccionar Archivo JSON</span>
             </label>
             <input type="file" id="dbFileInput" accept=".json,application/json" style="display: none;">
@@ -667,25 +768,39 @@
         <div class="db-footer-panel">
           <div class="db-footer-left">
             <button class="btn-action-secondary" id="dbResetBtn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><polyline points="23 20 23 14 17 14"></polyline><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <polyline points="23 20 23 14 17 14"></polyline>
+                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+              </svg>
               <span>Restablecer a Valores Originales</span>
             </button>
-            <span class="db-reset-tip">Elimina modificaciones locales en navegador y restaura la versión de fábrica.</span>
+            <span class="db-reset-tip">Elimina modificaciones locales en navegador y restaura la versión de
+              fábrica.</span>
           </div>
           <a href="data/prompts-database.json" target="_blank" class="db-link-raw">
             <span>Ver JSON sin formato</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
           </a>
         </div>
 
         <!-- Acordeón / Guía de Estructura para Modificar -->
         <div class="db-guide-box">
           <div class="db-guide-header">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
             <span>¿Cómo modificar o agregar prompts directamente en el JSON?</span>
           </div>
           <p class="db-guide-text">
-            Abre <code>data/prompts-database.json</code> en tu editor favorito. Para agregar un nuevo prompt al array <code>"prompts"</code>, incluye la estructura:
+            Abre <code>data/prompts-database.json</code> en tu editor favorito. Para agregar un nuevo prompt al array
+            <code>"prompts"</code>, incluye la estructura:
           </p>
           <pre class="db-guide-code"><code>{
   "id": "mi-nuevo-prompt",
@@ -715,14 +830,16 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-copy">
-        © 2026 <strong>PromptHub</strong>. Desarrollado con HTML5, Vanilla CSS y JS. Incluye 280+ Prompts Maestros y 100 Códigos Secretos para Gemini.
+        © 2026 <strong>PromptHub</strong>. Desarrollado con HTML5, Vanilla CSS y JS. Incluye 280+ Prompts Maestros y 100
+        Códigos Secretos para Gemini.
       </div>
       <div class="footer-links">
         <a href="#searchInput" class="footer-link">Buscar Prompts</a>
         <a href="#searchGeminiInput" class="footer-link" id="footerGeminiLink">Códigos Gemini</a>
         <a href="#config" class="footer-link" id="footerConfigLink">Instrucciones Gemini</a>
         <button id="footerDbBtn" class="footer-link footer-link-btn">Base de Datos JSON</button>
-        <a href="https://github.com/rodrigoquezadab/PromptsWorld" target="_blank" rel="noopener noreferrer" class="footer-link">Contribuir en GitHub</a>
+        <a href="https://github.com/rodrigoquezadab/PromptsWorld" target="_blank" rel="noopener noreferrer"
+          class="footer-link">Contribuir en GitHub</a>
       </div>
     </div>
   </footer>
@@ -748,9 +865,10 @@
 
   <!-- Códigos Secretos para Gemini (100 Atajos Organizados de Maverick) -->
   <script src="js/data/gemini-codes.js"></script>
-  
+
   <!-- Scripts Principales de la Aplicación -->
   <script src="js/prompts-data.js"></script>
   <script src="js/app.js"></script>
 </body>
+
 </html>
