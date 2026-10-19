@@ -113,8 +113,235 @@
     modalCloseBtn: document.getElementById('modalCloseBtn'),
     modalCancelBtn: document.getElementById('modalCancelBtn'),
     modalCopyBtn: document.getElementById('modalCopyBtn'),
-    toastContainer: document.getElementById('toastContainer')
+    toastContainer: document.getElementById('toastContainer'),
+
+    // Database Manager Elements
+    headerDbBtn: document.getElementById('headerDbBtn'),
+    footerDbBtn: document.getElementById('footerDbBtn'),
+    configDbOpenBtn: document.getElementById('configDbOpenBtn'),
+    configDbDownloadBtn: document.getElementById('configDbDownloadBtn'),
+    dbModalBackdrop: document.getElementById('dbModalBackdrop'),
+    dbModalCloseBtn: document.getElementById('dbModalCloseBtn'),
+    dbDownloadBtn: document.getElementById('dbDownloadBtn'),
+    dbFileInput: document.getElementById('dbFileInput'),
+    dbResetBtn: document.getElementById('dbResetBtn'),
+    dbStatusDot: document.getElementById('dbStatusDot'),
+    dbStatusText: document.getElementById('dbStatusText'),
+    dbStatusSub: document.getElementById('dbStatusSub'),
+    dbCountPrompts: document.getElementById('dbCountPrompts'),
+    dbCountCodes: document.getElementById('dbCountCodes'),
+    dbCountInstructions: document.getElementById('dbCountInstructions'),
+    dbCountCategories: document.getElementById('dbCountCategories')
   };
+
+  // =========================================================================
+  // Database Manager: Gestión desacoplada de Prompts e Instrucciones en JSON
+  // =========================================================================
+
+  const DB_STORAGE_KEY = 'prompts_world_database_custom';
+
+  const DatabaseManager = {
+    current: null,
+    isCustomData: false,
+
+    async init() {
+      // 1. Intentar cargar versión personalizada guardada en localStorage
+      try {
+        const stored = localStorage.getItem(DB_STORAGE_KEY);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed && Array.isArray(parsed.prompts)) {
+            this.current = parsed;
+            this.isCustomData = true;
+            return;
+          }
+        }
+      } catch (e) {
+        console.warn('Error al leer base de datos de localStorage:', e);
+      }
+
+      // 2. Si no hay personalizada y estamos en HTTP/HTTPS, intentar cargar el archivo JSON
+      if (typeof window !== 'undefined' && window.location.protocol.startsWith('http')) {
+        try {
+          const response = await fetch('data/prompts-database.json', { cache: 'no-cache' });
+          if (response.ok) {
+            this.current = await response.json();
+            this.isCustomData = false;
+            return;
+          }
+        } catch (e) {
+          console.warn('Fetch de prompts-database.json falló, usando respaldo en memoria:', e);
+        }
+      }
+
+      // 3. Respaldo por defecto: window.PROMPTS_WORLD_DEFAULT_DATABASE o fallback estructurado
+      if (typeof window !== 'undefined' && window.PROMPTS_WORLD_DEFAULT_DATABASE) {
+        this.current = JSON.parse(JSON.stringify(window.PROMPTS_WORLD_DEFAULT_DATABASE));
+      } else {
+        this.current = {
+          metadata: {
+            name: "PromptsWorld Unified Database",
+            version: "1.1.0",
+            description: "Base de datos unificada de Prompts Maestros, Códigos Secretos para Gemini e Instrucciones de Contexto Personal.",
+            lastUpdated: "2026-10-19"
+          },
+          categories: typeof CATEGORIES_DATA !== 'undefined' ? CATEGORIES_DATA : [],
+          geminiCategories: typeof GEMINI_CATEGORIES !== 'undefined' ? GEMINI_CATEGORIES : [],
+          instructionsTemplates: typeof GEMINI_INSTRUCTIONS_TEMPLATES !== 'undefined' ? GEMINI_INSTRUCTIONS_TEMPLATES : [],
+          geminiCodes: typeof GEMINI_CODES_DATA !== 'undefined' ? GEMINI_CODES_DATA : [],
+          prompts: typeof PROMPTS_DATA !== 'undefined' ? PROMPTS_DATA : []
+        };
+      }
+      this.isCustomData = false;
+    },
+
+    getPrompts() {
+      return (this.current && Array.isArray(this.current.prompts)) ? this.current.prompts : (typeof PROMPTS_DATA !== 'undefined' ? PROMPTS_DATA : []);
+    },
+
+    getCategories() {
+      return (this.current && Array.isArray(this.current.categories)) ? this.current.categories : (typeof CATEGORIES_DATA !== 'undefined' ? CATEGORIES_DATA : []);
+    },
+
+    getGeminiCodes() {
+      return (this.current && Array.isArray(this.current.geminiCodes)) ? this.current.geminiCodes : (typeof GEMINI_CODES_DATA !== 'undefined' ? GEMINI_CODES_DATA : []);
+    },
+
+    getGeminiCategories() {
+      return (this.current && Array.isArray(this.current.geminiCategories)) ? this.current.geminiCategories : (typeof GEMINI_CATEGORIES !== 'undefined' ? GEMINI_CATEGORIES : []);
+    },
+
+    getInstructionsTemplates() {
+      return (this.current && Array.isArray(this.current.instructionsTemplates)) ? this.current.instructionsTemplates : (typeof GEMINI_INSTRUCTIONS_TEMPLATES !== 'undefined' ? GEMINI_INSTRUCTIONS_TEMPLATES : []);
+    },
+
+    exportJSON() {
+      const dataToExport = this.current ? JSON.parse(JSON.stringify(this.current)) : {};
+      if (!dataToExport.metadata) dataToExport.metadata = {};
+      dataToExport.metadata.lastExported = new Date().toISOString();
+      dataToExport.metadata.totalPrompts = this.getPrompts().length;
+      dataToExport.metadata.totalGeminiCodes = this.getGeminiCodes().length;
+      dataToExport.metadata.totalInstructionsTemplates = this.getInstructionsTemplates().length;
+
+      const jsonStr = JSON.stringify(dataToExport, null, 2);
+      const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'prompts-database.json';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    },
+
+    importJSON(jsonString) {
+      let data;
+      try {
+        data = JSON.parse(jsonString);
+      } catch (err) {
+        throw new Error('El archivo no tiene un formato JSON válido.');
+      }
+
+      let newDb = {};
+      if (Array.isArray(data)) {
+        newDb = JSON.parse(JSON.stringify(this.current || {}));
+        newDb.prompts = data;
+      } else if (typeof data === 'object' && data !== null) {
+        newDb = { ...this.current, ...data };
+        if (!Array.isArray(newDb.prompts)) {
+          throw new Error('El archivo JSON debe contener un array "prompts".');
+        }
+      } else {
+        throw new Error('Estructura de JSON no compatible.');
+      }
+
+      this.current = newDb;
+      this.isCustomData = true;
+      localStorage.setItem(DB_STORAGE_KEY, JSON.stringify(newDb));
+      return {
+        prompts: this.getPrompts().length,
+        codes: this.getGeminiCodes().length,
+        instructions: this.getInstructionsTemplates().length
+      };
+    },
+
+    resetToDefault() {
+      localStorage.removeItem(DB_STORAGE_KEY);
+      this.isCustomData = false;
+      if (typeof window !== 'undefined' && window.PROMPTS_WORLD_DEFAULT_DATABASE) {
+        this.current = JSON.parse(JSON.stringify(window.PROMPTS_WORLD_DEFAULT_DATABASE));
+      }
+    },
+
+    isCustom() {
+      return this.isCustomData;
+    }
+  };
+
+  // --- Modal de Base de Datos ---
+  function openDbModal() {
+    if (!elements.dbModalBackdrop) return;
+    updateDatabaseModalStatus();
+    elements.dbModalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDbModal() {
+    if (!elements.dbModalBackdrop) return;
+    elements.dbModalBackdrop.classList.remove('open');
+    if (!elements.modalBackdrop?.classList.contains('open')) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  function updateDatabaseModalStatus() {
+    const isCustom = DatabaseManager.isCustom();
+    const prompts = DatabaseManager.getPrompts();
+    const codes = DatabaseManager.getGeminiCodes();
+    const instructions = DatabaseManager.getInstructionsTemplates();
+    const categories = DatabaseManager.getCategories();
+
+    if (elements.dbStatusDot) {
+      elements.dbStatusDot.className = 'db-status-indicator' + (isCustom ? ' custom' : '');
+    }
+    if (elements.dbStatusText) {
+      elements.dbStatusText.textContent = isCustom
+        ? 'Base de Datos: Personalizada (Guardada en Navegador)'
+        : 'Base de Datos: Predeterminada (Original)';
+    }
+    if (elements.dbStatusSub) {
+      elements.dbStatusSub.innerHTML = isCustom
+        ? 'Fuente: <code>Almacenamiento Local (Custom JSON)</code>'
+        : 'Archivo fuente: <code>data/prompts-database.json</code>';
+    }
+    if (elements.dbCountPrompts) elements.dbCountPrompts.textContent = prompts.length;
+    if (elements.dbCountCodes) elements.dbCountCodes.textContent = codes.length;
+    if (elements.dbCountInstructions) elements.dbCountInstructions.textContent = instructions.length;
+    if (elements.dbCountCategories) elements.dbCountCategories.textContent = categories.length;
+  }
+
+  function updateHeaderBadges() {
+    const totalPrompts = DatabaseManager.getPrompts().length;
+    const totalCodes = DatabaseManager.getGeminiCodes().length;
+
+    const promptsBadge = elements.navTabPrompts?.querySelector('.nav-count-badge');
+    if (promptsBadge) promptsBadge.textContent = totalPrompts + '+';
+
+    const codesBadge = elements.navTabGemini?.querySelector('.nav-count-badge');
+    if (codesBadge) codesBadge.textContent = totalCodes + ' Atajos';
+  }
+
+  function refreshEntireAppAfterDbChange() {
+    renderCategories();
+    renderPrompts();
+    renderGeminiCategories();
+    renderGeminiCodes();
+    renderInstructionsTemplates();
+    updateInstructionsBuilder();
+    updateDatabaseModalStatus();
+    updateHeaderBadges();
+  }
 
   // --- Helpers ---
   function getIcon(name) {
@@ -174,7 +401,7 @@
   function getFilteredPrompts() {
     const query = state.searchQuery.toLowerCase().trim();
 
-    return PROMPTS_DATA.filter((prompt) => {
+    return DatabaseManager.getPrompts().filter((prompt) => {
       // Category filter
       if (state.activeCategory !== 'all' && prompt.category !== state.activeCategory) {
         return false;
@@ -202,7 +429,7 @@
 
   // --- Render Categories ---
   function renderCategories() {
-    elements.categoriesList.innerHTML = CATEGORIES_DATA.map((cat) => {
+    elements.categoriesList.innerHTML = DatabaseManager.getCategories().map((cat) => {
       const isActive = state.activeCategory === cat.id && !state.onlyFavorites;
       return `
         <button class="category-chip ${isActive ? 'active' : ''}" data-category="${cat.id}">
@@ -297,10 +524,11 @@
   }
 
   function getFilteredGeminiCodes() {
-    if (typeof GEMINI_CODES_DATA === 'undefined') return [];
+    const list = DatabaseManager.getGeminiCodes();
+    if (!list || list.length === 0) return [];
     const query = state.geminiSearchQuery.toLowerCase().trim();
 
-    return GEMINI_CODES_DATA.filter((item) => {
+    return list.filter((item) => {
       // Category filter
       if (state.activeGeminiCategory !== 'all' && item.category !== state.activeGeminiCategory) {
         return false;
@@ -333,9 +561,10 @@
   }
 
   function renderGeminiCategories() {
-    if (!elements.geminiCategoriesList || typeof GEMINI_CATEGORIES === 'undefined') return;
+    if (!elements.geminiCategoriesList) return;
+    const list = DatabaseManager.getGeminiCategories();
 
-    elements.geminiCategoriesList.innerHTML = GEMINI_CATEGORIES.map((cat) => {
+    elements.geminiCategoriesList.innerHTML = list.map((cat) => {
       const isActive = state.activeGeminiCategory === cat.id && !state.onlyGeminiFavorites;
       return `
         <button class="category-chip ${isActive ? 'active' : ''}" data-gemini-category="${cat.id}">
@@ -653,7 +882,8 @@ Directrices para tus respuestas:
   function renderInstructionsTemplates() {
     if (!elements.geminiInstructionsTemplates) return;
 
-    elements.geminiInstructionsTemplates.innerHTML = GEMINI_INSTRUCTIONS_TEMPLATES.map((tpl) => {
+    const list = DatabaseManager.getInstructionsTemplates();
+    elements.geminiInstructionsTemplates.innerHTML = list.map((tpl) => {
       return `
         <article class="template-card animate-fade-in" data-tpl-id="${tpl.id}">
           <div class="template-card-header">
@@ -677,7 +907,7 @@ Directrices para tus respuestas:
 
   // --- Modal: Customize Variables ---
   function openModal(promptId) {
-    const prompt = PROMPTS_DATA.find(p => p.id === promptId);
+    const prompt = DatabaseManager.getPrompts().find(p => p.id === promptId);
     if (!prompt) return;
 
     state.activeModalPrompt = prompt;
@@ -920,7 +1150,7 @@ Directrices para tus respuestas:
         const copyBtn = e.target.closest('.copy-raw-btn');
         if (copyBtn) {
           const id = copyBtn.getAttribute('data-id');
-          const prompt = PROMPTS_DATA.find(p => p.id === id);
+          const prompt = DatabaseManager.getPrompts().find(p => p.id === id);
           if (prompt) {
             copyToClipboard(prompt.template);
           }
@@ -1074,7 +1304,7 @@ Directrices para tus respuestas:
         const btn = e.target.closest('.copy-template-btn');
         if (!btn) return;
         const tplId = btn.getAttribute('data-tpl-id');
-        const template = GEMINI_INSTRUCTIONS_TEMPLATES.find(t => t.id === tplId);
+        const template = DatabaseManager.getInstructionsTemplates().find(t => t.id === tplId);
         if (template) {
           copyToClipboard(template.content, '¡Plantilla copiada! Lista para pegar en Contexto personal.');
         }
@@ -1098,13 +1328,81 @@ Directrices para tus respuestas:
       });
     }
 
+    // Database Management Events
+    if (elements.headerDbBtn) elements.headerDbBtn.addEventListener('click', openDbModal);
+    if (elements.footerDbBtn) elements.footerDbBtn.addEventListener('click', openDbModal);
+    if (elements.configDbOpenBtn) elements.configDbOpenBtn.addEventListener('click', openDbModal);
+    
+    if (elements.configDbDownloadBtn) {
+      elements.configDbDownloadBtn.addEventListener('click', () => {
+        DatabaseManager.exportJSON();
+        showToast('📥 Base de datos descargada como prompts-database.json');
+      });
+    }
+
+    if (elements.dbDownloadBtn) {
+      elements.dbDownloadBtn.addEventListener('click', () => {
+        DatabaseManager.exportJSON();
+        showToast('📥 Base de datos descargada como prompts-database.json');
+      });
+    }
+
+    if (elements.dbModalCloseBtn) elements.dbModalCloseBtn.addEventListener('click', closeDbModal);
+    if (elements.dbModalBackdrop) {
+      elements.dbModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === elements.dbModalBackdrop) closeDbModal();
+      });
+    }
+
+    if (elements.dbFileInput) {
+      elements.dbFileInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const stats = DatabaseManager.importJSON(event.target.result);
+            refreshEntireAppAfterDbChange();
+            showToast(`✅ Base de datos actualizada (${stats.prompts} prompts, ${stats.codes} códigos, ${stats.instructions} plantillas)`);
+          } catch (err) {
+            alert('Error al importar el archivo JSON: ' + err.message);
+          } finally {
+            elements.dbFileInput.value = '';
+          }
+        };
+        reader.onerror = () => {
+          alert('Error al leer el archivo del disco.');
+          elements.dbFileInput.value = '';
+        };
+        reader.readAsText(file);
+      });
+    }
+
+    if (elements.dbResetBtn) {
+      elements.dbResetBtn.addEventListener('click', () => {
+        if (confirm('¿Deseas restaurar la base de datos a los valores de fábrica? Se descartarán los cambios personalizados en el navegador.')) {
+          DatabaseManager.resetToDefault();
+          refreshEntireAppAfterDbChange();
+          showToast('🔄 Base de datos restaurada a valores por defecto');
+        }
+      });
+    }
+
     // Keyboard shortcuts
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && elements.modalBackdrop && elements.modalBackdrop.classList.contains('open')) {
-        closeModal();
+      if (e.key === 'Escape') {
+        if (elements.dbModalBackdrop && elements.dbModalBackdrop.classList.contains('open')) {
+          closeDbModal();
+          return;
+        }
+        if (elements.modalBackdrop && elements.modalBackdrop.classList.contains('open')) {
+          closeModal();
+          return;
+        }
       }
       // Press '/' to search active view
-      if (e.key === '/' && !elements.modalBackdrop?.classList.contains('open')) {
+      if (e.key === '/' && !elements.modalBackdrop?.classList.contains('open') && !elements.dbModalBackdrop?.classList.contains('open')) {
         const isPrompts = state.currentView === 'prompts';
         const activeInput = isPrompts ? elements.searchInput : elements.searchGeminiInput;
         if (document.activeElement !== activeInput && activeInput) {
@@ -1116,7 +1414,8 @@ Directrices para tus respuestas:
   }
 
   // --- Initialize ---
-  function init() {
+  async function init() {
+    await DatabaseManager.init();
     updateFavoritesCount();
     renderCategories();
     renderPrompts();
@@ -1124,6 +1423,8 @@ Directrices para tus respuestas:
     renderGeminiCodes();
     updateInstructionsBuilder();
     renderInstructionsTemplates();
+    updateDatabaseModalStatus();
+    updateHeaderBadges();
     setupEvents();
 
     // Check initial hash

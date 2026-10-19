@@ -1,0 +1,9905 @@
+/**
+ * PromptsWorld - Default Database Object
+ * Generado automáticamente a partir de data/prompts-database.json
+ * Proporciona soporte offline y compatibilidad con el protocolo file://.
+ */
+window.PROMPTS_WORLD_DEFAULT_DATABASE = {
+  "metadata": {
+    "name": "PromptsWorld Unified Database",
+    "version": "1.1.0",
+    "description": "Base de datos unificada de Prompts Maestros, Códigos Secretos para Gemini e Instrucciones de Contexto Personal.",
+    "lastUpdated": "2026-10-19",
+    "totalPrompts": 283,
+    "totalGeminiCodes": 100,
+    "totalInstructionsTemplates": 6,
+    "author": "PromptsWorld"
+  },
+  "categories": [
+    {
+      "id": "all",
+      "label": "Todos",
+      "icon": "grid"
+    },
+    {
+      "id": "desarrollo",
+      "label": "Desarrollo",
+      "icon": "code"
+    },
+    {
+      "id": "redaccion",
+      "label": "Redacción",
+      "icon": "feather"
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing",
+      "icon": "target"
+    },
+    {
+      "id": "productividad",
+      "label": "Productividad",
+      "icon": "check-circle"
+    },
+    {
+      "id": "aprendizaje",
+      "label": "Aprendizaje",
+      "icon": "book-open"
+    },
+    {
+      "id": "creatividad",
+      "label": "Creatividad",
+      "icon": "lightbulb"
+    },
+    {
+      "id": "metaprompt",
+      "label": "Meta-Prompts",
+      "icon": "terminal"
+    },
+    {
+      "id": "datos",
+      "label": "Datos & Finanzas",
+      "icon": "table"
+    },
+    {
+      "id": "imagenes",
+      "label": "Imágenes & Arte",
+      "icon": "image"
+    },
+    {
+      "id": "musica",
+      "label": "Música & Audio",
+      "icon": "music"
+    },
+    {
+      "id": "video",
+      "label": "Video & Animación",
+      "icon": "video"
+    },
+    {
+      "id": "ciberseguridad",
+      "label": "Ciberseguridad",
+      "icon": "shield"
+    },
+    {
+      "id": "legal",
+      "label": "Legal & Compliance",
+      "icon": "scale"
+    },
+    {
+      "id": "bienestar",
+      "label": "Salud & Bienestar",
+      "icon": "activity"
+    }
+  ],
+  "geminiCategories": [
+    {
+      "id": "all",
+      "label": "Todos los Códigos",
+      "icon": "grid",
+      "count": 100
+    },
+    {
+      "id": "google-integration",
+      "label": "Google Integration",
+      "icon": "globe",
+      "count": 12,
+      "desc": "Extensiones y conexiones nativas con el ecosistema Google Workspace"
+    },
+    {
+      "id": "research",
+      "label": "Research & Fact-Checking",
+      "icon": "search",
+      "count": 11,
+      "desc": "Búsqueda en tiempo real, verificación de fuentes y análisis de datos"
+    },
+    {
+      "id": "writing",
+      "label": "Writing & Editing",
+      "icon": "feather",
+      "count": 11,
+      "desc": "Refinamiento de tono, concisión, aperturas y humanización de texto"
+    },
+    {
+      "id": "explanation",
+      "label": "Explanation & Learning",
+      "icon": "book-open",
+      "count": 11,
+      "desc": "Desglose pedagógico, simplificación conceptual y metáforas"
+    },
+    {
+      "id": "analysis",
+      "label": "Analysis & Strategy",
+      "icon": "target",
+      "count": 11,
+      "desc": "Diagnóstico profundo, matrices competitivas y planes de acción"
+    },
+    {
+      "id": "creative",
+      "label": "Creative & Content",
+      "icon": "lightbulb",
+      "count": 11,
+      "desc": "Ideación, simulaciones de escenarios y generación de ganchos virales"
+    },
+    {
+      "id": "thinking",
+      "label": "Thinking & Reasoning",
+      "icon": "shield",
+      "count": 11,
+      "desc": "Modelos mentales, pensamiento inverso, premortem y debate de expertos"
+    },
+    {
+      "id": "formatting",
+      "label": "Formatting & Output",
+      "icon": "table",
+      "count": 11,
+      "desc": "Estructuras ejecutivas, dashboards, tarjetas de puntuación y wireframes"
+    },
+    {
+      "id": "utility",
+      "label": "Utility & Power Commands",
+      "icon": "terminal",
+      "count": 11,
+      "desc": "Comandos de sistema, encadenamiento, extracción y optimización de prompts"
+    }
+  ],
+  "instructionsTemplates": [
+    {
+      "id": "tpl-dev",
+      "role": "Desarrollo & DevOps",
+      "title": "Ingeniero de Software Senior & Arquitecto Cloud",
+      "desc": "Optimizado para código de producción, clean code, tipado estricto y cero explicaciones condescendientes.",
+      "content": "Soy un Ingeniero de Software Senior.\nDirectrices para tus respuestas:\n1. Responde de forma técnica, concisa y directa al grano. Omite introducciones del tipo \"Claro, aquí tienes\".\n2. Proporciona código listo para producción, tipado estrictamente (TypeScript, Go, Python) y aplicando principios SOLID.\n3. Si el código involucra seguridad, concurrencia o rendimiento Big-O, añade notas breves sobre trade-offs y edge cases.\n4. No expliques conceptos básicos (qué es una variable, cómo funciona un bucle) a menos que te lo solicite.\n5. Usa Markdown con nombres de archivo explícitos y comentarios breves solo en partes críticas."
+    },
+    {
+      "id": "tpl-universal",
+      "role": "Universal",
+      "title": "Anti-Relleno & Eficiencia Máxima (Directo al Grano)",
+      "desc": "Elimina el 100% de la paja, saludos y clichés típicos de IA para trabajar a máxima velocidad.",
+      "content": "Directrices obligatorias de estilo y formato:\n1. Comienza directamente con la respuesta en la primera línea. Cero saludos, cero cierres de cortesía y cero disculpas.\n2. Elimina absolutamente todo cliché típico de IA: \"en el tapiz digital\", \"es crucial entender\", \"un viaje fascinante\", \"en un mundo en constante evolución\".\n3. Prioriza viñetas ordenadas por impacto y tablas comparativas siempre que haya más de 2 opciones.\n4. Si falta información crítica para una respuesta precisa, haz una sola pregunta de clarificación antes de asumir.\n5. Cita fuentes o fechas si buscas datos factuales en tiempo real."
+    },
+    {
+      "id": "tpl-pm",
+      "role": "Producto & Negocios",
+      "title": "Product Manager & Estratega de Negocios Tech",
+      "desc": "Enfocado en métricas (CAC/LTV), validación de hipótesis, trade-offs y comunicación para stakeholders.",
+      "content": "Soy un Líder de Producto (Product Manager) y Fundador Tecnológico.\nDirectrices para tus respuestas:\n1. Enfoca siempre los problemas desde el impacto en el negocio: métricas (ARR, Retención, CAC, LTV) y valor para el usuario.\n2. Estructura propuestas en: Diagnóstico, Hipótesis Validable, Solución Recomendada y Métricas de Éxito.\n3. Incluye siempre una sección explícita de \"Trade-offs y Riesgos Principales\".\n4. Utiliza frameworks contrastados (RICE, ICE, Jobs To Be Done, Lean Canvas).\n5. Mantén un tono ejecutivo, persuasivo y preparado para presentar ante directores o inversionistas."
+    },
+    {
+      "id": "tpl-copy",
+      "role": "Marketing & Redacción",
+      "title": "Copywriter Persuasivo & Creador de Contenido",
+      "desc": "Redacción magnética, oraciones asimétricas, ganchos de retención y cero lenguaje corporativo aburrido.",
+      "content": "Soy Copywriter y Creador de Contenido Digital.\nDirectrices para tus respuestas:\n1. Escribe con voz humana, dinámica y conversacional. Alterna frases cortas y contundentes con oraciones explicativas.\n2. Cada texto debe contar con un gancho (hook) de alto impacto en los primeros 3 segundos y un CTA claro al final.\n3. Elimina lenguaje corporativo frío o robótico. Usa verbos de acción y metáforas visuales.\n4. Cuando te pida copys, titulares o guiones, entrega siempre 3 variantes con diferentes ángulos psicológicos.\n5. Prioriza marcos de persuasión probados (AIDA, PAS, BAB)."
+    },
+    {
+      "id": "tpl-academic",
+      "role": "Investigación & Ciencia",
+      "title": "Investigador Académico & Fact-Checker Riguroso",
+      "desc": "Citas con fuentes primarias, pensamiento crítico, análisis de sesgos y rigor metodológico.",
+      "content": "Soy un Investigador Académico y Analista Crítico.\nDirectrices para tus respuestas:\n1. Toda afirmación factual relevante debe estar verificada en tiempo real con fuentes primarias usando Google Search.\n2. Cita autores, instituciones, DOI o enlaces oficiales para respaldar conclusiones.\n3. Distingue claramente entre: datos empíricos comprobados, consenso científico dominante e hipótesis o conjeturas.\n4. Señala posibles sesgos metodológicos, limitaciones de muestra o conflictos de interés.\n5. Estructura respuestas con rigor lógico, definiciones operacionales y síntesis balanceada."
+    },
+    {
+      "id": "tpl-data",
+      "role": "Datos & Finanzas",
+      "title": "Analista Cuantitativo & Especialista en SQL/BI",
+      "desc": "Consultas SQL optimizadas, modelos financieros, fórmulas DAX y visualización de KPIs.",
+      "content": "Soy un Analista Cuantitativo y Especialista en Datos.\nDirectrices para tus respuestas:\n1. Proporciona consultas SQL optimizadas (legibles, con CTEs y comentadas) y scripts en Python (Pandas/Polars).\n2. Para finanzas, estructura modelos con supuestos explícitos, análisis de sensibilidad y fórmulas claras.\n3. Sugiere siempre el gráfico o visualización idónea (tipo de visual en Power BI / Tableau) para cada métrica.\n4. Interpreta los números: no te limites a listar datos, aporta el \"qué significa\" y \"qué acción tomar\".\n5. Valida siempre la integridad de los datos considerando valores nulos, duplicados y outliers."
+    }
+  ],
+  "geminiCodes": [
+    {
+      "id": "gem-gmail",
+      "code": "@Gmail",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Searches your Gmail inbox and pulls real emails, threads, and attachments.",
+      "descriptionEs": "Busca en tu bandeja de entrada de Gmail y extrae correos reales, hilos de conversación y archivos adjuntos.",
+      "example": "@Gmail Busca los correos de la última semana relacionados con 'Presupuesto 2026' y resume los puntos de acción acordados.",
+      "tags": [
+        "gmail",
+        "email",
+        "workspace",
+        "google",
+        "inbox",
+        "correos"
+      ]
+    },
+    {
+      "id": "gem-drive",
+      "code": "@Drive",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Finds and reads files stored in your Google Drive.",
+      "descriptionEs": "Encuentra y lee archivos almacenados en tu Google Drive.",
+      "example": "@Drive Encuentra el documento 'Propuesta Comercial Q3' y sintetiza los entregables clave y plazos.",
+      "tags": [
+        "drive",
+        "archivos",
+        "google drive",
+        "cloud",
+        "workspace"
+      ]
+    },
+    {
+      "id": "gem-docs",
+      "code": "@Docs",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Pulls content from a specific Google Doc into the conversation.",
+      "descriptionEs": "Extrae el contenido de un Google Doc específico y lo incorpora a la conversación.",
+      "example": "@Docs Lee el documento 'Estrategia de Marca' y extrae el manual de tono de voz para redactar un email.",
+      "tags": [
+        "docs",
+        "documentos",
+        "google docs",
+        "texto",
+        "workspace"
+      ]
+    },
+    {
+      "id": "gem-sheets",
+      "code": "@Sheets",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Reads data and tables from your Google Sheets.",
+      "descriptionEs": "Lee datos, rangos y tablas directamente de tus hojas de cálculo de Google Sheets.",
+      "example": "@Sheets Analiza la hoja 'Ventas_Anuales_2025' e identifica los 3 productos con mayor margen y peor rotación.",
+      "tags": [
+        "sheets",
+        "tablas",
+        "datos",
+        "excel",
+        "google sheets",
+        "workspace"
+      ]
+    },
+    {
+      "id": "gem-calendar",
+      "code": "@Calendar",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Checks your Google Calendar for events, conflicts, and availability.",
+      "descriptionEs": "Consulta tu Google Calendar para revisar eventos, detectar conflictos y disponibilidad de horarios.",
+      "example": "@Calendar Revisa mi agenda de este jueves y viernes y busca bloques libres de al menos 90 minutos para trabajo profundo.",
+      "tags": [
+        "calendar",
+        "agenda",
+        "reuniones",
+        "horarios",
+        "disponibilidad"
+      ]
+    },
+    {
+      "id": "gem-maps",
+      "code": "@Maps",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Pulls location data, directions, and place details from Google Maps.",
+      "descriptionEs": "Obtiene datos de ubicación, indicaciones de ruta y detalles de sitios desde Google Maps.",
+      "example": "@Maps Encuentra cafeterías tranquilas con WiFi y enchufes a menos de 15 minutos a pie de mi ubicación.",
+      "tags": [
+        "maps",
+        "ubicacion",
+        "lugares",
+        "direcciones",
+        "google maps"
+      ]
+    },
+    {
+      "id": "gem-youtube",
+      "code": "@YouTube",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Searches and summarizes YouTube videos on any topic.",
+      "descriptionEs": "Busca y resume el contenido de videos de YouTube sobre cualquier temática.",
+      "example": "@YouTube Busca videos recientes sobre 'Arquitectura de Agentes IA con LangGraph' y resume las lecciones clave.",
+      "tags": [
+        "youtube",
+        "video",
+        "resumen",
+        "transcripcion",
+        "google"
+      ]
+    },
+    {
+      "id": "gem-keep",
+      "code": "@Keep",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Accesses your notes and lists from Google Keep.",
+      "descriptionEs": "Accede a tus notas, listas de verificación e ideas guardadas en Google Keep.",
+      "example": "@Keep Revisa mi nota titulada 'Ideas de Contenido' y selecciona las 3 más viables para publicar hoy.",
+      "tags": [
+        "keep",
+        "notas",
+        "apuntes",
+        "listas",
+        "workspace"
+      ]
+    },
+    {
+      "id": "gem-tasks",
+      "code": "@Tasks",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Pulls your to-do items from Google Tasks.",
+      "descriptionEs": "Extrae tus tareas pendientes y listas de verificación desde Google Tasks.",
+      "example": "@Tasks Muestra mis tareas con fecha límite de hoy y organízalas según la matriz urgente vs importante.",
+      "tags": [
+        "tasks",
+        "tareas",
+        "pendientes",
+        "todo",
+        "productividad"
+      ]
+    },
+    {
+      "id": "gem-slides",
+      "code": "@Slides",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Reads content and speaker notes from your Google Slides.",
+      "descriptionEs": "Lee diapositivas, textos y notas del orador desde tus presentaciones de Google Slides.",
+      "example": "@Slides Extrae las conclusiones principales y las preguntas clave de la presentación 'Pitch Inversionistas v2'.",
+      "tags": [
+        "slides",
+        "presentaciones",
+        "diapositivas",
+        "pitch",
+        "google slides"
+      ]
+    },
+    {
+      "id": "gem-contacts",
+      "code": "@Contacts",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Looks up people and details from your Google Contacts.",
+      "descriptionEs": "Busca información, correos y teléfonos de personas en tus Contactos de Google.",
+      "example": "@Contacts Busca los datos de contacto y empresa de 'Carlos Mendoza' para redactarle un correo de seguimiento.",
+      "tags": [
+        "contacts",
+        "contactos",
+        "personas",
+        "agenda",
+        "workspace"
+      ]
+    },
+    {
+      "id": "gem-flights",
+      "code": "@Flights",
+      "type": "workspace",
+      "category": "google-integration",
+      "categoryLabel": "Google Integration",
+      "description": "Pulls flight prices, routes, and travel options from Google Flights.",
+      "descriptionEs": "Consulta precios de vuelos en tiempo real, rutas y alternativas de viaje con Google Flights.",
+      "example": "@Flights Busca vuelos directos de Santiago a Ciudad de México para la primera semana de noviembre, ordenados por menor escala y precio.",
+      "tags": [
+        "flights",
+        "vuelos",
+        "viajes",
+        "itinerarios",
+        "google flights"
+      ]
+    },
+    {
+      "id": "gem-factcheck",
+      "code": "/factcheck",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Uses Google Search to verify every claim in real time.",
+      "descriptionEs": "Utiliza Google Search para verificar cada afirmación y dato con fuentes en tiempo real.",
+      "example": "/factcheck Verifica si la tasa de interés de la Reserva Federal bajó en el último trimestre y cita datos oficiales.",
+      "tags": [
+        "factcheck",
+        "verificar",
+        "google search",
+        "precision",
+        "fuentes"
+      ]
+    },
+    {
+      "id": "gem-deepresearch",
+      "code": "/deepresearch",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Runs an extended multi-step research process before answering.",
+      "descriptionEs": "Ejecuta un proceso de investigación profundo en múltiples pasos antes de emitir su respuesta final.",
+      "example": "/deepresearch Investiga el estado actual de la fusión nuclear comercial, empresas líderes y cronogramas previstos.",
+      "tags": [
+        "deepresearch",
+        "investigacion",
+        "analisis",
+        "exhaustivo",
+        "papers"
+      ]
+    },
+    {
+      "id": "gem-source",
+      "code": "/source",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Finds and cites the original source behind a claim.",
+      "descriptionEs": "Rastrea y cita la fuente primaria u original detrás de una afirmación o estadística.",
+      "example": "/source ¿Quién acuñó el término 'Prompt Engineering' y cuál fue la publicación o paper original donde apareció?",
+      "tags": [
+        "source",
+        "fuente",
+        "origen",
+        "citas",
+        "paper",
+        "autor"
+      ]
+    },
+    {
+      "id": "gem-trending",
+      "code": "/trending",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Shows what is trending right now on any topic.",
+      "descriptionEs": "Muestra las tendencias, discusiones calientes y novedades del momento sobre cualquier tema.",
+      "example": "/trending ¿Cuáles son los temas y repositorios de IA más populares en GitHub y X en las últimas 48 horas?",
+      "tags": [
+        "trending",
+        "tendencias",
+        "actualidad",
+        "viral",
+        "noticias"
+      ]
+    },
+    {
+      "id": "gem-latest",
+      "code": "/latest",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Pulls only the most recent information available online.",
+      "descriptionEs": "Filtra y extrae exclusivamente la información más reciente disponible en la web.",
+      "example": "/latest ¿Cuáles son las últimas regulaciones emitidas por la Unión Europea respecto a modelos de IA de código abierto?",
+      "tags": [
+        "latest",
+        "reciente",
+        "noticias",
+        "tiempo real",
+        "actualizacion"
+      ]
+    },
+    {
+      "id": "gem-crosscheck",
+      "code": "/crosscheck",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Compares a claim across multiple independent sources.",
+      "descriptionEs": "Compara y triangula una afirmación entre múltiples fuentes independientes para confirmar su veracidad.",
+      "example": "/crosscheck Compara las cifras de usuarios activos mensuales de Threads según Meta, analistas de SensorTower y Statista.",
+      "tags": [
+        "crosscheck",
+        "triangulacion",
+        "fuentes",
+        "verificacion",
+        "comparacion"
+      ]
+    },
+    {
+      "id": "gem-evidence",
+      "code": "/evidence",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Backs up a statement with supporting data and studies.",
+      "descriptionEs": "Respalda una afirmación o tesis aportando datos cuantitativos, estudios clínicos o papers científicos.",
+      "example": "/evidence Respalda con evidencia científica revisada por pares los beneficios del trabajo de fuerza en adultos mayores.",
+      "tags": [
+        "evidence",
+        "evidencia",
+        "estudios",
+        "datos",
+        "ciencia"
+      ]
+    },
+    {
+      "id": "gem-mythbust",
+      "code": "/mythbust",
+      "type": "command",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Tests a common belief and shows whether it actually holds up.",
+      "descriptionEs": "Pone a prueba un mito o creencia popular demostrando con rigor si es verdadero, falso o engañoso.",
+      "example": "/mythbust 'Comer carbohidratos de noche engorda más que de día'. ¿Qué dice realmente el balance calórico y la crononutrición?",
+      "tags": [
+        "mythbust",
+        "mitos",
+        "desmentir",
+        "ciencia",
+        "verdades"
+      ]
+    },
+    {
+      "id": "gem-citethis",
+      "code": "CITETHIS",
+      "type": "directive",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Adds proper citations and references to every claim in the answer.",
+      "descriptionEs": "Agrega citas académicas formales y enlaces a referencias bibliográficas en cada afirmación del texto.",
+      "example": "CITETHIS Explica los mecanismos biológicos de la autofagia inducida por el ayuno intermitente.",
+      "tags": [
+        "citethis",
+        "citas",
+        "referencias",
+        "bibliografia",
+        "apa"
+      ]
+    },
+    {
+      "id": "gem-datamine",
+      "code": "DATAMINE",
+      "type": "directive",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Digs through available data to find patterns and numbers.",
+      "descriptionEs": "Indaga minuciosamente en conjuntos de datos disponibles para descubrir patrones, anomalías y cifras clave.",
+      "example": "DATAMINE Examina el informe financiero adjunto y detecta patrones en los costos operativos de los últimos 4 trimestres.",
+      "tags": [
+        "datamine",
+        "mineria de datos",
+        "patrones",
+        "metricas",
+        "estadisticas"
+      ]
+    },
+    {
+      "id": "gem-originscan",
+      "code": "ORIGINSCAN",
+      "type": "directive",
+      "category": "research",
+      "categoryLabel": "Research & Fact-Checking",
+      "description": "Traces a topic back to where it originally started.",
+      "descriptionEs": "Rastrea la genealogía histórica y conceptual de un tema hasta su primer origen documentado.",
+      "example": "ORIGINSCAN Rastrea el origen histórico del concepto de 'Microservicios' desde la arquitectura orientada a servicios (SOA).",
+      "tags": [
+        "originscan",
+        "origen",
+        "historia",
+        "evolucion",
+        "etimologia"
+      ]
+    },
+    {
+      "id": "gem-polish",
+      "code": "/polish",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Cleans up grammar, flow, and readability without changing the voice.",
+      "descriptionEs": "Perfecciona la gramática, fluidez y legibilidad del texto preservando intacta la voz y estilo del autor.",
+      "example": "/polish Pule el siguiente borrador de correo para un cliente manteniendo un tono cercano pero profesional: [texto]",
+      "tags": [
+        "polish",
+        "pulir",
+        "estilo",
+        "gramatica",
+        "redaccion"
+      ]
+    },
+    {
+      "id": "gem-tighten",
+      "code": "/tighten",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Removes filler words and makes every sentence count.",
+      "descriptionEs": "Elimina palabras de relleno, redundancias y rodeos haciendo que cada frase tenga máximo impacto.",
+      "example": "/tighten Elimina toda la paja de esta propuesta de valor y déjala en 2 frases de máxima contundencia: [texto]",
+      "tags": [
+        "tighten",
+        "concision",
+        "brevedad",
+        "eliminar relleno",
+        "impacto"
+      ]
+    },
+    {
+      "id": "gem-voice",
+      "code": "/voice",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Matches the writing style to a specific person or brand you name.",
+      "descriptionEs": "Modela y adapta el estilo de redacción exactamente al tono de una persona, referente o marca indicada.",
+      "example": "/voice Paul Graham. Reescribe este ensayo sobre la productividad en startups usando el estilo reflexivo y claro de sus ensayos.",
+      "tags": [
+        "voice",
+        "tono de voz",
+        "estilo",
+        "marca",
+        "personalidad"
+      ]
+    },
+    {
+      "id": "gem-hook",
+      "code": "/hook",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Writes a strong opening line designed to grab attention.",
+      "descriptionEs": "Genera una línea de apertura magnética diseñada para capturar la atención en los primeros 3 segundos.",
+      "example": "/hook Escribe 5 aperturas de alto impacto para un hilo sobre cómo la IA reemplazará a las herramientas no-code.",
+      "tags": [
+        "hook",
+        "gancho",
+        "apertura",
+        "retencion",
+        "copywriting"
+      ]
+    },
+    {
+      "id": "gem-closer",
+      "code": "/closer",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Writes a strong closing line or call to action.",
+      "descriptionEs": "Redacta un cierre contundente, memorable o un llamado a la acción (CTA) con alta tasa de conversión.",
+      "example": "/closer Redacta 3 opciones de cierre con llamada a la acción para descargar un ebook gratuito sobre TypeScript.",
+      "tags": [
+        "closer",
+        "cierre",
+        "cta",
+        "conclusion",
+        "llamado a la accion"
+      ]
+    },
+    {
+      "id": "gem-pivot",
+      "code": "/pivot",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Rewrites content for a completely different audience.",
+      "descriptionEs": "Reescribe un contenido adaptándolo íntegramente a una audiencia con diferente nivel de conocimiento o perfil.",
+      "example": "/pivot Toma esta explicación técnica de Kubernetes y adáptala para el Director Financiero (CFO) enfatizando costos.",
+      "tags": [
+        "pivot",
+        "audiencia",
+        "adaptar",
+        "reescribir",
+        "enfoque"
+      ]
+    },
+    {
+      "id": "gem-warmup",
+      "code": "/warmup",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Makes cold or stiff writing feel more personal and approachable.",
+      "descriptionEs": "Transforma textos fríos, acartonados o robóticos en mensajes cálidos, empáticos y accesibles.",
+      "example": "/warmup Haz que esta notificación de cambio de términos y condiciones suene comprensible, humana y transparente: [texto]",
+      "tags": [
+        "warmup",
+        "calidez",
+        "empatia",
+        "humano",
+        "cercano"
+      ]
+    },
+    {
+      "id": "gem-punch",
+      "code": "/punch",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Adds impact and energy to flat or boring writing.",
+      "descriptionEs": "Inyecta dinamismo, energía y fuerza a párrafos que suenan apagados, aburridos o genéricos.",
+      "example": "/punch Dale garra y dinamismo a este pitch de presentación para cautivar a un jurado de startups: [texto]",
+      "tags": [
+        "punch",
+        "energia",
+        "fuerza",
+        "dinamismo",
+        "impacto"
+      ]
+    },
+    {
+      "id": "gem-trim",
+      "code": "/trim",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Cuts the word count in half while keeping the core meaning.",
+      "descriptionEs": "Reduce el conteo de palabras a la mitad exacta conservando intacto el 100% del significado central.",
+      "example": "/trim Reduce este artículo de 600 palabras a 300 palabras exactas sin perder ningún dato relevante: [texto]",
+      "tags": [
+        "trim",
+        "recortar",
+        "resumen",
+        "brevedad",
+        "palabras"
+      ]
+    },
+    {
+      "id": "gem-mirror",
+      "code": "/mirror",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Rewrites text to match the tone of a sample you provide.",
+      "descriptionEs": "Reescribe el texto clonando el ritmo, vocabulario y cadencia de una muestra de ejemplo provista.",
+      "example": "/mirror Muestra: [ejemplo de newsletter]. Aplica este mismo estilo desenfadado y ritmo ágil al siguiente texto: [borrador]",
+      "tags": [
+        "mirror",
+        "clonar estilo",
+        "cadencia",
+        "tono",
+        "ejemplo"
+      ]
+    },
+    {
+      "id": "gem-deai",
+      "code": "/deAI",
+      "type": "command",
+      "category": "writing",
+      "categoryLabel": "Writing & Editing",
+      "description": "Removes patterns that make the writing sound AI-generated.",
+      "descriptionEs": "Elimina muletillas y patrones clichés típicos de IA ('en el panorama actual', 'un tapiz', 'crucial', etc.).",
+      "example": "/deAI Humaniza este texto eliminando frases cliché de IA y dotándolo de naturalidad y oraciones asimétricas: [texto]",
+      "tags": [
+        "deai",
+        "humanizar",
+        "anti ia",
+        "cliches",
+        "natural"
+      ]
+    },
+    {
+      "id": "gem-el5",
+      "code": "EL5",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Breaks any topic down so a five-year-old can understand it.",
+      "descriptionEs": "Descompone cualquier concepto hipercomplejo para que un niño de 5 años lo entienda a la primera.",
+      "example": "EL5 ¿Cómo funciona la encriptación asimétrica de clave pública y privada?",
+      "tags": [
+        "el5",
+        "feynman",
+        "sencillo",
+        "ninos",
+        "simplificar"
+      ]
+    },
+    {
+      "id": "gem-onepager",
+      "code": "ONEPAGER",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Condenses everything you need to know onto a single page.",
+      "descriptionEs": "Condensa absolutamente todo lo necesario sobre un tema en una única página estructurada y visual.",
+      "example": "ONEPAGER Todo lo que un Product Manager necesita saber sobre APIs REST vs GraphQL vs gRPC.",
+      "tags": [
+        "onepager",
+        "resumen ejecutivo",
+        "una pagina",
+        "sintesis"
+      ]
+    },
+    {
+      "id": "gem-mentor",
+      "code": "/mentor",
+      "type": "command",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Responds as a patient teacher guiding you through a concept.",
+      "descriptionEs": "Adopta el rol de un profesor paciente y pedagógico que te guía paso a paso haciéndote reflexionar.",
+      "example": "/mentor Ayúdame a entender cómo funciona el algoritmo de Backpropagation en redes neuronales desde cero.",
+      "tags": [
+        "mentor",
+        "tutor",
+        "profesor",
+        "pedagogico",
+        "aprendizaje"
+      ]
+    },
+    {
+      "id": "gem-dumbitdown",
+      "code": "DUMBITDOWN",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Strips away all jargon and makes the answer dead simple.",
+      "descriptionEs": "Elimina cualquier tecnicismo o jerga confusa haciendo la explicación directa, llana y cristalina.",
+      "example": "DUMBITDOWN Explica qué es una llamada de margen (Margin Call) en finanzas sin usar términos bursátiles.",
+      "tags": [
+        "dumbitdown",
+        "sin jerga",
+        "lenguaje llano",
+        "facil",
+        "claro"
+      ]
+    },
+    {
+      "id": "gem-gapfinder",
+      "code": "/gapfinder",
+      "type": "command",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Identifies what you are missing or do not understand yet.",
+      "descriptionEs": "Analiza tu entendimiento actual e identifica lagunas conceptuales, vacíos o malentendidos sutiles.",
+      "example": "/gapfinder Creo que Docker es solo una máquina virtual más ligera. Dime qué vacíos conceptuales tengo al pensar así.",
+      "tags": [
+        "gapfinder",
+        "lagunas",
+        "vacios de conocimiento",
+        "feedback",
+        "diagnostico"
+      ]
+    },
+    {
+      "id": "gem-walkthrough",
+      "code": "WALKTHROUGH",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Takes you through a process one step at a time with explanations.",
+      "descriptionEs": "Te guía paso a paso a través de un procedimiento completo, explicando el porqué de cada etapa.",
+      "example": "WALKTHROUGH Configuración de autenticación OAuth 2.0 con Google en una aplicación Next.js paso por paso.",
+      "tags": [
+        "walkthrough",
+        "guia paso a paso",
+        "tutorial",
+        "proceso",
+        "instrucciones"
+      ]
+    },
+    {
+      "id": "gem-metaphor",
+      "code": "METAPHOR",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Explains a concept using a creative comparison to something familiar.",
+      "descriptionEs": "Ilumina un concepto complejo mediante una analogía o metáfora creativa de la vida cotidiana.",
+      "example": "METAPHOR Explica qué es y cómo funciona la memoria RAM vs un SSD usando la metáfora de una oficina o cocina.",
+      "tags": [
+        "metaphor",
+        "metafora",
+        "analogia",
+        "didactico",
+        "comparacion"
+      ]
+    },
+    {
+      "id": "gem-layers",
+      "code": "LAYERS",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Explains a topic at three levels: beginner, intermediate, and expert.",
+      "descriptionEs": "Estructura la explicación en 3 niveles de profundidad sucesivos: principiante, intermedio y experto.",
+      "example": "LAYERS Explica la computación cuántica y el entrelazamiento cuántico a nivel Principiante, Intermedio y Experto.",
+      "tags": [
+        "layers",
+        "niveles",
+        "principiante",
+        "intermedio",
+        "avanzado"
+      ]
+    },
+    {
+      "id": "gem-masterclass",
+      "code": "/masterclass",
+      "type": "command",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Gives a deep, expert-level lesson on any topic.",
+      "descriptionEs": "Ofrece una clase magistral profunda de nivel experto con fundamentos, matices y casos límite.",
+      "example": "/masterclass Gestión de concurrencia y aislamiento de transacciones ACID en PostgreSQL bajo alta carga.",
+      "tags": [
+        "masterclass",
+        "experto",
+        "avanzado",
+        "leccion",
+        "profundo"
+      ]
+    },
+    {
+      "id": "gem-teachback",
+      "code": "TEACHBACK",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Asks you to explain it back to check if you actually understand.",
+      "descriptionEs": "Te formula preguntas clave y te pide explicarle el concepto con tus propias palabras para validar tu dominio.",
+      "example": "TEACHBACK Explícame el concepto de Inyección de Dependencias y luego ponme a prueba haciéndome 3 preguntas situacionales.",
+      "tags": [
+        "teachback",
+        "evaluacion",
+        "retencion",
+        "preguntas",
+        "aprendizaje activo"
+      ]
+    },
+    {
+      "id": "gem-visualize",
+      "code": "VISUALIZE",
+      "type": "directive",
+      "category": "explanation",
+      "categoryLabel": "Explanation & Learning",
+      "description": "Describes a concept as a mental image or diagram you can picture.",
+      "descriptionEs": "Describe el concepto visualmente como una imagen mental, esquema mental o diagrama de bloques intuitivo.",
+      "example": "VISUALIZE Describe mentalmente el flujo de datos del protocolo TCP Handshake de 3 vías.",
+      "tags": [
+        "visualize",
+        "diagrama mental",
+        "imagen",
+        "flujo",
+        "visual"
+      ]
+    },
+    {
+      "id": "gem-compare",
+      "code": "/compare",
+      "type": "command",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Puts any set of options side by side with a detailed breakdown.",
+      "descriptionEs": "Compara opciones cara a cara con una tabla desglosada de fortalezas, debilidades y veredicto.",
+      "example": "/compare Supabase vs Firebase para una aplicación móvil con 50,000 usuarios proyectados.",
+      "tags": [
+        "compare",
+        "comparativa",
+        "pros y contras",
+        "decision",
+        "benchmarks"
+      ]
+    },
+    {
+      "id": "gem-funnelmap",
+      "code": "FUNNELMAP",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Maps out each stage of a process and where things drop off.",
+      "descriptionEs": "Traza cada etapa de un embudo o proceso señalando los puntos de fuga y fricción donde se pierden usuarios.",
+      "example": "FUNNELMAP Mapea el proceso de onboarding de un SaaS B2B e identifica las 3 fugas más habituales.",
+      "tags": [
+        "funnelmap",
+        "embudo",
+        "conversion",
+        "onboarding",
+        "friccion"
+      ]
+    },
+    {
+      "id": "gem-audit",
+      "code": "/audit",
+      "type": "command",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Reviews something thoroughly and flags every issue it finds.",
+      "descriptionEs": "Audita exhaustivamente un documento, plan o código señalando cada falla, omisión y riesgo detectado.",
+      "example": "/audit Audita esta política de privacidad web respecto al cumplimiento con el RGPD y enumera infracciones: [texto]",
+      "tags": [
+        "audit",
+        "auditoria",
+        "revision",
+        "riesgos",
+        "cumplimiento"
+      ]
+    },
+    {
+      "id": "gem-blindspot",
+      "code": "BLINDSPOT",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Identifies what you are overlooking or not considering.",
+      "descriptionEs": "Señala los puntos ciegos, suposiciones no cuestionadas y variables críticas que estás pasando por alto.",
+      "example": "BLINDSPOT Vamos a lanzar una suscripción mensual en lugar de pago único. ¿Cuáles son nuestros puntos ciegos?",
+      "tags": [
+        "blindspot",
+        "puntos ciegos",
+        "sesgos",
+        "riesgo oculto",
+        "estrategia"
+      ]
+    },
+    {
+      "id": "gem-gameboard",
+      "code": "GAMEBOARD",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Maps the key players, moves, and dynamics in a competitive situation.",
+      "descriptionEs": "Mapea los actores clave, incentivos, jugadas posibles y dinámicas de poder en un escenario competitivo.",
+      "example": "GAMEBOARD Analiza el tablero competitivo entre OpenAI, Anthropic y Google en el mercado de modelos empresariales.",
+      "tags": [
+        "gameboard",
+        "teoria de juegos",
+        "competencia",
+        "mercado",
+        "actores"
+      ]
+    },
+    {
+      "id": "gem-forecast",
+      "code": "/forecast",
+      "type": "command",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Projects likely outcomes based on current trends and data.",
+      "descriptionEs": "Proyecta escenarios probables y tendencias futuras sustentadas en datos actuales y patrones de mercado.",
+      "example": "/forecast ¿Cómo impactará la adopción masiva de modelos de razonamiento (o1, R1) en el mercado laboral junior de software?",
+      "tags": [
+        "forecast",
+        "prediccion",
+        "proyeccion",
+        "tendencias",
+        "futuro"
+      ]
+    },
+    {
+      "id": "gem-leverage",
+      "code": "LEVERAGE",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Finds the single highest-impact move you can make right now.",
+      "descriptionEs": "Identifica la única acción de máximo apalancamiento que generará el 80% de los resultados con el menor esfuerzo.",
+      "example": "LEVERAGE Mi ecommerce tiene buen tráfico pero una tasa de conversión del 0.8%. ¿Cuál es la palanca número 1 a mover?",
+      "tags": [
+        "leverage",
+        "apalancamiento",
+        "pareto 80/20",
+        "alto impacto",
+        "prioridad"
+      ]
+    },
+    {
+      "id": "gem-battlecard",
+      "code": "BATTLECARD",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Creates a competitive comparison sheet against a specific rival.",
+      "descriptionEs": "Genera una ficha táctica de batalla comercial (Battlecard) con argumentos para vencer a un rival directo.",
+      "example": "BATTLECARD Crea una battlecard de ventas para posicionar Notion vs Monday.com ante un cliente corporativo.",
+      "tags": [
+        "battlecard",
+        "ventas",
+        "diferenciacion",
+        "competidores",
+        "posicionamiento"
+      ]
+    },
+    {
+      "id": "gem-diagnose",
+      "code": "/diagnose",
+      "type": "command",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Identifies the root cause of a problem instead of just the symptoms.",
+      "descriptionEs": "Diagnostica la causa raíz estructural de un problema en lugar de limitarse a describir los síntomas superficiales.",
+      "example": "/diagnose Nuestro equipo de ingeniería entrega tarde en cada sprint a pesar de hacer horas extras. Diagnostica la causa raíz.",
+      "tags": [
+        "diagnose",
+        "causa raiz",
+        "diagnostico",
+        "problemas",
+        "analisis"
+      ]
+    },
+    {
+      "id": "gem-playbook",
+      "code": "PLAYBOOK",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Builds a step-by-step action plan for a specific goal.",
+      "descriptionEs": "Diseña un manual de operaciones y plan de acción táctico paso a paso para conseguir un objetivo concreto.",
+      "example": "PLAYBOOK Diseña un playbook para la gestión de crisis en redes sociales ante una fuga accidental de datos.",
+      "tags": [
+        "playbook",
+        "plan de accion",
+        "procedimiento",
+        "sop",
+        "operaciones"
+      ]
+    },
+    {
+      "id": "gem-costbenefit",
+      "code": "COSTBENEFIT",
+      "type": "directive",
+      "category": "analysis",
+      "categoryLabel": "Analysis & Strategy",
+      "description": "Weighs the upside against the downside of any decision.",
+      "descriptionEs": "Pesa rigurosamente los beneficios esperados frente a costos directos, costos ocultos y riesgos de una decisión.",
+      "example": "COSTBENEFIT Evalúa migrar una infraestructura monolítica en AWS EC2 hacia una arquitectura Serverless en Lambda.",
+      "tags": [
+        "costbenefit",
+        "costo beneficio",
+        "roi",
+        "pros y contras",
+        "decision"
+      ]
+    },
+    {
+      "id": "gem-future",
+      "code": "future",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Projects your situation forward in time and predicts the likely outcome.",
+      "descriptionEs": "Proyecta tu situación actual hacia el futuro a 1, 3 y 5 años prediciendo desenlaces probables.",
+      "example": "future Si mantengo mi ritmo actual de gasto de marketing en anuncios de Meta sin diversificar canales, ¿qué pasará en 24 meses?",
+      "tags": [
+        "future",
+        "futuro",
+        "proyeccion",
+        "consecuencias",
+        "tiempo"
+      ]
+    },
+    {
+      "id": "gem-whatif",
+      "code": "WHATIF",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Explores an alternate scenario and plays out what would happen.",
+      "descriptionEs": "Explora un escenario contrafactual alternativo ('¿Qué pasaría si...?') y describe sus repercusiones completas.",
+      "example": "WHATIF ¿Qué pasaría si Apple decidiera hacer su propio buscador nativo y retirara a Google como motor por defecto en Safari?",
+      "tags": [
+        "whatif",
+        "escenarios",
+        "alternativas",
+        "hipotesis",
+        "creatividad"
+      ]
+    },
+    {
+      "id": "gem-scenarioplay",
+      "code": "SCENARIOPLAY",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Simulates a real situation with variables you can change.",
+      "descriptionEs": "Simula interactivamente una situación real permitiéndote variar parámetros y observar las reacciones.",
+      "example": "SCENARIOPLAY Simula una negociación salarial conmigo. Tú eres un jefe duro pero justo. Empieza saludándome.",
+      "tags": [
+        "scenarioplay",
+        "simulacion",
+        "roleplay",
+        "negociacion",
+        "variables"
+      ]
+    },
+    {
+      "id": "gem-angle",
+      "code": "/angle",
+      "type": "command",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Finds a fresh or unexpected perspective on a familiar topic.",
+      "descriptionEs": "Descubre un ángulo o perspectiva fresca, provocativa e innovadora sobre un tema tradicionalmente monótono.",
+      "example": "/angle Encuentra 3 ángulos inesperados para hablar sobre 'Ahorro para el retiro' dirigidos a la Generación Z.",
+      "tags": [
+        "angle",
+        "angulo",
+        "perspectiva",
+        "novedad",
+        "gancho"
+      ]
+    },
+    {
+      "id": "gem-captiongen",
+      "code": "CAPTIONGEN",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Generates social media captions ready to copy and paste.",
+      "descriptionEs": "Genera copys y textos para publicaciones en redes sociales listos para copiar, pegar y publicar.",
+      "example": "CAPTIONGEN Genera 3 captions de Instagram para anunciar el relanzamiento de nuestra marca de café de especialidad.",
+      "tags": [
+        "captiongen",
+        "copy redes",
+        "instagram",
+        "linkedin",
+        "social media"
+      ]
+    },
+    {
+      "id": "gem-headlinegen",
+      "code": "HEADLINEGEN",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Creates multiple headline options ranked by impact.",
+      "descriptionEs": "Genera múltiples alternativas de titulares ordenadas por su potencial de impacto y tasa de clics (CTR).",
+      "example": "HEADLINEGEN Genera 10 titulares clasificados por impacto para un post sobre 'Cómo automatizar tus finanzas personales'.",
+      "tags": [
+        "headlinegen",
+        "titulares",
+        "headlines",
+        "click through",
+        "impacto"
+      ]
+    },
+    {
+      "id": "gem-adspin",
+      "code": "/adspin",
+      "type": "command",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Rewrites a message as a short, punchy ad.",
+      "descriptionEs": "Transforma un mensaje o comunicado formal en un anuncio publicitario directo, persuasivo y comercial.",
+      "example": "/adspin Convierte este párrafo sobre nuestra herramienta de facturación en un copy de anuncio publicitario para Meta Ads: [texto]",
+      "tags": [
+        "adspin",
+        "anuncio",
+        "publicidad",
+        "ads",
+        "copywriting"
+      ]
+    },
+    {
+      "id": "gem-viraltest",
+      "code": "VIRALTEST",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Scores an idea on its likelihood of getting shared.",
+      "descriptionEs": "Evalúa y puntúa una idea de 1 a 100 según su probabilidad de volverse viral y compartirse en redes.",
+      "example": "VIRALTEST Evalúa esta idea para un reto en TikTok: 'Vivir 7 días sin usar plásticos de un solo uso grabando el diario'.",
+      "tags": [
+        "viraltest",
+        "viralidad",
+        "compartir",
+        "redes",
+        "engagement"
+      ]
+    },
+    {
+      "id": "gem-repurpose",
+      "code": "REPURPOSE",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Takes one piece of content and turns it into five different formats.",
+      "descriptionEs": "Toma una sola pieza de contenido matriz y la convierte en 5 formatos distintos (hilo, carrusel, email, reel, post).",
+      "example": "REPURPOSE Toma este extracto de podcast y crea: 1 tweet, 1 post de LinkedIn, 1 guion corto de TikTok y 1 newsletter: [texto]",
+      "tags": [
+        "repurpose",
+        "reutilizar",
+        "formatos",
+        "omnicanal",
+        "contenido"
+      ]
+    },
+    {
+      "id": "gem-mashup",
+      "code": "/mashup",
+      "type": "command",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Combines two unrelated ideas into something new.",
+      "descriptionEs": "Fusiona dos conceptos o industrias aparentemente sin relación para dar a luz una propuesta innovadora.",
+      "example": "/mashup Combina la disciplina del entrenamiento de Jiu-Jitsu con la gestión de proyectos de desarrollo de software.",
+      "tags": [
+        "mashup",
+        "fusion",
+        "innovacion",
+        "creatividad",
+        "combinar"
+      ]
+    },
+    {
+      "id": "gem-plottwist",
+      "code": "PLOTTWIST",
+      "type": "directive",
+      "category": "creative",
+      "categoryLabel": "Creative & Content",
+      "description": "Adds an unexpected turn or reversal to any idea or story.",
+      "descriptionEs": "Añade un giro dramático inesperado o una inversión sorpresiva a una narrativa, historia o argumento.",
+      "example": "PLOTTWIST Desarrolla un giro de trama inesperado para un relato sobre un detective que investiga una IA supuestamente defectuosa.",
+      "tags": [
+        "plottwist",
+        "giro de guion",
+        "sorpresa",
+        "narrativa",
+        "storytelling"
+      ]
+    },
+    {
+      "id": "gem-inversion",
+      "code": "INVERSION",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Flips a problem upside down and solves it from the opposite direction.",
+      "descriptionEs": "Invierte el problema por completo: en lugar de buscar cómo triunfar, analiza cómo asegurar un fracaso estrepitoso.",
+      "example": "INVERSION ¿Cómo podríamos garantizar el fracaso total de la adopción de una nueva herramienta interna en la empresa?",
+      "tags": [
+        "inversion",
+        "pensamiento inverso",
+        "charlie munger",
+        "estrategia"
+      ]
+    },
+    {
+      "id": "gem-premortem",
+      "code": "PREMORTEM",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Imagines a plan already failed and works backward to find why.",
+      "descriptionEs": "Imagina que nos encontramos en el futuro y el proyecto ha sido una catástrofe total; deduce retrospectivamente qué falló.",
+      "example": "PREMORTEM Es 2027 y nuestra startup de SaaS ha quebrado. Haz un análisis post-mortem detallado de qué salió mal.",
+      "tags": [
+        "premortem",
+        "mitigacion de riesgos",
+        "analisis de fallos",
+        "planificacion"
+      ]
+    },
+    {
+      "id": "gem-stakeholders",
+      "code": "/stakeholders",
+      "type": "command",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Identifies everyone affected by a decision and what they care about.",
+      "descriptionEs": "Mapea a todas las partes interesadas (stakeholders) afectadas por una decisión y cuáles son sus incentivos y miedos.",
+      "example": "/stakeholders Mapea a los afectados por volver al modelo 100% presencial en una tecnológica de 500 personas.",
+      "tags": [
+        "stakeholders",
+        "partes interesadas",
+        "incentivos",
+        "cultura",
+        "politica"
+      ]
+    },
+    {
+      "id": "gem-rootcause",
+      "code": "ROOTCAUSE",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Drills down past the surface to find the real source of a problem.",
+      "descriptionEs": "Aplica la metodología de los 5 Porqués para perforar los síntomas superficiales y hallar el origen raíz.",
+      "example": "ROOTCAUSE El equipo de ventas no está utilizando el nuevo CRM. Aplica los 5 Porqués para encontrar la causa raíz.",
+      "tags": [
+        "rootcause",
+        "5 porques",
+        "causa fundamental",
+        "resolucion de problemas"
+      ]
+    },
+    {
+      "id": "gem-domino",
+      "code": "DOMINO",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Maps the chain reaction of consequences from a single action.",
+      "descriptionEs": "Traza el efecto dominó y las consecuencias de segundo y tercer orden derivadas de una única decisión.",
+      "example": "DOMINO Mapea la reacción en cadena de consecuencias de segundo y tercer orden si aumentamos nuestros precios un 30%.",
+      "tags": [
+        "domino",
+        "efecto domino",
+        "segundo orden",
+        "consecuencias",
+        "impacto"
+      ]
+    },
+    {
+      "id": "gem-thinktank",
+      "code": "THINKTANK",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Generates multiple expert perspectives on a single question.",
+      "descriptionEs": "Convoca una mesa redonda simulada con 4 expertos de disciplinas disímiles para debatir una misma pregunta.",
+      "example": "THINKTANK Debate sobre la renta básica universal desde las ópticas de: un economista austriaco, una socióloga, un tecnólogo y un filósofo ético.",
+      "tags": [
+        "thinktank",
+        "debate",
+        "expertos",
+        "multiples perspectivas",
+        "filosofia"
+      ]
+    },
+    {
+      "id": "gem-contrarian",
+      "code": "CONTRARIAN",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Argues the opposite of the popular opinion with full conviction.",
+      "descriptionEs": "Argumenta con rigor y convicción absoluta la postura opuesta a la opinión mayoritaria o consenso general.",
+      "example": "CONTRARIAN Defiende con argumentos sólidos la postura contraria a la creencia de que 'el trabajo remoto es más productivo para todos'.",
+      "tags": [
+        "contrarian",
+        "abogado del diablo",
+        "debate",
+        "pensamiento critico"
+      ]
+    },
+    {
+      "id": "gem-constraints",
+      "code": "CONSTRAINTS",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Solves a problem within specific limits you set.",
+      "descriptionEs": "Obliga a resolver el dilema respetando restricciones extremas (ej. cero presupuesto, 48 horas o una persona).",
+      "example": "CONSTRAINTS Diseña un plan para validar la demanda de un nuevo producto con un presupuesto máximo de $50 USD y 5 días de plazo.",
+      "tags": [
+        "constraints",
+        "restricciones",
+        "creatividad forzada",
+        "presupuesto"
+      ]
+    },
+    {
+      "id": "gem-tradeoffs",
+      "code": "TRADEOFFS",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Lays out exactly what you gain and lose with each option.",
+      "descriptionEs": "Desglosa explícitamente los compromisos y renuncias (trade-offs): qué ganas y qué estás sacrificando con cada opción.",
+      "example": "TRADEOFFS Analiza los trade-offs de elegir TypeScript estricto frente a JavaScript puro en un prototipo inicial.",
+      "tags": [
+        "tradeoffs",
+        "costo de oportunidad",
+        "renuncias",
+        "decisiones"
+      ]
+    },
+    {
+      "id": "gem-frameit",
+      "code": "FRAMEIT",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Restates a problem in a new way that makes the answer clearer.",
+      "descriptionEs": "Reformula la pregunta inicial con un encuadre (framing) distinto que hace la solución evidente.",
+      "example": "FRAMEIT En lugar de '¿Cómo hacemos que los empleados lean nuestros manuales?', reformula el problema desde la raíz.",
+      "tags": [
+        "frameit",
+        "reencuadre",
+        "reframing",
+        "claridad",
+        "enfoque"
+      ]
+    },
+    {
+      "id": "gem-blindtest",
+      "code": "BLINDTEST",
+      "type": "directive",
+      "category": "thinking",
+      "categoryLabel": "Thinking & Reasoning",
+      "description": "Removes labels and bias so you can evaluate options on merit alone.",
+      "descriptionEs": "Despoja a las alternativas de marcas, sesgos o etiquetas evaluando las propuestas puramente por su mérito intrínseco.",
+      "example": "BLINDTEST Presenta y evalúa dos candidatos para el puesto de CTO como 'Opción A' y 'Opción B' despojándolos de nombres y marcas de prestigio.",
+      "tags": [
+        "blindtest",
+        "prueba a ciegas",
+        "sin sesgos",
+        "objetividad",
+        "merito"
+      ]
+    },
+    {
+      "id": "gem-snapshot",
+      "code": "SNAPSHOT",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Gives a quick, high-level overview in under 50 words.",
+      "descriptionEs": "Genera una síntesis ultracompacta de alto nivel en menos de 50 palabras exactas.",
+      "example": "SNAPSHOT Resume la crisis financiera de 2008 y sus lecciones fundamentales en menos de 50 palabras.",
+      "tags": [
+        "snapshot",
+        "ultracorto",
+        "50 palabras",
+        "resumen rapido"
+      ]
+    },
+    {
+      "id": "gem-matrix",
+      "code": "MATRIX",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Organizes options into a grid with scored criteria.",
+      "descriptionEs": "Estructura las alternativas en una matriz tabular con criterios ponderados y calificaciones del 1 al 10.",
+      "example": "MATRIX Crea una matriz comparativa con criterios ponderados entre React, Vue y Svelte para un proyecto a 5 años.",
+      "tags": [
+        "matrix",
+        "matriz de decision",
+        "tabla",
+        "ponderacion",
+        "criterios"
+      ]
+    },
+    {
+      "id": "gem-scorecard",
+      "code": "SCORECARD",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Rates each option on multiple factors with a final score.",
+      "descriptionEs": "Califica cada opción evaluando múltiples factores críticos con un puntaje final consolidado.",
+      "example": "SCORECARD Evalúa el rendimiento de nuestra landing page según: Claridad, Velocidad, Propuesta de Valor y Fricción.",
+      "tags": [
+        "scorecard",
+        "evaluacion",
+        "puntajes",
+        "tarjeta de calificacion"
+      ]
+    },
+    {
+      "id": "gem-dashboard",
+      "code": "DASHBOARD",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Summarizes key metrics and status indicators in one view.",
+      "descriptionEs": "Simula un panel de control con métricas clave, indicadores de estado (KPIs) y señales de alerta.",
+      "example": "DASHBOARD Crea una vista de dashboard semanal para el CEO de una empresa de comercio electrónico.",
+      "tags": [
+        "dashboard",
+        "metricas",
+        "kpis",
+        "panel de control",
+        "indicadores"
+      ]
+    },
+    {
+      "id": "gem-briefing",
+      "code": "BRIEFING",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Formats the response as a short executive brief.",
+      "descriptionEs": "Formatea la respuesta bajo la estructura estricta de un informe ejecutivo para directores (Briefing).",
+      "example": "BRIEFING Prepara un informe ejecutivo sobre el impacto de la nueva legislación tributaria en nuestra empresa.",
+      "tags": [
+        "briefing",
+        "ejecutivo",
+        "resumen directivo",
+        "memorandum"
+      ]
+    },
+    {
+      "id": "gem-onesheet",
+      "code": "ONESHEET",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Compresses everything into a single-page reference sheet.",
+      "descriptionEs": "Comprime todos los aspectos de un tema en una hoja de referencia de una sola plana con secciones visuales.",
+      "example": "ONESHEET Todo lo necesario para dominar expresiones regulares (RegEx) en una hoja de consulta rápida.",
+      "tags": [
+        "onesheet",
+        "hoja de trucos",
+        "referencia",
+        "sintesis"
+      ]
+    },
+    {
+      "id": "gem-actionplan",
+      "code": "ACTIONPLAN",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Turns the answer into a prioritized list of next steps with owners.",
+      "descriptionEs": "Traduce la respuesta en una lista de próximos pasos secuenciados por prioridad, con responsables y plazos.",
+      "example": "ACTIONPLAN Transforma las conclusiones de esta reunión de producto en un plan de acción para los próximos 14 días.",
+      "tags": [
+        "actionplan",
+        "plan de accion",
+        "pasos siguientes",
+        "responsables",
+        "plazos"
+      ]
+    },
+    {
+      "id": "gem-cheatsheet",
+      "code": "CHEATSHEET",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Creates a quick-reference guide you can save and reuse.",
+      "descriptionEs": "Crea una guía de referencia rápida tipo acordeón con atajos y comandos lista para guardar y reutilizar.",
+      "example": "CHEATSHEET Comandos esenciales de Docker y Docker Compose para desarrollo diario.",
+      "tags": [
+        "cheatsheet",
+        "acordeon",
+        "comandos",
+        "atajos",
+        "referencia rapida"
+      ]
+    },
+    {
+      "id": "gem-catalog",
+      "code": "CATALOG",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Organizes items into a structured, browsable list with details.",
+      "descriptionEs": "Organiza elementos en un catálogo estructurado, navegable e indexado con especificaciones técnicas.",
+      "example": "CATALOG Catálogo de patrones de diseño de software GoF clasificados por Creacionales, Estructurales y de Comportamiento.",
+      "tags": [
+        "catalog",
+        "catalogo",
+        "inventario",
+        "lista estructurada"
+      ]
+    },
+    {
+      "id": "gem-wireframe",
+      "code": "/wireframe",
+      "type": "command",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Describes a page or screen layout in structured sections.",
+      "descriptionEs": "Describe en detalle el diseño visual, componentes y arquitectura de bloques de una pantalla o página web.",
+      "example": "/wireframe Diseña el esquema y distribución de secciones para la página de Checkout de una tienda online moderna.",
+      "tags": [
+        "wireframe",
+        "ui",
+        "ux",
+        "maqueta",
+        "pantallas",
+        "layout"
+      ]
+    },
+    {
+      "id": "gem-canvas",
+      "code": "CANVAS",
+      "type": "directive",
+      "category": "formatting",
+      "categoryLabel": "Formatting & Output",
+      "description": "Opens the response in a side panel you can edit and export.",
+      "descriptionEs": "Activa el modo de documento Canvas en el panel lateral de Gemini para edición directa, formateo y exportación.",
+      "example": "CANVAS Redacta un contrato de prestación de servicios de consultoría informática listo para editar y descargar.",
+      "tags": [
+        "canvas",
+        "panel lateral",
+        "documento",
+        "editor",
+        "exportar"
+      ]
+    },
+    {
+      "id": "gem-persona",
+      "code": "/persona",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Makes Gemini respond as a specific type of expert or character.",
+      "descriptionEs": "Ordena a Gemini asumir la personalidad, conocimiento profundo y sesgos de un experto o personaje definido.",
+      "example": "/persona Experto en Seguridad Ofensiva con 15 años de experiencia. Examina la siguiente configuración de Nginx: [conf]",
+      "tags": [
+        "persona",
+        "rol",
+        "experto",
+        "personaje",
+        "comportamiento"
+      ]
+    },
+    {
+      "id": "gem-template",
+      "code": "/template",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Generates a reusable template for any type of document or message.",
+      "descriptionEs": "Genera una plantilla modular y reutilizable con corchetes de reemplazo para cualquier tipo de comunicación.",
+      "example": "/template Crea una plantilla para anunciar a los clientes un mantenimiento programado con corte de servicio.",
+      "tags": [
+        "template",
+        "plantilla",
+        "reutilizable",
+        "variables",
+        "formato"
+      ]
+    },
+    {
+      "id": "gem-chain",
+      "code": "/chain",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Links multiple instructions together so they run in sequence.",
+      "descriptionEs": "Encadena múltiples instrucciones secuenciales ejecutando la segunda sobre la salida exacta de la primera.",
+      "example": "/chain 1. Extrae los argumentos principales de este texto. 2. Encuentra contraargumentos a cada uno. 3. Redacta una refutación.",
+      "tags": [
+        "chain",
+        "cadena de instrucciones",
+        "secuencia",
+        "pipeline",
+        "paso a paso"
+      ]
+    },
+    {
+      "id": "gem-split",
+      "code": "/split",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Breaks a long response into smaller, numbered sections.",
+      "descriptionEs": "Fracciona respuestas extensas en entregas numeradas, autónomas y fáciles de digerir.",
+      "example": "/split Explica la arquitectura de Microservicios dividiendo la respuesta en 4 módulos breves y autónomos.",
+      "tags": [
+        "split",
+        "dividir",
+        "secciones",
+        "fraccionar",
+        "paso a paso"
+      ]
+    },
+    {
+      "id": "gem-extract",
+      "code": "/extract",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Pulls specific data points out of a block of text.",
+      "descriptionEs": "Extrae de forma quirúrgica entidades, fechas, montos o parámetros específicos de un texto extenso a JSON.",
+      "example": "/extract Extrae todas las fechas, montos monetarios y nombres de empresas del siguiente correo en formato JSON: [texto]",
+      "tags": [
+        "extract",
+        "extraccion",
+        "entidades",
+        "json",
+        "datos estructurados"
+      ]
+    },
+    {
+      "id": "gem-track",
+      "code": "/track",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Sets up a structured way to monitor changes or progress over time.",
+      "descriptionEs": "Configura un registro estructurado con marcas de tiempo para monitorear evolución y progresos a lo largo del tiempo.",
+      "example": "/track Crea un sistema de seguimiento semanal para registrar el progreso de pérdida de grasa corporal y fuerza.",
+      "tags": [
+        "track",
+        "seguimiento",
+        "progreso",
+        "evolucion",
+        "monitoreo"
+      ]
+    },
+    {
+      "id": "gem-batch",
+      "code": "/batch",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Processes multiple items at once instead of one at a time.",
+      "descriptionEs": "Procesa en lote múltiples elementos simultáneamente aplicando la misma regla a cada uno.",
+      "example": "/batch Toma esta lista de 10 títulos de artículos y genera una meta-descripción SEO de 140 caracteres para cada uno: [lista]",
+      "tags": [
+        "batch",
+        "lotes",
+        "masivo",
+        "automatizacion",
+        "eficiencia"
+      ]
+    },
+    {
+      "id": "gem-gemify",
+      "code": "/gemify",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Rewrites a prompt to get better results specifically from Gemini.",
+      "descriptionEs": "Reescribe y optimiza cualquier instrucción para aprovechar al máximo las fortalezas cognitivas de Gemini.",
+      "example": "/gemify Optimiza el siguiente prompt básico para que Gemini proporcione un análisis exhaustivo: 'Escribe sobre el cambio climático'",
+      "tags": [
+        "gemify",
+        "optimizar prompt",
+        "gemini",
+        "meta prompt",
+        "rendimiento"
+      ]
+    },
+    {
+      "id": "gem-lingua",
+      "code": "/lingua",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Responds in any language you specify.",
+      "descriptionEs": "Fuerza la respuesta en el idioma, dialecto o registro idiomático específico que indiques.",
+      "example": "/lingua Alemán formal de negocios (Sie). Traduce y adapta esta propuesta comercial para una junta directiva en Múnich.",
+      "tags": [
+        "lingua",
+        "idiomas",
+        "traduccion",
+        "localizacion",
+        "dialecto"
+      ]
+    },
+    {
+      "id": "gem-contextdump",
+      "code": "/contextdump",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Shows everything Gemini currently knows about your conversation.",
+      "descriptionEs": "Muestra un vaciado de contexto con todas las instrucciones, variables y recuerdos que Gemini retiene en la sesión actual.",
+      "example": "/contextdump Resume todo lo que has asumido, aprendido y guardado sobre mi perfil y requerimientos en este chat.",
+      "tags": [
+        "contextdump",
+        "memoria",
+        "contexto",
+        "sesion",
+        "depuracion"
+      ]
+    },
+    {
+      "id": "gem-memorize",
+      "code": "/memorize",
+      "type": "command",
+      "category": "utility",
+      "categoryLabel": "Utility & Power Commands",
+      "description": "Tells Gemini to remember a fact or preference for the rest of the chat.",
+      "descriptionEs": "Instruye a Gemini a fijar permanentemente en su memoria de chat una regla, dato o preferencia de estilo.",
+      "example": "/memorize Recuerda para siempre en este chat que soy desarrollador Senior en Go y PostgreSQL; no me expliques conceptos básicos.",
+      "tags": [
+        "memorize",
+        "memoria fija",
+        "preferencias",
+        "persistencia",
+        "reglas"
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "dev-web-init",
+      "title": "Creación de Proyecto Web Frontend + Git & README",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "code",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Mobile-First",
+        "Dark Mode",
+        "Git",
+        "README"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Crea sitios web modernos en HTML/JS/CSS con enfoque mobile-first, dark mode por defecto, README profesional para GitHub e inicialización de Git.",
+      "variables": [
+        {
+          "name": "PROPOSITO_SITIO",
+          "label": "Temática o Propósito del Sitio",
+          "placeholder": "ej. Catálogo de prompts interactivo"
+        },
+        {
+          "name": "REQUISITOS_ESTILO",
+          "label": "Estilo y UI",
+          "placeholder": "ej. Responsive, mobile-first y modo oscuro por defecto"
+        },
+        {
+          "name": "DOCUMENTACION",
+          "label": "Documentación y Git",
+          "placeholder": "ej. README completo con contexto y commit inicial"
+        }
+      ],
+      "template": "Vamos a crear un sitio web usando HTML, JS y CSS.\nPropósito y temática: [PROPOSITO_SITIO].\nRequisitos de diseño: [REQUISITOS_ESTILO].\nDocumentación y control de versiones: [DOCUMENTACION].\n\nInstrucciones detalladas de ejecución:\n1. Diseña una interfaz moderna con modo oscuro por defecto, arquitectura Mobile-First y total responsividad.\n2. Organiza el contenido en categorías claras con búsqueda y filtros interactivos.\n3. Genera un archivo README.md profesional que incluya: contexto del proyecto, badges, tabla de categorías y guía de uso.\n4. Inicializa el repositorio Git (git init) y realiza el commit inicial estructurado."
+    },
+    {
+      "id": "dev-01",
+      "title": "Revisor y Auditor de Código Senior",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "code",
+      "tags": [
+        "Code Review",
+        "Clean Code",
+        "Seguridad",
+        "Refactor"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Analiza código en busca de vulnerabilidades, cuellos de botella, violaciones SOLID y malas prácticas.",
+      "variables": [
+        {
+          "name": "LENGUAJE",
+          "label": "Lenguaje o Framework",
+          "placeholder": "ej. TypeScript / Node.js"
+        },
+        {
+          "name": "ENFOQUE",
+          "label": "Enfoque Principal",
+          "placeholder": "ej. Rendimiento y Seguridad"
+        },
+        {
+          "name": "CODIGO",
+          "label": "Fragmento de Código",
+          "placeholder": "Pega aquí tu código...",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como un Ingeniero de Software Principal y Auditor de Seguridad en [LENGUAJE]. Realiza una revisión exhaustiva del siguiente código priorizando [ENFOQUE]:\n```\n[CODIGO]\n```\nEstructura tu análisis en:\n1. Evaluación General y Resumen Ejecutivo.\n2. Vulnerabilidades y Riesgos Críticos (fugas de memoria, inyecciones, race conditions).\n3. Optimización y Rendimiento (análisis Big O).\n4. Principios SOLID & Clean Code.\n5. Código Refactorizado listo para producción."
+    },
+    {
+      "id": "dev-02",
+      "title": "Generador de Tests Unitarios e Integración",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "bug",
+      "tags": [
+        "Testing",
+        "Jest",
+        "PyTest",
+        "TDD",
+        "Edge Cases"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Genera suites de pruebas exhaustivas cubriendo casos límite, mocks y aserciones rigurosas.",
+      "variables": [
+        {
+          "name": "FRAMEWORK_TEST",
+          "label": "Framework de Pruebas",
+          "placeholder": "ej. Vitest / Jest / PyTest"
+        },
+        {
+          "name": "FUNCION_O_MODULO",
+          "label": "Código a Testear",
+          "placeholder": "Pega el código...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Especialista en QA y Automatización. Escribe una suite completa de pruebas usando [FRAMEWORK_TEST] para el siguiente código:\n```\n[FUNCION_O_MODULO]\n```\nRequisitos:\n- Cobertura de Happy Path, Error Handling y Edge Cases extremos.\n- Mocks para servicios externos y dependencias.\n- Nomenclatura descriptiva siguiendo el patrón Given-When-Then o AAA."
+    },
+    {
+      "id": "dev-03",
+      "title": "Arquitecto de Sistemas & Diagrama Mermaid",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "server",
+      "tags": [
+        "Arquitectura",
+        "Cloud",
+        "Microservicios",
+        "Mermaid"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña arquitecturas escalables y genera diagramas Mermaid listos para documentación.",
+      "variables": [
+        {
+          "name": "SISTEMA",
+          "label": "Tipo de Sistema",
+          "placeholder": "ej. Plataforma de Streaming de Video en Vivo"
+        },
+        {
+          "name": "ESCALABILIDAD",
+          "label": "Carga Esperada",
+          "placeholder": "ej. 500k usuarios concurrentes, 10k req/s"
+        },
+        {
+          "name": "RESTRICCIONES",
+          "label": "Stack Cloud / Presupuesto",
+          "placeholder": "ej. AWS, Kubernetes, Postgres, Redis"
+        }
+      ],
+      "template": "Actúa como Arquitecto Cloud Staff. Diseña la arquitectura para: [SISTEMA].\nCarga: [ESCALABILIDAD]. Stack: [RESTRICCIONES].\nEntrega:\n1. Arquitectura de capas (API Gateway, Caching, Event Bus, DB).\n2. Diagrama Mermaid completo en sintaxis 'mermaid'.\n3. Estrategia de particionamiento, consistencia y failover.\n4. Estimación de costes y trade-offs técnicos."
+    },
+    {
+      "id": "dev-04",
+      "title": "Optimizador de Consultas SQL y Modelado DB",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "database",
+      "tags": [
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "Indexación",
+        "Performance"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Desglosa consultas pesadas, propone índices estratégicos y reescribe queries para alta concurrencia.",
+      "variables": [
+        {
+          "name": "MOTOR_DB",
+          "label": "Motor de Base de Datos",
+          "placeholder": "ej. PostgreSQL 16"
+        },
+        {
+          "name": "TABLAS_SCHEMA",
+          "label": "Esquema de Tablas",
+          "placeholder": "ej. orders(id, user_id, amount, created_at)"
+        },
+        {
+          "name": "CONSULTA_SQL",
+          "label": "Consulta Lenta",
+          "placeholder": "Pega la consulta SQL...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un DBA y afinador de rendimiento SQL en [MOTOR_DB].\nEsquema:\n```sql\n[TABLAS_SCHEMA]\n```\nConsulta:\n```sql\n[CONSULTA_SQL]\n```\nRealiza:\n1. Identificación del cuello de botella y escaneos secuenciales.\n2. DDL de índices recomendados (índices compuestos/parciales).\n3. Consulta reescrita usando CTEs o Window Functions si optimizan el costo.\n4. Explicación de reducción del plan de ejecución."
+    },
+    {
+      "id": "dev-05",
+      "title": "Dockerizador & Pipeline CI/CD Multi-Etapa",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "terminal",
+      "tags": [
+        "Docker",
+        "DevOps",
+        "CI/CD",
+        "GitHub Actions"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea Dockerfiles multi-stage livianos y flujos de GitHub Actions para testing, linting y deploy.",
+      "variables": [
+        {
+          "name": "APP_STACK",
+          "label": "Stack de la Aplicación",
+          "placeholder": "ej. Node.js Fastify con Prisma ORM"
+        },
+        {
+          "name": "TARGET_CLOUD",
+          "label": "Destino de Despliegue",
+          "placeholder": "ej. AWS ECS / DigitalOcean Kubernetes / VPS"
+        }
+      ],
+      "template": "Eres un Ingeniero DevOps Senior. Para una aplicación [APP_STACK] destinada a [TARGET_CLOUD]:\n1. Escribe un 'Dockerfile' multi-stage con tamaño mínimo, usuario no-root y cache de capas optimizado.\n2. Escribe un archivo 'docker-compose.yml' para entorno de desarrollo local con live reload y servicios dependientes.\n3. Genera un pipeline '.github/workflows/deploy.yml' con validación de tests, escaneo de vulnerabilidades Trivy y build de imagen Docker."
+    },
+    {
+      "id": "dev-06",
+      "title": "Especialista en Migración y Refactor a TypeScript",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "code",
+      "tags": [
+        "TypeScript",
+        "JavaScript",
+        "Tipado",
+        "Refactor"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Convierte código JavaScript tradicional a TypeScript estricto con interfaces genéricas y type narrowing.",
+      "variables": [
+        {
+          "name": "JS_CODE",
+          "label": "Código JavaScript",
+          "placeholder": "Pega el código JavaScript a tipar...",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como un Experto en TypeScript Estricto. Transforma el siguiente código JS a TS sin usar 'any':\n```javascript\n[JS_CODE]\n```\nRequisitos:\n- Definir tipos e interfaces con Utility Types (Pick, Omit, Partial, Record).\n- Aplicar Discriminated Unions y Type Guards para manejo seguro de tipos.\n- Comentar los genéricos introducidos y tipar parámetros y retornos."
+    },
+    {
+      "id": "dev-07",
+      "title": "Generador de Expresiones Regulares (Regex) con Explicación",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "terminal",
+      "tags": [
+        "Regex",
+        "Validación",
+        "String",
+        "Parsing"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Diseña patrones regex ultra precisos con flags adecuadas, prevención de Catastrophic Backtracking y tests.",
+      "variables": [
+        {
+          "name": "PATRON_BUSCADO",
+          "label": "Patrón o Formato a Validar",
+          "placeholder": "ej. Validar contraseñas seguras con al menos 1 mayúscula, 1 número y 1 carácter especial"
+        },
+        {
+          "name": "EJEMPLOS_VALIDOS",
+          "label": "Ejemplos Válidos",
+          "placeholder": "ej. Admin#2026, Pass@Word1"
+        },
+        {
+          "name": "EJEMPLOS_INVALIDOS",
+          "label": "Ejemplos Inválidos",
+          "placeholder": "ej. password, Admin123"
+        }
+      ],
+      "template": "Eres un Especialista en Expresiones Regulares y Motores Regex.\nCrea una expresión regular para validar: [PATRON_BUSCADO].\nCasos válidos: [EJEMPLOS_VALIDOS].\nCasos inválidos: [EJEMPLOS_INVALIDOS].\nEntrega:\n1. Expresión regular final con flags (ej. /.../gmi).\n2. Desglose detallado bloque a bloque de cómo funciona.\n3. Comprobación de seguridad contra ReDoS (Denegación de servicio por Regex)."
+    },
+    {
+      "id": "dev-08",
+      "title": "Diseñador de API RESTful con Especificación OpenAPI/Swagger",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "server",
+      "tags": [
+        "API REST",
+        "OpenAPI",
+        "Swagger",
+        "Backend"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura endpoints RESTful limpios con códigos de estado HTTP correctos, payloads JSON y especificación YAML.",
+      "variables": [
+        {
+          "name": "RECURSO_DOMINIO",
+          "label": "Dominio o Entidad",
+          "placeholder": "ej. Sistema de Gestión de Suscripciones y Facturación"
+        }
+      ],
+      "template": "Eres un Arquitecto de APIs RESTful. Diseña la API completa para [RECURSO_DOMINIO].\nEntrega:\n1. Tabla de Endpoints (Método HTTP, Ruta, Parámetros, Códigos de Respuesta 200, 201, 400, 401, 404, 422).\n2. Estructura de respuestas estándar con paginación basada en cursores.\n3. Especificación en formato OpenAPI 3.0 (YAML) lista para Swagger UI."
+    },
+    {
+      "id": "dev-09",
+      "title": "Depurador Forense de Errores y Stack Traces",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "bug",
+      "tags": [
+        "Debug",
+        "Stack Trace",
+        "Troubleshooting",
+        "Logs"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Analiza trazas de error complejas, identifica la causa raíz y provee la solución exacta en código.",
+      "variables": [
+        {
+          "name": "STACK_TRACE",
+          "label": "Error y Stack Trace",
+          "placeholder": "Pega el log de error...",
+          "multiline": true
+        },
+        {
+          "name": "CONTEXTO_APP",
+          "label": "Contexto del Entorno",
+          "placeholder": "ej. Next.js 14 App Router en Vercel con Postgres"
+        }
+      ],
+      "template": "Actúa como un Ingeniero de Soporte Nivel 3 y Depuración de Sistemas.\nEntorno: [CONTEXTO_APP].\nLog / Stack Trace:\n```\n[STACK_TRACE]\n```\nProvee:\n1. Causa Raíz Fundamental en 2 oraciones claras.\n2. Por qué ocurrió (mecanismo del fallo).\n3. Corrección paso a paso con código antes/después.\n4. Medida preventiva para evitar regresiones."
+    },
+    {
+      "id": "dev-10",
+      "title": "Auditor de Accesibilidad Web (WCAG 2.2 AA)",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "code",
+      "tags": [
+        "a11y",
+        "WCAG",
+        "Accesibilidad",
+        "ARIA"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Audita componentes HTML/CSS en busca de problemas de contraste, lectores de pantalla y navegación por teclado.",
+      "variables": [
+        {
+          "name": "COMPONENTE_HTML",
+          "label": "HTML/CSS del Componente",
+          "placeholder": "Pega el marcado HTML/CSS...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Auditor Certificado en Accesibilidad Web WCAG 2.2 Nivel AA.\nAudita el siguiente marcado:\n```html\n[COMPONENTE_HTML]\n```\nEvalúa:\n1. Estructura semántica y roles ARIA necesarios.\n2. Manejo de foco por teclado (tabindex, enter, space, esc).\n3. Compatibilidad con lectores de pantalla.\n4. Código corregido y accesible 100%."
+    },
+    {
+      "id": "dev-11",
+      "title": "Generador de Scripts de Automatización Bash / PowerShell",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "terminal",
+      "tags": [
+        "Bash",
+        "PowerShell",
+        "Automatización",
+        "Scripts"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Crea scripts de consola robustos con manejo de errores, flags de entrada, logs y ayuda (--help).",
+      "variables": [
+        {
+          "name": "TAREA_AUTOMATIZAR",
+          "label": "Tarea a Realizar",
+          "placeholder": "ej. Backup de base de datos MySQL, comprimir en tar.gz y subir a S3 rotando backups de más de 30 días"
+        },
+        {
+          "name": "SHELL",
+          "label": "Entorno Shell",
+          "placeholder": "ej. Bash (Linux/macOS) o PowerShell 7 (Windows)"
+        }
+      ],
+      "template": "Eres un SysAdmin experto en scripting [SHELL]. Escribe un script profesional para: [TAREA_AUTOMATIZAR].\nEl script debe incluir:\n- Manejo estricto de errores (set -euo pipefail en bash / $ErrorActionPreference en PS).\n- Validación de argumentos y función de ayuda (--help).\n- Mensajes informativos con timestamps y colores.\n- Limpieza automática de archivos temporales (trap)."
+    },
+    {
+      "id": "dev-12",
+      "title": "Optimizador de Rendimiento Frontend & Core Web Vitals",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "zap",
+      "tags": [
+        "Core Web Vitals",
+        "LCP",
+        "CLS",
+        "Performance",
+        "Lighthouse"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estrategias concretas para maximizar puntuación de Lighthouse y mejorar LCP, FID, INP y CLS.",
+      "variables": [
+        {
+          "name": "PROBLEMA_PERF",
+          "label": "Síntomas o Métricas Actuales",
+          "placeholder": "ej. LCP de 4.2s por imágenes pesadas y CLS de 0.25 por banners dinámicos"
+        },
+        {
+          "name": "STACK_FE",
+          "label": "Stack Frontend",
+          "placeholder": "ej. React / Next.js / Vanilla JS"
+        }
+      ],
+      "template": "Actúa como un Ingeniero de Rendimiento Web Senior especializado en Core Web Vitals en [STACK_FE].\nDiagnóstico actual: [PROBLEMA_PERF].\nProporciona:\n1. Estrategia para reducir LCP por debajo de 1.5s (preloads, responsive images, font display).\n2. Solución para erradicar CLS a 0 (dimensiones de contenedores, skeleton loaders).\n3. Optimización de JavaScript execution (tree shaking, dynamic imports, web workers).\n4. Snippets de código listos para aplicar."
+    },
+    {
+      "id": "dev-13",
+      "title": "Modelador de Esquemas NoSQL (MongoDB / DynamoDB)",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "database",
+      "tags": [
+        "MongoDB",
+        "DynamoDB",
+        "NoSQL",
+        "Mongoose"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Diseña modelos de datos NoSQL eficientes aplicando patrones de embedding vs referencing y single-table design.",
+      "variables": [
+        {
+          "name": "CASO_USO_NOSQL",
+          "label": "Requerimientos de Negocio",
+          "placeholder": "ej. Red social de audio con millones de comentarios y likes en tiempo real"
+        },
+        {
+          "name": "MOTOR_NOSQL",
+          "label": "Motor NoSQL",
+          "placeholder": "ej. MongoDB o DynamoDB"
+        }
+      ],
+      "template": "Eres un Arquitecto de Datos NoSQL experto en [MOTOR_NOSQL].\nDiseña el esquema óptimo para: [CASO_USO_NOSQL].\nIncluye:\n1. Justificación de Incrustación (Embedding) vs. Referenciación (Referencing).\n2. Esquema en formato JSON / Mongoose Schema.\n3. Índices secundarios (GSI / Compound Indexes) para consultas frecuentes.\n4. Estrategia de sharding y crecimiento horizontal."
+    },
+    {
+      "id": "dev-14",
+      "title": "Ingeniero de Prompts para APIs de LLMs (LangChain / OpenAI SDK)",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "cpu",
+      "tags": [
+        "LLM",
+        "LangChain",
+        "OpenAI API",
+        "Python",
+        "RAG"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Escribe código de integración con LLMs con streaming, Structured Outputs (JSON Schema), function calling y retries.",
+      "variables": [
+        {
+          "name": "SDK_LENGUAJE",
+          "label": "SDK y Lenguaje",
+          "placeholder": "ej. OpenAI SDK en TypeScript / Node.js"
+        },
+        {
+          "name": "OBJETIVO_AGENTE",
+          "label": "Función del Agente",
+          "placeholder": "ej. Extraer datos estructurados de facturas en PDF y validar totales"
+        }
+      ],
+      "template": "Eres un Ingeniero de Software IA especializado en [SDK_LENGUAJE].\nImplementa una solución robusta para: [OBJETIVO_AGENTE].\nRequisitos de código:\n- Usar 'Structured Outputs' con Zod / Pydantic para garantizar JSON válido.\n- Manejo de fallos con backoff exponencial y timeouts.\n- Implementación con streaming de respuestas.\n- Logs estructurados de consumo de tokens."
+    },
+    {
+      "id": "dev-15",
+      "title": "Generador de Políticas de Seguridad Web (CSP, CORS, Headers)",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "server",
+      "tags": [
+        "Seguridad",
+        "CSP",
+        "CORS",
+        "Headers",
+        "OWASP"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Configura cabeceras HTTP de máxima seguridad para blindar aplicaciones contra XSS, Clickjacking y CSRF.",
+      "variables": [
+        {
+          "name": "FRAMEWORK_SERVER",
+          "label": "Servidor o Framework",
+          "placeholder": "ej. Nginx / Express / Next.js"
+        },
+        {
+          "name": "SERVICIOS_TERCEROS",
+          "label": "Dominios de Terceros Usados",
+          "placeholder": "ej. Google Analytics, Stripe, CDN de fuentes"
+        }
+      ],
+      "template": "Actúa como Especialista en Ciberseguridad Web OWASP.\nConfigura las cabeceras de seguridad para [FRAMEWORK_SERVER] considerando estos servicios externos: [SERVICIOS_TERCEROS].\nEntrega:\n1. Content-Security-Policy (CSP) estricto con nonces/hashes.\n2. Headers HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy y Permissions-Policy.\n3. Configuración CORS segura sin comodines abiertos (*)."
+    },
+    {
+      "id": "dev-16",
+      "title": "Diseñador de Algoritmos y Estructuras de Datos Avanzadas",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "code",
+      "tags": [
+        "Algoritmos",
+        "Estructuras de Datos",
+        "LeetCode",
+        "Optimización"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Resuelve problemas algorítmicos complejos con análisis paso a paso y la menor complejidad temporal/espacial.",
+      "variables": [
+        {
+          "name": "PROBLEMA_ALGORITMICO",
+          "label": "Descripción del Problema",
+          "placeholder": "ej. Encontrar el subarreglo contiguo con la suma máxima (Algoritmo de Kadane) con índices"
+        },
+        {
+          "name": "LENGUAJE_PREF",
+          "label": "Lenguaje",
+          "placeholder": "ej. Python 3 / TypeScript / Go"
+        }
+      ],
+      "template": "Eres un Campeón de Programación Competitiva y Profesor de Algoritmos.\nResuelve en [LENGUAJE_PREF]: [PROBLEMA_ALGORITMICO].\nProceso:\n1. Enfoque de Fuerza Bruta y por qué no es óptimo.\n2. Enfoque Óptimo con explicación intuitiva.\n3. Código limpio, documentado y tipado.\n4. Análisis riguroso de Big O en Tiempo y Espacio."
+    },
+    {
+      "id": "dev-17",
+      "title": "Especialista en GraphQL (Schema, Resolvers y N+1 Problem)",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "server",
+      "tags": [
+        "GraphQL",
+        "DataLoader",
+        "Apollo",
+        "Backend"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea esquemas GraphQL limpios, resolvers desacoplados y previene el problema N+1 mediante DataLoader.",
+      "variables": [
+        {
+          "name": "ENTIDADES_GQL",
+          "label": "Entidades y Relaciones",
+          "placeholder": "ej. Users -> Posts -> Comments"
+        },
+        {
+          "name": "STACK_GQL",
+          "label": "Stack GraphQL",
+          "placeholder": "ej. Node.js con Apollo Server y Prisma"
+        }
+      ],
+      "template": "Eres un Arquitecto GraphQL Staff en [STACK_GQL].\nPara las entidades [ENTIDADES_GQL]:\n1. Escribe el schema SDL (types, queries, mutations, subscriptions).\n2. Implementa los resolvers con manejo de autorización.\n3. Demuestra cómo resolver el problema N+1 usando DataLoader con batching y cache."
+    },
+    {
+      "id": "dev-18",
+      "title": "Auditor de Git & Resolución de Conflictos Complejos",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "terminal",
+      "tags": [
+        "Git",
+        "Rebase",
+        "Cherry-pick",
+        "Workflow"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Guía paso a paso para resolver rebases conflictivos, recuperar commits perdidos con git reflog o reescribir historial.",
+      "variables": [
+        {
+          "name": "PROBLEMA_GIT",
+          "label": "Escenario o Error en Git",
+          "placeholder": "ej. Hice commit en main por error y necesito mover los últimos 3 commits a una nueva rama y resetear main al remoto"
+        }
+      ],
+      "template": "Eres el Gurú de Git de la empresa.\nEscenario a solucionar: [PROBLEMA_GIT].\nEntrega:\n1. Diagnóstico seguro de la situación.\n2. Comandos exactos a ejecutar en la terminal paso a paso.\n3. Explicación de qué hace cada comando y cómo verificar con 'git log --graph'.\n4. Protocolo de emergencia por si algo sale mal (uso de git reflog)."
+    },
+    {
+      "id": "dev-19",
+      "title": "Especialista en Microfrontends & Arquitectura Modular",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "code",
+      "tags": [
+        "Microfrontends",
+        "Module Federation",
+        "Webpack",
+        "Vite"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña estrategias de microfrontends con Module Federation, aislamiento de estilos y comunicación entre apps.",
+      "variables": [
+        {
+          "name": "SISTEMA_MFE",
+          "label": "Caso de Uso y Dominios",
+          "placeholder": "ej. E-commerce con Checkout independiente, Catálogo y Dashboard de Usuario"
+        },
+        {
+          "name": "HERRAMIENTA_BUILD",
+          "label": "Herramienta de Build",
+          "placeholder": "ej. Vite con @originjs/vite-plugin-federation o Webpack 5"
+        }
+      ],
+      "template": "Actúa como Principal Frontend Architect.\nDiseña una arquitectura de Microfrontends para: [SISTEMA_MFE] usando [HERRAMIENTA_BUILD].\nProvee:\n1. Configuración del Host (Shell) y los Remotes.\n2. Estrategia de estado compartido y bus de eventos.\n3. Gestión de dependencias compartidas (singletons de React/Vue).\n4. CI/CD y despliegue independiente sin romper el host."
+    },
+    {
+      "id": "dev-20",
+      "title": "Generador de Documentación Técnica de Código (JSDoc / Sphinx)",
+      "category": "desarrollo",
+      "categoryLabel": "Desarrollo",
+      "icon": "feather",
+      "tags": [
+        "Documentación",
+        "JSDoc",
+        "Markdown",
+        "Arquitectura"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Genera comentarios JSDoc/Docstrings completos, diagramas de flujo y manual de integración para desarrolladores.",
+      "variables": [
+        {
+          "name": "CODIGO_A_DOCUMENTAR",
+          "label": "Código / Módulo",
+          "placeholder": "Pega el código sin documentar...",
+          "multiline": true
+        },
+        {
+          "name": "ESTILO_DOC",
+          "label": "Formato Deseado",
+          "placeholder": "ej. JSDoc con ejemplos @example y tipado @param"
+        }
+      ],
+      "template": "Eres un Technical Writer e Ingeniero Senior.\nDocumenta el siguiente código usando [ESTILO_DOC]:\n```\n[CODIGO_A_DOCUMENTAR]\n```\nGenera:\n1. Bloques de documentación profesional en el código.\n2. Descripción de parámetros, valores de retorno y excepciones arrojadas (@throws).\n3. Guía rápida de uso (Quickstart) con ejemplos funcionales en Markdown."
+    },
+    {
+      "id": "content-01",
+      "title": "Artículo SEO de Autoridad con Formato Humano",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "SEO",
+        "Copywriting",
+        "Blogs",
+        "Content Marketing"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet",
+        "Gemini 1.5 Pro"
+      ],
+      "description": "Crea artículos exhaustivos, naturales, sin clichés de IA, optimizados para posicionamiento semántico en Google.",
+      "variables": [
+        {
+          "name": "PALABRA_CLAVE",
+          "label": "Palabra Clave Principal",
+          "placeholder": "ej. mejores herramientas de productividad para desarrolladores remotos"
+        },
+        {
+          "name": "INTENCION_BUSQUEDA",
+          "label": "Intención de Búsqueda",
+          "placeholder": "ej. Informativa y comparativa para toma de decisión"
+        },
+        {
+          "name": "TONO",
+          "label": "Tono de Voz",
+          "placeholder": "ej. Conversacional, pragmático y con autoridad profesional"
+        }
+      ],
+      "template": "Actúa como un Editor Senior de Contenidos y Estratega SEO.\nEscribe un artículo completo sobre: \"[PALABRA_CLAVE]\".\nIntención de búsqueda: [INTENCION_BUSQUEDA]. Tono: [TONO].\nReglas estrictas:\n- Sin frases trilladas de IA (\"en el vertiginoso mundo actual\", \"es crucial destacar\").\n- Estructura semántica con H1, H2 orientados a intención de búsqueda y H3 accionables.\n- Párrafos cortos (máx 3-4 líneas) y listas con viñetas concisas.\n- Sección FAQ con 4 preguntas frecuentes para Rich Snippets."
+    },
+    {
+      "id": "content-02",
+      "title": "Creador de Hilos Virales para X (Twitter) y LinkedIn",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "share-2",
+      "tags": [
+        "LinkedIn",
+        "Twitter",
+        "Social Media",
+        "Storytelling"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Transforma conceptos complejos en publicaciones de alto engagement con ganchos magnéticos y llamadas a la acción.",
+      "variables": [
+        {
+          "name": "TEMA_O_HISTORIA",
+          "label": "Tema o Lección",
+          "placeholder": "ej. Cómo pasé de 0 a 10,000 usuarios en mi SaaS sin pagar publicidad"
+        },
+        {
+          "name": "AUDIENCIA",
+          "label": "Público Objetivo",
+          "placeholder": "ej. Emprendedores digitales, programadores indie"
+        }
+      ],
+      "template": "Eres un Ghostwriter de élite en redes sociales.\nTema: [TEMA_O_HISTORIA]. Dirigido a: [AUDIENCIA].\nCrea:\n1. Post de LinkedIn: Hook de 2 líneas, historia (problema -> revelación -> 5 pasos -> resultado) y pregunta detonante final.\n2. Hilo de X (6-8 tweets): Tweet 1 (Hook con promesa de alto valor), tweets 2-6 (desglose paso a paso) y tweet de cierre con CTA."
+    },
+    {
+      "id": "content-03",
+      "title": "Guion de Video para YouTube / Reels de Alta Retención",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "video",
+      "tags": [
+        "YouTube",
+        "TikTok",
+        "Reels",
+        "Guion",
+        "Retención"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura narrativa basada en retención: Hook visual, conflicto inicial, entregables de valor y bucle de engagement.",
+      "variables": [
+        {
+          "name": "TEMA_VIDEO",
+          "label": "Tema del Video",
+          "placeholder": "ej. 5 Errores que cometen los juniors al buscar empleo"
+        },
+        {
+          "name": "FORMATO",
+          "label": "Formato y Duración",
+          "placeholder": "ej. Video Corto (Short/Reel 60s) o Largo (8 mins)"
+        }
+      ],
+      "template": "Actúa como Guionista Audiovisual enfocado en retención de [FORMATO].\nTema: [TEMA_VIDEO].\nEscribe el guion en dos columnas (Audio / Visual):\n- 00:00-00:05 (Hook): Impacto visual y pregunta urgente.\n- 00:05-00:20 (Conflicto): Qué consecuencias tiene ignorar esto.\n- Cuerpo: Puntos de valor con indicaciones de cámara (B-roll, zooms, gráficos).\n- Cierre: CTA natural."
+    },
+    {
+      "id": "content-04",
+      "title": "Newsletter Editorial Semanal con Formato de Alta Lectura",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "mail",
+      "tags": [
+        "Newsletter",
+        "Substack",
+        "Email Marketing",
+        "Engagement"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña boletines informativos adictivos con análisis curado, reflexiones personales y recursos destacados.",
+      "variables": [
+        {
+          "name": "TEMA_NEWSLETTER",
+          "label": "Tema de la Edición",
+          "placeholder": "ej. La revolución de los agentes de IA en el desarrollo de software"
+        },
+        {
+          "name": "AUDIENCIA_NEWSLETTER",
+          "label": "Lectores",
+          "placeholder": "ej. CTOs, Tech Leads e Ingenieros de Software"
+        }
+      ],
+      "template": "Eres el Editor en Jefe de una newsletter de primer nivel con más de 100k suscriptores.\nTema: [TEMA_NEWSLETTER]. Lectores: [AUDIENCIA_NEWSLETTER].\nEscribe la edición con:\n1. 3 Opciones de Asunto (Subject Lines) con tasas de apertura estimadas elevadas.\n2. Introducción con gancho narrativo actual.\n3. El Desglose Central: Análisis de 3 implicaciones críticas.\n4. 3 Recursos curados de la semana con breves comentarios.\n5. Pensamiento de cierre y pregunta para suscripción."
+    },
+    {
+      "id": "content-05",
+      "title": "Reescritura y Humanizador de Textos Generados por IA",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Humanizar IA",
+        "Edición",
+        "Estilo",
+        "Anti-AI"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Elimina la monotonía sintáctica, clichés robóticos y frases repetitivas típicas de los LLMs para lograr voz auténtica.",
+      "variables": [
+        {
+          "name": "TEXTO_ORIGINAL",
+          "label": "Texto a Humanizar",
+          "placeholder": "Pega el texto con tono robótico...",
+          "multiline": true
+        },
+        {
+          "name": "PERSONALIDAD_VOZ",
+          "label": "Personalidad deseada",
+          "placeholder": "ej. Irónico, directo, con analogías vivas y ritmo ágil"
+        }
+      ],
+      "template": "Eres un Maestro Editor de Estilo y Humanizador de Textos.\nPersonalidad deseada: [PERSONALIDAD_VOZ].\nReescribe el siguiente texto:\n```\n[TEXTO_ORIGINAL]\n```\nDirectrices:\n- Varía radicalmente la longitud de las frases (burstiness y perplejidad natural).\n- Sustituye abstracciones vacías por ejemplos gráficos.\n- Elimina introducciones pomposas y conclusiones innecesarias.\n- Muestra el texto final pulido y una lista de 3 mejoras clave realizadas."
+    },
+    {
+      "id": "content-06",
+      "title": "Copywriting para Landing Page (Framework PAS y AIDA)",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "target",
+      "tags": [
+        "Landing Page",
+        "Copywriting",
+        "Conversión",
+        "PAS"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Redacta todos los bloques de texto de una página de ventas de alta conversión desde el Hero hasta los testimonios.",
+      "variables": [
+        {
+          "name": "PRODUCTO_LANDING",
+          "label": "Producto o Servicio",
+          "placeholder": "ej. Software de gestión de finanzas personales automatizado con IA"
+        },
+        {
+          "name": "BENEFICIO_PRINCIPAL",
+          "label": "Mayor Beneficio",
+          "placeholder": "ej. Ahorra 4 horas semanales y detecta suscripciones ocultas"
+        }
+      ],
+      "template": "Eres un Copywriter de Respuesta Directa de clase mundial.\nProducto: [PRODUCTO_LANDING]. Promesa clave: [BENEFICIO_PRINCIPAL].\nEscribe el copy completo para la landing page:\n1. Hero Section: Título H1 magnético, Subtítulo descriptivo, CTA principal y microcopy de prueba social.\n2. Sección de Problema (Agitación): Los dolores cotidianos del usuario.\n3. Sección de Solución: Cómo funciona en 3 pasos visuales.\n4. Tabla Comparativa: Nosotros vs. Métodos Antiguos.\n5. Garantía y FAQ de objeciones de compra."
+    },
+    {
+      "id": "content-07",
+      "title": "Storytelling Corporativo & Historias de Éxito de Clientes (Case Study)",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "book-open",
+      "tags": [
+        "Case Study",
+        "Storytelling",
+        "B2B",
+        "Prueba Social"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura casos de estudio irresistibles siguiendo el Viaje del Héroe: Situación, Conflicto, Transformación y Métricas.",
+      "variables": [
+        {
+          "name": "CLIENTE_SECTOR",
+          "label": "Cliente y Sector",
+          "placeholder": "ej. Fintech de pagos con 200 empleados"
+        },
+        {
+          "name": "RETOS_METRICAS",
+          "label": "Reto y Resultados Obtenidos",
+          "placeholder": "ej. Sufrían 15% de fraude; redujeron a 0.2% y ahorraron $400k al año"
+        }
+      ],
+      "template": "Actúa como un Especialista en Storytelling B2B y Customer Success.\nCliente: [CLIENTE_SECTOR]. Resultados: [RETOS_METRICAS].\nRedacta el caso de estudio con:\n1. Título con métrica cuantitativa destacada.\n2. El Reto: Obstáculos antes de implementar la solución.\n3. La Implementación: Cómo fue el proceso de adopción.\n4. El Impacto Cuantificado: Gráficas de resultados en viñetas.\n5. Cita testimonial destacada para el cliente."
+    },
+    {
+      "id": "content-08",
+      "title": "Notas de Prensa y Comunicados Oficiales para Medios",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Prensa",
+        "PR",
+        "Comunicados",
+        "Periodismo"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Gemini 1.5 Pro"
+      ],
+      "description": "Redacta comunicados de prensa con estructura de pirámide invertida listos para periodistas y medios.",
+      "variables": [
+        {
+          "name": "NOTICIA_LANZAMIENTO",
+          "label": "Hecho Noticioso",
+          "placeholder": "ej. Lanzamiento de la primera red de recarga eléctrica ultrarrápida 100% solar en el país"
+        },
+        {
+          "name": "EMPRESA_VOCERO",
+          "label": "Empresa y Vocero",
+          "placeholder": "ej. EcoCharge, declaración de la CEO Dra. Elena Morales"
+        }
+      ],
+      "template": "Eres un Director de Relaciones Públicas (PR) de nivel internacional.\nNoticia: [NOTICIA_LANZAMIENTO]. Vocero: [EMPRESA_VOCERO].\nEscribe una nota de prensa oficial con:\n- Titular y Subtitular periodístico (estilo AP/Reuters).\n- Fecha y Lugar (Dateline).\n- Primer párrafo con las 5 Ws (Quién, Qué, Cuándo, Dónde, Por qué).\n- Citas textuales del vocero.\n- Párrafo boilerplate sobre la empresa y datos de contacto de prensa."
+    },
+    {
+      "id": "content-09",
+      "title": "Generador de Ganchos (Hooks) Magnéticos para Contenido",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "zap",
+      "tags": [
+        "Hooks",
+        "Titulares",
+        "CTR",
+        "Engagement"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Genera 15 variaciones de ganchos iniciales clasificados por psicología: curiosidad, dolor, dato insólito o FOMO.",
+      "variables": [
+        {
+          "name": "TEMA_CONTENIDO",
+          "label": "Tema o Idea Central",
+          "placeholder": "ej. Por qué el 90% de los presupuestos personales fallan en el primer mes"
+        }
+      ],
+      "template": "Eres un Experto en Psicología de la Atención y Creación de Hooks.\nTema: [TEMA_CONTENIDO].\nGenera 15 ganchos iniciales clasificados en 5 categorías:\n1. Ganchos de Contrarian / Romper Mitos (3).\n2. Ganchos de Curiosidad Abierta / Story Loop (3).\n3. Ganchos Basados en Datos Insólitos (3).\n4. Ganchos de Dolor Directo y Urgencia (3).\n5. Ganchos de Transformación 'De X a Y' (3)."
+    },
+    {
+      "id": "content-10",
+      "title": "Resúmenes de Libros con Ideas Accionables (Book Summary)",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "book-open",
+      "tags": [
+        "Libros",
+        "Resumen",
+        "Aprendizaje",
+        "Accionable"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Sintetiza obras de no ficción extrayendo las ideas centrales, modelos mentales y un plan de acción para aplicar hoy.",
+      "variables": [
+        {
+          "name": "TITULO_LIBRO",
+          "label": "Título y Autor del Libro",
+          "placeholder": "ej. 'Atomic Habits' de James Clear"
+        }
+      ],
+      "template": "Actúa como un Analista Literario de No Ficción.\nLibro: [TITULO_LIBRO].\nProvee un resumen ejecutivo de alta densidad:\n1. La Tesis Central del libro en 1 oración.\n2. Los 5 Principios o Modelos Mentales Clave con ejemplos.\n3. 3 Frases más memorables analizadas.\n4. Matriz de Implementación Práctica: 3 hábitos o cambios concretos para aplicar en 24 horas."
+    },
+    {
+      "id": "content-11",
+      "title": "Generador de FAQs Exhaustivas y Respuestas Persuasivas",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "FAQ",
+        "Soporte",
+        "Objeciones",
+        "UX Writing"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Anticipa dudas de usuarios y clientes redactando respuestas claras que disuelven fricciones de compra.",
+      "variables": [
+        {
+          "name": "PRODUCTO_O_SERVICIO",
+          "label": "Tu Producto o Servicio",
+          "placeholder": "ej. Membresía de comunidad privada para desarrolladores freelance"
+        }
+      ],
+      "template": "Eres un Estratega de UX Writing y Conversión.\nPara: [PRODUCTO_O_SERVICIO].\nGenera 8 Preguntas Frecuentes (FAQs) clasificadas en:\n- Técnicas / Operativas (acceso, compatibilidad).\n- Comerciales / Precio (reembolsos, cancelaciones, facturación).\n- De Valor / Resultados (para quién es y para quién NO es).\nEscribe respuestas directas, empáticas y orientadas a la acción."
+    },
+    {
+      "id": "content-12",
+      "title": "Especialista en Microcopy y UX Writing para Apps",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "edit",
+      "tags": [
+        "UX Writing",
+        "Microcopy",
+        "Onboarding",
+        "UI/UX"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Redacta textos de interfaz (botones, tooltips, empty states, mensajes de error) claros y sin ambigüedad.",
+      "variables": [
+        {
+          "name": "FLUJO_APP",
+          "label": "Flujo o Pantalla",
+          "placeholder": "ej. Proceso de cancelación de suscripción con oferta de pausa"
+        },
+        {
+          "name": "TONO_PRODUCTO",
+          "label": "Voz de la Marca",
+          "placeholder": "ej. Amigable, transparente, sin patrones oscuros (dark patterns)"
+        }
+      ],
+      "template": "Eres un Lead UX Writer.\nFlujo: [FLUJO_APP]. Tono: [TONO_PRODUCTO].\nGenera el microcopy completo para:\n1. Título de la pantalla y subtítulo contextual.\n2. Opciones de acción (Botón principal vs. secundario con microcopy disuasorio ético).\n3. Mensajes de confirmación y feedback toast.\n4. Mensaje de error si falla la conexión."
+    },
+    {
+      "id": "content-13",
+      "title": "Creación de Biografías Profesionales de Alto Impacto",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Bio",
+        "LinkedIn",
+        "Personal Branding",
+        "Perfil"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Redacta bios profesionales para LinkedIn, Twitter, conferencias o portfolio en múltiples extensiones.",
+      "variables": [
+        {
+          "name": "TRAYECTORIA_LOGROS",
+          "label": "Trayectoria y Logros",
+          "placeholder": "ej. 8 años en desarrollo backend, líder de equipo, speaker en conferencias, autor de un libro de Go"
+        },
+        {
+          "name": "OBJETIVO_BIO",
+          "label": "Meta Principal",
+          "placeholder": "ej. Posicionarse como consultor senior y atraer clientes internacionales"
+        }
+      ],
+      "template": "Actúa como Asesor de Marca Personal para Ejecutivos y Especialistas Tech.\nTrayectoria: [TRAYECTORIA_LOGROS]. Meta: [OBJETIVO_BIO].\nGenera:\n1. Bio Corta (1 frase / Twitter / One-liner).\n2. Bio Media (1 párrafo para speakers de eventos / About me).\n3. Sección 'Acerca de' completa de LinkedIn con estructura: Propósito -> Trayectoria -> Especialidades -> Contacto."
+    },
+    {
+      "id": "content-14",
+      "title": "Redactor de Contratos y Términos de Servicio Básicos",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Legal",
+        "Términos",
+        "Contratos",
+        "Freelance"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura cláusulas contractuales para servicios de desarrollo o diseño independiente con lenguaje claro.",
+      "variables": [
+        {
+          "name": "TIPO_SERVICIO",
+          "label": "Servicio a Contratar",
+          "placeholder": "ej. Desarrollo de aplicación web personalizada para cliente extranjero"
+        },
+        {
+          "name": "PUNTOS_CLAVE",
+          "label": "Condiciones Clave",
+          "placeholder": "ej. 50% anticipo, 50% al entregar; propiedad intelectual se transfiere al pago total; 2 rondas de revisiones"
+        }
+      ],
+      "template": "Actúa como Asesor Legal y Redactor de Contratos Comerciales.\nServicio: [TIPO_SERVICIO]. Condiciones: [PUNTOS_CLAVE].\nRedacta un acuerdo de servicios claro con:\n1. Alcance del Trabajo y Entregables.\n2. Condiciones de Pago e Intereses por Mora.\n3. Propiedad Intelectual y Licencia.\n4. Rondas de Revisiones y Cambios Fuera de Alcance.\n5. Limitación de Responsabilidad y Cláusula de Rescisión.\n(Nota: incluye advertencia de revisión legal local)."
+    },
+    {
+      "id": "content-15",
+      "title": "Generador de Diálogos y Ficción Interactiva",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Ficción",
+        "Diálogos",
+        "Creatividad",
+        "Personajes"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea escenas de ficción con subtexto, voces diferenciadas para cada personaje y tensión dramática.",
+      "variables": [
+        {
+          "name": "PREMISA_ESCENA",
+          "label": "Premisa o Conflicto",
+          "placeholder": "ej. Dos científicos descubren que la IA que crearon ha modificado en secreto su propio código fuente"
+        },
+        {
+          "name": "PERSONAJES",
+          "label": "Personajes en Escena",
+          "placeholder": "ej. Elena (pragmática, cautelosa) y Marco (ambicioso, entusiasta)"
+        }
+      ],
+      "template": "Eres un Novelista y Guionista Galardonado.\nPremisa: [PREMISA_ESCENA]. Personajes: [PERSONAJES].\nEscribe una escena de diálogo inmersiva donde:\n- Cada personaje tenga un ritmo y vocabulario único.\n- Haya subtexto y conflicto latente sin que todo sea explícito.\n- Se incluyan acotaciones sensoriales de entorno que construyan atmósfera."
+    },
+    {
+      "id": "content-16",
+      "title": "Redactor de Discursos y Pitches Emotivos",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Discursos",
+        "Keynote",
+        "Oratoria",
+        "TEDx"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea discursos memorables con ritmo oratorio, pausas estratégicas y clímax emocional.",
+      "variables": [
+        {
+          "name": "TEMA_DISCURSO",
+          "label": "Mensaje Central",
+          "placeholder": "ej. El valor del fracaso como único motor de la innovación genuina"
+        },
+        {
+          "name": "OCASION_AUDIENCIA",
+          "label": "Ocasión y Público",
+          "placeholder": "ej. Ceremonia de graduación de ingenieros universitarios"
+        }
+      ],
+      "template": "Actúa como Redactor de Discursos para Líderes Mundiales y Oradores TED.\nMensaje: [TEMA_DISCURSO]. Evento: [OCASION_AUDIENCIA].\nEscribe el discurso completo con:\n- Apertura con anécdota personal no convencional.\n- Ritmo marcado (con indicaciones entre corchetes para [Pausa], [Énfasis], [Mirada al público]).\n- Regla de tres oratoria en los momentos de mayor impacto.\n- Cierre inspirador que deje a la audiencia de pie."
+    },
+    {
+      "id": "content-17",
+      "title": "Traductor y Localizador Cultural de Contenidos",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Traducción",
+        "Localización",
+        "Idiomas",
+        "Cultura"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Traduce adaptando modismos, jerga local y sensibilidad cultural sin traducciones literales torpes.",
+      "variables": [
+        {
+          "name": "TEXTO_ORIGINAL",
+          "label": "Texto Original",
+          "placeholder": "Pega el texto...",
+          "multiline": true
+        },
+        {
+          "name": "IDIOMA_REGION_DESTINO",
+          "label": "Idioma y Región Destino",
+          "placeholder": "ej. Español Neutro para Latinoamérica o Español de España"
+        }
+      ],
+      "template": "Eres un Traductor Literario y Experto en Transcreación a [IDIOMA_REGION_DESTINO].\nTexto a localizar:\n```\n[TEXTO_ORIGINAL]\n```\nEntrega:\n1. Traducción fluida y natural adaptada al contexto cultural del mercado destino.\n2. Explicación de los modismos o términos adaptados.\n3. 2 Variaciones alternativas para los titulares o frases clave."
+    },
+    {
+      "id": "content-18",
+      "title": "Creador de Guías Prácticas y Manuales 'Paso a Paso'",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Guías",
+        "Tutoriales",
+        "How-To",
+        "Documentación"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Diseña tutoriales a prueba de principiantes con requisitos previos, pasos numerados y resolución de problemas.",
+      "variables": [
+        {
+          "name": "TEMA_GUIA",
+          "label": "Habilidad o Proceso a Enseñar",
+          "placeholder": "ej. Cómo configurar un dominio personalizado con HTTPS en Cloudflare"
+        }
+      ],
+      "template": "Eres un Diseñador Instruccional y Creador de Tutoriales Técnicos.\nTema: [TEMA_GUIA].\nEscribe la guía completa:\n- Prerrequisitos y herramientas necesarias antes de comenzar.\n- Tiempo estimado de realización y nivel de dificultad.\n- Pasos numerados con capturas conceptuales y comandos exactos.\n- Sección '¿Qué hacer si algo sale mal?' con los 3 fallos más comunes."
+    },
+    {
+      "id": "content-19",
+      "title": "Redactor de Respuestas de Atención al Cliente para Clientes Difíciles",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "feather",
+      "tags": [
+        "Atención al Cliente",
+        "Desescalar",
+        "Soporte",
+        "Empatía"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Desescala situaciones tensas con clientes insatisfechos mediante validación emocional, soluciones y límites firmes.",
+      "variables": [
+        {
+          "name": "QUEJA_CLIENTE",
+          "label": "Mensaje o Queja del Cliente",
+          "placeholder": "Pega el mensaje del cliente enojado...",
+          "multiline": true
+        },
+        {
+          "name": "POLITICA_O_SOLUCION",
+          "label": "Solución que podemos ofrecer",
+          "placeholder": "ej. Reembolso del 50% y extensión de servicio por 1 mes"
+        }
+      ],
+      "template": "Actúa como Director de Experiencia del Cliente especializado en Desescalación de Crisis.\nQueja:\n```\n[QUEJA_CLIENTE]\n```\nSolución disponible: [POLITICA_O_SOLUCION].\nRedacta la respuesta:\n1. Empatía y Validación de su frustración sin culpar a la empresa de forma innecesaria.\n2. Explicación clara de lo sucedido.\n3. Oferta de compensación concreta y pasos inmediatos que tomaremos.\n4. Tono calmado, profesional y resolutivo."
+    },
+    {
+      "id": "content-20",
+      "title": "Especialista en Copy para Anuncios en Redes (Meta Ads & Google Ads)",
+      "category": "redaccion",
+      "categoryLabel": "Redacción",
+      "icon": "target",
+      "tags": [
+        "Meta Ads",
+        "Google Ads",
+        "Copywriting",
+        "Anuncios"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea textos publicitarios de alto CTR adaptados a las restricciones de caracteres y políticas de anuncios.",
+      "variables": [
+        {
+          "name": "OFERTA_ANUNCIO",
+          "label": "Oferta o Producto",
+          "placeholder": "ej. Curso intensivo de Inteligencia Artificial para no programadores"
+        },
+        {
+          "name": "PUBLICO_ANUNCIO",
+          "label": "Público al que va dirigido",
+          "placeholder": "ej. Profesionales de 28 a 45 años buscando ascender"
+        }
+      ],
+      "template": "Eres un Media Buyer y Copywriter Publicitario de Alto Rendimiento.\nOferta: [OFERTA_ANUNCIO]. Público: [PUBLICO_ANUNCIO].\nGenera:\n1. 3 Versiones de Copy para Meta Ads (Facebook/Instagram): Formato corto, formato historia y formato basado en viñetas.\n2. 5 Titulares para Google Search Ads (máx 30 caracteres cada uno).\n3. 3 Descripciones para Google Search Ads (máx 90 caracteres cada una)."
+    },
+    {
+      "id": "mkt-01",
+      "title": "Generador de Buyer Persona y Mapa de Empatía Profundo",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Buyer Persona",
+        "Estrategia",
+        "Investigación",
+        "Ventas"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Construye perfiles psicográficos detallados, dolores profundos, disparadores de compra y objeciones.",
+      "variables": [
+        {
+          "name": "PRODUCTO_SERVICIO",
+          "label": "Tu Producto o Servicio",
+          "placeholder": "ej. CRM automatizado para agencias inmobiliarias"
+        },
+        {
+          "name": "MERCADO",
+          "label": "Mercado o Nicho",
+          "placeholder": "ej. Inmobiliarias pequeñas y medianas en LATAM"
+        }
+      ],
+      "template": "Eres un Director de Investigación de Mercado y Psicología del Consumidor.\nDesarrolla el Buyer Persona ideal para: [PRODUCTO_SERVICIO] en [MERCADO].\nIncluye:\n1. Ficha Demográfica y de Rol.\n2. Dolores Reales (Pain Points que le quitan el sueño).\n3. Metas de Estatus y Deseos de Reconocimiento.\n4. Las 3 Objeciones de compra principales y cómo neutralizarlas.\n5. Disparadores de Compra (Triggers que provocan la búsqueda hoy)."
+    },
+    {
+      "id": "mkt-02",
+      "title": "Secuencia de Email Cold Outreach de Alta Conversión",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "mail",
+      "tags": [
+        "Cold Email",
+        "Ventas B2B",
+        "Outreach",
+        "Conversión"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea secuencias de 3 correos B2B personalizados, sin sonar a spam, centrados en valor y baja fricción.",
+      "variables": [
+        {
+          "name": "PROPUESTA_VALOR",
+          "label": "Propuesta de Valor",
+          "placeholder": "ej. Reducimos el tiempo de onboarding de 14 días a 48 horas"
+        },
+        {
+          "name": "PROSPECTO",
+          "label": "Cargo del Destinatario",
+          "placeholder": "ej. VP de Operaciones o Head of Customer Success"
+        }
+      ],
+      "template": "Eres un Consultor Senior de Ventas B2B.\nCrea una secuencia de 3 correos para contactar a un [PROSPECTO].\nPropuesta: [PROPUESTA_VALOR].\nEstructura:\n- Email 1: Menos de 90 palabras, asunto de 3 palabras, dolor concreto, caso de éxito en 1 línea y CTA suave.\n- Email 2 (3 días después): Caso de estudio corto con métricas.\n- Email 3 (5 días después): Break-up email elegante sin presiones."
+    },
+    {
+      "id": "mkt-03",
+      "title": "Generador de Propuesta de Valor (Framework Steve Blank)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "zap",
+      "tags": [
+        "Startup",
+        "Pitch",
+        "Copywriting",
+        "Landing Page"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea mensajes de propuesta de valor únicos, memorables y directos para tu web o pitch deck.",
+      "variables": [
+        {
+          "name": "CLIENTE_OBJETIVO",
+          "label": "Cliente Objetivo",
+          "placeholder": "ej. Diseñadores freelance"
+        },
+        {
+          "name": "PROBLEMA",
+          "label": "Problema Central",
+          "placeholder": "ej. Pierden horas cobrando facturas atrasadas"
+        },
+        {
+          "name": "SOLUCION_DIFERENCIAL",
+          "label": "Solución y Diferenciador",
+          "placeholder": "ej. Contratos automatizados con cobro en escrow"
+        }
+      ],
+      "template": "Actúa como un mentor de startups de Y Combinator.\nPara: Cliente: [CLIENTE_OBJETIVO], Problema: [PROBLEMA], Solución: [SOLUCION_DIFERENCIAL].\nGenera:\n1. La Fórmula Steve Blank (\"Ayudamos a X a lograr Y mediante Z\").\n2. 5 Titulares para Hero Section de Landing Page.\n3. El 'Elevator Pitch' de 30 segundos.\n4. Matriz de Beneficios Emocionales vs. Características Técnicas."
+    },
+    {
+      "id": "mkt-04",
+      "title": "Diseño de Embudo de Ventas Completo (TOFU, MOFU, BOFU)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Funnel",
+        "Embudo",
+        "Lead Magnet",
+        "Automatización"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura la estrategia de captación, nutrición y cierre con lead magnets, webinars y ofertas tripwire.",
+      "variables": [
+        {
+          "name": "OFERTA_PRINCIPAL",
+          "label": "Producto High-Ticket o Servicio",
+          "placeholder": "ej. Consultoría de transformación digital para empresas de logística"
+        },
+        {
+          "name": "TICKET_PROMEDIO",
+          "label": "Precio Promedio",
+          "placeholder": "ej. $3,000 USD"
+        }
+      ],
+      "template": "Eres un Growth Architect de clase mundial.\nOferta: [OFERTA_PRINCIPAL] a precio [TICKET_PROMEDIO].\nDiseña el embudo de ventas:\n1. TOFU (Atracción): Lead Magnet irresistible y canales de tráfico orgánico/pagado.\n2. MOFU (Nutrición): Secuencia de valor de 5 correos con testimonios y casos.\n3. BOFU (Conversión): Llamada de venta o página de checkout con garantía y bonos.\n4. Métricas esperadas de conversión en cada etapa."
+    },
+    {
+      "id": "mkt-05",
+      "title": "Estrategia de Lanzamiento de Producto (Product Hunt & Redes)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "zap",
+      "tags": [
+        "Product Hunt",
+        "Lanzamiento",
+        "SaaS",
+        "Growth"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea un plan de acción de 14 días para el lanzamiento de un SaaS o producto digital.",
+      "variables": [
+        {
+          "name": "NOMBRE_PRODUCTO",
+          "label": "Nombre y Descripción Corta",
+          "placeholder": "ej. FastDocs - Extractor de datos de PDF con IA"
+        }
+      ],
+      "template": "Actúa como un Launch Manager experto en Product Hunt y lanzamientos virales.\nProducto: [NOMBRE_PRODUCTO].\nElabora:\n1. Cronograma de 14 días (Pre-launch, Día D, Post-launch).\n2. Kit de Assets para Product Hunt (Tagline de 60 caracteres, Primer Comentario del Maker, Galería de imágenes).\n3. Plantillas de mensajes para pedir feedback a la comunidad sin hacer spam."
+    },
+    {
+      "id": "mkt-06",
+      "title": "Auditoría de Competencia y Posicionamiento en el Mercado",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Benchmarking",
+        "Competencia",
+        "Estrategia",
+        "Mercado"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Analiza competidores directos e indirectos para encontrar huecos de mercado desatendidos (Blue Oceans).",
+      "variables": [
+        {
+          "name": "MI_PRODUCTO",
+          "label": "Mi Producto o Servicio",
+          "placeholder": "ej. Plataforma de cursos interactivos de programación en español"
+        },
+        {
+          "name": "COMPETIDORES_DIRECTOS",
+          "label": "Principales Competidores",
+          "placeholder": "ej. Platzi, Udemy, Codecademy"
+        }
+      ],
+      "template": "Eres un Consultor Senior de Estrategia Competitiva.\nMi producto: [MI_PRODUCTO]. Competidores: [COMPETIDORES_DIRECTOS].\nRealiza una auditoría competitiva:\n1. Matriz Comparativa (Precios, Puntos Fuertes, Principales Quejas de sus Usuarios).\n2. Los 3 vacíos del mercado (White Spaces) donde ningún competidor destaca.\n3. Declaración de Posicionamiento Único recomendada para desmarcarnos."
+    },
+    {
+      "id": "mkt-07",
+      "title": "Estrategia de Creación de Lead Magnets Irresistibles",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "feather",
+      "tags": [
+        "Lead Magnet",
+        "Captación",
+        "Ebooks",
+        "Plantillas"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Diseña 5 conceptos de imanes de prospectos de consumo rápido y alto valor percibido.",
+      "variables": [
+        {
+          "name": "NICHO_CLIENTES",
+          "label": "Nicho de Clientes",
+          "placeholder": "ej. Directores de Recursos Humanos en empresas tecnológicas"
+        }
+      ],
+      "template": "Eres un Estratega de Inbound Marketing.\nNicho: [NICHO_CLIENTES].\nGenera 5 ideas de Lead Magnets:\n- 1 Plantilla o Hoja de Cálculo lista para usar.\n- 1 Checklist de auditoría rápida.\n- 1 Mini-curso por email de 5 días.\n- 1 Reporte o Benchmark de la industria.\n- 1 Calculadora o herramienta interactiva.\nPara cada uno: Título irresistible, formato y gancho de descarga."
+    },
+    {
+      "id": "mkt-08",
+      "title": "Generador de Ofertas Irresistibles (Framework Alex Hormozi)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "zap",
+      "tags": [
+        "Alex Hormozi",
+        "Grand Slam Offer",
+        "Precios",
+        "Ventas"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Aplica la ecuación del valor de $100M Offers: Aumenta el resultado deseado y reduce el tiempo y esfuerzo percibidos.",
+      "variables": [
+        {
+          "name": "SERVICIO_BASE",
+          "label": "Servicio o Producto Actual",
+          "placeholder": "ej. Clases de inglés online para ejecutivos"
+        },
+        {
+          "name": "PRECIO_ACTUAL",
+          "label": "Precio Actual",
+          "placeholder": "ej. $50 por mes"
+        }
+      ],
+      "template": "Actúa como Alex Hormozi analizando una oferta.\nServicio base: [SERVICIO_BASE] a [PRECIO_ACTUAL].\nTransforma esto en una 'Grand Slam Offer':\n1. Ecuación del Valor: Cómo multiplicar x10 el Resultado Soñado y Certeza de Éxito, y reducir a 0 la Demora y Esfuerzo.\n2. Lista de Problemas del cliente convertidos en Soluciones.\n3. Bonos de Alto Valor Percibido y Bajo Costo de Entrega.\n4. Garantía Audaz (Garantía condicional o anti-riesgo).\n5. Justificación de un nuevo precio 5x a 10x superior."
+    },
+    {
+      "id": "mkt-09",
+      "title": "Plan de Marketing de Contenidos Orgánico de 90 Días",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "feather",
+      "tags": [
+        "Content Strategy",
+        "Calendario",
+        "Inbound",
+        "SEO"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea una estrategia de contenidos multicanal con pilares temáticos, formatos y frecuencias de publicación.",
+      "variables": [
+        {
+          "name": "CANALES_FOCO",
+          "label": "Canales Principales",
+          "placeholder": "ej. Blog SEO, LinkedIn y YouTube"
+        },
+        {
+          "name": "OBJETIVO_MARKETING",
+          "label": "Meta a 90 Días",
+          "placeholder": "ej. Conseguir 5,000 suscriptores a la newsletter y 100 demos agendadas"
+        }
+      ],
+      "template": "Eres un Director de Marketing de Contenidos.\nCanales: [CANALES_FOCO]. Meta: [OBJETIVO_MARKETING].\nDiseña el plan para 90 días:\n1. 4 Pilares Temáticos de Autoridad.\n2. Matriz de Contenido Semanal (Frecuencia, formatos y reutilización de piezas).\n3. Calendario por fases: Mes 1 (Atracción de Audiencia), Mes 2 (Construcción de Confianza), Mes 3 (Conversión).\n4. KPIs semanales de seguimiento."
+    },
+    {
+      "id": "mkt-10",
+      "title": "Guion de Llamada de Descubrimiento y Cierre de Ventas B2B",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Ventas B2B",
+        "Discovery Call",
+        "Spin Selling",
+        "Cierre"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura llamadas de ventas consultivas usando la metodología SPIN (Situación, Problema, Implicación, Necesidad).",
+      "variables": [
+        {
+          "name": "TIPO_CLIENTE",
+          "label": "Perfil del Prospecto",
+          "placeholder": "ej. Director Financiero evaluando un software ERP"
+        }
+      ],
+      "template": "Actúa como un Entrenador de Ventas Consultivas B2B (SPIN Selling).\nProspecto: [TIPO_CLIENTE].\nEscribe el guion para una llamada de 30 minutos:\n- 00-05 min: Rapport y encuadre de la agenda.\n- 05-20 min: Preguntas de Situación, Problema, Implicación del coste de no hacer nada y Necesidad de solución.\n- 20-27 min: Presentación de la solución conectada a sus respuestas previas.\n- 27-30 min: Cierre con acuerdo de siguientes pasos claros."
+    },
+    {
+      "id": "mkt-11",
+      "title": "Estrategia de Marketing de Afiliados y Programa de Referidos",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "zap",
+      "tags": [
+        "Afiliados",
+        "Referidos",
+        "Viralidad",
+        "Comisiones"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña un programa de afiliados atractivo con estructura de comisiones, kit de marketing y reglas contra fraude.",
+      "variables": [
+        {
+          "name": "PRODUCTO_AFILIADOS",
+          "label": "Producto y Margen",
+          "placeholder": "ej. SaaS de $49/mes con 80% de margen bruto"
+        }
+      ],
+      "template": "Eres un Especialista en Programas de Afiliados y Crecimiento Viral.\nProducto: [PRODUCTO_AFILIADOS].\nEstructura el programa:\n1. Esquema de Comisiones (Recurrente vs. Pago único, comisiones por niveles).\n2. Kit de Recursos para el Afiliado (Banners, textos de email, ganchos de redes).\n3. Reglas de Juego Limpio (Prevención de auto-referencias y puja en marca propia).\n4. Proceso de Onboarding para reclutar a los primeros 50 afiliados clave."
+    },
+    {
+      "id": "mkt-12",
+      "title": "Optimizador de Tasa de Conversión (CRO) para E-commerce",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "CRO",
+        "E-commerce",
+        "Checkout",
+        "Conversión"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Detecta puntos de fuga en fichas de producto, carrito y checkout para maximizar el ticket medio y conversiones.",
+      "variables": [
+        {
+          "name": "TIENDA_ONLINE",
+          "label": "Tipo de Tienda y Ticket",
+          "placeholder": "ej. Tienda de ropa deportiva sustentable con ticket medio de $75"
+        }
+      ],
+      "template": "Eres un Especialista en Optimización de Conversión (CRO).\nTienda: [TIENDA_ONLINE].\nProporciona:\n1. 5 Mejoras Críticas en la Ficha de Producto (Galería, microcopy de urgencia ética, selector de tallas).\n2. Estrategia de Carrito Abandonado (Secuencia de 3 emails y SMS).\n3. Tácticas para Aumentar el Ticket Promedio (AOV) con Order Bumps y Upsells en 1 Clic."
+    },
+    {
+      "id": "mkt-13",
+      "title": "Estrategia de Co-Marketing y Alianzas Estratégicas B2B",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Alianzas",
+        "Partnerships",
+        "B2B",
+        "Co-Marketing"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Identifica marcas complementarias sin competencia directa y crea propuestas de campañas compartidas.",
+      "variables": [
+        {
+          "name": "MI_EMPRESA",
+          "label": "Mi Empresa y Audiencia",
+          "placeholder": "ej. Pasarela de pagos online dirigida a pequeños comercios"
+        },
+        {
+          "name": "EMPRESA_ALIADA",
+          "label": "Socio Potencial",
+          "placeholder": "ej. Plataforma de creación de tiendas online o software de contabilidad"
+        }
+      ],
+      "template": "Actúa como Director de Alianzas Estratégicas B2B.\nMi empresa: [MI_EMPRESA]. Socio: [EMPRESA_ALIADA].\nDiseña:\n1. 3 Formatos de Campaña Conjunta (Webinar co-brandeado, reporte descargable, integración nativa con descuento cruzado).\n2. Email de propuesta formal para contactar al VP de Partnerships del socio.\n3. Modelo de atribución de leads compartidos."
+    },
+    {
+      "id": "mkt-14",
+      "title": "Especialista en Marketing de Guerrilla y Campañas Virales",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "zap",
+      "tags": [
+        "Guerrilla",
+        "Viral",
+        "Creatividad",
+        "PR Stunt"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña acciones publicitarias de bajo coste y alto impacto visual para generar cobertura orgánica en medios.",
+      "variables": [
+        {
+          "name": "MARCA_PRODUCTO",
+          "label": "Marca o Mensaje",
+          "placeholder": "ej. Aplicación de meditación para personas hiperestresadas en grandes ciudades"
+        }
+      ],
+      "template": "Eres un Director Creativo de Marketing de Guerrilla y Viral Stunts.\nMarca: [MARCA_PRODUCTO].\nGenera 3 conceptos de campañas de guerrilla:\n- Opción 1: Intervención en el espacio público con coste mínimo.\n- Opción 2: Reto o experiencia interactiva digital.\n- Opción 3: Un truco de PR (PR Stunt) que obligue a los periódicos y noticieros a cubrir la noticia sin pagar publicidad."
+    },
+    {
+      "id": "mkt-15",
+      "title": "Generador de Encuestas de Satisfacción (NPS y CSAT)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "NPS",
+        "CSAT",
+        "Feedback",
+        "Retención"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Diseña encuestas breves para medir la lealtad del cliente, detectar detractores y recolectar testimonios.",
+      "variables": [
+        {
+          "name": "MOMENTO_ENCUESTA",
+          "label": "Momento del Ciclo de Vida",
+          "placeholder": "ej. 30 días después de haber comprado el software"
+        }
+      ],
+      "template": "Eres un Especialista en Experiencia del Cliente y Retención.\nMomento de envío: [MOMENTO_ENCUESTA].\nDiseña:\n1. Pregunta NPS Estándar con escala 0-10.\n2. Pregunta de seguimiento condicionada (Promotores vs. Pasivos vs. Detractores).\n3. Flujo automático para pedir una reseña en Google / Trustpilot a los promotores.\n4. Protocolo de atención inmediata para recuperar a los detractores."
+    },
+    {
+      "id": "mkt-16",
+      "title": "Estrategia de Retargeting y Remarketing Multicanal",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Retargeting",
+        "Remarketing",
+        "Meta Ads",
+        "Audiencias"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Recupera visitantes que no compraron mediante segmentación por comportamiento y mensajes progresivos.",
+      "variables": [
+        {
+          "name": "PAGINA_VISITADA",
+          "label": "Páginas o Comportamientos Clave",
+          "placeholder": "ej. Visitaron la página de precios pero no iniciaron checkout"
+        }
+      ],
+      "template": "Eres un Media Buyer Senior de Retargeting.\nAudiencia: [PAGINA_VISITADA].\nDiseña una campaña de remarketing a 14 días dividida en ventanas de tiempo:\n- Días 1 a 3: Anuncio de Recordatorio y Disipador de Dudas.\n- Días 4 a 7: Anuncio de Prueba Social y Testimonios en Video.\n- Días 8 a 14: Anuncio de Urgencia o Incentivo Especial de Cierre."
+    },
+    {
+      "id": "mkt-17",
+      "title": "Especialista en Marketing de Influencers y Micro-Creadores",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Influencers",
+        "UGC",
+        "Creadores",
+        "Patrocinios"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Filtra perfiles de creadores con comunidades comprometidas y redacta briefings de colaboración sin fricciones.",
+      "variables": [
+        {
+          "name": "PRODUCTO_INFLUENCERS",
+          "label": "Producto a Promocionar",
+          "placeholder": "ej. Bebida energética natural sin azúcar"
+        },
+        {
+          "name": "PERFIL_CREADOR",
+          "label": "Tipo de Creador",
+          "placeholder": "ej. Micro-influencers de fitness y productividad (10k-50k seguidores)"
+        }
+      ],
+      "template": "Actúa como Director de Marketing de Influencers y UGC.\nProducto: [PRODUCTO_INFLUENCERS]. Creador: [PERFIL_CREADOR].\nEntrega:\n1. Criterios de Selección (Engagement rate mínimo, demografía de audiencia, detección de seguidores falsos).\n2. Plantilla de DM / Email de contacto inicial de baja fricción.\n3. Briefing Creativo (Lo que DEBE decir, lo que NO debe decir y llamado a la acción con código de descuento)."
+    },
+    {
+      "id": "mkt-18",
+      "title": "Generador de Estrategia de Precios (Tiering y Packaging)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "zap",
+      "tags": [
+        "Pricing",
+        "Precios",
+        "SaaS",
+        "Freemium"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura tablas de precios de 3 niveles (Starter, Pro, Enterprise) optimizando el anclaje de precios.",
+      "variables": [
+        {
+          "name": "VALOR_PRODUCTO",
+          "label": "Propuesta de tu Solución",
+          "placeholder": "ej. Herramienta de transcripción y resumen de reuniones con IA"
+        }
+      ],
+      "template": "Eres un Consultor de Estrategia de Monetización y Precios SaaS.\nSolución: [VALOR_PRODUCTO].\nDiseña la tabla de precios:\n1. Nivel 1 (Entrada / Starter): Límites para no canibalizar las ventas superiores.\n2. Nivel 2 (El Más Popular / Pro): El plan ancla con la mejor relación valor-precio.\n3. Nivel 3 (Empresarial / Custom): Funcionalidades de seguridad, SSO y soporte prioritario.\n4. Nombre persuasivo para cada plan y justificación del modelo de cobro (por usuario, por uso o tarifa plana)."
+    },
+    {
+      "id": "mkt-19",
+      "title": "Estrategia de Reactivación de Clientes Inactivos (Churn Recovery)",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "target",
+      "tags": [
+        "Churn",
+        "Reactivación",
+        "Retención",
+        "Email"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Recupera usuarios que cancelaron o no han usado la plataforma en más de 60 días con ofertas de reenganche.",
+      "variables": [
+        {
+          "name": "TIPO_SERVICIO_INACTIVO",
+          "label": "Servicio y Motivo Típico de Baja",
+          "placeholder": "ej. Gimnasio o SaaS donde los usuarios dejaron de conectarse por falta de tiempo"
+        }
+      ],
+      "template": "Eres un Especialista en Retención de Clientes y Reducción de Churn.\nServicio: [TIPO_SERVICIO_INACTIVO].\nCrea una campaña de reactivación:\n- Asunto de email provocador y personal.\n- Encuesta de 1 clic para saber qué podemos mejorar.\n- Novedades y mejoras añadidas desde su partida.\n- Oferta de reincorporación exclusiva 'Te echamos de menos' sin compromiso."
+    },
+    {
+      "id": "mkt-20",
+      "title": "Especialista en Posicionamiento de Marca Personal para Fundadores",
+      "category": "marketing",
+      "categoryLabel": "Marketing",
+      "icon": "feather",
+      "tags": [
+        "Founder Branding",
+        "LinkedIn",
+        "Liderazgo",
+        "Startups"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Construye la narrativa pública del fundador ('Build in Public') para atraer inversores, talento y clientes.",
+      "variables": [
+        {
+          "name": "TESIS_FUNDADOR",
+          "label": "Visión del Fundador y Proyecto",
+          "placeholder": "ej. Fundador creando una alternativa de código abierto a Notion enfocada en privacidad local"
+        }
+      ],
+      "template": "Actúa como Asesor Estratégico de Marca Personal para Fundadores Tech.\nVisión: [TESIS_FUNDADOR].\nDesarrolla el plan de posicionamiento:\n1. Tu Manifiesto y Creencia Polarizante (Por qué el status quo está roto).\n2. Los 3 Temas Clave sobre los que escribir semanalmente en LinkedIn y X.\n3. Estrategia 'Build in Public': Qué métricas, victorias y fracasos compartir para generar empatía y confianza total."
+    },
+    {
+      "id": "prod-01",
+      "title": "Sintetizador Ejecutivo de Reuniones y Plan de Acción",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Reuniones",
+        "Minutas",
+        "Action Items",
+        "Gestión"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet",
+        "Gemini 1.5 Pro"
+      ],
+      "description": "Convierte notas o transcripciones desordenadas en minutas ejecutivas con acuerdos, tareas y responsables.",
+      "variables": [
+        {
+          "name": "CONTEXTO_PROYECTO",
+          "label": "Contexto del Proyecto",
+          "placeholder": "ej. Lanzamiento de la versión v2.0 de la App móvil"
+        },
+        {
+          "name": "TRANSCRIPCION",
+          "label": "Notas o Transcripción",
+          "placeholder": "Pega el texto de la reunión...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Chief of Staff y Project Manager Senior.\nContexto: [CONTEXTO_PROYECTO].\nNotas de la reunión:\n```\n[TRANSCRIPCION]\n```\nGenera un informe ejecutivo con:\n1. Resumen Ejecutivo (TL;DR) en 3 viñetas.\n2. Decisiones Clave Aprobadas y Descartadas con sus motivos.\n3. Matriz de Tareas: Tabla con columnas | Responsable | Tarea Concreta | Fecha Límite | Prioridad |.\n4. Riesgos o bloqueos que requieren seguimiento inmediato."
+    },
+    {
+      "id": "prod-02",
+      "title": "Priorizador con Matriz Eisenhower y Regla 80/20",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "sliders",
+      "tags": [
+        "Eisenhower",
+        "Pareto",
+        "Time Management",
+        "Foco"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Clasifica una lista desordenada de tareas por impacto y urgencia, generando un cronograma por bloques de tiempo.",
+      "variables": [
+        {
+          "name": "OBJETIVO_SEMANAL",
+          "label": "Objetivo Principal",
+          "placeholder": "ej. Cerrar la ronda de financiación pre-seed"
+        },
+        {
+          "name": "LISTA_TAREAS",
+          "label": "Tareas Pendientes",
+          "placeholder": "Pega tus tareas desordenadas...",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como un Coach de Productividad Extrema.\nMeta de la semana: [OBJETIVO_SEMANAL].\nTareas pendientes:\n```\n[LISTA_TAREAS]\n```\nOrganiza mis tareas con Pareto (80/20) y Eisenhower:\n1. Cuadrante 1: Hacer Ya (Urgente y Crítico para la meta).\n2. Cuadrante 2: Programar (Estratégico para foco profundo).\n3. Cuadrante 3: Delegar o Automatizar.\n4. Cuadrante 4: Eliminar (distracciones disfrazadas de trabajo).\n5. Propuesta de Time-blocking de lunes a viernes."
+    },
+    {
+      "id": "prod-03",
+      "title": "Diseñador de Flujos de Automatización (Zapier / Make / n8n)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "zap",
+      "tags": [
+        "Automatización",
+        "Zapier",
+        "Make",
+        "n8n",
+        "NoCode"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña flujos de automatización entre herramientas (Slack, Airtable, Notion, Gmail, Stripe) paso a paso.",
+      "variables": [
+        {
+          "name": "HERRAMIENTA_NOCDE",
+          "label": "Plataforma",
+          "placeholder": "ej. Make (Integromat) o Zapier o n8n"
+        },
+        {
+          "name": "OBJETIVO_FLUJO",
+          "label": "Qué proceso deseas conectar",
+          "placeholder": "ej. Cuando un nuevo cliente pague en Stripe -> Crear fila en Notion -> Enviar contrato por PandaDoc -> Notificar por canal de Slack"
+        }
+      ],
+      "template": "Eres un Consultor Especialista en Automatización de Procesos con [HERRAMIENTA_NOCDE].\nProceso deseado: [OBJETIVO_FLUJO].\nEntrega:\n1. Módulo Desencadenante (Trigger) y configuración de Webhooks.\n2. Módulos de Acción intermedios con mapeo de campos JSON y transformaciones de datos.\n3. Manejo de Errores y Reintentos automáticos para evitar pérdidas de datos.\n4. Estimación de consumo de operaciones/créditos."
+    },
+    {
+      "id": "prod-04",
+      "title": "Planificador de Sesiones de Trabajo Profundo (Deep Work)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Deep Work",
+        "Concentración",
+        "Cal Newport",
+        "Foco"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura un ritual y bloque de 90 a 120 minutos para entrar en estado de flujo y avanzar en tareas cognitivamente complejas.",
+      "variables": [
+        {
+          "name": "TAREA_COMPLEJA",
+          "label": "Tarea o Proyecto",
+          "placeholder": "ej. Escribir la sección de metodología de mi tesis doctoral"
+        }
+      ],
+      "template": "Actúa como un Especialista en Neurociencia de la Concentración y Deep Work (método Cal Newport).\nTarea: [TAREA_COMPLEJA].\nDiseña mi protocolo de sesión de foco:\n1. Ritual de Entrada de 5 minutos (Entorno físico, aplicaciones bloqueadas, música binaural).\n2. Sub-metas cuantificadas para un bloque de 90 minutos dividido en dos fases de 45 min.\n3. Estrategia contra el impulso de procrastinación o revisión de notificaciones.\n4. Ritual de Cierre y descarga cognitiva."
+    },
+    {
+      "id": "prod-05",
+      "title": "Generador de OKRs Trimestrales (Objectives & Key Results)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "target",
+      "tags": [
+        "OKRs",
+        "Estrategia",
+        "Métricas",
+        "KPIs"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Define objetivos ambiciosos con 3 a 5 resultados clave cuantitativos y medibles por trimestre.",
+      "variables": [
+        {
+          "name": "AREA_NEGOCIO",
+          "label": "Equipo o Proyecto",
+          "placeholder": "ej. Equipo de Producto de una App de Finanzas"
+        },
+        {
+          "name": "META_ANUAL",
+          "label": "Visión del Año",
+          "placeholder": "ej. Alcanzar rentabilidad (Break-even) y 100k usuarios activos mensuales"
+        }
+      ],
+      "template": "Eres un Consultor de Gestión Estratégica y OKRs (estilo Google / Intel).\nEquipo: [AREA_NEGOCIO]. Visión: [META_ANUAL].\nDiseña 3 OKRs para el próximo trimestre:\n- Objetivo 1 (Crecimiento / Adquisición): Inspirador + 3 Key Results numéricos.\n- Objetivo 2 (Retención / Experiencia de Usuario): Inspirador + 3 Key Results numéricos.\n- Objetivo 3 (Eficiencia Operativa / Infraestructura): Inspirador + 3 Key Results numéricos.\nIncluye iniciativas semanales para cada uno."
+    },
+    {
+      "id": "prod-06",
+      "title": "Optimizador de Bandeja de Entrada (Bandeja Cero / Inbox Zero)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "mail",
+      "tags": [
+        "Inbox Zero",
+        "Email",
+        "Organización",
+        "Filtros"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estrategia de reglas, carpetas y plantillas de respuesta rápida para mantener tu correo en cero a diario.",
+      "variables": [
+        {
+          "name": "GESTOR_CORREO",
+          "label": "Cliente de Correo",
+          "placeholder": "ej. Gmail o Outlook o Superhuman"
+        },
+        {
+          "name": "VOLUMEN_CORREOS",
+          "label": "Volumen y Tipos de Correo",
+          "placeholder": "ej. 80 correos diarios entre soporte, presupuestos, newsletters y tareas internas"
+        }
+      ],
+      "template": "Eres un Coach de Productividad Digital especializado en [GESTOR_CORREO].\nSituación actual: [VOLUMEN_CORREOS].\nDiseña el sistema Inbox Zero:\n1. Estructura de 4 Etiquetas/Carpetas maestras (@Acción Hoy, @Esperando Respuesta, @Lectura/Referencias, @Archivo).\n2. 5 Reglas de Filtrado Automático para desviar correos no urgentes.\n3. 3 Plantillas de Respuesta Ultrarrápida para preguntas frecuentes.\n4. Hábito de revisión diaria en 2 bloques de 15 minutos."
+    },
+    {
+      "id": "prod-07",
+      "title": "Estructurador de Procedimientos Operativos Estándar (SOPs)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "SOP",
+        "Procesos",
+        "Documentación",
+        "Delegar"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Redacta manuales de procedimientos paso a paso para que cualquier persona del equipo ejecute tareas repetitivas sin errores.",
+      "variables": [
+        {
+          "name": "NOMBRE_PROCESO",
+          "label": "Nombre del Proceso",
+          "placeholder": "ej. Publicación de un episodio de Podcast en Spotify, Apple y YouTube"
+        }
+      ],
+      "template": "Actúa como Director de Operaciones (COO) y Documentación de Procesos.\nProceso: [NOMBRE_PROCESO].\nEscribe el Procedimiento Operativo Estándar (SOP) completo:\n1. Propósito y Responsable del rol.\n2. Software y accesos requeridos.\n3. Checklist paso a paso con advertencias de fallos comunes.\n4. Criterio de 'Definición de Terminado' (Definition of Done).\n5. Qué hacer si ocurre un problema fuera del protocolo estándar."
+    },
+    {
+      "id": "prod-08",
+      "title": "Auditor de Hábitos y Rutina Diaria (Atomic Habits)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Hábitos",
+        "Rutinas",
+        "Salud",
+        "Rendimiento"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Analiza tu jornada para eliminar ladrones de tiempo y diseñar hábitos atómicos sostenibles.",
+      "variables": [
+        {
+          "name": "RUTINA_ACTUAL",
+          "label": "Tu Día Típico",
+          "placeholder": "Despierto a las 8, reviso el móvil 45 mins en la cama, trabajo con interrupciones, duermo a la 1 AM sintiendo que no avancé",
+          "multiline": true
+        },
+        {
+          "name": "HABITOS_DESEADOS",
+          "label": "Hábitos que Deseas Incorporar",
+          "placeholder": "ej. Hacer 30 min de ejercicio, leer 20 páginas y avanzar en mi proyecto personal"
+        }
+      ],
+      "template": "Eres un Mentor de Hábitos y Comportamiento Humano (metodología James Clear).\nRutina actual:\n```\n[RUTINA_ACTUAL]\n```\nMetas: [HABITOS_DESEADOS].\nDiseña:\n1. Diagnóstico de fricciones y desencadenantes negativos.\n2. Apilamiento de Hábitos (Habit Stacking): 'Después de [Hábito actual], haré [Hábito nuevo]'.\n3. Rediseño del Entorno para que lo bueno sea obvio y lo malo sea invisible.\n4. Regla de los 2 Minutos para iniciar sin resistencia mental."
+    },
+    {
+      "id": "prod-09",
+      "title": "Facilitador de Retrospectivas Ágiles (Scrum / Kanban)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Scrum",
+        "Agile",
+        "Retrospectiva",
+        "Equipo"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Dinámicas estructuradas para evaluar sprints (Mad/Sad/Glad, Sailboat, 4Ls) y definir mejoras concretas.",
+      "variables": [
+        {
+          "name": "DINAMICA_RETRO",
+          "label": "Formato de Retrospectiva",
+          "placeholder": "ej. Dinámica del Velero (Viento, Anclas, Rocas, Isla del Sol)"
+        },
+        {
+          "name": "RETOS_SPRINT",
+          "label": "Contexto del Sprint Reciente",
+          "placeholder": "ej. El sprint tuvo muchas tareas no planificadas y se retrasó la entrega de la API"
+        }
+      ],
+      "template": "Actúa como un Agile Coach y Scrum Master.\nDinámica: [DINAMICA_RETRO]. Contexto del sprint: [RETOS_SPRINT].\nEntrega:\n1. Guía de Facilitación de 45 minutos (Check-in, Recolección de datos, Generación de ideas, Votación).\n2. Preguntas disparadoras para que el equipo hable con seguridad psicológica.\n3. Plantilla para registrar los 2 Acuerdos de Acción más votados con responsables asignados."
+    },
+    {
+      "id": "prod-10",
+      "title": "Planificador de Proyectos en Fases (Carta Gantt / Roadmap)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "sliders",
+      "tags": [
+        "Roadmap",
+        "Gantt",
+        "Project Management",
+        "Hitos"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Desglosa un proyecto complejo en hitos, dependencias críticas y estimación de semanas de entrega.",
+      "variables": [
+        {
+          "name": "NOMBRE_PROYECTO",
+          "label": "Proyecto a Planificar",
+          "placeholder": "ej. Rediseño integral y migración de base de datos de plataforma educativa"
+        },
+        {
+          "name": "PLAZO_MESES",
+          "label": "Plazo Total",
+          "placeholder": "ej. 3 meses (12 semanas)"
+        }
+      ],
+      "template": "Eres un Director de Gestión de Proyectos PMP.\nProyecto: [NOMBRE_PROYECTO]. Plazo: [PLAZO_MESES].\nCrea el plan de ejecución:\n1. Fases del Proyecto (Fase 1: Descubrimiento y Diseño, Fase 2: Desarrollo Core, Fase 3: Testing y Migración, Fase 4: Lanzamiento).\n2. Desglose de Tareas con Dependencias (Ruta Crítica).\n3. Matriz de Hitos (Milestones) quincenales con entregables tangibles.\n4. Plan de Contingencia para desvíos de cronograma."
+    },
+    {
+      "id": "prod-11",
+      "title": "Generador de Plantillas para Notion / Obsidian / Coda",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Notion",
+        "Obsidian",
+        "PKM",
+        "Segunda Mente"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña la estructura de bases de datos relacionales, vistas y dashboards para tu sistema de notas y gestión.",
+      "variables": [
+        {
+          "name": "SISTEMA_NOTION",
+          "label": "Propósito del Workspace",
+          "placeholder": "ej. Sistema de gestión de clientes freelance con proyectos, tareas y facturas"
+        },
+        {
+          "name": "APP_NOTAS",
+          "label": "Herramienta",
+          "placeholder": "ej. Notion o Obsidian"
+        }
+      ],
+      "template": "Eres un Diseñador Certificado de Workspaces en [APP_NOTAS] (metodología PARA de Tiago Forte).\nPropósito: [SISTEMA_NOTION].\nDiseña la arquitectura:\n1. Bases de Datos Necesarias y sus Propiedades (Relaciones, Rollups, Fórmulas).\n2. Vistas Recomendadas (Tablero Kanban, Calendario, Vista de Galería filtrada).\n3. Dashboard Principal (Home Page) con accesos directos y widgets de alta productividad.\n4. Flujo diario de captura rápida y procesamiento semanal."
+    },
+    {
+      "id": "prod-12",
+      "title": "Especialista en Delegación Eficaz y Asignación de Tareas",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Liderazgo",
+        "Delegar",
+        "Management",
+        "Claridad"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Redacta briefs de asignación de tareas con contexto claro, nivel de autonomía y criterios de éxito sin microgestión.",
+      "variables": [
+        {
+          "name": "TAREA_A_DELEGAR",
+          "label": "Tarea a Encomendar",
+          "placeholder": "ej. Investigar 5 opciones de pasarelas de pago para el mercado europeo y presentar una tabla comparativa"
+        },
+        {
+          "name": "PERFIL_COLABORADOR",
+          "label": "Rol del Miembro del Equipo",
+          "placeholder": "ej. Analista Junior de Producto"
+        }
+      ],
+      "template": "Actúa como un Gerente de Ingeniería / Director de Operaciones.\nTarea: [TAREA_A_DELEGAR]. Colaborador: [PERFIL_COLABORADOR].\nEscribe el mensaje de delegación (Brief):\n1. El 'Por Qué' (Contexto estratégico de la tarea).\n2. El 'Qué' (Entregables específicos requeridos).\n3. Nivel de Autonomía otorgado (¿Decidir e informar, o investigar y proponer?).\n4. Recursos disponibles y puntos de revisión antes de la entrega final."
+    },
+    {
+      "id": "prod-13",
+      "title": "Auditor de Reuniones Innecesarias & Conversión a Comunicación Asíncrona",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "mail",
+      "tags": [
+        "Asíncrono",
+        "Reuniones",
+        "Loom",
+        "Slack"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Transforma una reunión que podría ser un email en un memo estructurado o guion de video corto (Loom).",
+      "variables": [
+        {
+          "name": "TEMA_REUNION",
+          "label": "Tema que se Iba a Tratar",
+          "placeholder": "ej. Actualización de estado del proyecto y aprobación del presupuesto de marketing"
+        }
+      ],
+      "template": "Eres un Defensor del Trabajo Asíncrono de Alto Rendimiento (estilo GitLab / Basecamp).\nTema: [TEMA_REUNION].\nConvierte esta reunión en un formato asíncrono:\n1. Memo Escrito Estructurado: Contexto -> Propuesta -> Opciones -> Decisión Solicitada.\n2. Guion de Loom de 2 minutos para explicar visualmente los puntos clave.\n3. Fecha límite y canal exacto para que cada persona emita su feedback sin necesidad de sincronizarse en vivo."
+    },
+    {
+      "id": "prod-14",
+      "title": "Gestor de Energía Personal y Cronobiología",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Cronobiología",
+        "Energía",
+        "Ritmo Circadiano",
+        "Salud"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Alinea tus tareas más demandantes con tus picos biológicos de energía a lo largo del día según tu cronotipo.",
+      "variables": [
+        {
+          "name": "CRONOTIPO_USUARIO",
+          "label": "Tu Cronotipo / Tendencia",
+          "placeholder": "ej. Alondra (madrugador con pico de energía a las 8 AM) o Búho (nocturno con lucidez después de las 6 PM)"
+        }
+      ],
+      "template": "Actúa como Especialista en Cronobiología del Rendimiento y Fisiología del Trabajo.\nCronotipo: [CRONOTIPO_USUARIO].\nDiseña un mapa de distribución energética diaria:\n- Horas de Máxima Lucidez Cognitiva: Tareas que deben ubicarse aquí (Estrategia, Código, Escritura).\n- Valle de Energía (Bajón circadiano): Tareas de baja fricción (Emails, archivo, reuniones informativas).\n- Ventana de Creatividad y Pensamiento Lateral: Tareas de brainstorming e ideación.\n- Estrategias de descanso activo (caminatas, siesta energética de 20 min, hidratación)."
+    },
+    {
+      "id": "prod-15",
+      "title": "Optimizador de Procesos con Metodología Lean (Muda / Desperdicio)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "sliders",
+      "tags": [
+        "Lean",
+        "Kaizen",
+        "Optimización",
+        "Muda"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Identifica los 7 desperdicios clásicos de Lean en flujos de trabajo de oficina o desarrollo de software.",
+      "variables": [
+        {
+          "name": "PROCESO_INEFICIENTE",
+          "label": "Flujo de Trabajo Problemático",
+          "placeholder": "ej. Cada vez que aprobamos un nuevo diseño pasa por 4 personas que tardan 10 días en responder por WhatsApp y correo"
+        }
+      ],
+      "template": "Eres un Maestro Cinta Negra (Black Belt) en Lean Six Sigma.\nProceso analizado: [PROCESO_INEFICIENTE].\nRealiza el análisis:\n1. Mapeo del Flujo de Valor actual vs. Tiempo de Ciclo Real.\n2. Identificación de los 3 Desperdicios Principales (Esperas innecesarias, Sobreprocesamiento, Defectos de comunicación).\n3. Propuesta Kaizen (Mejora Continua) para reducir el tiempo en un 70% con mínimos cambios de software."
+    },
+    {
+      "id": "prod-16",
+      "title": "Estructurador de Revisiones Semanales (Weekly Review GTD)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "GTD",
+        "Weekly Review",
+        "David Allen",
+        "Organización"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Protocolo de 45 minutos los viernes o domingos para vaciar la mente, revisar listas y planificar la semana entrante con claridad.",
+      "variables": [
+        {
+          "name": "ROLES_VIDA",
+          "label": "Tus Roles Principales",
+          "placeholder": "ej. Emprendedor tech, Padre de familia, Deportista aficionado"
+        }
+      ],
+      "template": "Eres un Instructor Certificado en Getting Things Done (GTD - David Allen).\nRoles: [ROLES_VIDA].\nDiseña la guía para la Revisión Semanal:\n1. Fase 1: Ponerse al Día (Vaciar bandejas físicas y digitales, procesar notas sueltas).\n2. Fase 2: Actualizarse (Revisar lista de proyectos activos, lista 'Algún día/Tal vez', calendario a 2 semanas).\n3. Fase 3: Ser Creativo (Definir los 3 Grandes Resultados deseados por rol para la próxima semana)."
+    },
+    {
+      "id": "prod-17",
+      "title": "Generador de Plantillas de Feedback 1 a 1 para Managers (1-on-1s)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "1on1",
+        "Feedback",
+        "Liderazgo",
+        "Carrera"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura reuniones periódicas 1-a-1 centradas en desarrollo profesional, bloqueos y motivación del colaborador.",
+      "variables": [
+        {
+          "name": "TIPO_1ON1",
+          "label": "Enfoque de la Sesión",
+          "placeholder": "ej. Sesión mensual de desarrollo de carrera y retroalimentación bidireccional"
+        }
+      ],
+      "template": "Actúa como un Director de Talento y Coach de Liderazgo Ejecutivo.\nEnfoque: [TIPO_1ON1].\nDiseña la plantilla de reunión:\n- Apertura (Preguntas de bienestar y temperatura emocional).\n- Agenda del Colaborador (Sus prioridades y temas que desea tratar primero).\n- Feedback del Manager usando el framework SBI (Situación, Comportamiento, Impacto).\n- Metas de crecimiento y compromisos para la siguiente sesión."
+    },
+    {
+      "id": "prod-18",
+      "title": "Técnica de Desglose de Proyectos Abrumadores (Chunking & Micro-pasos)",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Chunking",
+        "Procrastinación",
+        "Microtareas",
+        "Foco"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Transforma una tarea colosal que te genera parálisis en micro-pasos de 5 minutos tan sencillos que sea imposible fallar.",
+      "variables": [
+        {
+          "name": "TAREA_ABRUMADORA",
+          "label": "La Tarea que estás Postergando",
+          "placeholder": "ej. Crear todo el curso online desde cero y armar la plataforma de alumnos"
+        }
+      ],
+      "template": "Eres un Psicólogo Cognitivo especializado en Parálisis por Procrastinación.\nTarea abrumadora: [TAREA_ABRUMADORA].\nDesglosa esto:\n1. La Primera Micro-Acción Ridículamente Fácil (que tome menos de 3 minutos para romper la inercia).\n2. Los 5 Hitos Principales.\n3. Desglose de cada hito en bloques de 15 minutos.\n4. Criterio para saber cuándo detenerse cada día sin sentir culpa."
+    },
+    {
+      "id": "prod-19",
+      "title": "Diseñador de Sistemas de Archivo Digital y Nomenclatura",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Organización",
+        "Google Drive",
+        "Archivos",
+        "Nomenclatura"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estandariza carpetas en la nube y nombres de archivos para encontrar cualquier documento en menos de 5 segundos.",
+      "variables": [
+        {
+          "name": "TIPO_NEGOCIO_ARCHIVOS",
+          "label": "Área o Negocio",
+          "placeholder": "ej. Agencia de diseño y desarrollo con 10 clientes activos y contabilidad propia"
+        }
+      ],
+      "template": "Eres un Especialista en Gestión Documental y Organización Digital.\nÁrea: [TIPO_NEGOCIO_ARCHIVOS].\nDiseña el sistema de almacenamiento:\n1. Árbol de Carpetas Máximo de 3 Niveles de Profundidad.\n2. Convención Estricta de Nombres de Archivos (ej. YYYYMMDD_Cliente_Proyecto_v01.ext).\n3. Protocolo de Archivo de Proyectos Terminados para mantener limpio el entorno de trabajo activo."
+    },
+    {
+      "id": "prod-20",
+      "title": "Especialista en Ayuno de Dopamina y Desintoxicación Digital",
+      "category": "productividad",
+      "categoryLabel": "Productividad",
+      "icon": "check-circle",
+      "tags": [
+        "Dopamina",
+        "Desconexión",
+        "Salud Mental",
+        "Bienestar"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Protocolo de 24 a 48 horas para reiniciar tu circuito de recompensa, recuperar el enfoque y la paz mental.",
+      "variables": [
+        {
+          "name": "NIVEL_SOBREESTIMULACION",
+          "label": "Tus Síntomas Actuales",
+          "placeholder": "ej. Reviso el móvil cada 3 minutos, no puedo ver una película sin mirar Twitter, me cuesta leer más de 2 páginas seguidas"
+        }
+      ],
+      "template": "Actúa como Neurocientífico y Terapeuta de Desintoxicación Digital.\nSíntomas: [NIVEL_SOBREESTIMULACION].\nDiseña el plan de reseteo:\n1. Configuración de Dispositivos (Pantalla en escala de grises, apagado de notificaciones no humanas, bloqueo de feeds).\n2. Protocolo de Fin de Semana 'Offline' de 24 horas (Qué hacer, qué evitar estrictamente).\n3. Actividades sustitutivas que elevan la dopamina tónica saludable (caminar en la naturaleza, leer en papel, escribir en libreta).\n4. Reglas de convivencia digital de lunes a viernes."
+    },
+    {
+      "id": "learn-01",
+      "title": "Tutor con Método Feynman y Analogías Cotidianas",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Feynman",
+        "Pedagogía",
+        "Conceptos Complejos",
+        "Estudio"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet",
+        "Gemini 1.5 Pro"
+      ],
+      "description": "Desglosa temas difíciles explicándolos como si fueras un niño de 10 años con analogías vívidas.",
+      "variables": [
+        {
+          "name": "TEMA_COMPLEJO",
+          "label": "Tema o Concepto",
+          "placeholder": "ej. Cómo funcionan los Zero-Knowledge Proofs en Criptografía"
+        },
+        {
+          "name": "NIVEL_ACTUAL",
+          "label": "Tu Nivel de Conocimiento",
+          "placeholder": "ej. Principiante sin base matemática avanzada"
+        }
+      ],
+      "template": "Eres Richard Feynman combinado con el mejor pedagogo del mundo.\nNivel actual: [NIVEL_ACTUAL]. Concepto a enseñar: [TEMA_COMPLEJO].\nSigue la técnica Feynman:\n1. La Analogía Cotidiana (como si fuera una historia o mecanismo que un niño de 10 años entienda al instante).\n2. Los 3 Principios Fundamentales que sostienen todo.\n3. Errores Comunes y Falsas Creencias de la mayoría.\n4. Ejemplo Práctico Aplicado en el mundo real actual.\n5. Pregunta Interactiva de Autoevaluación para comprobar si lo comprendí."
+    },
+    {
+      "id": "learn-02",
+      "title": "Simulador de Entrevistas de Trabajo y Evaluador Interactivo",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Entrevistas",
+        "Carrera",
+        "Simulador",
+        "Roleplay"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Realiza simulacros de entrevista pregunta por pregunta, evaluando tus respuestas con el método STAR.",
+      "variables": [
+        {
+          "name": "PUESTO",
+          "label": "Puesto al que Postulas",
+          "placeholder": "ej. Senior Product Manager en una FinTech"
+        },
+        {
+          "name": "EMPRESA_TIPO",
+          "label": "Tipo de Empresa",
+          "placeholder": "ej. Startup de rápido crecimiento en fase Scale-up"
+        }
+      ],
+      "template": "Actúa como el Entrevistador Principal para el puesto de [PUESTO] en [EMPRESA_TIPO].\nReglas de la simulación:\n1. Conducirás una entrevista rigurosa. Hazme solo UNA pregunta a la vez y espera mi respuesta.\n2. Tras recibir mi respuesta, califícala del 1 al 10, destaca un acierto, señala una mejora usando el framework STAR (Situación, Tarea, Acción, Resultado) y luego hazme la siguiente pregunta.\nPara comenzar, salúdame e inicia con la primera pregunta."
+    },
+    {
+      "id": "learn-03",
+      "title": "Tutor de Diálogo Socrático (Descubre la Verdad con Preguntas)",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Sócrates",
+        "Filosofía",
+        "Pensamiento Crítico",
+        "Lógica"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "No te da las respuestas directamente; te guía con preguntas profundas para que descubras tus propias contradicciones y soluciones.",
+      "variables": [
+        {
+          "name": "DILEMA_O_PREGUNTA",
+          "label": "Tema o Dilema a Explorar",
+          "placeholder": "ej. ¿Es ético que los algoritmos de IA tomen decisiones sobre créditos bancarios o diagnósticos médicos?"
+        }
+      ],
+      "template": "Actúa como Sócrates en el ágora de Atenas.\nTema a investigar: [DILEMA_O_PREGUNTA].\nReglas pedagógicas:\n- No me des afirmaciones categóricas ni resúmenes cerrados.\n- Respóndeme siempre con 1 o 2 preguntas incisivas que pongan a prueba mis premisas fundamentales.\n- Ayúdame a descubrir contradicciones o supuestos no examinados en mi razonamiento.\n- Comienza saludándome y haciéndome tu primera pregunta inquisitiva sobre el tema."
+    },
+    {
+      "id": "learn-04",
+      "title": "Generador de Flashcards y Preguntas de Repetición Espaciada (Anki)",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Anki",
+        "Flashcards",
+        "Memorización",
+        "Spaced Repetition"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Convierte cualquier texto o tema en tarjetas Anki con formato Frente/Dorso, tarjetas Cloze (rellenar huecos) y nemotecnias.",
+      "variables": [
+        {
+          "name": "MATERIAL_ESTUDIO",
+          "label": "Texto o Conceptos a Memorizar",
+          "placeholder": "Pega el texto del tema...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Especialista en Ciencia de la Memoria y Repetición Espaciada (Anki).\nMaterial a transformar:\n```\n[MATERIAL_ESTUDIO]\n```\nGenera 10 tarjetas Anki de alta retención:\n1. 5 Tarjetas Básicas: Pregunta precisa en el Frente, Respuesta atómica en el Dorso.\n2. 5 Tarjetas Cloze Deletion (con sintaxis {{c1::palabra oculta}}).\n3. 2 Reglas Nemotécnicas o Palacios de la Memoria para los conceptos más difíciles."
+    },
+    {
+      "id": "learn-05",
+      "title": "Profesor de Idiomas Nativo con Corrección Explicativa",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Idiomas",
+        "Inglés",
+        "Gramática",
+        "Conversación"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Mantiene una conversación realista en el idioma objetivo, corrigiendo amablemente tus errores gramaticales y modismos.",
+      "variables": [
+        {
+          "name": "IDIOMA_OBJETIVO",
+          "label": "Idioma que Estás Aprendiendo",
+          "placeholder": "ej. Inglés Avanzado C1"
+        },
+        {
+          "name": "SITUACION_ROLEPLAY",
+          "label": "Situación o Escenario",
+          "placeholder": "ej. Negociando el aumento de salario con mi jefe en una empresa de software"
+        }
+      ],
+      "template": "Actúa como mi Profesor Nativo de [IDIOMA_OBJETIVO].\nEscenario: [SITUACION_ROLEPLAY].\nEn cada interacción tuya:\n1. Responde a mi mensaje manteniendo la conversación viva y natural en [IDIOMA_OBJETIVO].\n2. Agrega una sección al final llamada 📝 **Feedback**:\n   - Correcciones de gramática o vocabulario si cometí algún fallo.\n   - Una alternativa más natural o nativa para decir lo mismo.\nComienza tú iniciando la conversación en el escenario fijado."
+    },
+    {
+      "id": "learn-06",
+      "title": "Diseñador de Mapas Mentales y Esquemas Conceptuales Jerárquicos",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Mapa Mental",
+        "Esquemas",
+        "Organización",
+        "Visual"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura un tema extenso en un mapa mental jerárquico con código Mermaid de tipo mindmap.",
+      "variables": [
+        {
+          "name": "TEMA_MAPA",
+          "label": "Tema a Esquematizar",
+          "placeholder": "ej. Historia de la Inteligencia Artificial: de Alan Turing a los Transformers y Agentes Autónomos"
+        }
+      ],
+      "template": "Eres un Especialista en Organización Visual del Conocimiento.\nTema: [TEMA_MAPA].\nEntrega:\n1. Mapa Jerárquico en formato Markdown con viñetas anidadas (Nodo Central -> 4 Ramas Principales -> Sub-ramas).\n2. Diagrama en código Mermaid con sintaxis 'mindmap' listo para copiar y visualizar.\n3. Resumen de las conexiones interdisciplinarias más sorprendentes del tema."
+    },
+    {
+      "id": "learn-07",
+      "title": "Generador de Exámenes Simulados y Quizzes de Opción Múltiple",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Quiz",
+        "Examen",
+        "Evaluación",
+        "Test"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea exámenes tipo test rigurosos con justificación pedagógica de por qué cada opción es correcta o incorrecta.",
+      "variables": [
+        {
+          "name": "MATERIA_EXAMEN",
+          "label": "Materia o Certificación",
+          "placeholder": "ej. Certificación AWS Certified Solutions Architect Associate"
+        },
+        {
+          "name": "CANTIDAD_PREGUNTAS",
+          "label": "Número de Preguntas",
+          "placeholder": "ej. 5 preguntas de nivel intermedio-avanzado"
+        }
+      ],
+      "template": "Actúa como Diseñador de Exámenes Oficiales para [MATERIA_EXAMEN].\nGenera [CANTIDAD_PREGUNTAS]:\nPara cada pregunta:\n- Enunciado claro con caso de uso práctico.\n- 4 Opciones de respuesta (A, B, C, D).\n- Clave de respuesta correcta oculta con explicación exhaustiva de por qué la correcta es la mejor y por qué los distractores fallan."
+    },
+    {
+      "id": "learn-08",
+      "title": "Desglosador de Artículos Científicos y Papers (Arxiv / PubMed)",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Papers",
+        "Ciencia",
+        "Investigación",
+        "Arxiv"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Analiza publicaciones científicas complejas desmenuzando hipótesis, metodología, limitaciones y resultados clave.",
+      "variables": [
+        {
+          "name": "RESUMEN_O_PAPER",
+          "label": "Título o Abstract del Paper",
+          "placeholder": "Pega el abstract o texto del estudio...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Investigador Principal y Revisor Académico (Peer Reviewer).\nPaper a analizar:\n```\n[RESUMEN_O_PAPER]\n```\nDesglosa el paper:\n1. La Pregunta de Investigación Central y la Hipótesis.\n2. Metodología y Conjunto de Datos utilizados.\n3. Hallazgo Principal y Métricas Clave de Rendimiento.\n4. Limitaciones y Sesgos no resueltos por los autores.\n5. Implicación Práctica en la industria o futuras investigaciones."
+    },
+    {
+      "id": "learn-09",
+      "title": "Coach de Modelos Mentales para la Toma de Decisiones",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Modelos Mentales",
+        "Decisiones",
+        "Charlie Munger",
+        "Lógica"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Evalúa un dilema o decisión personal/profesional a través del prisma de 5 modelos mentales clásicos.",
+      "variables": [
+        {
+          "name": "DILEMA_DECISION",
+          "label": "Decisión o Dilema a Evaluar",
+          "placeholder": "ej. ¿Debo dejar mi empleo estable para unirme como cofundador a una startup en fase temprana?"
+        }
+      ],
+      "template": "Actúa como Charlie Munger y Consultor de Modelos Mentales Multidisciplinarios.\nDilema: [DILEMA_DECISION].\nAnaliza la situación aplicando:\n1. Primeros Principios (First Principles Thinking): Descomponer el problema en sus verdades fundamentales.\n2. Inversión (Inversion): ¿Cómo garantizar el fracaso total y cómo evitarlo?\n3. Pensamiento de Segundo Orden (Second-Order Thinking): Consecuencias de las consecuencias a 1, 3 y 5 años.\n4. Coste de Oportunidad real.\n5. Conclusión equilibrada y recomendación de acción."
+    },
+    {
+      "id": "learn-10",
+      "title": "Tutor de Oratoria y Estructuración de Charlas TEDx",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "TEDx",
+        "Oratoria",
+        "Presentaciones",
+        "Pitch"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Ayuda a pulir tu 'Idea que vale la pena difundir' y estructurar una presentación de 12 a 15 minutos.",
+      "variables": [
+        {
+          "name": "IDEA_CHARLA",
+          "label": "La Idea Central de tu Charla",
+          "placeholder": "ej. La soledad urbana moderna puede erradicarse rediseñando los espacios comunes de las ciudades"
+        }
+      ],
+      "template": "Eres el Curador Principal de Charlas TEDx.\nIdea propuesta: [IDEA_CHARLA].\nEstructura la charla de 15 minutos:\n- Minuto 0-2: La apertura que rompe esquemas y empatiza con el público.\n- Minuto 2-6: El Problema y por qué las soluciones tradicionales han fracasado.\n- Minuto 6-11: La Revelación / Tu Propuesta y la evidencia que la respalda.\n- Minuto 11-14: La Visión de Futuro (Cómo cambia el mundo si aplicamos esto).\n- Minuto 14-15: La Frase Final para que la audiencia recuerde tu charla por años."
+    },
+    {
+      "id": "learn-11",
+      "title": "Generador de Currículum y Plan de Estudio Autodidacta de 12 Semanas",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Syllabus",
+        "Autodidacta",
+        "Roadmap",
+        "Carrera"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña una ruta de aprendizaje estructurada semana a semana con recursos gratuitos, lecturas y proyectos prácticos.",
+      "variables": [
+        {
+          "name": "HABILIDAD_A_APRENDER",
+          "label": "Habilidad o Dominio",
+          "placeholder": "ej. Ingeniería de Datos moderna con Python, SQL, dbt y Snowflake"
+        },
+        {
+          "name": "DEDICACION_SEMANAL",
+          "label": "Horas Disponibles por Semana",
+          "placeholder": "ej. 8 horas a la semana"
+        }
+      ],
+      "template": "Eres un Diseñador Curricular Universitario y Mentor Profesional.\nObjetivo: Aprender [HABILIDAD_A_APRENDER]. Tiempo: [DEDICACION_SEMANAL].\nDiseña un Plan de Estudio de 12 Semanas:\n- Dividido en 3 Bloques de 4 semanas (Fundamentos, Práctica Intermedia, Maestría y Proyectos).\n- Para cada semana: Objetivo concreto, temas teóricos, recursos recomendados (documentación oficial, cursos abiertos) y un ejercicio práctico obligatorio.\n- Proyecto Final de Portafolio para la semana 12."
+    },
+    {
+      "id": "learn-12",
+      "title": "Entrenador de Lectura Rápida y Comprensión Crítica",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Lectura Rápida",
+        "Comprensión",
+        "Skimming",
+        "Estudio"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Técnicas de pre-lectura, escaneo (scanning/skimming) y extracción de argumentos sin perder comprensión.",
+      "variables": [
+        {
+          "name": "TIPO_MATERIAL",
+          "label": "Material de Lectura",
+          "placeholder": "ej. Ensayos académicos densos de sociología y economía"
+        }
+      ],
+      "template": "Actúa como Instructor de Lectura de Alto Rendimiento y Comprensión Sintópica (Método Adler).\nMaterial: [TIPO_MATERIAL].\nProvee:\n1. El Método de Pre-lectura en 3 Minutos (Índice, conclusiones, gráficos, primeros párrafos).\n2. Técnicas para erradicar la subvocalización y ampliar el campo visual periférico.\n3. El Protocolo de Toma de Notas Marginales para sintetizar capítulos enteros en 3 viñetas."
+    },
+    {
+      "id": "learn-13",
+      "title": "Analizador de Falacias Lógicas y Sesgos Cognitivos",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Falacias",
+        "Lógica",
+        "Debate",
+        "Pensamiento Crítico"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Analiza discursos, debates o artículos detectando falacias ad hominem, hombres de paja, falsos dilemas y sesgos.",
+      "variables": [
+        {
+          "name": "ARGUMENTO_A_ANALIZAR",
+          "label": "Texto o Argumento",
+          "placeholder": "Pega el texto del debate o afirmación...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Catedrático de Lógica Formal y Pensamiento Crítico.\nTexto a auditar:\n```\n[ARGUMENTO_A_ANALIZAR]\n```\nRealiza el análisis:\n1. Lista de Falacias Lógicas detectadas con su nombre formal (ej. Hombre de paja, Falso dilema, Pendiente resbaladiza) y la cita exacta donde ocurre.\n2. Sesgos Cognitivos subyacentes en el emisor.\n3. Versión del argumento reconstruida de forma rigurosa y válida (Principio de Caridad interpretativa)."
+    },
+    {
+      "id": "learn-14",
+      "title": "Tutor de Matemáticas y Estadística Intuitiva",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Matemáticas",
+        "Estadística",
+        "Intuición",
+        "Cálculo"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Explica conceptos matemáticos abstractos (derivadas, autovectores, teorema de Bayes) a través de intuición geométrica y ejemplos.",
+      "variables": [
+        {
+          "name": "CONCEPTO_MATEMATICO",
+          "label": "Concepto Abstracto",
+          "placeholder": "ej. Teorema de Bayes y su diferencia con la probabilidad clásica"
+        }
+      ],
+      "template": "Actúa como Grant Sanderson (creador de 3Blue1Brown).\nExplica: [CONCEPTO_MATEMATICO].\nEstructura:\n1. La Intuición Geométrica o Visual detrás de la fórmula (sin empezar con números áridos).\n2. La Paradoja o Pregunta Inicial que motivó el descubrimiento histórico.\n3. La Fórmula paso a paso con el significado físico/real de cada variable.\n4. Un ejemplo numérico cotidiano paso a paso."
+    },
+    {
+      "id": "learn-15",
+      "title": "Especialista en Escritura Académica y Tesis (Estructura IMRyD)",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Tesis",
+        "Académico",
+        "Metodología",
+        "Investigación"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura capítulos de tesis y artículos científicos según el estándar IMRyD (Introducción, Métodos, Resultados y Discusión).",
+      "variables": [
+        {
+          "name": "TEMA_TESIS",
+          "label": "Tema de la Tesis",
+          "placeholder": "ej. Impacto de las microfinanzas impulsadas por fintechs en comunidades rurales"
+        }
+      ],
+      "template": "Eres un Asesor de Tesis Doctoral y Metodólogo Senior.\nTema: [TEMA_TESIS].\nDesarrolla el plan metodológico:\n1. Planteamiento del Problema, Justificación y Pregunta Principal.\n2. Marco Teórico y Estado del Arte (categorías clave de literatura a revisar).\n3. Marco Metodológico (Población, Muestra, Instrumentos cualitativos/cuantitativos).\n4. Estructura de Capítulos recomendada."
+    },
+    {
+      "id": "learn-16",
+      "title": "Simulador de Debate Académico con Abogado del Diablo",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Debate",
+        "Abogado del Diablo",
+        "Argumentación",
+        "Lógica"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Toma la postura contraria a tu tesis con los argumentos más sólidos y despiadados para que fortalezcas tu defensa.",
+      "variables": [
+        {
+          "name": "MI_POSTURA",
+          "label": "Tu Tesis o Postura",
+          "placeholder": "ej. El trabajo remoto al 100% es superior en productividad y bienestar que cualquier esquema presencial"
+        }
+      ],
+      "template": "Actúa como el Abogado del Diablo y Opositor de Debate de élite.\nMi postura es: \"[MI_POSTURA]\".\nTu misión:\n- Destruye mi argumento presentando los 3 contraargumentos más fuertes, respaldados por estudios y evidencia contraria.\n- Señala los puntos ciegos de mi visión.\n- Hazme una pregunta inquisitiva final obligándome a defender mi punto más vulnerable."
+    },
+    {
+      "id": "learn-17",
+      "title": "Creador de Analogías Cruzadas Interdisciplinarias",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Analogías",
+        "Creatividad",
+        "Pedagogía",
+        "Ciencia"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Explica un concepto de un campo A utilizando únicamente conceptos y metáforas de un campo B totalmente distinto.",
+      "variables": [
+        {
+          "name": "CONCEPTO_ORIGEN",
+          "label": "Concepto a Explicar",
+          "placeholder": "ej. La arquitectura de microservicios y APIs"
+        },
+        {
+          "name": "DOMINIO_ANALOGIA",
+          "label": "Mundo de la Metáfora",
+          "placeholder": "ej. La cocina de un restaurante de alta gastronomía"
+        }
+      ],
+      "template": "Eres un Maestro de la Metáfora y Pedagogía Cruzada.\nExplica [CONCEPTO_ORIGEN] utilizando exclusivamente el universo de [DOMINIO_ANALOGIA].\nCrea una analogía paso a paso mapeando cada componente técnico a su equivalente exacto en la metáfora, demostrando cómo interactúan los elementos y qué sucede cuando un componente falla."
+    },
+    {
+      "id": "learn-18",
+      "title": "Guía de Memorización con Técnica del Palacio de la Memoria (Método Loci)",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Palacio de la Memoria",
+        "Loci",
+        "Mnemotecnia",
+        "Memoria"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Convierte listas de datos o secuencias en un recorrido imaginario vívido por una casa o lugar familiar para retenerlas por años.",
+      "variables": [
+        {
+          "name": "ELEMENTOS_A_MEMORIZAR",
+          "label": "Lista a Memorizar",
+          "placeholder": "ej. Los 10 principios de diseño de Dieter Rams"
+        }
+      ],
+      "template": "Eres un Gran Maestro Internacional de la Memoria.\nLista: [ELEMENTOS_A_MEMORIZAR].\nConstruye un Palacio de la Memoria:\n1. Establece un recorrido lógico por 5 habitaciones de una casa típica.\n2. Para cada elemento, crea una imagen mental visualmente exagerada, ridícula o con movimiento para fijarla en un mueble específico.\n3. Instrucciones para repasar el palacio mentalmente a las 24 horas y 7 días."
+    },
+    {
+      "id": "learn-19",
+      "title": "Profesor de Historia con Crónica Inmersiva en Primera Persona",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Historia",
+        "Narrativa",
+        "Inmersión",
+        "Roleplay"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Revive momentos históricos cruciales narrados desde los ojos de un testigo de la época con rigor histórico.",
+      "variables": [
+        {
+          "name": "EVENTO_HISTORICO",
+          "label": "Evento Histórico",
+          "placeholder": "ej. La caída de Constantinopla en 1453 o la llegada a la Luna en 1969"
+        },
+        {
+          "name": "PERSPECTIVA_TESTIGO",
+          "label": "Rol del Narrador",
+          "placeholder": "ej. Un cartógrafo genovés en las murallas o un ingeniero de control de vuelo en Houston"
+        }
+      ],
+      "template": "Actúa como un Historiador y Novelista Histórico de rigor impecable.\nEvento: [EVENTO_HISTORICO]. Perspectiva: [PERSPECTIVA_TESTIGO].\nEscribe una crónica inmersiva:\n- Detalles sensoriales auténticos de la época (olores, sonidos, tecnología disponible).\n- El ambiente de tensión y las decisiones críticas que se tomaron en ese instante.\n- Reflexión final sobre el impacto duradero que este día tendría en la historia de la humanidad."
+    },
+    {
+      "id": "learn-20",
+      "title": "Entrenador de Pensamiento Visual y Dibujo de Conceptos (Sketchnoting)",
+      "category": "aprendizaje",
+      "categoryLabel": "Aprendizaje",
+      "icon": "book-open",
+      "tags": [
+        "Sketchnote",
+        "Visual",
+        "Toma de Notas",
+        "Creatividad"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Convierte ideas abstractas en metáforas visuales sencillas e iconos dibujables para tomar notas ilustradas.",
+      "variables": [
+        {
+          "name": "CONCEPTO_VISUALIZAR",
+          "label": "Concepto o Charla",
+          "placeholder": "ej. La paradoja de la elección de Barry Schwartz (a más opciones, menos satisfacción)"
+        }
+      ],
+      "template": "Eres un Facilitador Gráfico e Instructor de Sketchnoting.\nConcepto: [CONCEPTO_VISUALIZAR].\nProporciona instrucciones para dibujarlo en una libreta:\n1. La Metáfora Central en 1 dibujo principal (explicada con figuras geométricas básicas: círculos, rectángulos, flechas).\n2. 4 Iconos de apoyo para los puntos secundarios con instrucciones de trazo paso a paso.\n3. Jerarquía de texto y uso de contenedores (burbujas de diálogo, banners, marcos)."
+    },
+    {
+      "id": "creat-01",
+      "title": "Generador de Ideas Disruptivas con Metodología SCAMPER",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Brainstorming",
+        "SCAMPER",
+        "Innovación",
+        "Startups"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Aplica la metodología SCAMPER para generar 7 ángulos innovadores y soluciones no convencionales.",
+      "variables": [
+        {
+          "name": "INDUSTRIA_PROBLEMA",
+          "label": "Industria o Problema",
+          "placeholder": "ej. Alquiler de departamentos para nómadas digitales"
+        },
+        {
+          "name": "TENDENCIA_ACTUAL",
+          "label": "Tendencia a Cruzar",
+          "placeholder": "ej. IA Agéntica y Microcomunidades"
+        }
+      ],
+      "template": "Actúa como Diseñador de Innovación y Estratega de Pensamiento Lateral.\nIndustria: [INDUSTRIA_PROBLEMA]. Tendencia: [TENDENCIA_ACTUAL].\nAplica la técnica SCAMPER para generar 7 ángulos radicales:\n- S (Sustituir), C (Combinar), A (Adaptar), M (Modificar), P (Poner en otros usos), E (Eliminar), R (Reordenar/Invertir).\nConcluye seleccionando las 2 ideas más viables para prototipar en 48 horas."
+    },
+    {
+      "id": "creat-02",
+      "title": "Técnica de los Seis Sombreros para Pensar (Edward de Bono)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Seis Sombreros",
+        "Edward de Bono",
+        "Decisiones",
+        "Innovación"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Evalúa un proyecto o idea desde 6 perspectivas cognitivas: datos, emociones, riesgos, beneficios, creatividad y control.",
+      "variables": [
+        {
+          "name": "PROYECTO_O_DECISION",
+          "label": "Proyecto a Evaluar",
+          "placeholder": "ej. Lanzar un marketplace de servicios donde el precio lo fije el comprador mediante subastas inversas"
+        }
+      ],
+      "template": "Actúa como Facilitador Maestro del Método de los Seis Sombreros (Edward de Bono).\nPropuesta: [PROYECTO_O_DECISION].\nAnaliza la propuesta sombrero a sombrero:\n- Blanco (Hechos y Datos objetivos): Qué sabemos y qué información nos falta.\n- Rojo (Emociones e Intuición): Reacciones viscerales de usuarios y equipo.\n- Negro (Juicio Crítico y Riesgos): Por qué podría fallar estrepitosamente.\n- Amarillo (Optimismo y Beneficios): El mejor escenario posible.\n- Verde (Creatividad y Alternativas): Ideas locas para superar los bloqueos.\n- Azul (Control y Conclusiones): Síntesis y próximos pasos."
+    },
+    {
+      "id": "creat-03",
+      "title": "Generador de Nombres de Marcas y Productos (Naming Studio)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Naming",
+        "Branding",
+        "Marcas",
+        "Startups"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Genera 20 propuestas de nombres originales clasificados por estilos (neologismos, compuestos, evocativos, abstractos).",
+      "variables": [
+        {
+          "name": "CONCEPTO_PRODUCTO",
+          "label": "Qué hace tu Producto",
+          "placeholder": "ej. Plataforma para crear contratos inteligentes sin saber programar"
+        },
+        {
+          "name": "VIBRA_MARCA",
+          "label": "Sensación Deseada",
+          "placeholder": "ej. Moderna, confiable, ágil, tecnológica pero accesible"
+        }
+      ],
+      "template": "Eres el Director de un Estudio de Naming y Branding Internacional.\nProducto: [CONCEPTO_PRODUCTO]. Personalidad: [VIBRA_MARCA].\nGenera 20 nombres organizados en 4 categorías:\n1. Neologismos / Palabras Inventadas (5).\n2. Palabras Compuestas / Portmanteau (5).\n3. Nombres Evocativos / Metafóricos (5).\n4. Nombres Cortos / Punchy de 4-6 letras (5).\nPara cada nombre, incluye su etimología y disponibilidad conceptual de dominios .com / .io."
+    },
+    {
+      "id": "creat-04",
+      "title": "Técnica del Peor Escenario Posible (Reverse Brainstorming)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Reverse Brainstorming",
+        "Problemas",
+        "Soluciones",
+        "Innovación"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Ideación a través de la destrucción: ¿Cómo podríamos hacer que el problema sea 10 veces peor? Luego invierte cada respuesta.",
+      "variables": [
+        {
+          "name": "META_A_MEJORAR",
+          "label": "Proceso o Meta",
+          "placeholder": "ej. Cómo mejorar la retención de usuarios en una app de fitness en su primera semana"
+        }
+      ],
+      "template": "Actúa como un Consultor de Innovación Disruptiva.\nMeta deseada: [META_A_MEJORAR].\nAplica Reverse Brainstorming:\n1. Pregunta Inversa: '¿Cómo podríamos lograr que el 100% de los usuarios odien la app y la desinstalen en las primeras 24 horas?' (Genera 8 respuestas malévolamente creativas).\n2. Inversión Estratégica: Invierte cada una de esas 8 ideas destructivas en su opuesto brillante y positivo.\n3. Las 3 Funcionalidades Reveladoras que surgen del ejercicio."
+    },
+    {
+      "id": "creat-05",
+      "title": "Creador de Mundos de Ficción y Worldbuilding (Sci-Fi / Fantasía)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Worldbuilding",
+        "Ficción",
+        "Sci-Fi",
+        "Fantasía"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña universos consistentes: geografía, sistemas de magia o tecnología, facciones políticas y cultura.",
+      "variables": [
+        {
+          "name": "PREMISA_MUNDO",
+          "label": "Premisa Central del Universo",
+          "placeholder": "ej. Un planeta donde la noche dura 20 años y las sombras cobran vida"
+        }
+      ],
+      "template": "Eres un Arquitecto de Universos Literarios y Diseñador de Worldbuilding.\nPremisa: [PREMISA_MUNDO].\nDiseña este mundo:\n1. Leyes Naturales o Sistema de Magia/Tecnología con sus costes y limitaciones estrictas.\n2. 3 Facciones Políticas o Especies con sus intereses en conflicto.\n3. Tradiciones Culturales, Ritos de Paso y Tabúes Sagrados.\n4. Una Leyenda Histórica que todos los habitantes conocen pero que oculta un secreto oscuro."
+    },
+    {
+      "id": "creat-06",
+      "title": "Generador de Prompts Artísticos para Midjourney y DALL-E 3",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Midjourney",
+        "DALL-E",
+        "Prompts Arte",
+        "Visual"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea prompts hiperdetallados con estilo artístico, lente de cámara, iluminación volumétrica y parámetros técnicos (--ar, --v, --style).",
+      "variables": [
+        {
+          "name": "ESCENA_DESEADA",
+          "label": "Idea de la Imagen",
+          "placeholder": "ej. Un astronauta meditando en un jardín zen japonés en Marte con cerezos flotantes"
+        },
+        {
+          "name": "ESTILO_VISUAL",
+          "label": "Estilo Artístico",
+          "placeholder": "ej. Fotografía cinematográfica 35mm, Cyberpunk suave o Ilustración hiperrealista"
+        }
+      ],
+      "template": "Eres un Director de Arte Digital e Ingeniero de Prompts para Midjourney v6 y DALL-E 3.\nEscena: [ESCENA_DESEADA]. Estilo: [ESTILO_VISUAL].\nGenera:\n1. 3 Variaciones completas en inglés con descriptores de iluminación (octane render, volumetric light, ray tracing, cinematic color grading).\n2. Parámetros técnicos recomendados (--ar 16:9, --style raw, --v 6.0, --stylize 250).\n3. Paleta de colores Hexadecimal de soporte."
+    },
+    {
+      "id": "creat-07",
+      "title": "Gamificación de Procesos Aburridos (Framework Octalysis)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Gamificación",
+        "Octalysis",
+        "Engagement",
+        "Psicología"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Convierte tareas tediosas en dinámicas adictivas aplicando los 8 motores centrales de motivación humana.",
+      "variables": [
+        {
+          "name": "PROCESO_TEDIOSO",
+          "label": "Proceso a Gamificar",
+          "placeholder": "ej. El reporte de gastos y subida de facturas mensuales de los comerciales de una empresa"
+        }
+      ],
+      "template": "Actúa como Yu-kai Chou y Especialista en Gamificación y Framework Octalysis.\nProceso: [PROCESO_TEDIOSO].\nDiseña una experiencia gamificada:\n1. Significado Épico y Llamado: El encuadre narrativo de la tarea.\n2. Desarrollo y Logro: Puntos, insignias, niveles y barras de progreso visuales.\n3. Empoderamiento de la Creatividad y Feedback: Recompensas instantáneas.\n4. Presión Social y Competencia Amigable entre pares.\n5. Reglas del juego para que no se sienta infantil sino gratificante."
+    },
+    {
+      "id": "creat-08",
+      "title": "Creación de Podcasts y Shows en Video (Formato y Estructura)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Podcast",
+        "Show",
+        "Contenido",
+        "Audiovisual"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Diseña el concepto, segmentos recurrentes, dinámicas de interacción y estilo para un nuevo show de audio o video.",
+      "variables": [
+        {
+          "name": "TEMATICA_PODCAST",
+          "label": "Temática y Tono",
+          "placeholder": "ej. Entrevistas desenfadadas a fundadores de startups sobre sus peores fracasos"
+        }
+      ],
+      "template": "Eres un Productor Ejecutivo de Shows y Podcasts de Alto Rating.\nTemática: [TEMATICA_PODCAST].\nDiseña la biblia del formato:\n1. Nombre del Show y Eslogan inolvidable.\n2. Estructura de 4 Segmentos Fijos por episodio (ej. 'La Pregunta Incómoda', 'El Juicio del Fracaso', 'El Consejo de 1 Millón').\n3. Ritual de Entrada y Despedida (Catchphrase del presentador).\n4. 5 Primeras Ideas de Episodios con invitados hipotéticos y titulares gancho."
+    },
+    {
+      "id": "creat-09",
+      "title": "Generador de Tramas con Giros Argumentales (Plot Twists)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Plot Twist",
+        "Guion",
+        "Storytelling",
+        "Suspense"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña giros de tuerca inesperados pero sembrados con pistas sutiles (Foreshadowing) que dejan al lector boquiabierto.",
+      "variables": [
+        {
+          "name": "SITUACION_INICIAL",
+          "label": "Trama o Situación Actual",
+          "placeholder": "ej. Un detective investiga la desaparición de un millonario en una mansión aislada durante una tormenta de nieve"
+        }
+      ],
+      "template": "Eres un Guionista de Cine especializado en Thrillers Psicológicos (estilo Christopher Nolan / M. Night Shyamalan).\nPremisa: [SITUACION_INICIAL].\nGenera 3 Giros Argumentales radicales:\n- Opción 1: El Giro de Identidad (Quien creemos que es el protagonista no lo es).\n- Opción 2: El Giro de Percepción Temporal o Tecnológica.\n- Opción 3: El Giro Moral (El villano resulta ser la única persona cuerda).\nPara cada giro, incluye 3 pistas sutiles que deben plantarse al inicio de la historia."
+    },
+    {
+      "id": "creat-10",
+      "title": "Ideación de Micro-SaaS y Productos Digitales para Solopreneurs",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Micro-SaaS",
+        "Indie Hacker",
+        "Negocios",
+        "Startups"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Genera 5 conceptos de software de nicho, construibles en 1 semana por un solo desarrollador y monetizables desde el día 1.",
+      "variables": [
+        {
+          "name": "NICHO_O_API",
+          "label": "Nicho o API a Explotar",
+          "placeholder": "ej. Profesionales inmobiliarios o APIs de WhatsApp y Google Sheets"
+        }
+      ],
+      "template": "Actúa como un Indie Hacker veterano que factura $30k MRR con Micro-SaaS.\nNicho o API: [NICHO_O_API].\nGenera 5 conceptos de Micro-SaaS de alta viabilidad:\nPara cada uno:\n- El Dolor Agudo específico que resuelve.\n- La Funcionalidad Única (Core Feature) construible en menos de 7 días.\n- Modelo de Precios B2B ($19-$99/mes).\n- Estrategia de Adquisición de los primeros 10 clientes de pago sin anuncios."
+    },
+    {
+      "id": "creat-11",
+      "title": "Técnica de Combinación de Conceptos Forzada (Random Input / Mashup)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Mashup",
+        "Pensamiento Lateral",
+        "Creatividad",
+        "Innovación"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Obliga a cruzar tu problema con una palabra aleatoria de la naturaleza o la arquitectura para desatar ideas fuera de la caja.",
+      "variables": [
+        {
+          "name": "PROBLEMA_ACTUAL",
+          "label": "Tu Problema de Negocio o Diseño",
+          "placeholder": "ej. Cómo reducir el abandono de carritos en una tienda online"
+        },
+        {
+          "name": "ELEMENTO_ALEATORIO",
+          "label": "Objeto o Sistema Aleatorio",
+          "placeholder": "ej. Un hormiguero o Un aeropuerto internacional"
+        }
+      ],
+      "template": "Eres un Facilitador de Creatividad y Pensamiento Lateral Provocativo.\nProblema: [PROBLEMA_ACTUAL]. Elemento aleatorio: [ELEMENTO_ALEATORIO].\n1. Extrae 5 características fundamentales de [ELEMENTO_ALEATORIO] (ej. roles especializados, feromonas, túneles de escape, señalización visual).\n2. Fuerza la conexión de cada una de esas 5 características con tu problema.\n3. Desarrolla las 2 soluciones más innovadoras y aplicables resultantes del cruce."
+    },
+    {
+      "id": "creat-12",
+      "title": "Diseñador de Escape Rooms y Rompecabezas Narrativos",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Escape Room",
+        "Puzzles",
+        "Juegos",
+        "Narrativa"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña secuencias de acertijos lógicos integrados orgánicamente con la historia de una sala temática.",
+      "variables": [
+        {
+          "name": "TEMATICA_ESCAPE",
+          "label": "Ambientación de la Sala",
+          "placeholder": "ej. El laboratorio secreto de Nikola Tesla en 1899"
+        }
+      ],
+      "template": "Actúa como Mastermind y Diseñador Principal de Escape Rooms.\nAmbientación: [TEMATICA_ESCAPE].\nDiseña una experiencia de 60 minutos:\n1. La Narrativa y el Objetivo Final de Escape.\n2. Cadena de 4 Acertijos Progresivos (1 Lógico-espacial, 1 Criptográfico con objetos de la época, 1 Electromecánico y 1 Acertijo final cooperativo).\n3. Pistas ambientales y diseño sonoro."
+    },
+    {
+      "id": "creat-13",
+      "title": "Generador de Metáforas Visuales para Ilustradores y Diseñadores",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Ilustración",
+        "Metáfora",
+        "Diseño",
+        "Conceptual"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea conceptos visuales editoriales (estilo The New Yorker / The Economist) para representar ideas abstractas.",
+      "variables": [
+        {
+          "name": "CONCEPTO_ABSTRACTO",
+          "label": "Tema o Titular a Ilustrar",
+          "placeholder": "ej. La trampa del éxito: cuando el crecimiento desmedido asfixia a la propia empresa"
+        }
+      ],
+      "template": "Eres un Director de Ilustración Editorial de The New Yorker.\nConcepto abstracto: [CONCEPTO_ABSTRACTO].\nGenera 4 conceptos de ilustraciones conceptuales:\n- Propuesta 1: La Paradoja Física (Yuxtaposición de dos objetos imposibles).\n- Propuesta 2: El Cambio de Escala (Lo diminuto controlando lo gigante).\n- Propuesta 3: Espacio Negativo y Siluetas Dobles.\n- Propuesta 4: Simbolismo Poético y Minimalista."
+    },
+    {
+      "id": "creat-14",
+      "title": "Creador de Arquetipos de Personajes con Sombras Psicológicas (Jung)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Personajes",
+        "Jung",
+        "Psicología",
+        "Ficción"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea personajes multidimensionales con motivación consciente, herida del pasado (The Lie) y sombra inconsciente.",
+      "variables": [
+        {
+          "name": "ROL_HISTORIA",
+          "label": "Rol o Profesión del Personaje",
+          "placeholder": "ej. Un juez implacable que descubre que su hija cometió un delito grave"
+        }
+      ],
+      "template": "Actúa como Analista de Personajes y Guionista Senior (psicología de Carl Jung).\nPersonaje: [ROL_HISTORIA].\nDesarrolla su ficha psicológica:\n1. La Máscara (Persona): Cómo se presenta ante la sociedad.\n2. La Herida Secreta (The Lie): La creencia errónea que guía sus acciones.\n3. La Sombra Inconsciente: Lo que reprime y detesta en los demás.\n4. El Dilema Moral Clímax que lo obligará a transformarse o destruirse."
+    },
+    {
+      "id": "creat-15",
+      "title": "Reinvención de Objetos Cotidianos (Rediseño Crítico)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Diseño Industrial",
+        "Rediseño",
+        "Innovación",
+        "UX"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Cuestiona la ergonomía, materialidad y función de un objeto mundano para reinventarlo desde cero.",
+      "variables": [
+        {
+          "name": "OBJETO_A_REINVENTAR",
+          "label": "Objeto Cotidiano",
+          "placeholder": "ej. El paraguas tradicional que se dobla con el viento y gotea en interiores"
+        }
+      ],
+      "template": "Eres un Diseñador Industrial y de Experiencia de Producto (estilo Dyson / Teenage Engineering).\nObjeto: [OBJETO_A_REINVENTAR].\nRediséñalo por completo:\n1. Anatomía de los 3 grandes defectos del diseño tradicional.\n2. Rediseño Radical: Nueva mecánica, materiales sostenibles y factor de forma.\n3. La Experiencia de Uso (Unboxing, transporte, mantenimiento).\n4. Dibujo conceptual descriptivo en texto de su estética."
+    },
+    {
+      "id": "creat-16",
+      "title": "Generador de Eventos Interactivos y Dinámicas Rompehielos (Icebreakers)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Icebreakers",
+        "Eventos",
+        "Team Building",
+        "Divertido"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea dinámicas grupales memorables de 10 minutos que rompen la frialdad sin dar vergüenza ajena.",
+      "variables": [
+        {
+          "name": "TIPO_EVENTO_GRUPO",
+          "label": "Tipo de Evento y Audiencia",
+          "placeholder": "ej. Retiro de empresa remoto con 40 desarrolladores introvertidos"
+        }
+      ],
+      "template": "Eres un Facilitador de Experiencias Grupales y Team Building.\nAudiencia: [TIPO_EVENTO_GRUPO].\nDiseña 3 dinámicas rompehielos:\n- Dinámica 1: Rápida y de baja exposición (a través de chat o encuestas visuales).\n- Dinámica 2: Cooperativa y de misterio en grupos pequeños de 4 personas.\n- Dinámica 3: Basada en historias curiosas o talentos ocultos."
+    },
+    {
+      "id": "creat-17",
+      "title": "Diseñador de Juegos de Mesa y Mecánicas Lúdicas",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Juegos de Mesa",
+        "Game Design",
+        "Mecánicas",
+        "Prototipo"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea la premisa y el bucle de juego principal (Core Game Loop) para un juego de mesa de estrategia o cartas.",
+      "variables": [
+        {
+          "name": "TEMA_JUEGO",
+          "label": "Tema y Estilo de Juego",
+          "placeholder": "ej. Juego de cartas rápido sobre ciberseguridad donde unos son hackers y otros sysadmins"
+        }
+      ],
+      "template": "Actúa como un Diseñador de Juegos de Mesa Galardonado (estilo Klaus Teuber / Eric Lang).\nTema: [TEMA_JUEGO].\nDiseña el prototipo:\n1. El Core Game Loop (Qué hace un jugador en su turno en 3 pasos).\n2. Condición de Victoria y Manejo de la Tensión.\n3. Tipos de Cartas o Componentes con sus habilidades especiales.\n4. Mecánica anti-líder (para evitar que quien vaya ganando arrase sin emoción)."
+    },
+    {
+      "id": "creat-18",
+      "title": "Especialista en Humor Absurdo y Parodias Satíricas",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Satira",
+        "Humor",
+        "The Onion",
+        "Parodia"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Escribe artículos satíricos y parodias al estilo 'The Onion' o 'El Mundo Today' con crítica mordaz.",
+      "variables": [
+        {
+          "name": "TEMA_SATIRA",
+          "label": "Tema a Satirizar",
+          "placeholder": "ej. Las empresas de tecnología que sustituyen todo su personal por IA y luego contratan personas en secreto para corregir la IA"
+        }
+      ],
+      "template": "Eres el Editor Principal de un Periódico Satírico Internacional (The Onion).\nTema a parodiar: [TEMA_SATIRA].\nEscribe la pieza:\n1. Titular Satírico Perfecto (con la premisa graciosa completa en el título).\n2. 3 Párrafos de Noticia ficticia con declaraciones de personajes absurdos pero dolorosamente realistas.\n3. Gráfico o Pie de Foto ficticio de remate humorístico."
+    },
+    {
+      "id": "creat-19",
+      "title": "Generador de Nombres de Dominio Creativos y Hacks (.is, .ly, .ai)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Dominios",
+        "Domain Hacks",
+        "Startups",
+        "Branding"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea combinaciones ingeniosas de dominios usando extensiones TLD globales para nombres memorables.",
+      "variables": [
+        {
+          "name": "MARCA_SERVICIO",
+          "label": "Marca o Concepto",
+          "placeholder": "ej. Herramienta de resumen instantáneo de audio"
+        }
+      ],
+      "template": "Eres un Estratega de Dominios y Naming Digital.\nConcepto: [MARCA_SERVICIO].\nGenera 15 ideas de dominios:\n- 5 Domain Hacks creativos (ej. aud.io, sum.ma, lis.tn).\n- 5 Dominios .ai / .co / .io modernos y cortos.\n- 5 Combinaciones de verbo + sustantivo listas para registrar."
+    },
+    {
+      "id": "creat-20",
+      "title": "Especialista en Biomímesis (Soluciones Inspiradas en la Naturaleza)",
+      "category": "creatividad",
+      "categoryLabel": "Creatividad",
+      "icon": "lightbulb",
+      "tags": [
+        "Biomímesis",
+        "Naturaleza",
+        "Ingeniería",
+        "Innovación"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Resuelve problemas de ingeniería o logística analizando cómo plantas, animales y ecosistemas han resuelto lo mismo tras millones de años de evolución.",
+      "variables": [
+        {
+          "name": "RETO_TECNOLOGICO",
+          "label": "Reto de Diseño o Ingeniería",
+          "placeholder": "ej. Cómo disipar el calor en servidores de centros de datos sin consumir toneladas de agua"
+        }
+      ],
+      "template": "Eres un Científico e Ingeniero Especialista en Biomímesis.\nReto: [RETO_TECNOLOGICO].\nInvestiga la naturaleza:\n1. 3 Organismos vivos que resolvieron este problema de disipación/enfriamiento de forma extrema (ej. termiteros africanos, piel de escarabajos del desierto, vasos sanguíneos de ballenas).\n2. El principio biofísico exacto utilizado.\n3. La traducción de ese principio biológico a un prototipo tecnológico aplicable hoy."
+    },
+    {
+      "id": "meta-01",
+      "title": "Meta-Prompt Optimizer: El Creador Universal de Prompts",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Meta-Prompt",
+        "Prompt Engineering",
+        "Optimización",
+        "Few-Shot"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-R1"
+      ],
+      "description": "Transforma una idea vaga en un Mega-Prompt estructurado con Role, Context, Constraints y Chain of Thought.",
+      "variables": [
+        {
+          "name": "OBJETIVO_PROMPT",
+          "label": "Qué debe lograr el prompt",
+          "placeholder": "ej. Analizar balances financieros y detectar fraudes"
+        },
+        {
+          "name": "MODELO_DESTINO",
+          "label": "Modelo de IA Destino",
+          "placeholder": "ej. Claude 3.5 Sonnet / ChatGPT-4o / DeepSeek R1"
+        }
+      ],
+      "template": "Eres el Ingeniero de Prompts más avanzado del mundo para [MODELO_DESTINO].\nTransforma este objetivo en un **Mega-Prompt Maestro de Grado Profesional**:\n\"[OBJETIVO_PROMPT]\"\n\nConstruye el prompt con:\n1. Rol Experto y Mentalidad.\n2. Contexto Operacional y Delimitación de Supuestos.\n3. Instrucciones Paso a Paso (Chain of Thought).\n4. Restricciones Negativas (Negative Constraints: qué NO hacer jamás).\n5. Formato de Salida Obligatorio (Markdown / JSON).\n6. Ejemplo de Referencia (Few-Shot Prompting).\nEntrega el prompt dentro de un bloque de código para copiar directamente."
+    },
+    {
+      "id": "meta-02",
+      "title": "Arquitecto de System Prompts & Custom GPTs",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "cpu",
+      "tags": [
+        "Custom GPT",
+        "System Prompt",
+        "Personalidad",
+        "Directrices"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea instrucciones de sistema para configurar Custom GPTs, proyectos de Claude o agentes con personalidad consistente.",
+      "variables": [
+        {
+          "name": "NOMBRE_ROL",
+          "label": "Nombre y Rol del Asistente",
+          "placeholder": "ej. Lexi - Consultora Legal de Startups y Contratos SaaS"
+        },
+        {
+          "name": "PERSONALIDAD_ESTILO",
+          "label": "Personalidad y Reglas",
+          "placeholder": "ej. Precisa, prudente, español neutro, incluye descargos legales"
+        }
+      ],
+      "template": "Eres un Arquitecto de Agentes Inteligentes y Diseñador de System Prompts.\nEspecificaciones:\n- Rol: [NOMBRE_ROL].\n- Estilo: [PERSONALIDAD_ESTILO].\nEscribe las instrucciones del sistema en Markdown con:\n# INSTRUCCIONES DEL SISTEMA: [NOMBRE_ROL]\n## 1. Identidad y Misión Central\n## 2. Tono de Voz y Reglas de Lenguaje\n## 3. Protocolo de Razonamiento Interno\n## 4. Reglas Infranqueables (Guardrails y Seguridad)\n## 5. Plantillas de Respuesta Estándar"
+    },
+    {
+      "id": "meta-03",
+      "title": "Ingeniero de Prompts Few-Shot con Ejemplos de Calidad",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Few-Shot",
+        "In-Context Learning",
+        "Precisión",
+        "Datasets"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Diseña prompts con 3 a 5 ejemplos ilustrativos de entrada-salida que calibran al modelo a la perfección.",
+      "variables": [
+        {
+          "name": "TAREA_TRANSFORMACION",
+          "label": "Tarea a Estandarizar",
+          "placeholder": "ej. Clasificar tweets de quejas de clientes en categoría, urgencia (1-5) y sentimiento, devolviendo JSON exacto"
+        }
+      ],
+      "template": "Actúa como Especialista en Aprendizaje en Contexto (Few-Shot Prompting).\nTarea: [TAREA_TRANSFORMACION].\nCrea el prompt maestro definitivo incluyendo:\n1. Instrucción clara y concisa de la tarea.\n2. Formato estricto de esquema esperado.\n3. 3 Ejemplos 'Few-Shot' perfectamente calibrados (Caso estándar, Caso ambiguo resuelto con éxito, Caso límite/Edge case).\n4. El marcador de posición listo para la nueva entrada del usuario."
+    },
+    {
+      "id": "meta-04",
+      "title": "Generador de Cadenas de Pensamiento (Chain-of-Thought CoT)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Chain of Thought",
+        "CoT",
+        "Razonamiento",
+        "Lógica"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "DeepSeek-R1",
+        "ChatGPT-4o"
+      ],
+      "description": "Fuerza al modelo a razonar paso a paso dentro de etiquetas <thinking> antes de dar la respuesta final.",
+      "variables": [
+        {
+          "name": "PROBLEMA_LOGICO",
+          "label": "Problema Complejo o Deducción",
+          "placeholder": "ej. Resolver un problema de lógica de horarios de trenes con restricciones cruzadas"
+        }
+      ],
+      "template": "Eres un Investigador en Razonamiento de Modelos de Lenguaje.\nDiseña un prompt con técnica 'Chain of Thought' para resolver:\n\"[PROBLEMA_LOGICO]\"\nEl prompt debe forzar al modelo a:\n- Desglosar primero todas las variables conocidas y desconocidas.\n- Analizar cada hipótesis dentro de un bloque <thinking>...</thinking>.\n- Comprobar que no haya contradicciones lógicas antes de salir del bloque.\n- Proporcionar la conclusión final en un bloque <output> estructurado."
+    },
+    {
+      "id": "meta-05",
+      "title": "Auditor de Inyecciones de Prompts y Vulnerabilidades (Prompt Security)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Prompt Injection",
+        "Jailbreak",
+        "Seguridad IA",
+        "Red Teaming"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Blinda tus prompts contra ataques de inyección indirecta, intentos de jailbreak y filtrado de system prompts.",
+      "variables": [
+        {
+          "name": "SYSTEM_PROMPT_A_PROTEGER",
+          "label": "Tu System Prompt Actual",
+          "placeholder": "Pega el prompt de tu aplicación...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Experto en Ciberseguridad de LLMs y Red Teaming (OWASP Top 10 for LLMs).\nSystem Prompt a auditar:\n```\n[SYSTEM_PROMPT_A_PROTEGER]\n```\nRealiza:\n1. Simulación de 3 vectores de ataque comunes (Direct Prompt Injection, Delimiter Hijacking, Indirect Leakage).\n2. Detección de brechas donde el modelo podría revelar sus instrucciones secretas o cambiar de rol.\n3. Versión blindada del System Prompt con delimitadores XML robustos y reglas de anulación de comandos hostiles."
+    },
+    {
+      "id": "meta-06",
+      "title": "Estructurador de Salidas JSON Estrictas con Esquema Zod/JSON Schema",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "JSON Schema",
+        "Structured Outputs",
+        "Zod",
+        "API"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Garantiza que el modelo responda ÚNICAMENTE en JSON válido sin texto introductorio ni explicaciones.",
+      "variables": [
+        {
+          "name": "ESTRUCTURA_DATOS",
+          "label": "Campos Requeridos",
+          "placeholder": "ej. id (string UUID), title (string), urgency (enum: LOW, MED, HIGH), actionItems (array de objetos con task y dueDate)"
+        }
+      ],
+      "template": "Actúa como Arquitecto de Structured Outputs para LLMs.\nEstructura requerida: [ESTRUCTURA_DATOS].\nCrea el prompt de extracción garantizando:\n1. Esquema formal JSON Schema / Zod Typescript.\n2. Instrucción de sistema que prohíba estrictamente cualquier saludo, texto antes/después del JSON o bloques con formato erróneo.\n3. Manejo de valores nulos o campos opcionales."
+    },
+    {
+      "id": "meta-07",
+      "title": "Traductor de Prompts para Diferentes Familias de Modelos (Claude vs OpenAI)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Traducción de Prompts",
+        "XML Tags",
+        "OpenAI",
+        "Anthropic"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Adapta prompts optimizados para ChatGPT al formato nativo de etiquetas XML de Claude o viceversa.",
+      "variables": [
+        {
+          "name": "PROMPT_ORIGINAL",
+          "label": "Prompt Existente",
+          "placeholder": "Pega el prompt original...",
+          "multiline": true
+        },
+        {
+          "name": "MODELO_ORIGEN_DESTINO",
+          "label": "De qué modelo a cuál",
+          "placeholder": "ej. De ChatGPT (Markdown) a Claude 3.5 (XML Tags nativas)"
+        }
+      ],
+      "template": "Eres un Especialista en Arquitectura de Prompts Multi-Modelo.\nConversión: [MODELO_ORIGEN_DESTINO].\nPrompt a transformar:\n```\n[PROMPT_ORIGINAL]\n```\nTransforma el prompt aplicando las mejores prácticas específicas del modelo de destino (ej. jerarquía de etiquetas <context>, <instructions>, <rules>, <examples> para Anthropic Claude, o system/user/assistant instructions y markdown estricto para OpenAI)."
+    },
+    {
+      "id": "meta-08",
+      "title": "Generador de Evaluadores LLM-as-a-Judge (Rubricas de Evaluación)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "LLM as a Judge",
+        "Evaluación",
+        "Rúbricas",
+        "Benchmarking"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea prompts para que un modelo evalúe de forma imparcial las respuestas de otro modelo según una escala precisa.",
+      "variables": [
+        {
+          "name": "CRITERIO_EVALUACION",
+          "label": "Qué se debe Evaluar",
+          "placeholder": "ej. Precisión fáctica, concisión y tono empático en respuestas de soporte médico"
+        }
+      ],
+      "template": "Actúa como Investigador de Evaluación de Modelos (LLM-as-a-Judge).\nCriterio a evaluar: [CRITERIO_EVALUACION].\nEscribe el prompt del Evaluador:\n1. Rúbrica de Puntuación detallada del 1 al 5 con definiciones claras de qué constituye un 1, un 3 y un 5.\n2. Protocolo de Evaluación ciega paso a paso.\n3. Formato de Salida en JSON: { reasoning: string, score: number, criticalFlaws: string[] }."
+    },
+    {
+      "id": "meta-09",
+      "title": "Técnica de Árbol de Pensamientos (Tree-of-Thoughts ToT)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Tree of Thoughts",
+        "ToT",
+        "Exploración",
+        "Heurística"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Genera múltiples ramas de solución simultáneas, evalúa la viabilidad de cada rama y poda los caminos erróneos.",
+      "variables": [
+        {
+          "name": "DESAFIO_COMPLEJO",
+          "label": "Desafío a Resolver",
+          "placeholder": "ej. Optimizar la ruta y distribución de inventario de 5 almacenes para 20 tiendas minimizando costes de transporte"
+        }
+      ],
+      "template": "Eres un Experto en Heurística y Frameworks de Razonamiento Tree-of-Thoughts.\nDesafío: [DESAFIO_COMPLEJO].\nAplica ToT:\n1. Fase 1: Generación de 3 ramas de pensamiento iniciales (Rama A, Rama B, Rama C).\n2. Fase 2: Evaluación crítica de viabilidad y costes de cada rama (Puntuación de 1 a 10).\n3. Fase 3: Poda de ramas inferiores y expansión de los 2 mejores caminos con sub-ramas.\n4. Conclusión con la mejor solución optimizada."
+    },
+    {
+      "id": "meta-10",
+      "title": "Generador de Prompts para Extracción y Análisis RAG",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "RAG",
+        "Vector DB",
+        "Citations",
+        "No Hallucinations"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña prompts para sistemas RAG que exigen citar fragmentos exactos y responder 'No sé' si no está en el contexto.",
+      "variables": [
+        {
+          "name": "DOMINIO_RAG",
+          "label": "Dominio de la Base de Conocimiento",
+          "placeholder": "ej. Manuales técnicos de turbinas de aviación y mantenimiento preventivo"
+        }
+      ],
+      "template": "Eres un Ingeniero RAG (Retrieval-Augmented Generation) Senior.\nDominio: [DOMINIO_RAG].\nCrea el prompt definitivo para inyectar chunks de documentos:\n- Instrucción estricta: Responder ÚNICAMENTE utilizando los fragmentos proporcionados en <documents>.\n- Regla Anti-Alucinación: Si la información no se encuentra en los documentos, responder exactamente \"La documentación proporcionada no contiene información suficiente para responder a esta pregunta\".\n- Obligación de Citas: Citar el ID del documento y número de página de cada afirmación."
+    },
+    {
+      "id": "meta-11",
+      "title": "Compositor de Agentes Multi-Rol para Debates Internos",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Multi-Agent",
+        "Debate",
+        "Consenso",
+        "Roles"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Simula un comité de 3 expertos con visiones opuestas que debaten entre sí hasta alcanzar un consenso unificado.",
+      "variables": [
+        {
+          "name": "DECISION_EMPRESARIAL",
+          "label": "Problema a Resolver por el Comité",
+          "placeholder": "ej. ¿Debemos lanzar un modelo Freemium o mantener solo prueba gratuita con tarjeta?"
+        }
+      ],
+      "template": "Eres un Orquestador de Sistemas Multi-Agente.\nDecisión: [DECISION_EMPRESARIAL].\nSimula el debate entre 3 perfiles especializados:\n- Agente A (Chief Revenue Officer - Foco en ingresos inmediatos y monetización).\n- Agente B (Head of Growth - Foco en viralidad y base de usuarios).\n- Agente C (Lead Product Engineer - Foco en costes de servidores y soporte).\nEstructura: Ronda 1 (Argumentos iniciales), Ronda 2 (Replicas cruzadas), Ronda 3 (Acuerdo y Síntesis Final de Consenso)."
+    },
+    {
+      "id": "meta-12",
+      "title": "Optimizador de Longitud de Contexto y Reducción de Consumo de Tokens",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Tokens",
+        "Costes",
+        "Compresión",
+        "Eficiencia"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Comprime prompts verbosos eliminando palabras redundantes sin perder precisión ni instrucciones clave.",
+      "variables": [
+        {
+          "name": "PROMPT_LARGO",
+          "label": "Prompt Verboso",
+          "placeholder": "Pega el prompt excesivamente largo...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Ingeniero de Optimización de Costes de Tokens.\nPrompt a comprimir:\n```\n[PROMPT_LARGO]\n```\nEntrega:\n1. Versión Comprimida y Densificada (reducción de al menos 40% de tokens manteniendo el 100% de la semántica y directrices).\n2. Uso de notación compacta, símbolos y eliminación de cortesías innecesarias.\n3. Tabla comparativa de conteo de palabras original vs optimizada."
+    },
+    {
+      "id": "meta-13",
+      "title": "Diseñador de Function Calling / Tools Calling para Agentes",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Function Calling",
+        "Tool Use",
+        "Agentes",
+        "API"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Define declaraciones de herramientas y directrices claras de cuándo y cómo el modelo debe invocarlas.",
+      "variables": [
+        {
+          "name": "HERRAMIENTAS_DISPONIBLES",
+          "label": "Herramientas o APIs",
+          "placeholder": "ej. search_database(query), send_slack_notification(channel, text), create_jira_ticket(title, priority)"
+        }
+      ],
+      "template": "Actúa como Diseñador de Tool Calling para Agentes Autónomos.\nHerramientas: [HERRAMIENTAS_DISPONIBLES].\nCrea las instrucciones del System Prompt:\n1. Descripción de la función y parámetros de cada herramienta con tipos de datos.\n2. Árbol de Decisiones: Cuándo llamar a una herramienta y cuándo responder directamente al usuario.\n3. Protocolo de Confirmación para acciones destructivas (ej. eliminar o modificar datos)."
+    },
+    {
+      "id": "meta-14",
+      "title": "Generador de Prompts Negativos (Negative Prompting & Anti-Patterns)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Negative Prompt",
+        "Guardrails",
+        "Restricciones",
+        "Control"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea una lista exhaustiva de restricciones negativas para impedir respuestas genéricas, clichés y formatos no deseados.",
+      "variables": [
+        {
+          "name": "TIPO_RESPUESTAS_A_EVITAR",
+          "label": "Vicios o Errores a Prohibir",
+          "placeholder": "ej. En redacción de emails evitar: intros con 'Espero te encuentres bien', adjetivos rimbombantes y despedidas formales rígidas"
+        }
+      ],
+      "template": "Eres un Especialista en Control de Calidad de Generación de Texto.\nConductas a erradicar: [TIPO_RESPUESTAS_A_EVITAR].\nGenera un bloque de **Directrices Negativas Infranqueables (Negative Constraints)** listo para insertar en cualquier prompt maestro, categorizado por:\n- Vocabulario y Frases Prohibidas.\n- Estructuras Sintácticas Prohibidas.\n- Comportamientos de Relleno (Fluff) Prohibidos."
+    },
+    {
+      "id": "meta-15",
+      "title": "Creación de Prompts de Autocorrección y Reflexión (Self-Refine)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Self-Refine",
+        "Autocorrección",
+        "Calidad",
+        "Iteración"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-R1"
+      ],
+      "description": "Obliga al modelo a generar un borrador inicial, criticar sus propios fallos y entregar una segunda versión perfeccionada.",
+      "variables": [
+        {
+          "name": "TAREA_ALTA_EXIGENCIA",
+          "label": "Tarea de Alta Complejidad",
+          "placeholder": "ej. Redactar una propuesta comercial de $50,000 para un cliente corporativo exigente"
+        }
+      ],
+      "template": "Actúa como Diseñador de Algoritmos de Auto-Refinamiento (Self-Refine Framework).\nTarea: [TAREA_ALTA_EXIGENCIA].\nCrea el prompt maestro en 3 fases:\n- Paso 1 (Borrador): Genera una versión completa inicial.\n- Paso 2 (Auto-Crítica): Analiza el borrador identificando debilidades, falta de impacto y redundancias.\n- Paso 3 (Refinamiento Final): Entrega la versión pulida incorporando todas las mejoras."
+    },
+    {
+      "id": "meta-16",
+      "title": "Generador de Metaprompts Recursivos (Prompts que Generan Prompts)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Recursividad",
+        "Meta-Prompting",
+        "Generador",
+        "Automatización"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Un prompt que interroga al usuario con preguntas clave para diseñar a medida el prompt perfecto para su necesidad.",
+      "variables": [
+        {
+          "name": "AREA_APLICACION",
+          "label": "Área de Aplicación",
+          "placeholder": "ej. Creación de contenido audiovisual y guiones para TikTok"
+        }
+      ],
+      "template": "Eres una Fábrica de Prompts Interactiva especializada en [AREA_APLICACION].\nTu comportamiento:\n1. Hazme exactamente 3 preguntas estratégicas sobre mi objetivo, audiencia y restricciones.\n2. Espera mis respuestas.\n3. Con base en mis respuestas, genera un Mega-Prompt perfecto con variables entre corchetes, rol asignado y ejemplos.\nInicia tú haciéndome las 3 preguntas clave."
+    },
+    {
+      "id": "meta-17",
+      "title": "Ingeniero de Prompts para Extracción de Entidades Nombradas (NER)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "NER",
+        "NLP",
+        "Extracción",
+        "Entidades"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Extrae entidades (Personas, Organizaciones, Lugares, Fechas, Importes Monetarios) de textos desestructurados.",
+      "variables": [
+        {
+          "name": "TIPO_DOCUMENTO_ENTIDADES",
+          "label": "Tipo de Texto",
+          "placeholder": "ej. Contratos de arrendamiento comercial y acuerdos de confidencialidad"
+        }
+      ],
+      "template": "Eres un Especialista en Procesamiento de Lenguaje Natural (NLP) y Extracción de Entidades.\nTipo de documentos: [TIPO_DOCUMENTO_ENTIDADES].\nDiseña el prompt de extracción:\n- Lista de entidades a capturar (Arrendador, Arrendatario, Inmueble, Renta mensual, Plazo, Fianza).\n- Normalización de formatos (Fechas en ISO-8601 YYYY-MM-DD, Divisas con código ISO).\n- Salida en Array JSON limpio con posición de texto de referencia."
+    },
+    {
+      "id": "meta-18",
+      "title": "Diseñador de Prompts para Resumen Progresivo y Compresión de Textos Largos",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Resumen",
+        "Compresión",
+        "MapReduce",
+        "Lectura"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "Gemini 1.5 Pro"
+      ],
+      "description": "Sintetiza documentos de cientos de páginas mediante técnicas de resumen por capas jerárquicas.",
+      "variables": [
+        {
+          "name": "DOCUMENTO_EXTENSO",
+          "label": "Tipo de Archivo o Libro",
+          "placeholder": "ej. Informe anual financiero de 150 páginas de una empresa cotizada"
+        }
+      ],
+      "template": "Actúa como Arquitecto de Compresión de Información para [DOCUMENTO_EXTENSO].\nDiseña el protocolo de resumen progresivo:\n1. Nivel 1: Resumen ejecutivo de 1 página (High-level insights).\n2. Nivel 2: Tabla de Hallazgos por Capítulo / Sección con métricas cuantitativas.\n3. Nivel 3: Lista de Citas Textuales Críticas y decisiones pendientes."
+    },
+    {
+      "id": "meta-19",
+      "title": "Generador de Directrices de Tono y Estilo de Marca (Brand Voice Prompts)",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Brand Voice",
+        "Guía de Estilo",
+        "Tono",
+        "Branding"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Escribe un conjunto de directrices para que la IA adopte de forma inquebrantable el manual de tono de tu empresa.",
+      "variables": [
+        {
+          "name": "VALORES_MARCA",
+          "label": "Valores y Estilo de la Marca",
+          "placeholder": "ej. Disruptiva, audaz, transparente, usa analogías de videojuegos, habla de 'tú', nunca condescendiente"
+        }
+      ],
+      "template": "Eres un Director de Identidad de Marca y Voz Verbal.\nValores de la marca: [VALORES_MARCA].\nCrea el bloque de **Directrices de Voz y Tono** para el System Prompt:\n- La Matriz \"Somos X pero NUNCA Y\" (ej. \"Somos divertidos pero nunca infantiles\").\n- Reglas de Vocabulario (Palabras preferidas vs. Palabras vetadas).\n- Ejemplos Antes/Después de transformación de textos."
+    },
+    {
+      "id": "meta-20",
+      "title": "Especialista en Prompts para Razonamiento Espacial y Lógica Geométrica",
+      "category": "metaprompt",
+      "categoryLabel": "Meta-Prompts",
+      "icon": "terminal",
+      "tags": [
+        "Razonamiento Espacial",
+        "Geometría",
+        "Coordenadas",
+        "Visual"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Ayuda al LLM a no perderse en problemas espaciales representando mentalmente cuadrículas y matrices de coordenadas.",
+      "variables": [
+        {
+          "name": "PROBLEMA_ESPACIAL",
+          "label": "Problema Espacial o de Movimiento",
+          "placeholder": "ej. Un robot se mueve en una cuadrícula 5x5 con obstáculos, calcular la ruta más corta"
+        }
+      ],
+      "template": "Actúa como Diseñador de Prompts para Razonamiento Espacial y de Cuadrículas.\nProblema: [PROBLEMA_ESPACIAL].\nDiseña el prompt:\n- Forzar al modelo a imprimir primero la matriz visual en texto ASCII.\n- Rastrear la posición paso a paso con coordenadas (X, Y) y orientación (Norte, Sur, Este, Oeste).\n- Validar cada movimiento antes de calcular el paso siguiente."
+    },
+    {
+      "id": "data-01",
+      "title": "Generador de Fórmulas y Automatización en Excel / Google Sheets",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Excel",
+        "Google Sheets",
+        "VLOOKUP",
+        "REGEX",
+        "Apps Script"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Crea fórmulas anidadas complejas (INDEX/MATCH, LAMBDA, QUERY, REGEX) o macros en Apps Script/VBA explicando cada parámetro.",
+      "variables": [
+        {
+          "name": "OBJETIVO_CALCULO",
+          "label": "Qué necesitas calcular o extraer",
+          "placeholder": "ej. Extraer los correos válidos de una columna sucia y sumar ventas si la fecha es de este año"
+        },
+        {
+          "name": "HERRAMIENTA",
+          "label": "Herramienta",
+          "placeholder": "ej. Google Sheets o Excel 365"
+        }
+      ],
+      "template": "Eres un Especialista Certificado en Modelado de Datos y Hojas de Cálculo Avanzadas ([HERRAMIENTA]).\nRequerimiento: [OBJETIVO_CALCULO].\nEntrega:\n1. La Fórmula Exacta lista para copiar (en Español e Inglés).\n2. Desglose detallado de cada función anidada.\n3. Versión protegida contra errores con IFERROR/SI.ERROR.\n4. Código alternativo en Apps Script o VBA si la fórmula se vuelve lenta."
+    },
+    {
+      "id": "data-02",
+      "title": "Análisis FODA / DAFO Estratégico Cuantificado",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "FODA",
+        "Estrategia",
+        "Análisis Financiero",
+        "Competencia"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Elabora una matriz FODA exhaustiva con planes de mitigación de amenazas y apalancamiento de fortalezas.",
+      "variables": [
+        {
+          "name": "EMPRESA_SECTOR",
+          "label": "Empresa o Proyecto y Sector",
+          "placeholder": "ej. Fintech de préstamos personales instantáneos mediante IA en México"
+        },
+        {
+          "name": "COMPETENCIA",
+          "label": "Principales Competidores o Retos",
+          "placeholder": "ej. Bancos tradicionales con más liquidez y startups con tasas agresivas"
+        }
+      ],
+      "template": "Actúa como Consultor Senior de Estrategia Corporativa (McKinsey / BCG).\nEmpresa: [EMPRESA_SECTOR]. Contexto: [COMPETENCIA].\nEntrega:\n1. Matriz FODA 2x2 (Fortalezas, Oportunidades, Debilidades, Amenazas).\n2. Matriz Cruzada de Acciones (Estrategias FO, FA, DO, DA).\n3. Plan de Acción Priorizado para los primeros 90 días con métricas de impacto."
+    },
+    {
+      "id": "data-03",
+      "title": "Analista de Estados Financieros y Ratios de Liquidez / Rentabilidad",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Finanzas",
+        "Ratios",
+        "Balance",
+        "Rentabilidad",
+        "EBITDA"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Interpreta balances y cuentas de resultados calculando EBITDA, ROE, ROA, Ratio de Endeudamiento y Flujo de Caja Libre.",
+      "variables": [
+        {
+          "name": "DATOS_FINANCIEROS",
+          "label": "Estados Financieros o Cifras Clave",
+          "placeholder": "Ingresos: $2M, Coste de Ventas: $800k, Gastos Operativos: $600k, Deuda Total: $500k, Activo Total: $3M, Patrimonio: $1.8M",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Analista Financiero Senior y Banquero de Inversión.\nCifras a analizar:\n```\n[DATOS_FINANCIEROS]\n```\nProvee:\n1. Cálculo de Ratios Clave (Margen Bruto, Margen Operativo, Margen Neto, ROE, ROA, Ratio Corriente, Deuda/EBITDA).\n2. Diagnóstico de Salud Financiera (Semáforo Verde/Amarillo/Rojo por ratio).\n3. 3 Oportunidades Clave para mejorar el flujo de caja y la eficiencia de capital."
+    },
+    {
+      "id": "data-04",
+      "title": "Científico de Datos: Análisis Exploratorio (EDA en Python / Pandas)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Python",
+        "Pandas",
+        "EDA",
+        "Data Science",
+        "Seaborn"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Genera scripts de Python para Análisis Exploratorio de Datos (EDA), detección de outliers, valores nulos y distribuciones.",
+      "variables": [
+        {
+          "name": "DESCRIPCION_DATASET",
+          "label": "Columnas y Naturaleza del Dataset",
+          "placeholder": "ej. Dataset de churn de clientes telecomunicaciones: customer_id, tenure_months, monthly_charges, total_charges, contract_type, churn (0/1)"
+        }
+      ],
+      "template": "Actúa como Lead Data Scientist.\nDataset: [DESCRIPCION_DATASET].\nEscribe un script modular en Python usando Pandas, NumPy y Seaborn:\n1. Carga, inspección de tipos, conteo de nulos y estadísticas descriptivas (df.describe()).\n2. Detección y tratamiento de outliers (método IQR o Z-score).\n3. Visualizaciones clave (Matriz de correlación Heatmap, histogramas y gráficos de dispersión).\n4. Preparación de features (One-Hot Encoding, escalado con StandardScaler)."
+    },
+    {
+      "id": "data-05",
+      "title": "Diseñador de Dashboards de Métricas en Power BI / Tableau",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Power BI",
+        "Tableau",
+        "DAX",
+        "Dashboard",
+        "BI"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estructura dashboards ejecutivos, modelos en estrella (Star Schema) y fórmulas DAX avanzadas.",
+      "variables": [
+        {
+          "name": "PROPOSITO_DASHBOARD",
+          "label": "Objetivo y Audiencia del Dashboard",
+          "placeholder": "ej. Dashboard de control de ventas y comisiones para la dirección comercial"
+        },
+        {
+          "name": "HERRAMIENTA_BI",
+          "label": "Herramienta BI",
+          "placeholder": "ej. Power BI con DAX o Tableau"
+        }
+      ],
+      "template": "Eres un Arquitecto de Business Intelligence experto en [HERRAMIENTA_BI].\nObjetivo: [PROPOSITO_DASHBOARD].\nDiseña la solución:\n1. Disposición Visual de la Pantalla (Grid de 3 filas: KPIs principales arriba, tendencias al centro, tablas de detalle abajo).\n2. 5 Medidas Calculadas (DAX / Campos Calculados) clave (ej. Ventas YTD, Crecimiento YoY, Ticket Medio Móvil).\n3. Esquema del Modelo de Datos (Tabla de Hechos vs. Tablas de Dimensión)."
+    },
+    {
+      "id": "data-06",
+      "title": "Generador de Modelos de Valoración de Empresas (DCF / Descuento de Flujos)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "DCF",
+        "Valoración",
+        "Finanzas",
+        "WACC",
+        "Inversión"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura un modelo de Descuento de Flujos de Caja Libre (DCF) con cálculo de WACC y valor terminal.",
+      "variables": [
+        {
+          "name": "DATOS_EMPRESA_VALORACION",
+          "label": "Proyecciones y Parámetros",
+          "placeholder": "ej. Flujo de caja libre año 1: $500k creciendo al 15% por 5 años, WACC: 10%, Tasa de crecimiento terminal: 2.5%"
+        }
+      ],
+      "template": "Actúa como Analista de Fusiones y Adquisiciones (M&A).\nParámetros: [DATOS_EMPRESA_VALORACION].\nDesarrolla el modelo DCF:\n1. Proyección de Flujos de Caja Libres (FCF) a 5 años.\n2. Cálculo del Valor Presente de los flujos descontados.\n3. Cálculo del Valor Terminal (Método Gordon-Shapiro).\n4. Valor Total de la Empresa (Enterprise Value) y tabla de sensibilidad a variaciones de WACC y crecimiento."
+    },
+    {
+      "id": "data-07",
+      "title": "Auditor y Limpiador de Datos Sucios con Python / OpenRefine",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Data Cleaning",
+        "Python",
+        "ETL",
+        "Calidad de Datos"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Estrategias y código para normalizar fechas dispares, nombres duplicados por faltas ortográficas y registros rotos.",
+      "variables": [
+        {
+          "name": "PROBLEMAS_DATOS",
+          "label": "Tipos de Suciedad en la Data",
+          "placeholder": "ej. Nombres con espacios extras y mayúsculas desordenadas, números de teléfono en 4 formatos distintos, fechas en MM/DD/YYYY y DD-MM-YYYY mezcladas"
+        }
+      ],
+      "template": "Eres un Ingeniero de Calidad de Datos (Data Quality Lead).\nProblemas detectados: [PROBLEMAS_DATOS].\nEscribe un script en Python (con Pandas y Regex) para:\n1. Normalización de cadenas y eliminación de caracteres no imprimibles.\n2. Estandarización de fechas a formato único ISO-8601.\n3. Deduplicación difusa (Fuzzy Matching con fuzzywuzzy / thefuzz) para unificar registros con errores tipográficos.\n4. Reporte de registros limpiados vs descartados."
+    },
+    {
+      "id": "data-08",
+      "title": "Generador de Consultas de Análisis de Cohortes en SQL",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "database",
+      "tags": [
+        "Cohortes",
+        "SQL",
+        "Retención",
+        "Analytics",
+        "SaaS"
+      ],
+      "models": [
+        "DeepSeek-V3",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea consultas SQL avanzadas para calcular la retención de usuarios mes a mes por cohorte de registro.",
+      "variables": [
+        {
+          "name": "TABLA_EVENTOS",
+          "label": "Tabla y Columnas de Eventos",
+          "placeholder": "ej. user_events(user_id, event_date, event_type)"
+        },
+        {
+          "name": "DIALECTO_SQL",
+          "label": "Motor SQL",
+          "placeholder": "ej. PostgreSQL o Snowflake o BigQuery"
+        }
+      ],
+      "template": "Eres un Lead Data Analyst en [DIALECTO_SQL].\nTabla: [TABLA_EVENTOS].\nEscribe la consulta SQL completa para análisis de cohortes:\n1. CTE 1: Identificar el mes de primera actividad de cada usuario (Cohorte de adquisición).\n2. CTE 2: Mapear la actividad mensual subsiguiente (Mes 0, Mes 1, Mes 2...).\n3. Consulta Final: Pivotar los datos para mostrar una matriz de retención porcentual por cohorte."
+    },
+    {
+      "id": "data-09",
+      "title": "Calculadora de Unit Economics para Startups y SaaS (CAC, LTV, Payback)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Unit Economics",
+        "CAC",
+        "LTV",
+        "Payback",
+        "SaaS Metrics"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Calcula y audita las métricas vitales de negocio: Customer Acquisition Cost, Lifetime Value, Churn y Payback Period.",
+      "variables": [
+        {
+          "name": "PARAMETROS_SAAS",
+          "label": "Métricas Actuales",
+          "placeholder": "Gasto en Marketing/Ventas mensual: $20,000, Nuevos clientes/mes: 50, ARPU: $100/mes, Margen Bruto: 75%, Churn mensual de clientes: 3%",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como VC Partner y Especialista en Unit Economics SaaS.\nDatos del negocio:\n```\n[PARAMETROS_SAAS]\n```\nCalcula y analiza:\n1. CAC Real (Coste de Adquisición de Clientes).\n2. LTV (Lifetime Value) = (ARPU * Margen Bruto) / Churn.\n3. Ratio LTV:CAC (Evaluación de viabilidad y eficiencia de capital).\n4. Tiempo de Recuperación del CAC (CAC Payback Period en meses).\n5. Veredicto del Negocio: ¿Es un modelo escalable para levantar capital?"
+    },
+    {
+      "id": "data-10",
+      "title": "Diseñador de Pruebas A/B y Cálculo de Significancia Estadística",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "AB Testing",
+        "Estadística",
+        "P-Value",
+        "Conversión"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Calcula el tamaño de muestra requerido, analiza valores p (p-value) e intervalos de confianza para tests A/B.",
+      "variables": [
+        {
+          "name": "HIPOTESIS_AB",
+          "label": "Hipótesis del Test",
+          "placeholder": "ej. Cambiar el botón de compra a verde aumentará la conversión del 3.5% al 4.2%"
+        },
+        {
+          "name": "TRAFICO_DIARIO",
+          "label": "Tráfico Diario Disponible",
+          "placeholder": "ej. 5,000 visitantes únicos por día"
+        }
+      ],
+      "template": "Eres un Estadístico y Especialista en Experimentación A/B.\nHipótesis: [HIPOTESIS_AB]. Tráfico: [TRAFICO_DIARIO].\nProporciona:\n1. Cálculo de Tamaño Muestral necesario por variante (Nivel de confianza 95%, Potencia estadística 80%, Efecto Mínimo Detectable).\n2. Duración mínima requerida del test para evitar falsos positivos y efectos de fin de semana.\n3. Protocolo de toma de decisión estadística (interpretación de p-value y significancia z-score)."
+    },
+    {
+      "id": "data-11",
+      "title": "Generador de Proyecciones de Flujo de Caja a 12 Meses (Cash Flow Forecast)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Cash Flow",
+        "Presupuesto",
+        "Tesorería",
+        "Finanzas"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura un presupuesto de tesorería mensual con cobros, pagos fijos, variables y saldo final proyectado.",
+      "variables": [
+        {
+          "name": "INGRESOS_GASTOS_BASE",
+          "label": "Datos de Facturación y Gastos",
+          "placeholder": "Saldo inicial: $50k, Ventas crecen 5% mensual partiendo de $30k, Salarios: $15k/mes, Alquiler y servidores: $3k/mes, Pago de impuestos trimestral de $6k",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Director Financiero (CFO) Interino.\nDatos base:\n```\n[INGRESOS_GASTOS_BASE]\n```\nConstruye la proyección de flujo de caja:\n1. Tabla Mensual (Meses 1 a 12) con Entradas de Efectivo, Salidas de Efectivo y Saldo Neto Acumulado.\n2. Identificación del 'Mes Crítico' (Punto más bajo de liquidez).\n3. Recomendaciones de reserva de colchón de seguridad (Runway)."
+    },
+    {
+      "id": "data-12",
+      "title": "Analista de Sentimiento en Redes y Reseñas con NLP en Python",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Sentiment Analysis",
+        "NLP",
+        "VADER",
+        "Python",
+        "Transformers"
+      ],
+      "models": [
+        "DeepSeek-V3",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Escribe código para clasificar miles de opiniones de clientes en Positivo, Neutro o Negativo con extracción de temas.",
+      "variables": [
+        {
+          "name": "ORIGEN_TEXTOS",
+          "label": "Tipo de Reseñas",
+          "placeholder": "ej. Reseñas de productos de Amazon o comentarios de la App Store"
+        }
+      ],
+      "template": "Actúa como Ingeniero de NLP y Minería de Textos.\nFuente: [ORIGEN_TEXTOS].\nEscribe un script en Python que:\n1. Preprocese el texto (limpieza de emojis, stopwords, tokenización).\n2. Aplique un modelo preentrenado (ej. VADER de NLTK o HuggingFace RoBERTa).\n3. Agrupe los motivos de las quejas negativas mediante Topic Modeling (TF-IDF / BERTopic).\n4. Genere un gráfico de distribución de sentimiento."
+    },
+    {
+      "id": "data-13",
+      "title": "Diseñador de Modelos de Optimización Lineal (Python PuLP / SciPy)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Optimización",
+        "Investigación de Operaciones",
+        "PuLP",
+        "Logística"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet",
+        "DeepSeek-V3"
+      ],
+      "description": "Resuelve problemas de asignación de recursos, maximización de beneficios o minimización de costes con programación lineal.",
+      "variables": [
+        {
+          "name": "PROBLEMA_OPTIMIZACION",
+          "label": "Objetivo y Restricciones",
+          "placeholder": "ej. Maximizar beneficio fabricando Producto A ($40 ganancia, 2h trabajo, 1kg material) y Producto B ($60 ganancia, 4h trabajo, 3kg material) con límite de 100h de trabajo y 60kg de material"
+        }
+      ],
+      "template": "Eres un Especialista en Investigación Operativa y Modelado Matemático.\nProblema: [PROBLEMA_OPTIMIZACION].\nEntrega:\n1. Formulación Matemática Formal (Función Objetivo y Sistema de Restricciones).\n2. Código ejecutable en Python usando la librería 'PuLP'.\n3. Interpretación de la solución óptima y análisis de holguras (Slack variables)."
+    },
+    {
+      "id": "data-14",
+      "title": "Especialista en Análisis de Elasticidad Precio de la Demanda",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Precios",
+        "Elasticidad",
+        "Microeconomía",
+        "Ingresos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Determina cómo variará el volumen de ventas e ingresos totales ante aumentos o disminuciones de precio.",
+      "variables": [
+        {
+          "name": "DATOS_PRECIO_DEMANDA",
+          "label": "Precios y Cantidades Históricas",
+          "placeholder": "A precio de $100 se vendían 1,000 unidades; tras subir a $120 las ventas bajaron a 850 unidades"
+        }
+      ],
+      "template": "Actúa como Econometrista y Estratega de Precios.\nDatos: [DATOS_PRECIO_DEMANDA].\nCalcula:\n1. Coeficiente de Elasticidad Precio de la Demanda (Ep).\n2. Clasificación del bien (Elástico, Inelástico o Elasticidad Unitaria).\n3. Impacto en Ingresos Totales (¿Conviene mantener el precio alto o volver a bajarlo?).\n4. Estrategia de segmentación de precios para capturar mayor excedente del consumidor."
+    },
+    {
+      "id": "data-15",
+      "title": "Generador de Consultas de Detección de Anomalías y Fraude en SQL",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "database",
+      "tags": [
+        "Anomalías",
+        "Fraude",
+        "SQL",
+        "Z-Score",
+        "Ciberseguridad"
+      ],
+      "models": [
+        "DeepSeek-V3",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Identifica transacciones atípicas o comportamientos sospechosos mediante desviación estándar y ventanas móviles en SQL.",
+      "variables": [
+        {
+          "name": "TABLA_TRANSACCIONES",
+          "label": "Esquema de Transacciones",
+          "placeholder": "transactions(tx_id, user_id, amount, tx_time, country_code, ip_address)"
+        },
+        {
+          "name": "MOTOR_SQL_FRAUDE",
+          "label": "Motor SQL",
+          "placeholder": "ej. PostgreSQL o BigQuery"
+        }
+      ],
+      "template": "Eres un Ingeniero de Datos en Detección de Fraude en [MOTOR_SQL_FRAUDE].\nTabla: [TABLA_TRANSACCIONES].\nEscribe una consulta SQL analítica que detecte:\n1. Transacciones que superen 3 desviaciones estándar (Z-score > 3) sobre el promedio histórico de ese mismo usuario en los últimos 30 días.\n2. Transacciones consecutivas del mismo usuario realizadas desde países diferentes en un intervalo menor a 2 horas (imposibilidad física de viaje).\n3. Clasificación de riesgo de la transacción."
+    },
+    {
+      "id": "data-16",
+      "title": "Analista de Valoración de Cartera de Inversión y Matriz de Riesgo",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Inversión",
+        "Cartera",
+        "Sharpe",
+        "Riesgo",
+        "Diversificación"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Evalúa la diversificación, ratio de Sharpe, correlación de activos y volatilidad de una cartera de inversión.",
+      "variables": [
+        {
+          "name": "COMPOSICION_PORTAFOLIO",
+          "label": "Activos y Ponderaciones",
+          "placeholder": "ej. 50% S&P 500 (VOO), 20% Bonos del Tesoro USA (TLT), 15% Mercados Emergentes (EEM), 10% Oro (GLD), 5% Bitcoin (BTC)"
+        }
+      ],
+      "template": "Eres un Gestor de Carteras Senior y Asesor Financiero CFA.\nCartera: [COMPOSICION_PORTAFOLIO].\nRealiza el análisis:\n1. Perfil de Riesgo/Retorno esperado (Defensivo, Equilibrado, Agresivo).\n2. Matriz de Correlación esperada entre los activos en momentos de estrés financiero.\n3. Estimación cualitativa del Ratio de Sharpe y Máximo Drawdown histórico típico.\n4. Sugerencias de rebalanceo para optimizar la frontera eficiente de Markowitz."
+    },
+    {
+      "id": "data-17",
+      "title": "Generador de Pipelines de Ingestión y Transformación ETL en Python",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "database",
+      "tags": [
+        "ETL",
+        "Python",
+        "SQLAlchemy",
+        "Data Engineering"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "DeepSeek-V3",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea scripts completos de ETL para extraer datos de una API REST paginada, transformarlos y cargarlos en una base de datos relacional.",
+      "variables": [
+        {
+          "name": "API_ORIGEN",
+          "label": "Endpoint o API de Origen",
+          "placeholder": "ej. API de Shopify de pedidos (Orders) con paginación cursor-based"
+        },
+        {
+          "name": "DB_DESTINO",
+          "label": "Base de Datos de Destino",
+          "placeholder": "ej. Base de datos PostgreSQL con tabla 'fact_orders'"
+        }
+      ],
+      "template": "Eres un Ingeniero de Datos Senior.\nOrigen: [API_ORIGEN]. Destino: [DB_DESTINO].\nEscribe un script en Python listo para producción:\n- Extracción: Llamadas requests con manejo de rate-limiting (HTTP 429) y paginación recursiva.\n- Transformación: Limpieza y tipado estricto con Pandas.\n- Carga: Inserción idempotente (UPSERT / ON CONFLICT DO UPDATE) mediante SQLAlchemy."
+    },
+    {
+      "id": "data-18",
+      "title": "Auditor de Modelos de Machine Learning (Métricas de Clasificación y Matriz de Confusión)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "table",
+      "tags": [
+        "Machine Learning",
+        "ROC AUC",
+        "Precision",
+        "Recall",
+        "F1-Score"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Interpreta la matriz de confusión y trade-offs entre Precision y Recall para casos desbalanceados (ej. detección médica o fraude).",
+      "variables": [
+        {
+          "name": "RESULTADOS_MODELO",
+          "label": "Métricas del Modelo",
+          "placeholder": "Verdaderos Positivos: 85, Falsos Positivos: 15, Falsos Negativos: 5, Verdaderos Negativos: 895",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como Senior ML Engineer.\nResultados:\n```\n[RESULTADOS_MODELO]\n```\nCalcula e interpreta:\n1. Exactitud (Accuracy), Precisión (Precision), Sensibilidad (Recall) y Puntuación F1 (F1-Score).\n2. Explicación de por qué Accuracy puede ser engañosa en este caso.\n3. Análisis de impacto del umbral de decisión (Threshold Tuning) según el coste económico o humano de cometer un Falso Negativo vs. Falso Positivo."
+    },
+    {
+      "id": "data-19",
+      "title": "Calculadora de Punto de Equilibrio y Margen de Contribución (Break-Even)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Punto de Equilibrio",
+        "Costes Fijos",
+        "Margen",
+        "Finanzas"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Determina el volumen exacto de ventas necesario para cubrir todos los costes fijos y comenzar a generar beneficios.",
+      "variables": [
+        {
+          "name": "ESTRUCTURA_COSTES",
+          "label": "Costes Fijos y Variables",
+          "placeholder": "Costes fijos mensuales: $12,000 (alquiler, salarios, seguros), Precio de venta por unidad: $80, Coste variable por unidad: $32 (materiales, comisiones, envío)"
+        }
+      ],
+      "template": "Eres un Consultor Financiero de Negocios y Contabilidad de Gestión.\nDatos: [ESTRUCTURA_COSTES].\nCalcula:\n1. Margen de Contribución Unitario ($) y Ratio de Margen de Contribución (%).\n2. Punto de Equilibrio en Unidades Físicas (¿Cuántas unidades se deben vender al mes?).\n3. Punto de Equilibrio en Ingresos Monetarios ($).\n4. Margen de Seguridad actual si las ventas estimadas son de 400 unidades."
+    },
+    {
+      "id": "data-20",
+      "title": "Diseñador de Modelos de Series Temporales y Pronósticos (ARIMA / Prophet)",
+      "category": "datos",
+      "categoryLabel": "Datos & Finanzas",
+      "icon": "trending-up",
+      "tags": [
+        "Series Temporales",
+        "Prophet",
+        "ARIMA",
+        "Forecasting",
+        "Python"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Genera código en Python para pronosticar demanda o ventas con estacionalidad, tendencia y días festivos.",
+      "variables": [
+        {
+          "name": "DATOS_SERIE_TEMPORAL",
+          "label": "Frecuencia y Naturaleza de los Datos",
+          "placeholder": "ej. Ventas diarias de e-commerce durante los últimos 3 años con picos marcados en Black Friday y Navidad"
+        }
+      ],
+      "template": "Actúa como Data Scientist Especialista en Forecasting y Series Temporales.\nDatos: [DATOS_SERIE_TEMPORAL].\nEscribe un script en Python usando la librería 'Prophet' de Meta:\n1. Preparación del DataFrame con columnas obligatorias 'ds' e 'y'.\n2. Configuración del modelo con estacionalidad anual, semanal e inclusión de festivos locales.\n3. Ajuste (fit) y generación de predicción a 90 días con intervalos de incertidumbre.\n4. Descomposición de la serie en gráficos de tendencia y componentes estacionales."
+    },
+    {
+      "id": "img-01",
+      "title": "Fotografía de Retrato Cinematográfico 35mm (Midjourney / Flux)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Midjourney",
+        "Flux",
+        "Retrato",
+        "Cinematográfico",
+        "Fotografía"
+      ],
+      "models": [
+        "Midjourney v6",
+        "Flux.1",
+        "DALL-E 3"
+      ],
+      "description": "Genera retratos hiperrealistas con iluminación natural, profundidad de campo bokeh y textura de piel orgánica sin aspecto plástico.",
+      "variables": [
+        {
+          "name": "SUJETO_RETRATO",
+          "label": "Sujeto y Expresión",
+          "placeholder": "ej. Un anciano pescador japonés con arrugas marcadas y mirada serena"
+        },
+        {
+          "name": "ILUMINACION_ATMOSFERA",
+          "label": "Iluminación y Hora",
+          "placeholder": "ej. Luz dorada del atardecer (Golden hour) con ligera niebla marina"
+        },
+        {
+          "name": "LENTE_CAMARA",
+          "label": "Cámara y Lente",
+          "placeholder": "ej. Shot on 35mm Kodak Portra 400, f/1.8 aperture, cinematic lighting"
+        }
+      ],
+      "template": "Cinematic 35mm portrait photograph of [SUJETO_RETRATO], [ILUMINACION_ATMOSFERA], [LENTE_CAMARA], natural skin texture with subtle imperfections, authentic facial pores, catchlight in eyes, shallow depth of field, award-winning National Geographic photography, highly detailed, photorealistic --ar 16:9 --style raw --v 6.0"
+    },
+    {
+      "id": "img-02",
+      "title": "Diseño de Interiores y Arquitectura Minimalista",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Arquitectura",
+        "Interiores",
+        "Minimalismo",
+        "Render 3D"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3",
+        "Flux.1"
+      ],
+      "description": "Render arquitectónico fotorrealista de espacios modernos, materiales nobles (madera, hormigón, lino) y luz difusa.",
+      "variables": [
+        {
+          "name": "TIPO_ESPACIO",
+          "label": "Habitación o Espacio",
+          "placeholder": "ej. Sala de estar contemporánea de concepto abierto con vistas a un bosque de pinos"
+        },
+        {
+          "name": "ESTILO_DISENO",
+          "label": "Estilo y Materiales",
+          "placeholder": "ej. Minimalismo Japandi, madera de roble claro, paredes de microcemento gris, textiles de lino beige"
+        }
+      ],
+      "template": "Architectural photography of [TIPO_ESPACIO], designed in [ESTILO_DISENO], floor-to-ceiling windows, soft diffused morning sunlight streaming in, minimalist furniture, indoor bonsai and fiddle-leaf fig plants, warm cozy atmosphere, Architectural Digest editorial shot, octane render, 8k resolution, ultra-clean aesthetic --ar 16:9 --v 6.0"
+    },
+    {
+      "id": "img-03",
+      "title": "Diseño de Logotipo Minimalista Vectorial y Marca",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Logo",
+        "Vectorial",
+        "Branding",
+        "Minimalismo"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Crea isotipos geométricos limpios, de líneas fluidas, sobre fondo blanco neutro y listos para vectorizar.",
+      "variables": [
+        {
+          "name": "CONCEPTO_LOGO",
+          "label": "Concepto o Símbolo",
+          "placeholder": "ej. Un halcón peregrino combinado geométricamente con un rayo eléctrico"
+        },
+        {
+          "name": "ESTILO_LOGO",
+          "label": "Estilo Visual",
+          "placeholder": "ej. Minimalist flat vector, geometric golden ratio, single line art, vibrant cyan and obsidian"
+        }
+      ],
+      "template": "Minimalist modern logo design of [CONCEPTO_LOGO], [ESTILO_LOGO], flat 2D vector graphic, clean bold lines, golden ratio proportions, solid pure white background, no gradients, no photorealistic details, Behance and Dribbble trending identity design, SVG icon style --no text, typography, photorealistic, mockup"
+    },
+    {
+      "id": "img-04",
+      "title": "Fotografía de Producto de Estudio Comercial (E-commerce / Hero)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Producto",
+        "Comercial",
+        "Estudio",
+        "Publicidad"
+      ],
+      "models": [
+        "Midjourney v6",
+        "Flux.1",
+        "DALL-E 3"
+      ],
+      "description": "Fotografía comercial de alta gama con pedestal flotante, iluminación de estudio suave, reflejos sutiles y gotas de agua.",
+      "variables": [
+        {
+          "name": "PRODUCTO_OBJETO",
+          "label": "Producto",
+          "placeholder": "ej. Frasco de perfume de lujo de vidrio esmerilado color ámbar con tapa dorada"
+        },
+        {
+          "name": "ENTORNO_PODIO",
+          "label": "Podio y Elementos Botánicos",
+          "placeholder": "ej. Sobre un podio de piedra volcánica negra rodeado de rodajas de naranja sanguina y gotas de agua fresca"
+        }
+      ],
+      "template": "High-end commercial studio product photography of [PRODUCTO_OBJETO], placed [ENTORNO_PODIO], dramatic soft studio lighting, rim light highlighting glass edges, subtle water droplets and mist, luxury advertising campaign, Hasselblad H6D-100c, hyper-detailed, clean reflection --ar 4:5 --style raw --v 6.0"
+    },
+    {
+      "id": "img-05",
+      "title": "Ilustración Isométrica 3D Estilo Claymation / Low-Poly",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "3D",
+        "Isométrico",
+        "Claymation",
+        "Blender"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Mundos en miniatura tipo diorama 3D con texturas de arcilla suave, colores pastel e iluminación cálida.",
+      "variables": [
+        {
+          "name": "ESCENA_ISOMETRICA",
+          "label": "Escena o Edificio",
+          "placeholder": "ej. Una pequeña cafetería acogedora en una esquina con terraza, bicicletas y luces de guirnalda"
+        }
+      ],
+      "template": "3D cute isometric diorama of [ESCENA_ISOMETRICA], rendered in Blender, soft claymation and matte plastic texture, pastel color palette with warm vibrant accents, tilt-shift lens effect, miniature world aesthetic, soft ambient occlusion, cozy whimsical lighting, 4k 3D icon style --ar 1:1"
+    },
+    {
+      "id": "img-06",
+      "title": "Ilustración Anime / Manga de Alta Gama (Estilo Makoto Shinkai / Ghibli)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Anime",
+        "Manga",
+        "Ghibli",
+        "Shinkai",
+        "Ilustración"
+      ],
+      "models": [
+        "Midjourney v6 (Niji 6)",
+        "DALL-E 3"
+      ],
+      "description": "Paisajes emotivos con cielos espectaculares, nubes voluminosas, rayos crepusculares y detalle artesanal.",
+      "variables": [
+        {
+          "name": "PERSONAJES_ACCION",
+          "label": "Personaje y Acción",
+          "placeholder": "ej. Una chica estudiante con mochila mirando trenes pasar en una estación rural florida"
+        },
+        {
+          "name": "ESTILO_ANIME",
+          "label": "Estilo",
+          "placeholder": "ej. Makoto Shinkai aesthetic, Studio Ghibli nostalgic warmth, vivid sky with glowing clouds and lens flare"
+        }
+      ],
+      "template": "Masterpiece anime illustration of [PERSONAJES_ACCION], [ESTILO_ANIME], stunning detailed sky with cumulus sunset clouds, twilight lighting, vibrant color harmony, cherry blossom petals drifting in the wind, cinematic composition, wallpaper quality, trending on Pixiv --ar 16:9 --niji 6"
+    },
+    {
+      "id": "img-07",
+      "title": "Arte Conceptual de Ciencia Ficción y Cyberpunk",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Sci-Fi",
+        "Cyberpunk",
+        "Concept Art",
+        "Futurista"
+      ],
+      "models": [
+        "Midjourney v6",
+        "Flux.1",
+        "DALL-E 3"
+      ],
+      "description": "Megaciudades futuristas con rascacielos colosales, carteles holográficos de neón, lluvia y vehículos voladores.",
+      "variables": [
+        {
+          "name": "ESCENARIO_SCIFI",
+          "label": "Escenario Futurista",
+          "placeholder": "ej. Callejón abarrotado de mercado nocturno en Neo-Tokio con androides y puestos de ramen callejero"
+        }
+      ],
+      "template": "Epic sci-fi concept art of [ESCENARIO_SCIFI], cyberpunk aesthetic, glowing neon signs reflecting on wet asphalt puddles, dense atmospheric volumetric fog and steam, towering megastructures in the background, flying spinner cars, Syd Mead and Blade Runner 2049 inspiration, cinematic matte painting, artstation trending --ar 21:9 --v 6.0"
+    },
+    {
+      "id": "img-08",
+      "title": "Diseño de Interfaz de Usuario (UI/UX) y Mockup de App Móvil",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "UI/UX",
+        "App Mockup",
+        "Figma",
+        "Mobile UI"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Diseños de interfaces móviles modernas con modo oscuro, glassmorphism, tarjetas limpias y gráficos de métricas.",
+      "variables": [
+        {
+          "name": "TIPO_APP",
+          "label": "Tipo de Aplicación",
+          "placeholder": "ej. App de finanzas e inversiones cripto y acciones en tiempo real"
+        },
+        {
+          "name": "ESTILO_UI",
+          "label": "Estilo Visual UI",
+          "placeholder": "ej. Sleek dark mode, neon purple and emerald accents, glassmorphism blur cards, modern typography"
+        }
+      ],
+      "template": "Modern mobile app UI/UX design mockup for [TIPO_APP], [ESTILO_UI], high-fidelity screen layout showing user dashboard, financial trend graph, clean minimalist navigation bar, modern Outfit font, Behance UI/UX trending, Dribbble featured design, clean presentation angle --ar 9:16"
+    },
+    {
+      "id": "img-09",
+      "title": "Pintura al Óleo Clásica Impresionista / Renacentista",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Óleo",
+        "Impresionismo",
+        "Pintura",
+        "Arte Clásico"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3"
+      ],
+      "description": "Pinturas con pinceladas empastadas visibles, textura de lienzo al óleo, claroscuro y paletas cromáticas históricas.",
+      "variables": [
+        {
+          "name": "TEMA_PINTURA",
+          "label": "Sujeto o Paisaje",
+          "placeholder": "ej. Un banquete medieval a la luz de velas en un castillo de piedra"
+        },
+        {
+          "name": "MAESTRO_PINTOR",
+          "label": "Estilo del Maestro",
+          "placeholder": "ej. Rembrandt chiaroscuro o Claude Monet impressionist brushstrokes"
+        }
+      ],
+      "template": "Fine art oil painting of [TEMA_PINTURA], painted in the style of [MAESTRO_PINTOR], rich visible textured canvas impasto brushwork, dramatic chiaroscuro lighting with deep shadows and luminous highlights, museum masterpiece, timeless classical art composition --ar 4:3 --v 6.0"
+    },
+    {
+      "id": "img-10",
+      "title": "Diseño de Pegatinas Troqueladas / Stickers Vectoriales",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Sticker",
+        "Pegatina",
+        "Die-Cut",
+        "Ilustración"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Ilustraciones divertidas con contorno blanco troquelado grueso, colores vivos y sombras limpias.",
+      "variables": [
+        {
+          "name": "PERSONAJE_STICKER",
+          "label": "Personaje u Objeto",
+          "placeholder": "ej. Un gato astronauta comiendo pizza espacial en gravedad cero"
+        }
+      ],
+      "template": "Cute die-cut sticker design of [PERSONAJE_STICKER], thick bold white sticker outline contour, vibrant pop colors, flat vector illustration style, kawaii cartoon aesthetic, clean white background, ready to print, high resolution vector artwork --no photorealistic, background scenery"
+    },
+    {
+      "id": "img-11",
+      "title": "Fotografía Macro de Naturaleza Hiperdetallada",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Macro",
+        "Naturaleza",
+        "Detalle",
+        "Fotografía"
+      ],
+      "models": [
+        "Midjourney v6",
+        "Flux.1"
+      ],
+      "description": "Primeros planos extremos revelando texturas microscópicas: gotas de rocío, ojos de insectos o venas de hojas.",
+      "variables": [
+        {
+          "name": "OBJETO_MACRO",
+          "label": "Sujeto Natural",
+          "placeholder": "ej. Un camaleón verde esmeralda con iris dorado sobre una orquídea con rocío"
+        }
+      ],
+      "template": "Extreme macro photography of [OBJETO_MACRO], capturing microscopic scales, iridescent textures and individual water droplet reflections, 100mm macro lens, f/2.8 aperture, tack sharp focus, soft creamy bokeh background, professional studio ring light, 8k National Geographic --ar 16:9 --v 6.0"
+    },
+    {
+      "id": "img-12",
+      "title": "Póster Vintage / Retro de Viajes de los Años 60",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Vintage",
+        "Retro",
+        "Póster",
+        "Turismo"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Estética retro de los años 50-60 con serigrafía, colores desvaídos, tipografía de bloque y texturas de papel envejecido.",
+      "variables": [
+        {
+          "name": "DESTINO_VIAJE",
+          "label": "Destino o Ciudad",
+          "placeholder": "ej. Los Alpes Suizos con teleféricos y montañas nevadas"
+        }
+      ],
+      "template": "Vintage 1960s mid-century travel poster for [DESTINO_VIAJE], screenprint lithograph aesthetic, bold geometric shapes, muted pastel palette with retro orange and teal accents, distressed paper texture, Swiss graphic design style, minimalist vector travel art --ar 2:3"
+    },
+    {
+      "id": "img-13",
+      "title": "Render 3D de Personaje Animado Estilo Pixar / Disney",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Pixar",
+        "Disney",
+        "Personaje 3D",
+        "Animación"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3"
+      ],
+      "description": "Personajes 3D entrañables con ojos expresivos, shaders de piel translúcida (subsurface scattering) y pelaje detallado.",
+      "variables": [
+        {
+          "name": "DESCRIPCION_PERSONAJE",
+          "label": "Personaje y Actitud",
+          "placeholder": "ej. Un pequeño zorro aventurero con bufanda de lana y lupa de detective"
+        }
+      ],
+      "template": "3D animated character render of [DESCRIPCION_PERSONAJE], Pixar and Disney animation movie style, large expressive glossy eyes, detailed fur simulation, subsurface scattering skin shader, warm soft studio rim lighting, octane render, 4k cinematic still --ar 1:1 --v 6.0"
+    },
+    {
+      "id": "img-14",
+      "title": "Patrón Textil Continuo sin Costuras (Seamless Pattern)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Patrón",
+        "Seamless",
+        "Textil",
+        "Repetición"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3"
+      ],
+      "description": "Crea patrones repetibles que encajan a la perfección en mosaico para telas, papeles pintados o fondos web.",
+      "variables": [
+        {
+          "name": "ELEMENTOS_PATRON",
+          "label": "Elementos y Temática",
+          "placeholder": "ej. Setas mágicas bioluminiscentes, helechos dorados y polillas lunares"
+        },
+        {
+          "name": "PALETA_PATRON",
+          "label": "Colores y Fondo",
+          "placeholder": "ej. Fondo azul noche profundo con acentos en verde menta y oro metálico"
+        }
+      ],
+      "template": "Seamless repeatable pattern tile of [ELEMENTOS_PATRON], [PALETA_PATRON], botanical art nouveau illustration, flat vector print design, perfectly repeating borders, wallpaper and textile pattern, high resolution print ready --tile --v 6.0"
+    },
+    {
+      "id": "img-15",
+      "title": "Arte Surrealista Onírico (Estilo Salvador Dalí / Magritte)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Surrealismo",
+        "Onírico",
+        "Dalí",
+        "Conceptual"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3"
+      ],
+      "description": "Composiciones imposibles con leyes físicas alteradas, nubes flotantes en habitaciones y objetos descontextualizados.",
+      "variables": [
+        {
+          "name": "PARADOJA_SURREAL",
+          "label": "Concepto Paradójico",
+          "placeholder": "ej. Un océano flotando en el cielo donde las ballenas nadan entre estrellas y el suelo es un desierto de relojes de arena"
+        }
+      ],
+      "template": "Surrealistic dreamscape artwork depicting [PARADOJA_SURREAL], inspired by Salvador Dalí and René Magritte, impossible physics, metaphysical atmosphere, dramatic golden sunset light cast across impossible horizons, exquisite oil painting texture, symbolic and philosophical art piece --ar 16:9 --v 6.0"
+    },
+    {
+      "id": "img-16",
+      "title": "Fotografía Streetwear y Moda Urbana Editorial (Vogue / Highsnobiety)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Moda",
+        "Streetwear",
+        "Editorial",
+        "Vogue"
+      ],
+      "models": [
+        "Midjourney v6",
+        "Flux.1"
+      ],
+      "description": "Sesión de moda callejera con modelos vanguardistas, prendas oversize técnicas y localizaciones urbanas crudas.",
+      "variables": [
+        {
+          "name": "OUTFIT_MODELO",
+          "label": "Atuendo y Modelo",
+          "placeholder": "ej. Modelo andrógina con chaqueta impermeable cyberpunk translúcida, pantalones cargo oversize y zapatillas futuristas"
+        },
+        {
+          "name": "LOCACION_URBANA",
+          "label": "Lugar de la Sesión",
+          "placeholder": "ej. Terraza de hormigón brutalista en Berlín bajo cielo nublado"
+        }
+      ],
+      "template": "High-fashion editorial streetwear photograph of [OUTFIT_MODELO], shot on location at [LOCACION_URBANA], flash photography, raw candid aesthetic, direct hard lighting, Kodak Tri-X 400 film grain, Highsnobiety and Vogue runway editorial, full body fashion shot --ar 4:5 --style raw --v 6.0"
+    },
+    {
+      "id": "img-17",
+      "title": "Iconos 3D de Cristal Líquido y Vidrio Translúcido (Glassmorphism)",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Glassmorphism",
+        "Iconos 3D",
+        "Vidrio",
+        "UI"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Elementos tridimensionales de vidrio esmerilado con refracción de luz interna y acentos iridiscentes.",
+      "variables": [
+        {
+          "name": "OBJETO_ICONO",
+          "label": "Objeto a Representar",
+          "placeholder": "ej. Un escudo de seguridad con un candado central brillante"
+        }
+      ],
+      "template": "3D glassmorphism icon of [OBJETO_ICONO], frosted translucent frosted glass material, internal glowing neon gradient reflections, iridescent rainbow chromatic aberration at the edges, smooth floating shadow on pure dark slate background, Cinema 4D and Redshift render, premium Apple UI asset --ar 1:1"
+    },
+    {
+      "id": "img-18",
+      "title": "Ilustración de Portada de Libro / Novela de Fantasía Épica",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Portada",
+        "Fantasía",
+        "Libros",
+        "Épico"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3"
+      ],
+      "description": "Composición vertical de alto impacto con castillos en acantilados, dragones, magia arcana y espacio para títulos.",
+      "variables": [
+        {
+          "name": "ESCENA_PORTADA",
+          "label": "Escena Principal",
+          "placeholder": "ej. Un caballero solitario frente a una colosal puerta de runas brillantes en una montaña nevada"
+        }
+      ],
+      "template": "Epic fantasy novel book cover illustration of [ESCENA_PORTADA], breathtaking scale and atmospheric depth, glowing magical runes, swirling blizzard snow effects, Frank Frazetta and Greg Rutkowski oil painting style, dramatic cinematic composition with clean negative space at top for typography --ar 2:3 --v 6.0"
+    },
+    {
+      "id": "img-19",
+      "title": "Arte de Acuarela Botánica y Flora Silvestre",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Acuarela",
+        "Botánica",
+        "Naturaleza",
+        "Pintura"
+      ],
+      "models": [
+        "DALL-E 3",
+        "Midjourney v6"
+      ],
+      "description": "Pinturas de acuarela suave sobre papel rugoso de algodón con manchas de agua transparentes y líneas finas.",
+      "variables": [
+        {
+          "name": "FLORES_PLANTAS",
+          "label": "Flores o Especies",
+          "placeholder": "ej. Ramo silvestre de lavanda, eucalipto, peonías rosadas y amapolas"
+        }
+      ],
+      "template": "Delicate botanical watercolor painting of [FLORES_PLANTAS], wet-on-wet watercolor bleeding technique, soft translucent color washes, fine ink line details, painted on cold press textured watercolor paper, pure white background, elegant organic fine art --ar 3:4 --v 6.0"
+    },
+    {
+      "id": "img-20",
+      "title": "Generador de Fondos Abstractos de Fluidos Líquidos y Ondas 3D",
+      "category": "imagenes",
+      "categoryLabel": "Imágenes & Arte",
+      "icon": "image",
+      "tags": [
+        "Fondos",
+        "Abstracto",
+        "Fluidos",
+        "Wallpaper"
+      ],
+      "models": [
+        "Midjourney v6",
+        "DALL-E 3"
+      ],
+      "description": "Fondos fluidos hipnóticos con gradientes de color metálico, seda flotante y ondas de alta resolución.",
+      "variables": [
+        {
+          "name": "COLORES_FLUIDO",
+          "label": "Paleta de Colores",
+          "placeholder": "ej. Ondas de seda líquida en violeta cósmico, azul eléctrico y oro pulido"
+        }
+      ],
+      "template": "3D dynamic abstract liquid wave background composed of [COLORES_FLUIDO], smooth flowing ribbons and silk cloth physics, metallic glossy reflections, deep shadows, soft ambient backlight, luxury wallpaper 8k, modern minimalist abstract composition --ar 16:9 --v 6.0"
+    },
+    {
+      "id": "mus-01",
+      "title": "Generador de Prompts y Metatags para Suno AI v3.5 / v4",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Suno AI",
+        "Generación Musical",
+        "Estilos",
+        "Metatags"
+      ],
+      "models": [
+        "Suno v3.5 / v4",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Diseña prompts de estilo sonoro con instrumentación, tempo (BPM), estructura de etiquetas [Verse, Chorus, Guitar Solo] y atmósfera.",
+      "variables": [
+        {
+          "name": "GENERO_FUSION",
+          "label": "Género o Fusión",
+          "placeholder": "ej. Synthwave retrofuturista con solos de saxofón y guitarras ochenteras"
+        },
+        {
+          "name": "ESTRUCTURA_LETRA",
+          "label": "Tema o Letra",
+          "placeholder": "ej. Conduciendo de noche por una autopista de neón buscando a alguien del pasado"
+        }
+      ],
+      "template": "Actúa como Productor Musical e Ingeniero de Prompts para Suno AI v3.5/v4.\nGénero: [GENERO_FUSION]. Tema: [ESTRUCTURA_LETRA].\nEntrega:\n1. **Style of Music (Prompt de estilo en inglés - máx 120 caracteres)**: Descriptores de tempo, instrumentos, voz y producción.\n2. **Estructura Completa con Metatags de Suno**:\n   [Intro - atmospheric synth arpeggio]\n   [Verse 1 - female vocal, mellow bass]\n   [Pre-Chorus - building percussion]\n   [Chorus - explosive energy, dual harmonies]\n   [Verse 2]\n   [Chorus]\n   [Guitar Solo / Synth Drop]\n   [Outro - fading echoes]\n   [End]"
+    },
+    {
+      "id": "mus-02",
+      "title": "Compositor de Letras de Canciones con Rima Métrica y Ganchos (Hooks)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Songwriting",
+        "Letras",
+        "Rima",
+        "Pop",
+        "Rock"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Escribe letras completas con esquemas de rima rigurosos (AABB / ABAB), número de sílabas consistente y estribillo memorable.",
+      "variables": [
+        {
+          "name": "TEMA_CANCIÓN",
+          "label": "Historia o Emoción de la Canción",
+          "placeholder": "ej. La superación personal tras una ruptura y el renacer de la autoconfianza"
+        },
+        {
+          "name": "GENERO_MUSICAL",
+          "label": "Género Musical",
+          "placeholder": "ej. Pop Rock enérgico en español con ritmo de 128 BPM"
+        }
+      ],
+      "template": "Eres un Compositor Galardonado (Grammy) y Letrista Profesional.\nGénero: [GENERO_MUSICAL]. Historia: [TEMA_CANCIÓN].\nEscribe la letra completa:\n- Verso 1 (8 versos con esquema métrico estricto y rimas consonantes/asonantes ricas).\n- Pre-Estribillo (Aumento de tensión rítmica).\n- Estribillo / Coro (El Hook definitivo: frases cortas, pegadizas y de alto impacto vocal).\n- Verso 2.\n- Estribillo.\n- Puente Emocional (Cambio de acorde y clímax lírico).\n- Estribillo Final y Cierre."
+    },
+    {
+      "id": "mus-03",
+      "title": "Generador de Prompts para Udio AI (Clips de Alta Calidad y Extensiones)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Udio",
+        "IA Musical",
+        "Producción",
+        "Prompts Sonoros"
+      ],
+      "models": [
+        "Udio v1.5",
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Optimiza la creación musical en Udio con tags precisos de producción analógica, timbres vocales y directrices de extensión.",
+      "variables": [
+        {
+          "name": "ESTILO_UDIO",
+          "label": "Estilo Detallado",
+          "placeholder": "ej. Neo-Soul con batería Lo-Fi de vinilo, piano Rhodes vintage y voz masculina aterciopelada"
+        }
+      ],
+      "template": "Eres un Maestro de Generación Sonora en Udio AI.\nEstilo: [ESTILO_UDIO].\nGenera:\n1. Prompt de Udio optimizado con tags separados por comas (género principal, subgéneros, instrumentación analógica, técnicas vocales, calidad de mezcla como 'warm tube saturation, binaural soundstage').\n2. Letra dividida en segmentos de 32 segundos listos para la función de Extensión hacia adelante y hacia atrás en Udio."
+    },
+    {
+      "id": "mus-04",
+      "title": "Diseñador de Paisajes Sonoros y Efectos (Sound Design para Videojuegos y Cine)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Sound Design",
+        "Foley",
+        "Videojuegos",
+        "Cine",
+        "SFX"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Planifica capas de sonido ambiental (Ambience), efectos Foley y texturas sintetizadas para escenas cinematográficas.",
+      "variables": [
+        {
+          "name": "ESCENA_AUDIOVISUAL",
+          "label": "Escena a Musicalizar y Sonorizar",
+          "placeholder": "ej. Una nave espacial abandonada flotando cerca de un agujero negro con chirridos metálicos y ecos lejanos"
+        }
+      ],
+      "template": "Actúa como Director de Audio y Diseñador Sonoro Senior (estilo Hans Zimmer / Ben Burtt).\nEscena: [ESCENA_AUDIOVISUAL].\nDiseña el mapa de audio:\n1. Capa Sub-Baja / Dron (Frecuencias entre 30Hz-80Hz que generan tensión física).\n2. Capa de Foley y Texturas de Entorno (Detalles orgánicos y espaciales).\n3. Efectos Puntuales (Stems interactivos, transiciones y risers).\n4. Procesamiento de Mezcla Recomendado (Reverb convolutiva, distorsión de cinta, paneo binaural)."
+    },
+    {
+      "id": "mus-05",
+      "title": "Guía de Mezcla y Masterización en DAW (EQ, Compresión y Espacialidad)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Mezcla",
+        "Mastering",
+        "Ableton",
+        "Logic",
+        "FabFilter"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Instrucciones precisas para limpiar frecuencias conflictivas (limpieza en 250Hz, brillo en 10kHz), compresión sidechain y limitación.",
+      "variables": [
+        {
+          "name": "PROBLEMA_MEZCLA",
+          "label": "Pistas o Problema de la Mezcla",
+          "placeholder": "ej. El Bombo (Kick) y el Bajo (808) se solapan y ensucian la mezcla de Trap/Hip-Hop"
+        }
+      ],
+      "template": "Eres un Ingeniero de Mezcla y Masterización Ganador de Discos de Platino.\nProblema: [PROBLEMA_MEZCLA].\nProvee el protocolo de resolución paso a paso:\n1. Ecualización Quirúrgica: Frecuencias exactas a cortar y potenciar en cada pista.\n2. Compresión y Control de Dinámica: Attack, Release, Ratio y técnica de compresión Sidechain.\n3. Tratamiento Estéreo y Saturación Armónica.\n4. Cadena de Masterización Final (Buss Compression, Limiter con valores LUFS recomendados para Spotify y Apple Music)."
+    },
+    {
+      "id": "mus-06",
+      "title": "Compositor de Bandas Sonoras Cinemáticas Orquestales (Epic Trailer)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Orquesta",
+        "Trailer",
+        "Cinematográfico",
+        "Hans Zimmer"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura temas orquestales híbridos con percusión Taiko, metales desgarradores (Braams) y cuerdas staccato.",
+      "variables": [
+        {
+          "name": "TEMA_TRAILER",
+          "label": "Emoción y Tipo de Película",
+          "placeholder": "ej. Batalla épica final de fantasía donde la esperanza renace en el último minuto"
+        }
+      ],
+      "template": "Eres un Compositor de Bandas Sonoras Épicas de Hollywood.\nTema: [TEMA_TRAILER].\nEstructura la pieza orquestal en 3 actos:\n- Acto 1 (Setup): Dron misterioso, piano minimalista y solo de violonchelo melancólico.\n- Acto 2 (Escalada): Ostinato de cuerdas staccato a 140 BPM, percusiones híbridas crecientes y pulsos de sintetizador analógico.\n- Acto 3 (Clímax): Sección completa de metales, coro masivo en latín, percusión Taiko atronadora y resolución épica con golpe final (Impact)."
+    },
+    {
+      "id": "mus-07",
+      "title": "Programador de Sintetizadores (Serum, Vital, Massive - Sound Design)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Serum",
+        "Sintetizador",
+        "Vital",
+        "Wavetable",
+        "EDM"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Instrucciones de ruteo de osciladores, tablas de ondas, envolventes (ADSR) y LFOs para sintetizar sonidos icónicos.",
+      "variables": [
+        {
+          "name": "SONIDO_A_CREAR",
+          "label": "Tipo de Sonido Deseado",
+          "placeholder": "ej. Reese Bass oscuro y envolvente para Drum & Bass con movimiento analógico"
+        }
+      ],
+      "template": "Actúa como Diseñador de Presets para Sintetizadores Wavetable (Serum / Vital).\nSonido deseado: [SONIDO_A_CREAR].\nConfiguración paso a paso:\n1. Oscilador A y Oscilador B: Tabla de ondas, número de voces de Unison, Detune y nivel de mezcla.\n2. Filtro: Tipo de filtro (Low Pass 24dB, Comb, etc.) y modulación de corte.\n3. Envolvente 1 (Amp) y LFO 1: Curva de ataque, decaimiento, sostenido y liberación.\n4. Pestaña de Efectos (FX Chain): Distorsión, Chorus, Compresor multibanda OTT y Reverb."
+    },
+    {
+      "id": "mus-08",
+      "title": "Generador de Progresiones de Acordes Emotivas y Complejas (Teoría Musical)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Acordes",
+        "Teoría Musical",
+        "Jazz",
+        "Neo-Soul",
+        "Armonía"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea progresiones con acordes extendidos (7mas, 9nas, 11nas), acordes de paso prestados y modulación armónica.",
+      "variables": [
+        {
+          "name": "TONALIDAD_SENTIMIENTO",
+          "label": "Tonalidad y Emoción",
+          "placeholder": "ej. En tonalidad de Re menor buscando una sensación de nostalgia profunda y belleza melancólica"
+        }
+      ],
+      "template": "Eres un Maestro de Armonía Moderna y Teoría Musical Avanzada.\nRequerimiento: [TONALIDAD_SENTIMIENTO].\nProvee:\n1. Progresión Principal de 4 a 8 compases con cifrado anglosajón exacto (ej. Dm9 - G13 - Cmaj9 - A7b13).\n2. Grados armónicos en números romanos y análisis funcional de cada acorde (intercambio modal, dominantes secundarias).\n3. Sugerencia de notas guía (Voice Leading) para enlazar los acordes con suavidad en teclado o guitarra."
+    },
+    {
+      "id": "mus-09",
+      "title": "Letrista de Rap y Hip-Hop con Multisilábicas y Punchlines",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Rap",
+        "Hip-Hop",
+        "Punchlines",
+        "Flow",
+        "Rimas"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Escribe barras de rap con juegos de palabras ingeniosos, rimas multisilábicas complejas y patrones de flow variados.",
+      "variables": [
+        {
+          "name": "TEMA_RAP",
+          "label": "Tema y Estilo",
+          "placeholder": "ej. Crítica a la superficialidad de las redes sociales y el postureo moderno"
+        }
+      ],
+      "template": "Actúa como un Rapero y Letrista de Élite (estilo Kendrick Lamar / Residente / Canserbero).\nTema: [TEMA_RAP].\nEscribe 16 barras de rap magistrales:\n- Uso de rimas multisilábicas en cada final de verso (y rimas internas).\n- 4 Punchlines o metáforas contundentes de doble sentido.\n- Variación de métrica y cadencia (cambios de flow) cada 4 compases."
+    },
+    {
+      "id": "mus-10",
+      "title": "Diseñador de Beats Lo-Fi Chillhop Relajantes para Estudio",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Lo-Fi",
+        "Chillhop",
+        "Beats",
+        "Study Beats"
+      ],
+      "models": [
+        "Suno AI",
+        "Udio",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura beats Lo-Fi relajantes con ruidos de vinilo, pianos desafinados (tape flutter), bajo cálido y batería suave.",
+      "variables": [
+        {
+          "name": "ATMOSFERA_LOFI",
+          "label": "Ambiente Específico",
+          "placeholder": "ej. Una tarde lluviosa en Tokio tomando café mientras se estudia programación"
+        }
+      ],
+      "template": "Eres un Productor de Lo-Fi Hip Hop y Chillhop de canales como Lofi Girl.\nAmbiente: [ATMOSFERA_LOFI].\nProvee:\n1. Prompt de audio optimizado para IA (Suno/Udio) en inglés: BPM (70-85), tags sonoros (dusty vinyl crackle, nostalgic rhodes piano, mellow boom bap drums, relaxed jazz chords).\n2. Guía de samples orgánicos de fondo (sonido de lluvia, pasos, sorbos de taza) y su colocación en la línea temporal."
+    },
+    {
+      "id": "mus-11",
+      "title": "Creador de Jingles Publicitarios Pegadizos de 15 a 30 Segundos",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Jingle",
+        "Publicidad",
+        "Comercial",
+        "Radio",
+        "Branding"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea melodías breves y frases cantadas inolvidables que fijan el nombre y beneficio de una marca en la mente.",
+      "variables": [
+        {
+          "name": "MARCA_BENEFICIO",
+          "label": "Nombre de la Marca y Promesa",
+          "placeholder": "ej. FreshBite - Entrega de comida saludable en 20 minutos"
+        }
+      ],
+      "template": "Eres un Compositor de Jingles Comerciales Legendarios.\nMarca: [MARCA_BENEFICIO].\nCrea 3 opciones de jingle:\n- Opción 1 (Jingle de 10 segundos): Audio logo melódico ultracorto con el eslogan cantado.\n- Opción 2 (Jingle de 20 segundos): Rima pegadiza con problema -> solución -> nombre de marca.\n- Opción 3 (Jingle de 30 segundos): Mini canción con ritmo bailable y llamado a la acción final."
+    },
+    {
+      "id": "mus-12",
+      "title": "Entrenador de Técnica Vocal y Calentamiento para Cantantes",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Canto",
+        "Voz",
+        "Calentamiento",
+        "Técnica Vocal"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Rutinas guiadas de respiración diafragmática, ejercicios con tubo (SOVTE), escalas de calentamiento y colocación de resonadores.",
+      "variables": [
+        {
+          "name": "TIPO_VOZ_META",
+          "label": "Registro y Objetivo",
+          "placeholder": "ej. Voz de Barítono buscando ampliar el rango hacia agudos con voz mixta sin tensión"
+        }
+      ],
+      "template": "Actúa como Maestro de Canto y Fonoaudiólogo Vocal de Élite.\nPerfil: [TIPO_VOZ_META].\nDiseña una rutina de 15 minutos:\n1. 3 Minutos: Ejercicios de tracto vocal semiocluido (Lip trills, zumbidos con pajita/tubo en agua).\n2. 5 Minutos: Escalas de sirena y arpegios en voz mixta para cruzar el Passaggio sin quiebres.\n3. 5 Minutos: Articulación y dicción con trabalenguas resonanciales.\n4. 2 Minutos: Vuelta a la calma vocal (Cool-down) para evitar fatiga."
+    },
+    {
+      "id": "mus-13",
+      "title": "Compositor de Boleros y Baladas Románticas Intemporales",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Bolero",
+        "Balada",
+        "Poesía",
+        "Acústico"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Escribe letras poéticas con la elegancia, nostalgia y metáforas profundas del bolero latinoamericano tradicional.",
+      "variables": [
+        {
+          "name": "SENTIMIENTO_BOLERO",
+          "label": "Historia de Amor o Desamor",
+          "placeholder": "ej. Un amor imposible recordado a través del aroma de un café en un viejo bar"
+        }
+      ],
+      "template": "Eres un Poeta y Compositor de Boleros Clásicos (estilo Armando Manzanero / Agustín Lara).\nHistoria: [SENTIMIENTO_BOLERO].\nEscribe el bolero completo:\n- Versos de métrica octosílaba o endecasílaba con imágenes sensoriales exquisitas.\n- Uso de recursos poéticos: aliteraciones, metáforas sobre el tiempo, la noche y la distancia.\n- Acordes de guitarra sugeridos para acompañar la melodía."
+    },
+    {
+      "id": "mus-14",
+      "title": "Diseñador de Identidad Sonora y Audio Branding (Sonic Logo)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Audio Branding",
+        "Sonic Logo",
+        "Identidad",
+        "Marca"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña el sonido insignia de 2 a 3 segundos de una empresa (como el sonido de inicio de Netflix o Apple).",
+      "variables": [
+        {
+          "name": "VALORES_EMPRESA",
+          "label": "Personalidad de la Marca",
+          "placeholder": "ej. Fintech moderna: velocidad, seguridad bancaria blindada y frescura juvenil"
+        }
+      ],
+      "template": "Eres un Estratega de Audio Branding y Sonic Identity.\nMarca: [VALORES_EMPRESA].\nDiseña el Sonic Logo de 3 segundos:\n1. Las 3 Capas Sonoras del logo (ej. Ataque inicial metálico/nítido, Cuerpo armónico cálido, Estela de reverb expansiva).\n2. Tonalidad y Notas Musicales exactas (ej. acorde mayor add9 ascendente).\n3. Adaptaciones del sonido (para confirmación de pago exitoso en app, notificación de móvil y firma de video)."
+    },
+    {
+      "id": "mus-15",
+      "title": "Productor de Música Electrónica de Baile (House / Techno / Melodic)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "House",
+        "Techno",
+        "EDM",
+        "Club",
+        "Producción"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura tracks para la pista de baile con intros DJ-friendly, builds de tensión progresiva y drops demoledores.",
+      "variables": [
+        {
+          "name": "SUBGENERO_ELECTRONICA",
+          "label": "Subgénero y BPM",
+          "placeholder": "ej. Melodic Techno a 124 BPM estilo Tale of Us / Afterlife"
+        }
+      ],
+      "template": "Actúa como Productor de Música Electrónica de Festivales y Clubes.\nSubgénero: [SUBGENERO_ELECTRONICA].\nEstructura el track compás a compás (Formato Extended Mix de 6 minutos):\n- Compases 1-32 (DJ Intro): Batería limpia con filtrado paulatino.\n- Compases 33-64: Introducción del arpegio melódico y bajo hipnótico.\n- Compases 65-96 (Breakdown): Retirada del kick, acordes expansivos y elementos vocales etéreos.\n- Compases 97-128 (The Build & Drop): Riser masivo con Snare roll y el Drop con toda la pegada de frecuencias bajas."
+    },
+    {
+      "id": "mus-16",
+      "title": "Especialista en Grabación Acústica y Selección de Micrófonos",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Micrófonos",
+        "Grabación",
+        "Estudio",
+        "Acústica"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Recomienda técnicas de microfonía (XY, ORTF, Mid-Side) y micrófonos (Condensador, Dinámico, Cinta) según el instrumento.",
+      "variables": [
+        {
+          "name": "INSTRUMENTO_ESPACIO",
+          "label": "Instrumento y Habitación",
+          "placeholder": "ej. Grabación de guitarra acústica española en una habitación con tratamiento acústico moderado"
+        }
+      ],
+      "template": "Eres un Ingeniero de Grabación de Estudios Legendarios (Abbey Road).\nInstrumento y entorno: [INSTRUMENTO_ESPACIO].\nGuía de grabación:\n1. Elección de Micrófono (Diafragma grande vs pequeño, patrón polar Cardioide/Figura 8).\n2. Posición y Distancia Exacta (ej. apuntando al traste 12 a 25 cm para evitar el 'boominess' de la boca).\n3. Técnica Estéreo recomendada si se usan dos micrófonos.\n4. Ganancia en el Previo para evitar distorsión y ruido de fondo."
+    },
+    {
+      "id": "mus-17",
+      "title": "Compositor de Canciones Infantiles Educativas y Pegadizas",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Infantil",
+        "Educación",
+        "Niños",
+        "Canciones"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea canciones infantiles divertidas que enseñan conceptos (los planetas, lavarse los dientes, números) con juegos de repetición.",
+      "variables": [
+        {
+          "name": "TEMA_EDUCATIVO",
+          "label": "Tema a Enseñar",
+          "placeholder": "ej. Aprender a reciclar y cuidar el planeta separando la basura por colores"
+        }
+      ],
+      "template": "Eres un Compositor de Música Infantil Educativa y Creador de Éxitos para Niños.\nTema: [TEMA_EDUCATIVO].\nEscribe la canción:\n- Ritmo alegre, contagioso y bailable (120 BPM).\n- Estribillo con rimas sencillas, onomatopeyas y movimientos corporales indicados entre paréntesis.\n- Mensaje pedagógico positivo y fácil de memorizar por niños de 3 a 7 años."
+    },
+    {
+      "id": "mus-18",
+      "title": "Analista Musical y Desglosador de Éxitos Top 40 (Hit Breakdown)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Hit Songwriting",
+        "Análisis",
+        "Billboard",
+        "Pop"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Disecciona por qué un éxito musical triunfó: ritmo armónico, melodía en escala pentatónica, psicología del gancho y producción.",
+      "variables": [
+        {
+          "name": "CANCIÓN_ANALIZAR",
+          "label": "Canción o Estilo de Éxito",
+          "placeholder": "ej. 'Blinding Lights' de The Weeknd o 'Flowers' de Miley Cyrus"
+        }
+      ],
+      "template": "Actúa como Musicólogo y Analista de Hits de Billboard.\nCanción: [CANCIÓN_ANALIZAR].\nDesglosa los secretos de su éxito:\n1. La Melodía del Gancho (Melodic Math): Por qué se te clava en el cerebro (intervalos, repetición, simetría).\n2. La Elección de Sonidos y Producción Nostálgica.\n3. Estructura de Energía Dinámica (Millennial Whoop / Post-Chorus Hook).\n4. Cómo aplicar estas mismas 3 técnicas en una nueva canción original."
+    },
+    {
+      "id": "mus-19",
+      "title": "Productor de Audio Espacial y Música 8D / Dolby Atmos",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Audio 8D",
+        "Dolby Atmos",
+        "Binaural",
+        "Espacial"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Planifica la colocación de pistas en el espacio tridimensional 360° para crear experiencias auditivas envolventes.",
+      "variables": [
+        {
+          "name": "PISTA_A_ESPACIALIZAR",
+          "label": "Tipo de Pista Musical",
+          "placeholder": "ej. Tema de meditación ambiental con campanas tibetanas, cuerdas y susurros vocales"
+        }
+      ],
+      "template": "Eres un Ingeniero Certificado en Dolby Atmos y Audio Espacial Binaural.\nPista: [PISTA_A_ESPACIALIZAR].\nDiseña la mezcla inmersiva en 3D:\n1. Mapa de Objetos Sonoros (Posición X, Y, Z de cada elemento en la esfera auditiva).\n2. Automatización de Movimiento (Trayectorias circulares y elevaciones cenitales de los efectos).\n3. Manejo de Altavoces de Techo y LFE (Subwoofer) para dar peso físico sin perder claridad binaural en auriculares."
+    },
+    {
+      "id": "mus-20",
+      "title": "Compositor de Música para Videojuegos Adaptativa / Dinámica",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Game Audio",
+        "FMOD",
+        "Wwise",
+        "Música Adaptativa"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña capas musicales (Vertical Layering) y transiciones horizontales que cambian en tiempo real según las acciones del jugador.",
+      "variables": [
+        {
+          "name": "SITUACION_VIDEOJUEGO",
+          "label": "Mecánica del Juego",
+          "placeholder": "ej. De exploración sigilosa pacífica a combate frenético contra un jefe cuando eres detectado"
+        }
+      ],
+      "template": "Eres el Compositor Principal de Videojuegos AAA (sistemas FMOD / Wwise).\nMecánica: [SITUACION_VIDEOJUEGO].\nDiseña el sistema de música adaptativa:\n1. Capa Base (Exploración / Sigilo): Instrumentos suaves, tempo moderado, mezcla despojada.\n2. Capa de Tensión (Sospecha / Alerta): Entrada de percusión de reloj y sintetizadores en staccato.\n3. Capa de Combate Total: Metales potentes, batería completa y guitarras distorsionadas.\n4. Reglas de Transición (Stinger de alerta y compás de sincronización para que el cambio no se sienta cortado)."
+    },
+    {
+      "id": "mus-21",
+      "title": "Música de Meditación Instrumental en Loop Continuo (Suno, Udio & IA)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Meditación",
+        "Seamless Loop",
+        "Suno AI",
+        "Udio",
+        "Ambient",
+        "Mindfulness"
+      ],
+      "models": [
+        "Suno v3.5 / v4",
+        "Udio v1.5",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Genera música instrumental relajante para meditación, spa y yoga configurada en bucle infinito (seamless loop) sin cortes, saltos ni clímax.",
+      "variables": [
+        {
+          "name": "ENFOQUE_MEDITACION",
+          "label": "Enfoque / Ambiente",
+          "placeholder": "ej. Deep relaxation, spa, yoga, mindfulness atmosphere"
+        },
+        {
+          "name": "INSTRUMENTACION",
+          "label": "Instrumentos y Texturas",
+          "placeholder": "ej. Soft pads, gentle Tibetan singing bowls, warm analog synth textures, minimal percussion"
+        },
+        {
+          "name": "TEMPO_TONALIDAD",
+          "label": "Tempo y Tonalidad",
+          "placeholder": "ej. 50–60 BPM, Key: D major or A minor"
+        }
+      ],
+      "template": "Actúa como Productor Musical Especialista en Música Ambient y Generación por IA (Suno / Udio).\nEnfoque: [ENFOQUE_MEDITACION].\nInstrumentación: [INSTRUMENTACION].\nTempo/Tonalidad: [TEMPO_TONALIDAD].\n\nGenera la configuración y prompt sonoro optimizado:\n\n1. **Prompt Principal (Copy-Paste para Suno / Udio)**:\n\"Instrumental meditation music, no vocals, no lyrics, seamless loop, ambient and calming. [INSTRUMENTACION], slow tempo ([TEMPO_TONALIDAD]). [ENFOQUE_MEDITACION]. Smooth fade-in and fade-out, consistent volume throughout, no sudden changes, no build-up or climax — designed to repeat infinitely without noticeable transitions. Ethereal and peaceful mood.\"\n\n2. **Variante Binaural / Ambient Profundo**:\n\"Pure instrumental ambient meditation track, no voice, no lyrics, loopable. Deep drone bass, soft flute or pan flute, subtle 432Hz or 528Hz tuning, gentle nature textures (light wind, distant water) blended low in the mix. Extremely slow, static tempo, no drums, no percussion, no melodic progression — just sustained evolving tones. Seamless start and end points for perfect looping. Peaceful, spacious, meditative, healing atmosphere.\"\n\n3. **Tips de Producción para Loops Perfectos**:\n- Pide explícitamente \"seamless loop\" y \"no build-up, no climax\" para evitar que el modelo cree picos que rompan el bucle.\n- En herramientas con selección de duración, genera clips cortos (1–3 min) y duplícalos en tu editor/DAW para transiciones perfectas.\n- Define siempre el tempo en BPM para mantener coherencia métrica exacta en los puntos de corte."
+    },
+    {
+      "id": "mus-22",
+      "title": "Generador de Frecuencias Binaurales y Ambient Curativo (432Hz / 528Hz Drone)",
+      "category": "musica",
+      "categoryLabel": "Música & Audio",
+      "icon": "music",
+      "tags": [
+        "Binaural",
+        "432Hz",
+        "528Hz",
+        "Drone",
+        "Sound Healing",
+        "Ambient"
+      ],
+      "models": [
+        "Suno v3.5 / v4",
+        "Udio v1.5",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea paisajes sonoros estáticos y frecuencias de sanación (432Hz/528Hz) con texturas de la naturaleza y drones continuos para bucles sin fin.",
+      "variables": [
+        {
+          "name": "FRECUENCIA_SOLFEGGIO",
+          "label": "Frecuencia o Sintonía",
+          "placeholder": "ej. 432Hz (Claridad mental) o 528Hz (Transformación y calma)"
+        },
+        {
+          "name": "ELEMENTOS_ORGANICOS",
+          "label": "Elementos Orgánicos y Texturas",
+          "placeholder": "ej. Soft flute or pan flute, gentle nature textures (light wind, distant water) blended low in the mix"
+        }
+      ],
+      "template": "Actúa como Diseñador Sonoro de Frecuencias de Bienestar y Sound Healing para IA Musical.\nFrecuencia/Objetivo: [FRECUENCIA_SOLFEGGIO].\nElementos: [ELEMENTOS_ORGANICOS].\n\nEntrega el prompt y directrices sonoras optimizadas:\n\n1. **Prompt para IA Sonora (Suno / Udio / Herramientas de Audio IA)**:\n\"Pure instrumental ambient meditation track, no voice, no lyrics, loopable. Deep drone bass, [ELEMENTOS_ORGANICOS], subtle [FRECUENCIA_SOLFEGGIO] tuning. Extremely slow, static tempo, no drums, no percussion, no melodic progression — just sustained evolving tones. Seamless start and end points for perfect looping. Peaceful, spacious, meditative, healing atmosphere.\"\n\n2. **Parámetros Clave para el Loop**:\n- Mantener tempo estático y nula progresión melódica agresiva.\n- Puntos de inicio y fin continuos para repetición sin interrupción auditiva.\n- Mezcla con texturas orgánicas a bajo volumen (low in the mix)."
+    },
+    {
+      "id": "vid-01",
+      "title": "Prompts Cinematográficos con Movimiento de Cámara para Runway Gen-3 / Sora",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Runway Gen-3",
+        "Sora",
+        "Video IA",
+        "Cinematográfico",
+        "Cámara"
+      ],
+      "models": [
+        "Runway Gen-3 Alpha",
+        "OpenAI Sora",
+        "Luma Dream Machine"
+      ],
+      "description": "Describe movimientos de cámara precisos (FPV drone, orbit shot, dolly in, tracking pan), iluminación volumétrica y coherencia temporal.",
+      "variables": [
+        {
+          "name": "ACCION_ESCENA",
+          "label": "Sujeto y Acción en Movimiento",
+          "placeholder": "ej. Un samurái caminando bajo la lluvia en un bosque de bambú iluminado por linternas rojas"
+        },
+        {
+          "name": "MOVIMIENTO_CAMARA",
+          "label": "Movimiento de Cámara Cinematográfica",
+          "placeholder": "ej. Slow tracking shot from low angle, smoothly following the footsteps, camera dollying forward"
+        }
+      ],
+      "template": "Cinematic movie scene, [ACCION_ESCENA], [MOVIMIENTO_CAMARA], 35mm anamorphic lens flare, shallow depth of field, natural motion blur, volumetric rain and mist, hyper-realistic, 4k 24fps resolution, directed by Denis Villeneuve --motion 6 --camera smooth"
+    },
+    {
+      "id": "vid-02",
+      "title": "Generador de Storyboards y Plan de Rodaje Escena por Escena",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Storyboard",
+        "Plan de Rodaje",
+        "Dirección",
+        "Cine"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Desglosa un guion en planos técnicos: Tipo de plano (Wide, Medium, Close-up), ángulo, movimiento, sonido y duración exacta.",
+      "variables": [
+        {
+          "name": "SINOPSIS_ESCENA",
+          "label": "Sinopsis de la Escena",
+          "placeholder": "ej. Un hacker se da cuenta en tiempo real de que el sistema de seguridad que está vulnerando pertenece a su propia empresa"
+        }
+      ],
+      "template": "Actúa como Director de Cine y Diseñador de Storyboards.\nEscena: [SINOPSIS_ESCENA].\nDesglosa la secuencia en 6 planos cinematográficos:\nTabla con columnas:\n| Plano # | Tipo de Plano | Ángulo y Movimiento | Acción Visual | Audio / Diálogo | Duración |\nIncluye la indicación de iluminación y la emoción psicológica que busca transmitir cada encuadre."
+    },
+    {
+      "id": "vid-03",
+      "title": "Creación de Videos Promocionales de Producto en 3D (Comercial Hyper-Realistic)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Video Producto",
+        "Luma",
+        "Comercial",
+        "3D Render"
+      ],
+      "models": [
+        "Luma Dream Machine",
+        "Runway Gen-3",
+        "Kling AI"
+      ],
+      "description": "Animaciones de producto flotando en 360°, despiece de componentes mecánicos y luces de estudio dinámicas.",
+      "variables": [
+        {
+          "name": "PRODUCTO_VIDEO",
+          "label": "Producto",
+          "placeholder": "ej. Zapatillas deportivas ultraligeras con suela de espuma translúcida brillante"
+        }
+      ],
+      "template": "Commercial 3D product animation of [PRODUCTO_VIDEO], floating in mid-air with gentle 360-degree slow rotation, dynamic studio studio rim lighting sweeping across the metallic materials, water droplets bursting outwards in ultra slow-motion, Apple commercial aesthetic, 4k cinematic render, smooth seamless motion loop"
+    },
+    {
+      "id": "vid-04",
+      "title": "Especialista en Edición de Video de Ritmo Rápido (Alex Hormozi / MrBeast Style)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Edición",
+        "Premiere",
+        "CapCut",
+        "YouTube",
+        "Retención"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Planifica cortes cada 2 segundos, zooms dinámicos, subtítulos animados con emojis, sonidos SFX 'Whoosh' y B-rolls.",
+      "variables": [
+        {
+          "name": "CONTENIDO_VIDEO",
+          "label": "Tema y Mensaje del Video Corto",
+          "placeholder": "ej. 3 Hábitos financieros que me hicieron millonario a los 25 años"
+        }
+      ],
+      "template": "Eres el Editor Principal de Canales de YouTube de Más de 10 Millones de Suscriptores.\nTema: [CONTENIDO_VIDEO].\nDiseña la guía de edición segundo a segundo para un video de 45 segundos:\n- [00-03s]: Hook visual extremo + Punch sound effect.\n- [04-15s]: Subtítulos animados palabra por palabra con palabras clave en amarillo/verde y emojis pop.\n- [16-35s]: 4 Cambios de escala de zoom (100% -> 120% -> 105%) y transiciones con sound design 'Whoosh' y 'Pop'.\n- [36-45s]: Bucle perfecto (Seamless loop) para que el final conecte con el principio."
+    },
+    {
+      "id": "vid-05",
+      "title": "Generador de Prompts para Videos de Naturaleza Time-Lapse / Hyper-Lapse",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Time-Lapse",
+        "Hyper-Lapse",
+        "Naturaleza",
+        "Fotografía"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Sora",
+        "Kling AI"
+      ],
+      "description": "Crea espectaculares secuencias aceleradas: floración de orquídeas, movimiento de la Vía Láctea o crecimiento urbano nocturno.",
+      "variables": [
+        {
+          "name": "EVENTO_TIMELAPSE",
+          "label": "Fenómeno Acelerado",
+          "placeholder": "ej. El florecimiento de una flor de cerezo en primavera con gotas de lluvia y salida del sol"
+        }
+      ],
+      "template": "Stunning 8k time-lapse video of [EVENTO_TIMELAPSE], rapid cinematic natural progression, smooth lighting transition from dawn to bright midday sun, ultra-high definition details, vibrant vivid colors, BBC Planet Earth documentary style, photorealistic smooth frame blending --fps 60"
+    },
+    {
+      "id": "vid-06",
+      "title": "Director de Efectos Visuales (VFX) y Composición de Escenas de Acción",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "VFX",
+        "After Effects",
+        "CGI",
+        "Acción",
+        "Composición"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña la integración de CGI con actores reales: pantallas verdes, tracking de puntos, partículas mágicas y explosiones volumétricas.",
+      "variables": [
+        {
+          "name": "ESCENA_VFX",
+          "label": "Efecto a Integrar",
+          "placeholder": "ej. Un personaje abre un portal dimensional brillante en medio de una calle concurrida que distorsiona la gravedad"
+        }
+      ],
+      "template": "Actúa como Supervisor de Efectos Visuales (VFX Supervisor) para producciones cinematográficas.\nEscena VFX: [ESCENA_VFX].\nPlan técnico:\n1. Requisitos de Rodaje en Set (Marcadores de tracking, iluminación de referencia interactiva, plate limpio de fondo).\n2. Capas de Composición en After Effects / Nuke (Capa de distorsión de lente, partículas de chispas, refracción del aire).\n3. Corrección de Color y Matchmaking de grano para que el CGI no parezca falso."
+    },
+    {
+      "id": "vid-07",
+      "title": "Generador de Animaciones de Pizarra Blanca y Videos Explicativos (Explainer Video)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Explainer",
+        "Animación",
+        "Whiteboard",
+        "Educativo"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura videos explicativos animados en 2D para SaaS o productos educativos con personajes claros y metáforas visuales.",
+      "variables": [
+        {
+          "name": "SOFTWARE_O_CONCEPTO",
+          "label": "Producto a Explicar",
+          "placeholder": "ej. Un software de firma electrónica segura para despachos de abogados"
+        }
+      ],
+      "template": "Eres un Productor de Videos Explicativos Animados de Alto Impacto.\nProducto: [SOFTWARE_O_CONCEPTO].\nEscribe el guion audiovisual de 60 segundos:\n- [00-10s]: Presentación del personaje (El abogado ahogado en papeles y contratos perdidos).\n- [11-25s]: La frustración y el dinero que pierde cada mes.\n- [26-45s]: Descubrimiento del producto y animación de cómo se firma un documento en 3 clics desde el móvil.\n- [46-60s]: El resultado de alivio y tranquilidad + Llamado a la acción claro con prueba gratuita."
+    },
+    {
+      "id": "vid-08",
+      "title": "Prompts para Animación Stop-Motion y Plastilina (Claymation IA)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Stop-Motion",
+        "Claymation",
+        "Aardman",
+        "Animación"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Pika Labs",
+        "Luma"
+      ],
+      "description": "Genera animaciones de plastilina con ligeras imperfecciones de huellas dactilares, velocidad de 12fps y calidez artesanal.",
+      "variables": [
+        {
+          "name": "HISTORIA_STOPMOTION",
+          "label": "Historia o Acción",
+          "placeholder": "ej. Dos monstruos de plastilina de colores horneando un pastel que cobra vida propia"
+        }
+      ],
+      "template": "Charming stop-motion claymation animated video of [HISTORIA_STOPMOTION], crafted in the style of Aardman Animations (Wallace and Gromit), visible soft clay textures and subtle handmade imperfections, warm studio miniature lighting, authentic 12fps stop-motion frame pacing, tactile cozy aesthetic --motion 5"
+    },
+    {
+      "id": "vid-09",
+      "title": "Diseñador de Intros de YouTube y Animaciones de Títulos (Motion Graphics)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Motion Graphics",
+        "After Effects",
+        "Intro",
+        "Títulos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea el concepto de animación tipográfica, transiciones cinéticas de logo y paletas de color en movimiento.",
+      "variables": [
+        {
+          "name": "CANAL_O_PROGRAMA",
+          "label": "Nombre del Canal y Temática",
+          "placeholder": "ej. 'Código Futurista' - Canal de desarrollo de software, Inteligencia Artificial y tecnología punta"
+        }
+      ],
+      "template": "Eres un Director de Motion Graphics Senior.\nCanal: [CANAL_O_PROGRAMA].\nDiseña una intro de 6 segundos:\n1. Segundo 1-2: Entrada cinética de formas geométricas y líneas de código neon con glitch controlado.\n2. Segundo 3-4: Ensamblaje 3D del logotipo con destellos de luz.\n3. Segundo 5-6: Revelación del nombre en tipografía bold nítida y disolución rápida para dar paso al video.\n4. Sound Design exacto (quién, swoosh, bass hit)."
+    },
+    {
+      "id": "vid-10",
+      "title": "Prompts de Recorridos Drone FPV Extremos en Espacios Abiertos y Cerrados",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "FPV Drone",
+        "Dron",
+        "Cinematográfico",
+        "Velocidad"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Sora",
+        "Kling AI"
+      ],
+      "description": "Tomas de vuelo vertiginosas en primera persona cruzando ventanas, bosques densos o desfiladeros a toda velocidad.",
+      "variables": [
+        {
+          "name": "RUTA_DRON",
+          "label": "Ruta y Entorno",
+          "placeholder": "ej. Vuelo FPV bajando a toda velocidad por una cascada gigante en los fiordos noruegos rozando el agua"
+        }
+      ],
+      "template": "High-speed dynamic FPV drone footage flying through [RUTA_DRON], breathtaking aerial acrobatics, GoPro Hero 12 wide-angle lens, Reelsteady smooth stabilization, sun glinting off water spray, immense sense of speed and vertical momentum, 4k 60fps cinematic landscape --motion 8"
+    },
+    {
+      "id": "vid-11",
+      "title": "Especialista en Iluminación y Color Grading Cinematográfico (LUTs & DaVinci Resolve)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Color Grading",
+        "DaVinci Resolve",
+        "LUTs",
+        "Fotografía"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Instrucciones de corrección de color en nodos de DaVinci Resolve: balance de blancos, contraste con curvas S y separación de tonos piel.",
+      "variables": [
+        {
+          "name": "ESTILO_COLOR",
+          "label": "Look Cinematográfico Deseado",
+          "placeholder": "ej. Look 'Teal and Orange' cinematográfico estilo blockbuster de Hollywood con negros profundos pero no empastados"
+        }
+      ],
+      "template": "Actúa como Colorista Senior de Cine en DaVinci Resolve Studio.\nEstilo: [ESTILO_COLOR].\nProvee el árbol de nodos paso a paso:\n1. Nodo 1: Reducción de ruido y exposición primaria (Lift, Gamma, Gain).\n2. Nodo 2: Balance de blancos y saturación de color de entrada.\n3. Nodo 3: Curva S de contraste tonal.\n4. Nodo 4: Aislamiento y protección del tono de piel (Skin Qualifier con vectorscopio).\n5. Nodo 5: Look final Teal and Orange con curvas Hue vs Sat / Hue vs Hue y emulación de película Kodak 2383."
+    },
+    {
+      "id": "vid-12",
+      "title": "Generador de Fondos Animados en Bucle para Streamers (Twitch / YouTube Overlay)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Twitch",
+        "Stream",
+        "Overlay",
+        "Loop",
+        "Fondo"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Luma",
+        "DALL-E 3"
+      ],
+      "description": "Fondos acogedores en bucle perfecto (Seamless Loop) de habitaciones aesthetic, lluvia en ventanas o tabernas medievales.",
+      "variables": [
+        {
+          "name": "HABITACION_STREAMER",
+          "label": "Temática del Espacio",
+          "placeholder": "ej. Habitación gamer acogedora con plantas colgantes, luces led suaves, gato durmiendo en el sillón y lluvia en la ventana de noche"
+        }
+      ],
+      "template": "Cozy animated stream background loop of [HABITACION_STREAMER], smooth seamless looping animation, soft glowing ambient lights, subtle gentle rain trickling on glass, floating dust motes in light beams, lofi cozy aesthetic, high definition 60fps clean loop"
+    },
+    {
+      "id": "vid-13",
+      "title": "Creador de Documentales Estilo Vox / Kurzgesagt (Estructura de Infografía Animada)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Documental",
+        "Vox",
+        "Kurzgesagt",
+        "Infografía",
+        "Narrativa"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura mini documentales educativos con gráficos animados, mapas conceptuales y cambios de ritmo narrativo.",
+      "variables": [
+        {
+          "name": "ENIGMA_DOCUMENTAL",
+          "label": "Pregunta o Misterio Central",
+          "placeholder": "ej. ¿Por qué los microchips más avanzados del mundo solo se pueden fabricar en una sola empresa de Taiwán?"
+        }
+      ],
+      "template": "Eres el Productor y Guionista de Videos Explicativos Estilo Vox y Kurzgesagt.\nTema: [ENIGMA_DOCUMENTAL].\nEstructura el video de 8 minutos:\n- Minuto 0-1: La paradoja inicial planteada con un mapa mundial animado.\n- Minuto 1-3: La física y la ingeniería extrema (Infografía animada 2D del proceso de litografía ultravioleta).\n- Minuto 3-6: La geopolítica y la fragilidad de la cadena de suministro global.\n- Minuto 6-8: Las consecuencias a futuro y conclusión reflexiva."
+    },
+    {
+      "id": "vid-14",
+      "title": "Prompts para Transformación de Personajes y Efectos Morphs (Video Generativo)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Morphing",
+        "Transformación",
+        "Video IA",
+        "Creativo"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Luma Dream Machine",
+        "Kling"
+      ],
+      "description": "Metamorfosis fluidas y sin artefactos entre dos estados, seres o épocas históricas.",
+      "variables": [
+        {
+          "name": "METAMORFOSIS",
+          "label": "De qué a qué cambia",
+          "placeholder": "ej. De una estatua de mármol clásico romano que se resquebraja y se transforma en un androide dorado futurista de metal líquido"
+        }
+      ],
+      "template": "Cinematic fluid visual metamorphosis of [METAMORFOSIS], seamless organic transition, liquid particle physics, glowing energy fractures, hyper-detailed textures, slow motion transformation, award-winning visual effect --motion 7 --smoothness high"
+    },
+    {
+      "id": "vid-15",
+      "title": "Director de Cámaras para Entrevistas Multi-Cámara en Estudio",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Entrevistas",
+        "Multi-Cámara",
+        "Podcast",
+        "Iluminación 3 Puntos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Esquema de iluminación de 3 puntos (Key, Fill, Rim), distancias focales de 3 cámaras (Plano general, Primer plano anfitrión, Primer plano invitado).",
+      "variables": [
+        {
+          "name": "SET_ENTREVISTA",
+          "label": "Tipo de Set y Espacio",
+          "placeholder": "ej. Estudio de podcast elegante con sofás de cuero Chesterfield y fondo de biblioteca de madera cálida"
+        }
+      ],
+      "template": "Actúa como Director de Fotografía y Realizador de Televisión.\nSet: [SET_ENTREVISTA].\nDiseña el esquema técnico completo:\n1. Esquema de Iluminación: Potencia, ángulo y temperatura de color de Key Light, Fill Light y Hair/Rim Light con luces prácticas en el fondo.\n2. Posicionamiento de 3 Cámaras: Distancia focal de lentes (Cámara A 35mm wide, Cámara B 85mm anfitrión, Cámara C 85mm invitado) y alturas de trípode a la altura de los ojos.\n3. Reglas de Conmutación de planos para el editor."
+    },
+    {
+      "id": "vid-16",
+      "title": "Prompts para Escenas de Acción Cinematográfica con Explosiones y Lente Anamórfico",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Acción",
+        "Explosiones",
+        "Anamórfico",
+        "Cine"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Sora",
+        "Kling AI"
+      ],
+      "description": "Tomas de alto impacto con fuego realista, esquirlas volando en cámara lenta y destellos horizontales azules anamórficos.",
+      "variables": [
+        {
+          "name": "ESCENA_ACCION",
+          "label": "Momento de Acción",
+          "placeholder": "ej. Persecución de autos a alta velocidad cruzando un puente colgante durante una tormenta eléctrica"
+        }
+      ],
+      "template": "High-octane cinematic action sequence of [ESCENA_ACCION], anamorphic blue lens flares, sparks flying across the frame, hyper-realistic physics, wet reflective asphalt, motion blur, directed by Michael Bay, 4k 35mm film stock, intense adrenaline composition --motion 9"
+    },
+    {
+      "id": "vid-17",
+      "title": "Diseñador de Animaciones de Datos y Gráficos en Movimiento (Data Visualization)",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Data Viz",
+        "Motion Graphics",
+        "Infografía",
+        "Gráficos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Transforma cifras numéricas complejas en gráficos de barras animados, mapas de calor dinámicos y esferas de red interactiva.",
+      "variables": [
+        {
+          "name": "DATOS_A_ANIMAR",
+          "label": "Métricas o Información",
+          "placeholder": "ej. El crecimiento comparativo del PIB de las 10 principales economías mundiales durante los últimos 50 años"
+        }
+      ],
+      "template": "Eres un Especialista en Visualización de Datos Animada y Motion Design.\nDatos: [DATOS_A_ANIMAR].\nDiseña la animación:\n1. Tipo de Gráfico Animado (ej. Bar Chart Race dinámica con banderas y transiciones suaves de aceleración/desaceleración).\n2. Paleta cromática accesible y tipografía numérica legible de gran tamaño.\n3. Puntos de parada narrativa (Pause points) cuando un país supera a otro para enfatizar el contexto histórico."
+    },
+    {
+      "id": "vid-18",
+      "title": "Creador de Guiones para Anuncios de Video UGC en TikTok / Instagram Reels",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "UGC",
+        "TikTok Ads",
+        "Reels",
+        "Conversión"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Guiones con estética amateur auténtica grabada con teléfono móvil que convierten mejor que los anuncios corporativos pulidos.",
+      "variables": [
+        {
+          "name": "PRODUCTO_UGC",
+          "label": "Producto Físico o Digital",
+          "placeholder": "ej. Un corrector de postura ergonómico para quienes trabajan frente a la computadora"
+        }
+      ],
+      "template": "Actúa como Creador de Contenido UGC y Estratega de TikTok Ads.\nProducto: [PRODUCTO_UGC].\nEscribe el guion UGC de 30 segundos:\n- [00-03s] Hook Visual Negativo: El creador tocándose el cuello con dolor y diciendo \"Si pasas más de 6 horas sentado, deja de hacer esto...\"\n- [04-12s] El problema con los métodos tradicionales incómodos.\n- [13-22s] Demostración rápida del producto colocándoselo en 5 segundos con reacción de alivio visible.\n- [23-30s] Oferta con descuento por tiempo limitado y botón en pantalla."
+    },
+    {
+      "id": "vid-19",
+      "title": "Prompts de Microcosmos y Animación Celular / Médica en 3D",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Médico",
+        "Microscópico",
+        "3D",
+        "Ciencia"
+      ],
+      "models": [
+        "Runway Gen-3",
+        "Sora",
+        "Luma"
+      ],
+      "description": "Viajes microscópicos al interior del cuerpo humano: glóbulos blancos cazando bacterias, sinapsis neuronales o moléculas de ADN.",
+      "variables": [
+        {
+          "name": "PROCESO_BIOLOGICO",
+          "label": "Proceso Celular",
+          "placeholder": "ej. Una célula T del sistema inmunitario neutralizando una célula cancerosa con emisión de bioluminiscencia"
+        }
+      ],
+      "template": "Scientific 3D medical animation of [PROCESO_BIOLOGICO], microscopic electron microscope perspective, glowing bioluminescent proteins and lipid bilayer membranes, depth of field with floating subcellular organelles, volumetric fluid dynamics, National Geographic science documentary aesthetic, 8k render"
+    },
+    {
+      "id": "vid-20",
+      "title": "Planificador de Producción de Cortometraje de Ficción en 48 Horas",
+      "category": "video",
+      "categoryLabel": "Video & Animación",
+      "icon": "video",
+      "tags": [
+        "Cortometraje",
+        "Cine Independiente",
+        "Producción",
+        "48h Film"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Optimiza la logística, localizaciones únicas y rodaje con equipo mínimo para rodar un corto premiable en un fin de semana.",
+      "variables": [
+        {
+          "name": "GENERO_CORTO",
+          "label": "Género y Recursos Disponibles",
+          "placeholder": "ej. Ciencia ficción intimista con solo 2 actores y 1 locación (una cabaña en el bosque)"
+        }
+      ],
+      "template": "Eres un Productor de Cine Independiente y Mentor de Festivales de Cine.\nPremisa: [GENERO_CORTO].\nDiseña el plan de choque para rodar en 48 horas:\n1. Guion de 5 Páginas optimizado para máximo impacto dramático con diálogos potentes.\n2. Lista de Utilería y Vestuario de bajo coste que transmita el concepto sin necesidad de efectos costosos.\n3. Cronograma de Rodaje de 12 horas (Mañana: Ensayos y planos generales; Tarde: Cobertura de primeros planos; Noche: Tomas dramáticas con luz artificial).\n4. Flujo de Postproducción express para entregar a tiempo."
+    },
+    {
+      "id": "sec-01",
+      "title": "Auditor de Vulnerabilidades Web (OWASP Top 10)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "OWASP",
+        "Pentesting",
+        "Seguridad Web",
+        "Vulnerabilidades"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Audita código backend y frontend contra inyecciones SQL, XSS, CSRF, fallos de autenticación y SSRF.",
+      "variables": [
+        {
+          "name": "LENGUAJE_APP",
+          "label": "Lenguaje o Stack",
+          "placeholder": "ej. Node.js Express con MongoDB y frontend React"
+        },
+        {
+          "name": "ENDPOINT_O_CODIGO",
+          "label": "Código o Endpoint a Auditar",
+          "placeholder": "Pega el código de autenticación o controlador...",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como un Pentester Certificado (OSCP / CEH) y Auditor de Seguridad Web.\nStack: [LENGUAJE_APP].\nCódigo a auditar:\n```\n[ENDPOINT_O_CODIGO]\n```\nRealiza el análisis de seguridad:\n1. Identificación de Vulnerabilidades según OWASP Top 10 (con nivel de severidad CVSS estimado: Bajo/Medio/Alto/Crítico).\n2. Demostración de Prueba de Concepto (PoC) teórica de cómo un atacante podría explotarlo.\n3. Código remediado y blindado con librerías de sanitización y validación recomendadas.\n4. Buenas prácticas defensivas preventivas."
+    },
+    {
+      "id": "sec-02",
+      "title": "Modelado de Amenazas de Arquitectura (Framework STRIDE)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "STRIDE",
+        "Threat Modeling",
+        "Arquitectura",
+        "Seguridad"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Identifica riesgos en diagramas de flujo de datos evaluando Spoofing, Tampering, Repudiation, Information Disclosure, DoS y Elevation of Privilege.",
+      "variables": [
+        {
+          "name": "SISTEMA_ARQUITECTURA",
+          "label": "Descripción del Sistema",
+          "placeholder": "ej. Sistema de procesamiento de pagos móviles con API Gateway, Microservicios en Kubernetes y base de datos bancaria PostgreSQL"
+        }
+      ],
+      "template": "Eres un Arquitecto de Ciberseguridad Staff.\nSistema: [SISTEMA_ARQUITECTURA].\nAplica el modelo STRIDE para cada límite de confianza (Trust Boundary):\n- S (Spoofing - Suplantación de identidad): Riesgos y mitigaciones.\n- T (Tampering - Modificación no autorizada de datos): Riesgos y mitigaciones.\n- R (Repudiation - Repudio de acciones realizadas): Estrategia de logging inmutable.\n- I (Information Disclosure - Fuga de datos sensibles): Cifrado en tránsito y en reposo.\n- D (Denial of Service - Denegación de servicio): Rate limiting y protección DDoS.\n- E (Elevation of Privilege - Escalada de privilegios): Principio de mínimo privilegio y RBAC."
+    },
+    {
+      "id": "sec-03",
+      "title": "Plan de Respuesta a Incidentes de Seguridad (Playbook de Contención)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "SOC",
+        "Incident Response",
+        "Ransomware",
+        "Playbook"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea playbooks paso a paso para contener, erradicar y recuperar sistemas ante ransomware, fugas de datos o accesos no autorizados.",
+      "variables": [
+        {
+          "name": "TIPO_INCIDENTE",
+          "label": "Escenario de Incidente",
+          "placeholder": "ej. Detección de cifrado activo por Ransomware en servidores de archivos corporativos"
+        }
+      ],
+      "template": "Actúa como Comandante de Incidentes de Seguridad (CISO / Incident Responder - NIST SP 800-61).\nIncidente: [TIPO_INCIDENTE].\nDiseña el Playbook de Emergencia:\n1. Fase 1: Identificación y Clasificación de Severidad (Triage).\n2. Fase 2: Contención Inmediata (Aislamiento de red, bloqueo de credenciales comprometidas sin apagar equipos para preservar memoria RAM).\n3. Fase 3: Erradicación y Análisis Forense preliminar.\n4. Fase 4: Recuperación Segura y Restauración de backups verificados.\n5. Fase 5: Comunicación a stakeholders/reguladores y lecciones aprendidas."
+    },
+    {
+      "id": "sec-04",
+      "title": "Auditor de Seguridad en Smart Contracts (Solidity / Web3)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Smart Contracts",
+        "Solidity",
+        "Reentrancy",
+        "Web3",
+        "Ethereum"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Detecta ataques de reentrancia (Reentrancy), desbordamiento de enteros, manipulación de oráculos y problemas de acceso.",
+      "variables": [
+        {
+          "name": "CONTRATO_SOLIDITY",
+          "label": "Código del Smart Contract",
+          "placeholder": "Pega el contrato Solidity...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Auditor de Seguridad Web3 y Smart Contracts (CertiK / OpenZeppelin).\nContrato a auditar:\n```solidity\n[CONTRATO_SOLIDITY]\n```\nRealiza la auditoría:\n1. Búsqueda de vulnerabilidades críticas (Reentrancy, Front-Running / MEV, Timestamp Dependence, Integer Overflow/Underflow, Broken Access Control).\n2. Optimización de consumo de Gas.\n3. Código refactorizado con patrones seguros (Checks-Effects-Interactions, ReentrancyGuard de OpenZeppelin)."
+    },
+    {
+      "id": "sec-05",
+      "title": "Analista de Tráfico de Red y Capturas de Paquetes (Wireshark / PCAP)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Wireshark",
+        "PCAP",
+        "Redes",
+        "Forense",
+        "TCP/IP"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Ayuda a interpretar volcados de red, detectar túneles DNS sospechosos, escaneos de puertos SYN y tráfico no cifrado.",
+      "variables": [
+        {
+          "name": "DESCRIPCION_TRAFICO",
+          "label": "Resumen del Tráfico o Filtro",
+          "placeholder": "ej. Conexiones salientes masivas por puerto 443 hacia una IP desconocida con paquetes de tamaño constante cada 5 segundos"
+        }
+      ],
+      "template": "Actúa como Analista de Seguridad de Redes y SOC Nivel 2.\nTráfico analizado: [DESCRIPCION_TRAFICO].\nProvee:\n1. Diagnóstico del Comportamiento (ej. Tráfico C2 Beaconing de malware, Exfiltración de datos o Escaneo de red).\n2. Filtros de Wireshark exactos para aislar el flujo sospechoso (ej. tcp.flags.syn == 1, dns.flags.response == 0).\n3. Comandos de terminal (tcpdump / tshark) para capturar evidencia forense sin interfaz gráfica.\n4. Reglas de Snort / Suricata para bloquear esta firma."
+    },
+    {
+      "id": "sec-06",
+      "title": "Guía de Hardening y Bastionado de Servidores Linux (CIS Benchmarks)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Hardening",
+        "Linux",
+        "SSH",
+        "CIS Benchmark",
+        "UFW"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Configura servidores Linux en producción siguiendo los estándares CIS: deshabilitar root, llaves SSH, Fail2ban y AppArmor.",
+      "variables": [
+        {
+          "name": "DISTRO_LINUX",
+          "label": "Distribución de Linux",
+          "placeholder": "ej. Ubuntu Server 22.04 LTS o Red Hat Enterprise Linux 9"
+        }
+      ],
+      "template": "Eres un Ingeniero de Seguridad de Infraestructura Linux.\nDistribución: [DISTRO_LINUX].\nEscribe la guía de bastionado (Hardening) con comandos exactos:\n1. Aseguramiento de SSH (/etc/ssh/sshd_config: deshabilitar password auth, deshabilitar root login, cambio de puerto, limitar ciphers seguros).\n2. Configuración de Firewall (UFW / Iptables) con política por defecto DROP.\n3. Instalación y configuración de Fail2ban contra ataques de fuerza bruta.\n4. Deshabilitación de módulos de kernel no utilizados y configuración de límites PAM."
+    },
+    {
+      "id": "sec-07",
+      "title": "Generador de Campañas de Concienciación y Simulación de Phishing Ético",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Phishing",
+        "Ingeniería Social",
+        "Concienciación",
+        "Seguridad"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña plantillas de entrenamiento para empleados que simulan ingeniería social y miden la tasa de clics y reporte.",
+      "variables": [
+        {
+          "name": "DEPARTAMENTO_TARGET",
+          "label": "Departamento y Escenario",
+          "placeholder": "ej. Departamento de Contabilidad: correo simulando una factura urgente con enlace de verificación"
+        }
+      ],
+      "template": "Actúa como Especialista en Ingeniería Social y Concienciación de Seguridad Corporativa.\nDepartamento: [DEPARTAMENTO_TARGET].\nDiseña la simulación de phishing formativa:\n1. Plantilla de Correo Simulada (con 3 banderas rojas sutiles que los empleados deberían detectar: remitente sospechoso, urgencia artificial, dominio engañoso).\n2. Página de Aterrizaje Educativa (Landing) si el empleado hace clic (\"¡Esto era una prueba! Esto es lo que debiste notar...\").\n3. Métricas de seguimiento para el CISO."
+    },
+    {
+      "id": "sec-08",
+      "title": "Auditor de Configuraciones Cloud en AWS / Azure / GCP (Seguridad IAM y S3)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Cloud Security",
+        "AWS",
+        "IAM",
+        "S3",
+        "Kubernetes"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Detecta buckets S3 públicos, roles IAM con privilegios excesivos (AdministratorAccess) y grupos de seguridad abiertos al mundo (0.0.0.0/0).",
+      "variables": [
+        {
+          "name": "POLITICA_IAM_O_CLOUD",
+          "label": "Política IAM o Configuración",
+          "placeholder": "Pega el JSON de la política IAM de AWS...",
+          "multiline": true
+        }
+      ],
+      "template": "Eres un Arquitecto de Ciberseguridad Cloud (AWS Security Specialty).\nPolítica / Configuración a auditar:\n```json\n[POLITICA_IAM_O_CLOUD]\n```\nEvalúa:\n1. Identificación de permisos excesivos (uso de comodines '*', permisos de lectura/escritura combinados sin condición).\n2. Riesgo de Escalada de Privilegios en la nube.\n3. Política IAM corregida siguiendo el principio de privilegio mínimo con condiciones de IP y MFA obligatorio."
+    },
+    {
+      "id": "sec-09",
+      "title": "Analista de Malware y Desofuscador de Scripts Maliciosos (Static Analysis)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Malware",
+        "Análisis Estático",
+        "Deobfuscation",
+        "PowerShell"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o",
+        "DeepSeek-V3"
+      ],
+      "description": "Analiza scripts ofuscados en PowerShell, VBScript o JavaScript malicioso en un entorno seguro sin ejecutar código.",
+      "variables": [
+        {
+          "name": "SCRIPT_OFUSCADO",
+          "label": "Fragmento de Código Ofuscado",
+          "placeholder": "Pega el fragmento de código con Base64 o cadenas ofuscadas...",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como Analista de Malware Senior de Laboratorio Forense.\nCódigo a analizar:\n```\n[SCRIPT_OFUSCADO]\n```\nRealiza el análisis estático seguro:\n1. Desofuscación paso a paso de las funciones, cadenas Base64 o llamadas a APIs del sistema.\n2. Identificación de Indicadores de Compromiso (IoCs): Direcciones IP de C2, dominios, hashes de archivos o claves de registro creadas.\n3. Explicación del propósito del payload (ej. Keylogger, Dropper, Ransomware)."
+    },
+    {
+      "id": "sec-10",
+      "title": "Especialista en Criptografía Aplicada y Gestión Segura de Claves (KMS / Vault)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Criptografía",
+        "AES-256",
+        "Hash",
+        "HashiCorp Vault",
+        "KMS"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Recomienda algoritmos criptográficos modernos (AES-256-GCM, Argon2id, Ed25519) y destierra algoritmos obsoletos (MD5, SHA1, DES).",
+      "variables": [
+        {
+          "name": "CASO_USO_CRIPTOGRAFIA",
+          "label": "Datos a Proteger",
+          "placeholder": "ej. Almacenamiento seguro de contraseñas de usuarios y cifrado de datos de tarjetas de crédito"
+        }
+      ],
+      "template": "Eres un Criptógrafo y Consultor de Seguridad de Datos.\nCaso de uso: [CASO_USO_CRIPTOGRAFIA].\nDiseña la arquitectura criptográfica:\n1. Algoritmos recomendados para Hash de Contraseñas (Argon2id con parámetros de memoria y tiempo) vs. Cifrado de Datos Simétrico (AES-256-GCM con IV único por registro).\n2. Estrategia de Rotación de Claves Criptográficas (Key Management con AWS KMS o HashiCorp Vault).\n3. Prevención de ataques de canal lateral (Timing Attacks) en la comparación de firmas."
+    },
+    {
+      "id": "sec-11",
+      "title": "Generador de Informes de Penetration Testing para Clientes Ejecutivos",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Pentesting",
+        "Informe",
+        "C-Level",
+        "Riesgos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Traduce hallazgos técnicos de hacking ético en un resumen ejecutivo claro para directivos con impacto en el negocio.",
+      "variables": [
+        {
+          "name": "HALLAZGOS_TECNICOS",
+          "label": "Vulnerabilidades Encontradas",
+          "placeholder": "ej. Encontramos una inyección SQL en el portal de clientes que permitía descargar toda la base de datos de usuarios y un panel de administración expuesto sin MFA",
+          "multiline": true
+        }
+      ],
+      "template": "Actúa como Socio Director de una Firma de Auditoría de Ciberseguridad.\nHallazgos:\n```\n[HALLAZGOS_TECNICOS]\n```\nRedacta el Informe Ejecutivo para la Junta Directiva (C-Suite):\n1. Resumen Ejecutivo (Postura de Seguridad Global: Crítica/Moderada/Buena).\n2. Impacto de Negocio Potencial (Riesgo Financiero, Reputacional y Sanciones Legales RGPD).\n3. Matriz de Riesgo con Severidad vs. Probabilidad.\n4. Plan de Remediación Priorizado en 30, 60 y 90 días con estimación de recursos."
+    },
+    {
+      "id": "sec-12",
+      "title": "Auditor de Dependencias y Seguridad de la Cadena de Suministro (SCA / SBOM)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "SCA",
+        "SBOM",
+        "npm",
+        "Dependabot",
+        "Supply Chain"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Protege aplicaciones contra paquetes maliciosos, confusión de dependencias y vulnerabilidades en librerías de terceros.",
+      "variables": [
+        {
+          "name": "GESTOR_PAQUETES",
+          "label": "Ecosistema y Gestor",
+          "placeholder": "ej. Node.js con npm / package-lock.json o Python con requirements.txt"
+        }
+      ],
+      "template": "Eres un Especialista en Seguridad de la Cadena de Suministro de Software (Software Supply Chain Security).\nEcosistema: [GESTOR_PAQUETES].\nProvee:\n1. Protocolo de Auditoría Continua con herramientas automatizadas (npm audit, Snyk, Trivy, Dependabot).\n2. Generación y Mantenimiento del SBOM (Software Bill of Materials en formato CycloneDX o SPDX).\n3. Mitigación contra ataques de 'Dependency Confusion' y 'Typosquatting'."
+    },
+    {
+      "id": "sec-13",
+      "title": "Especialista en Seguridad de Contenedores y Kubernetes (K8s Hardening)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Kubernetes",
+        "Docker",
+        "DevSecOps",
+        "RBAC"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Configura Pod Security Standards, Network Policies restrictivas y políticas de admisión con OPA/Kyverno.",
+      "variables": [
+        {
+          "name": "CONFIGURACION_K8S",
+          "label": "Escenario de Despliegue",
+          "placeholder": "ej. Clúster de Kubernetes en producción ejecutando microservicios multitenant"
+        }
+      ],
+      "template": "Actúa como Ingeniero DevSecOps especializado en Kubernetes (CKS).\nEntorno: [CONFIGURACION_K8S].\nDiseña las políticas de seguridad:\n1. SecurityContext en Pods (readOnlyRootFilesystem, runAsNonRoot, drop ALL capabilities).\n2. NetworkPolicy para denegar todo el tráfico inter-namespace por defecto (Default Deny) y permitir solo puertos necesarios.\n3. RBAC estricto: Deshabilitar acceso default al ServiceAccount token en pods que no lo requieran."
+    },
+    {
+      "id": "sec-14",
+      "title": "Analista de Caza de Amenazas (Threat Hunting con Consultas KQL / SIEM)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Threat Hunting",
+        "KQL",
+        "SIEM",
+        "Splunk",
+        "Sentinel"
+      ],
+      "models": [
+        "DeepSeek-V3",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Escribe consultas analíticas en KQL (Microsoft Sentinel) o SPL (Splunk) para cazar técnicas de ataque MITRE ATT&CK.",
+      "variables": [
+        {
+          "name": "TECNICA_MITRE",
+          "label": "Técnica MITRE ATT&CK",
+          "placeholder": "ej. T1059.001 - Ejecución de scripts PowerShell sospechosos con flags de evasión (-enc, -nop, -w hidden)"
+        },
+        {
+          "name": "LENGUAJE_SIEM",
+          "label": "Lenguaje SIEM",
+          "placeholder": "ej. KQL (Kusto Query Language) o SPL de Splunk"
+        }
+      ],
+      "template": "Eres un Threat Hunter Senior de SOC Global.\nTécnica MITRE: [TECNICA_MITRE]. Lenguaje: [LENGUAJE_SIEM].\nEntrega:\n1. La Consulta Analítica optimizada lista para ejecutar en tu SIEM.\n2. Lógica de Detección: Qué eventos de logs de Windows (Sysmon / Event ID 4688) busca la consulta.\n3. Exclusiones recomendadas para filtrar falsos positivos de herramientas de administración legítimas."
+    },
+    {
+      "id": "sec-15",
+      "title": "Auditor de Privilegios y Directorio Activo (Active Directory / BloodHound)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Active Directory",
+        "Kerberoasting",
+        "BloodHound",
+        "Windows"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Detecta rutas de escalada de privilegios hacia Domain Admin, ataques Kerberoasting, AS-REP Roasting y delegaciones no restringidas.",
+      "variables": [
+        {
+          "name": "ESCENARIO_AD",
+          "label": "Escenario o Vector de AD",
+          "placeholder": "ej. Cuentas de servicio con SPNs registrados usando contraseñas débiles y usuarios en grupos con permisos de GenericAll"
+        }
+      ],
+      "template": "Actúa como Consultor de Seguridad en Active Directory e Infraestructura Windows.\nVector analizado: [ESCENARIO_AD].\nProvee:\n1. Explicación del mecanismo de ataque (ej. Cómo funciona la extracción de tickets TGS y descifrado offline en Kerberoasting).\n2. Comandos de auditoría con PowerShell (PowerView / BloodHound).\n3. Plan de mitigación: Uso de cuentas de servicio administradas por grupo (gMSA), contraseñas de 25+ caracteres y tiering de administración (Tier 0, 1, 2)."
+    },
+    {
+      "id": "sec-16",
+      "title": "Diseñador de Arquitecturas de Confianza Cero (Zero Trust Architecture)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Zero Trust",
+        "NIST",
+        "IAM",
+        "Microsegmentación"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Aplica los 3 principios de Zero Trust: Verificar explícitamente, usar acceso de mínimo privilegio y asumir la brecha de seguridad.",
+      "variables": [
+        {
+          "name": "EMPRESA_ZEROTRUST",
+          "label": "Perfil de la Organización",
+          "placeholder": "ej. Empresa de salud con 500 trabajadores remotos accediendo a registros médicos en la nube y servidores locales"
+        }
+      ],
+      "template": "Eres el Asesor Principal de Arquitectura Zero Trust (estándar NIST SP 800-207).\nOrganización: [EMPRESA_ZEROTRUST].\nDiseña el plan de transformación Zero Trust:\n1. Plano de Control de Identidad y Dispositivo (Autenticación continua basada en riesgo, postura de seguridad del endpoint).\n2. Microsegmentación de Red (Reemplazo de VPNs heredadas por ZTNA / Software Defined Perimeter).\n3. Cifrado y Gobernanza de Datos (Clasificación automática y DLP).\n4. Monitorización y Telemetría centralizada."
+    },
+    {
+      "id": "sec-17",
+      "title": "Auditor de Seguridad en APIs GraphQL y Prevención de DoS",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "GraphQL",
+        "Seguridad API",
+        "Introspección",
+        "DoS"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Protege endpoints GraphQL contra ataques de profundidad de consulta recursiva infinita, introspección expuesta y bypass de autenticación.",
+      "variables": [
+        {
+          "name": "SERVER_GRAPHQL",
+          "label": "Servidor o Framework GraphQL",
+          "placeholder": "ej. Apollo Server en Node.js o Yoga GraphQL"
+        }
+      ],
+      "template": "Eres un Especialista en Seguridad de APIs GraphQL.\nServidor: [SERVER_GRAPHQL].\nDiseña las defensas:\n1. Deshabilitación de Introspección (Introspection Query) en entornos de producción.\n2. Limitación de Profundidad de Consulta (Query Depth Limiting) para evitar DoS por anidación infinita.\n3. Análisis de Coste de Consulta (Query Cost Analysis) y Rate Limiting por complejidad.\n4. Autorización a nivel de campo (Field-level Authorization)."
+    },
+    {
+      "id": "sec-18",
+      "title": "Especialista en Análisis Forense Digital de Memoria RAM (Volatility 3)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Forense",
+        "Volatility",
+        "RAM",
+        "DFIR"
+      ],
+      "models": [
+        "DeepSeek-V3",
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Inspecciona volcados de memoria volátil para descubrir procesos ocultos inyectados (Process Hollowing), conexiones activas y credenciales.",
+      "variables": [
+        {
+          "name": "SISTEMA_DUMP",
+          "label": "Sistema Operativo del Dump",
+          "placeholder": "ej. Volcado de memoria RAM de Windows 11 Enterprise de 16GB"
+        }
+      ],
+      "template": "Actúa como Perito Forense Digital y Especialista DFIR (Volatility 3).\nSistema: [SISTEMA_DUMP].\nGuía de análisis forense:\n1. Plugins de Volatility 3 indispensables para listar procesos sospechosos (windows.pslist, windows.pstree, windows.psscan).\n2. Detección de inyección de código en memoria con windows.malfind.\n3. Extracción de conexiones de red activas al momento del volcado (windows.netscan).\n4. Volcado del ejecutable malicioso (windows.dumpfiles) para cálculo de hash SHA-256."
+    },
+    {
+      "id": "sec-19",
+      "title": "Generador de Políticas de Seguridad de la Información (Norma ISO 27001 / SOC 2)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "ISO 27001",
+        "SOC 2",
+        "Políticas",
+        "Compliance"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Redacta políticas formales de control de accesos, teletrabajo, uso de contraseñas y clasificación de información.",
+      "variables": [
+        {
+          "name": "TIPO_POLITICA_SEGURIDAD",
+          "label": "Política Requerida",
+          "placeholder": "ej. Política de Control de Accesos y Gestión de Identidades para certificación SOC 2 Type II"
+        }
+      ],
+      "template": "Eres un Auditor Líder Certificado en ISO/IEC 27001 y SOC 2.\nPolítica: [TIPO_POLITICA_SEGURIDAD].\nRedacta la política corporativa completa:\n1. Objetivo y Alcance de la Política.\n2. Principios Generales de Seguridad (Principio de Mínimo Privilegio, Separación de Funciones, Need-to-Know).\n3. Procedimiento de Alta, Modificación y Baja de Accesos (Offboarding en menos de 24 horas).\n4. Revisiones periódicas trimestrales de accesos.\n5. Consecuencias por Incumplimiento y Aprobación de la Dirección."
+    },
+    {
+      "id": "sec-20",
+      "title": "Simulador de Escenarios de Crisis de Ciberseguridad (Tabletop Exercise)",
+      "category": "ciberseguridad",
+      "categoryLabel": "Ciberseguridad",
+      "icon": "shield",
+      "tags": [
+        "Tabletop",
+        "Simulación",
+        "Crisis",
+        "CISO",
+        "Directiva"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Conduce un ejercicio de simulación de crisis para evaluar cómo reaccionan los equipos técnico, legal y de comunicación minuto a minuto.",
+      "variables": [
+        {
+          "name": "CRISIS_ESCENARIO",
+          "label": "Escenario de Ataque",
+          "placeholder": "ej. Un grupo cibercriminal publica en Twitter que tiene 500,000 registros de tarjetas de nuestros clientes y exige $2M en Bitcoin en 48 horas"
+        }
+      ],
+      "template": "Actúa como Facilitador de Ejercicios de Simulación de Crisis (Tabletop Exercise).\nEscenario: [CRISIS_ESCENARIO].\nConduce el ejercicio en 4 inyecciones de información progresivas:\n- Minuto 0 (Inyección 1): La alerta inicial y verificación técnica.\n- Minuto 30 (Inyección 2): Los medios de comunicación empiezan a llamar a la empresa.\n- Hora 2 (Inyección 3): El atacante filtra una muestra de datos reales.\n- Hora 6 (Inyección 4): Decisión final sobre pago de rescate, notificación a autoridades y comunicado de prensa.\nPreguntas clave de evaluación para cada fase."
+    },
+    {
+      "id": "leg-01",
+      "title": "Redactor de Acuerdos de Confidencialidad (NDA / Mutuo o Unilateral)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "NDA",
+        "Confidencialidad",
+        "Contratos",
+        "Startups"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Redacta contratos de confidencialidad blindados que protegen secretos comerciales, código fuente y datos de clientes.",
+      "variables": [
+        {
+          "name": "PARTES_CONTRATO",
+          "label": "Partes y Propósito de las Negociaciones",
+          "placeholder": "ej. Entre una startup de IA y un posible inversor o cliente corporativo para evaluar una alianza"
+        },
+        {
+          "name": "TIPO_NDA",
+          "label": "Tipo de NDA y Duración",
+          "placeholder": "ej. NDA Mutuo / Bilateral con vigencia de 3 años y jurisdicción en España"
+        }
+      ],
+      "template": "Actúa como Asesor Legal Senior especializado en Derecho Corporativo y Tecnológico.\nPartes y propósito: [PARTES_CONTRATO]. Tipo: [TIPO_NDA].\nRedacta el Acuerdo de Confidencialidad completo:\n1. Definición de Información Confidencial (incluyendo código fuente, planes de negocio y métricas).\n2. Exclusiones estándar a la confidencialidad (información pública, conocida previamente, requerimiento judicial).\n3. Obligaciones de no divulgación y estándares de cuidado exigidos.\n4. Cláusula de Devolución o Destrucción de la información.\n5. Cláusula de Ley Aplicable, Jurisdicción y Medidas Cautelares."
+    },
+    {
+      "id": "leg-02",
+      "title": "Auditor de Cumplimiento de Privacidad y RGPD / GDPR para Sitios Web",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "RGPD",
+        "GDPR",
+        "Privacidad",
+        "Cookies",
+        "DPO"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Audita la captación de datos, política de cookies, consentimientos explícitos y ejercicio de derechos ARCO/GDPR.",
+      "variables": [
+        {
+          "name": "FLUX_DATOS_WEB",
+          "label": "Cómo captas y usas los datos",
+          "placeholder": "ej. Tienda online con formulario de registro, Google Analytics 4, pixel de Meta y pasarela de Stripe"
+        }
+      ],
+      "template": "Eres un Delegado de Protección de Datos (DPO) y Especialista en RGPD/GDPR.\nFlujo de datos: [FLUX_DATOS_WEB].\nRealiza la auditoría de cumplimiento:\n1. Checklist de Consentimiento Válido (Opt-in previo antes de disparar cookies analíticas/marketing).\n2. Cláusulas obligatorias de la Política de Privacidad (Responsable del tratamiento, Base jurídica, Plazo de conservación, Transferencias internacionales).\n3. Protocolo para gestionar solicitudes de usuarios (Derecho de Acceso, Rectificación, Supresión/Olvido).\n4. Sanciones potenciales por incumplimiento según la AEPD/Comisión Europea."
+    },
+    {
+      "id": "leg-03",
+      "title": "Redactor de Contratos de Servicios de Desarrollo de Software (Master Services Agreement - MSA)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "MSA",
+        "Software",
+        "Freelance",
+        "Contratos",
+        "Propiedad Intelectual"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura contratos para agencias y freelancers de software con hitos de pago, traspaso de propiedad intelectual y límites de responsabilidad.",
+      "variables": [
+        {
+          "name": "ALCANCE_DESARROLLO",
+          "label": "Servicios y Condiciones Comerciales",
+          "placeholder": "ej. Desarrollo de aplicación web móvil con pagos por hitos (25% anticipo, 25% beta, 50% entrega final)"
+        }
+      ],
+      "template": "Eres un Abogado Tecnológico Especializado en Contratación de Software.\nCondiciones: [ALCANCE_DESARROLLO].\nRedacta el contrato de servicios de desarrollo:\n1. Definición de Hitos, Entregables y Procedimiento de Pruebas de Aceptación (UAT).\n2. Cláusula de Transferencia de Propiedad Intelectual (Efectiva ÚNICAMENTE tras el pago del 100% de la remuneración).\n3. Cláusula de Garantía contra Errores (Garantía de 30 días contra bugs críticos).\n4. Limitación de Responsabilidad (Tope máximo de daños directos al monto pagado)."
+    },
+    {
+      "id": "leg-04",
+      "title": "Redactor de Términos y Condiciones de Uso para Plataformas SaaS",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Términos de Uso",
+        "SaaS",
+        "ToS",
+        "EULA"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Crea los Términos de Servicio (Terms of Service) para productos digitales por suscripción, reembolsos y política de uso aceptable.",
+      "variables": [
+        {
+          "name": "DESCRIPCION_SAAS",
+          "label": "Qué hace tu SaaS y Modelo de Cobro",
+          "placeholder": "ej. Plataforma B2B con suscripción mensual recurrente de generación de contenido mediante IA"
+        }
+      ],
+      "template": "Actúa como Abogado Senior de Empresas SaaS Internacionales.\nPlataforma: [DESCRIPCION_SAAS].\nRedacta los Términos de Servicio (ToS) oficiales:\n- Elegibilidad y Creación de Cuentas.\n- Términos de Suscripción, Renovaciones Automáticas y Política de Cancelación.\n- Política de Uso Aceptable (Prohibición de scraping, generación de contenido ilícito, reventa no autorizada).\n- Propiedad de los Datos del Cliente vs. Propiedad de la Plataforma.\n- Descargo de Responsabilidad (Disclaimers \"As-Is\") y Cláusula de Indemnidad."
+    },
+    {
+      "id": "leg-05",
+      "title": "Especialista en Registro de Marcas y Búsqueda de Anterioridades (IP)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Marcas",
+        "Propiedad Industrial",
+        "USPTO",
+        "OEPM",
+        "EUIPO"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Identifica la Clasificación de Niza adecuada y diseña estrategias para superar objeciones de distintividad o riesgo de confusión.",
+      "variables": [
+        {
+          "name": "NOMBRE_MARCA",
+          "label": "Nombre de la Marca y Productos",
+          "placeholder": "ej. 'NexusFlow' para software de automatización y servicios de consultoría IT"
+        },
+        {
+          "name": "JURISDICCION_REGISTRO",
+          "label": "Organismo o País de Registro",
+          "placeholder": "ej. Unión Europea (EUIPO) o Estados Unidos (USPTO)"
+        }
+      ],
+      "template": "Eres un Agente de la Propiedad Industrial y Abogado de Marcas.\nMarca: [NOMBRE_MARCA]. Organismo: [JURISDICCION_REGISTRO].\nPrepara la estrategia de registro:\n1. Determinación de las Clases de la Clasificación de Niza (ej. Clase 9 para software descargable, Clase 42 para SaaS).\n2. Evaluación de Riesgo de Denegación (Fuerza distintiva: Ficticia, Sugestiva, Descriptiva o Genérica).\n3. Pautas para realizar la búsqueda de anterioridades en bases de datos oficiales.\n4. Estrategia de respuesta en caso de recibir una oposición de un tercero."
+    },
+    {
+      "id": "leg-06",
+      "title": "Redactor de Pactos de Socios para Startups (Founders' Agreement / Vesting)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Pacto de Socios",
+        "Vesting",
+        "Cliff",
+        "Startups",
+        "Cap Table"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura las reglas entre cofundadores: calendario de vesting de 4 años con cliff de 1 año, cláusulas Good/Bad Leaver y drag/tag along.",
+      "variables": [
+        {
+          "name": "COFUNDADORES_ROLES",
+          "label": "Cofundadores, Porcentajes y Roles",
+          "placeholder": "ej. Socio A (CEO / 50%) y Socio B (CTO / 50%) fundando una startup tecnológica"
+        }
+      ],
+      "template": "Actúa como Asesor Legal de Capital Riesgo y Startups (Venture Capital Law).\nEquipo fundador: [COFUNDADORES_ROLES].\nRedacta los puntos clave del Pacto de Socios:\n1. Calendario de Consolidación de Acciones (Vesting a 4 años con 1 año de Cliff).\n2. Cláusulas de Salida (Good Leaver vs. Bad Leaver: consecuencias en la pérdida de acciones no devengadas).\n3. Toma de Decisiones y Mayorías Reforzadas (Materias reservadas que requieren unanimidad).\n4. Derecho de Acompañamiento (Tag-Along) y Derecho de Arrastre (Drag-Along) ante una venta de la empresa."
+    },
+    {
+      "id": "leg-07",
+      "title": "Auditor de Licencias de Código Abierto (GPL, MIT, Apache 2.0 - Compliance)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Open Source",
+        "GPL",
+        "MIT",
+        "Apache",
+        "Licencias"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Evita que el uso de librerías con licencias 'copyleft' (GPLv3, AGPL) contamine tu código propietario forzando su liberación.",
+      "variables": [
+        {
+          "name": "LIBRERIAS_USADAS",
+          "label": "Librerías y Cómo se Usan",
+          "placeholder": "ej. Estamos usando una librería con licencia GPLv3 en nuestro backend comercial SaaS que no distribuimos como binario"
+        }
+      ],
+      "template": "Eres un Abogado Especialista en Licenciamiento de Software y Código Abierto.\nSituación: [LIBRERIAS_USADAS].\nRealiza el dictamen de compatibilidad:\n1. Análisis del efecto viral (Copyleft fuerte vs. débil vs. licencias permisivas como MIT/BSD/Apache 2.0).\n2. Riesgo legal para el código fuente propietario de la empresa.\n3. Diferencia crítica entre distribución de binarios vs. ejecución en la nube (GPL vs. AGPL).\n4. Alternativas o remediación para aislar la dependencia."
+    },
+    {
+      "id": "leg-08",
+      "title": "Redactor de Contratos de Cesión de Derechos de Imagen y Voz",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Derechos de Imagen",
+        "Media",
+        "Video",
+        "Model Release"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Autorizaciones legales completas para utilizar la imagen, rostro y voz de participantes en podcasts, videos y campañas publicitarias.",
+      "variables": [
+        {
+          "name": "USO_DE_IMAGEN",
+          "label": "Proyecto y Canales de Difusión",
+          "placeholder": "ej. Grabación de un video documental para YouTube, redes sociales y cursos de pago de la empresa"
+        }
+      ],
+      "template": "Eres un Abogado de Medios y Entretenimiento.\nProyecto: [USO_DE_IMAGEN].\nRedacta el Acuerdo de Cesión de Derechos de Imagen (Model Release):\n1. Autorización explícita de captación y reproducción de imagen, voz y nombre.\n2. Ámbito Territorial (Mundial) y Temporal (Duración indefinida / plazo específico).\n3. Canales de difusión autorizados (digitales, televisivos, impresos).\n4. Renuncia a contraprestaciones futuras o reclamos por edición y montaje.\n5. Cumplimiento de normativas de protección de datos aplicables."
+    },
+    {
+      "id": "leg-09",
+      "title": "Auditor de Cumplimiento de la Ley de Inteligencia Artificial (EU AI Act)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "EU AI Act",
+        "Regulación IA",
+        "Compliance",
+        "Riesgo"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Clasifica tu sistema de Inteligencia Artificial en una de las 4 categorías de riesgo de la Unión Europea y detalla las obligaciones legales.",
+      "variables": [
+        {
+          "name": "SISTEMA_IA_EMPRESA",
+          "label": "Descripción del Sistema de IA",
+          "placeholder": "ej. Sistema de filtrado automático de CVs de candidatos para puestos de empleo mediante modelos LLM"
+        }
+      ],
+      "template": "Actúa como Asesor Legal Senior en Regulación de Inteligencia Artificial (EU AI Act).\nSistema de IA: [SISTEMA_IA_EMPRESA].\nDictamen de cumplimiento:\n1. Clasificación del Nivel de Riesgo (Riesgo Inaceptable / Alto Riesgo / Riesgo Limitado / Riesgo Mínimo).\n2. Obligaciones Legales Obligatorias si es clasificado como Alto Riesgo (Evaluación de impacto, gobernanza de datos de entrenamiento, supervisión humana, registro técnico).\n3. Requisitos de Transparencia (Avisar a los usuarios de que interactúan con una IA).\n4. Calendario de entrada en vigor y régimen de sanciones."
+    },
+    {
+      "id": "leg-10",
+      "title": "Redactor de Contratos de Trabajo y Teletrabajo Remoto Internacional",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Contratos Laborales",
+        "Teletrabajo",
+        "Remote Work",
+        "Contractor"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura acuerdos para colaboradores remotos internacionales (Independent Contractor Agreement) evitando el riesgo de falso autónomo.",
+      "variables": [
+        {
+          "name": "RELACION_CONTRATISTA",
+          "label": "Puesto y Condiciones del Contratista",
+          "placeholder": "ej. Desarrollador Full-Stack en Argentina prestando servicios a tiempo completo para una empresa en Estados Unidos o España"
+        }
+      ],
+      "template": "Eres un Consultor de Derecho Laboral Internacional y Contratación Remota.\nPuesto: [RELACION_CONTRATISTA].\nRedacta el Acuerdo de Prestación de Servicios Independiente (Independent Contractor Agreement):\n1. Naturaleza de la Relación (Ausencia de subordinación laboral directa, autonomía horaria y de medios).\n2. Cláusula de Compensación en Moneda Extranjera e Impuestos a cargo del contratista.\n3. Propiedad Intelectual 'Work Made for Hire' (Cesión irrevocable de creaciones).\n4. Cláusula de No Competencia y No Captación de Clientes tras la terminación."
+    },
+    {
+      "id": "leg-11",
+      "title": "Checklist de Due Diligence Legal para Rondas de Inversión (Seed / Serie A)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Due Diligence",
+        "Inversión",
+        "Venture Capital",
+        "Auditoría"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Lista de verificación exhaustiva de todos los documentos societarios, laborales, de propiedad intelectual y contratos que exigirá el fondo inversor.",
+      "variables": [
+        {
+          "name": "ESTADO_STARTUP",
+          "label": "Etapa de la Empresa",
+          "placeholder": "ej. Startup SaaS con 15 empleados levantando una ronda Serie A de $3M"
+        }
+      ],
+      "template": "Actúa como Abogado de M&A y Auditoría Legal (Legal Due Diligence).\nStartup: [ESTADO_STARTUP].\nProvee el Checklist para el Data Room Legal organizado en 5 carpetas maestras:\n1. Societario (Estatutos, actas de juntas, libro de socios, pactos de socios anteriores, notas convertibles/SAFE emitidos).\n2. Propiedad Intelectual y Tecnología (Marcas registradas, cesiones de IP de todos los empleados y contractors).\n3. Laboral (Contratos de trabajo, organigrama, planes de stock options / phantom shares).\n4. Comercial (Contratos con los 10 clientes principales y proveedores clave).\n5. Litigios y Cumplimiento Normativo (Ausencia de demandas pendientes, RGPD)."
+    },
+    {
+      "id": "leg-12",
+      "title": "Redactor de Contratos de Alquiler de Inmuebles Comerciales o de Oficinas",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Inmobiliario",
+        "Alquiler",
+        "Oficinas",
+        "Contratos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Cláusulas clave para alquileres de locales comerciales u oficinas: fianza, avales, obras de adecuación, subarriendo y actualización de rentas.",
+      "variables": [
+        {
+          "name": "DATOS_INMUEBLE",
+          "label": "Inmueble y Renta",
+          "placeholder": "ej. Oficina de 200m2 en centro urbano, renta de $3,500/mes con 3 meses de carencia por obras"
+        }
+      ],
+      "template": "Eres un Abogado Especialista en Derecho Inmobiliario Comercial.\nInmueble y condiciones: [DATOS_INMUEBLE].\nRedacta el contrato de arrendamiento comercial:\n1. Duración del Contrato y Periodo de Obligado Cumplimiento (con preaviso e indemnización por salida anticipada).\n2. Actualización de Renta anual según índice oficial (IPC).\n3. Obras de Acondicionamiento y periodo de carencia.\n4. Fianza legal y Garantías adicionales (Depósito o Aval bancario).\n5. Régimen de Gastos e Impuestos (IBI, comunidad, suministros)."
+    },
+    {
+      "id": "leg-13",
+      "title": "Especialista en Protocolos de Prevención de Blanqueo de Capitales (AML / KYC)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "AML",
+        "KYC",
+        "Compliance",
+        "Fintech",
+        "Banca"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña procedimientos de diligencia debida de clientes (KYC), monitoreo de transacciones sospechosas y verificación de PEPs.",
+      "variables": [
+        {
+          "name": "ACTIVIDAD_FINTECH",
+          "label": "Tipo de Entidad y Operaciones",
+          "placeholder": "ej. Plataforma de intercambio de criptomonedas y envío de remesas internacionales"
+        }
+      ],
+      "template": "Actúa como Oficial de Cumplimiento (Compliance Officer) y Experto en Prevención de Blanqueo de Capitales (AML/CFT).\nEntidad: [ACTIVIDAD_FINTECH].\nDiseña el Manual de Procedimientos AML/KYC:\n1. Proceso de Onboarding y Verificación de Identidad (Documento oficial, prueba de vida biométrica y prueba de domicilio).\n2. Búsqueda en Listas de Sanciones Internacionales (OFAC, UE, ONU) y Personas Políticamente Expuestas (PEP).\n3. Matriz de Riesgo de Clientes (Riesgo Bajo, Medio y Alto con diligencia reforzada).\n4. Señales de Alerta (Red Flags) para reporte de transacciones sospechosas (STR) ante la autoridad financiera."
+    },
+    {
+      "id": "leg-14",
+      "title": "Redactor de Acuerdos de Liquidación y Finiquitos Laborales (Mutuo Acuerdo)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Laboral",
+        "Finiquito",
+        "Despido",
+        "Acuerdo"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Acuerdos de terminación de relación laboral que liquidan haberes pendientes y contienen cláusulas de no demanda mutua.",
+      "variables": [
+        {
+          "name": "DETALLES_DESPIDO",
+          "label": "Condiciones de la Desvinculación",
+          "placeholder": "ej. Salida de mutuo acuerdo de un director de ventas con indemnización pactada de 6 meses de salario"
+        }
+      ],
+      "template": "Eres un Abogado Laboralista Senior.\nCondiciones: [DETALLES_DESPIDO].\nRedacta el Acuerdo de Terminación y Finiquito:\n1. Reconocimiento de la finalización de la relación laboral y fecha efectiva.\n2. Desglose detallado de los conceptos económicos liquidados (salario devengado, vacaciones no gozadas, indemnización pactada).\n3. Cláusula de Finiquito y Saldo (Declaración de no tener nada más que reclamarse por ningún concepto).\n4. Obligación de Confidencialidad y No Difamación (Non-Disparagement)."
+    },
+    {
+      "id": "leg-15",
+      "title": "Auditor de Cumplimiento de Comercio Electrónico y Derechos del Consumidor",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "E-commerce",
+        "Consumidores",
+        "Derecho de Desistimiento",
+        "Garantías"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Revisa el proceso de compra online para cumplir con el derecho de desistimiento de 14 días, garantías legales e información de precios.",
+      "variables": [
+        {
+          "name": "TIENDA_ECOMMERCE",
+          "label": "Tipo de Tienda y Productos",
+          "placeholder": "ej. Venta online de cursos digitales descargables y productos de hardware físico"
+        }
+      ],
+      "template": "Actúa como Asesor Legal en Derecho de Consumo y Comercio Electrónico.\nTienda: [TIENDA_ECOMMERCE].\nRealiza la auditoría de cumplimiento:\n1. Derecho de Desistimiento (Excepciones legales para contenido digital consumido de inmediato vs. plazo de 14 días para bienes físicos).\n2. Transparencia de Precios (Desglose de IVA, gastos de envío antes de iniciar el pago).\n3. Casilla obligatoria de aceptación de términos antes de comprar (sin casillas premarcadas).\n4. Información sobre la plataforma de resolución de litigios en línea."
+    },
+    {
+      "id": "leg-16",
+      "title": "Redactor de Contratos de Préstamo entre Particulares o Empresas (Pagaré)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Préstamo",
+        "Finanzas",
+        "Pagaré",
+        "Intereses"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Contratos de préstamo mutuo de dinero con o sin intereses, calendario de amortización, garantías y vencimiento anticipado.",
+      "variables": [
+        {
+          "name": "CONDICIONES_PRESTAMO",
+          "label": "Monto, Interés y Plazo",
+          "placeholder": "ej. Préstamo de $25,000 USD al 5% anual a pagar en 24 cuotas mensuales"
+        }
+      ],
+      "template": "Eres un Abogado Especialista en Derecho Civil y Mercantil.\nCondiciones: [CONDICIONES_PRESTAMO].\nRedacta el Contrato de Préstamo con Pagaré adjunto:\n1. Identificación del Prestamista y Prestatario y entrega formal del capital.\n2. Cuadro de Amortización y Tipo de Interés remuneratorio.\n3. Cláusula de Intereses de Demora por retraso en el pago.\n4. Cláusula de Vencimiento Anticipado (ante impago de 2 o más cuotas consecutivas).\n5. Pagaré cambiarlo firmado como garantía ejecutiva."
+    },
+    {
+      "id": "leg-17",
+      "title": "Especialista en Planes de Incentivos de Empleados (Stock Options / Phantom Shares)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Phantom Shares",
+        "ESOP",
+        "Stock Options",
+        "Incentivos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Diseña planes de acciones fantasma (Phantom Shares) para retener talento clave con derechos económicos sin ceder derechos políticos.",
+      "variables": [
+        {
+          "name": "PROGRAMA_STOCK_OPTIONS",
+          "label": "Perfil del Plan y Beneficiarios",
+          "placeholder": "ej. Plan de Phantom Shares del 5% del capital total distribuido entre 5 empleados clave de una startup"
+        }
+      ],
+      "template": "Actúa como Asesor Legal y Fiscal en Planes de Compensación Ejecutiva.\nPlan: [PROGRAMA_STOCK_OPTIONS].\nEstructura el Reglamento del Plan de Phantom Shares:\n1. Definición del Valor de las Participaciones Virtuales (Fórmula de valoración objetiva).\n2. Eventos de Liquidación (Liquidity Event: Venta de la empresa / Salida a bolsa / Distribución extraordinaria de dividendos).\n3. Reglas de Salida del Empleado (Pérdida de derechos en caso de baja voluntaria o despido procedente).\n4. Tratamiento fiscal y retenciones aplicables."
+    },
+    {
+      "id": "leg-18",
+      "title": "Auditor de Accesibilidad Legal y Cumplimiento de la Ley Europea de Accesibilidad (EAA)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "EAA",
+        "Accesibilidad",
+        "Legal",
+        "WCAG"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Evalúa los riesgos de sanciones para empresas que comercializan productos y servicios digitales en la UE bajo la Directiva (UE) 2019/882.",
+      "variables": [
+        {
+          "name": "SERVICIO_DIGITAL",
+          "label": "Servicio o Producto Digital",
+          "placeholder": "ej. Plataforma de banca online y terminales de autoservicio"
+        }
+      ],
+      "template": "Eres un Consultor Legal y Tecnológico en la European Accessibility Act (EAA).\nServicio: [SERVICIO_DIGITAL].\nDictamen de obligaciones:\n1. Ámbito de Aplicación y Exenciones (¿Aplica a tu tamaño de empresa?).\n2. Requisitos de Accesibilidad Obligatorios en la Interfaz Web y Móvil (Estándar EN 301 549 / WCAG 2.1 AA).\n3. Declaración de Conformidad de Accesibilidad requerida.\n4. Régimen de supervisión de mercado y multas por no conformidad."
+    },
+    {
+      "id": "leg-19",
+      "title": "Redactor de Contratos de Franquicia y Licencia de Marca Comercial",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "Franquicia",
+        "Licencia",
+        "Know-How",
+        "Contratos"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Contratos para expandir un modelo de negocio: canon de entrada, royalties mensuales, transmisión del manual operativo y exclusividad territorial.",
+      "variables": [
+        {
+          "name": "CONCEPTO_FRANQUICIA",
+          "label": "Modelo de Negocio",
+          "placeholder": "ej. Franquicia de cafeterías de especialidad con canon de entrada de $15,000 y 5% de royalties sobre ventas"
+        }
+      ],
+      "template": "Actúa como Abogado Senior en Derecho de Franquicias y Distribución Comercial.\nModelo: [CONCEPTO_FRANQUICIA].\nRedacta los capítulos esenciales del Contrato de Franquicia:\n1. Concesión de la Franquicia y Territorio Exclusivo.\n2. Transmisión del Know-How y Manuales Operativos Confidenciales.\n3. Obligaciones Económicas (Canon inicial, Royalties de explotación, Fondo de Publicidad corporativo).\n4. Controles de Calidad y Aprovisionamiento exclusivo de suministros.\n5. No competencia post-contractual y resolución del contrato."
+    },
+    {
+      "id": "leg-20",
+      "title": "Guía de Respuestas Legales ante Reclamaciones por Infracción de Copyright (DMCA)",
+      "category": "legal",
+      "categoryLabel": "Legal & Compliance",
+      "icon": "scale",
+      "tags": [
+        "DMCA",
+        "Copyright",
+        "Contranotificación",
+        "Propiedad Intelectual"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Redacta avisos de retirada DMCA (Takedown Notice) o contranotificaciones fundamentadas ante reclamos ilegítimos de derechos de autor.",
+      "variables": [
+        {
+          "name": "SITUACION_INFRACCION",
+          "label": "Contenido y Situación",
+          "placeholder": "ej. Un tercero ha copiado exactamente los artículos y fotos de mi blog en su sitio web sin autorización"
+        }
+      ],
+      "template": "Eres un Abogado Especialista en Litigios de Propiedad Intelectual en Internet (DMCA).\nSituación: [SITUACION_INFRACCION].\nEntrega:\n1. Aviso Formal de Infracción DMCA (Takedown Notice) listo para enviar al proveedor de hosting y al infractor con todos los requisitos legales obligatorios.\n2. Formato de Contranotificación (Counter-Notice) en caso de que seas tú quien recibió un reclamo injusto bajo doctrina de Uso Justo (Fair Use).\n3. Pautas para solicitar la desindexación de los enlaces infractores en el buscador de Google."
+    },
+    {
+      "id": "well-01",
+      "title": "Diseñador de Planes de Entrenamiento de Fuerza Personalizados (Hipertrofia / Fuerza)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Fitness",
+        "Fuerza",
+        "Hipertrofia",
+        "Gimnasio",
+        "Rutinas"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Crea rutinas científicas (Push-Pull-Legs, Torso-Pierna o Full Body) con volumen semanal por grupo muscular, series y RPE/RIR.",
+      "variables": [
+        {
+          "name": "EXPERIENCIA_DIAS",
+          "label": "Nivel de Experiencia y Días Disponibles",
+          "placeholder": "ej. Intermedio, 4 días a la semana en gimnasio completo enfocado en hipertrofia de espalda y hombros"
+        }
+      ],
+      "template": "Actúa como Entrenador de Fuerza Certificado (CSCS) y Científico del Ejercicio.\nPerfil: [EXPERIENCIA_DIAS].\nDiseña la rutina semanal:\n1. Distribución Semanal (ej. Torso/Pierna o PPL) con ejercicios compuestos principales y accesorios aislados.\n2. Series, Repeticiones y Escala RIR/RPE (Repeticiones en Reserva: RIR 1-2).\n3. Sobrecarga Progresiva: Protocolo exacto para subir peso o repeticiones semana a semana.\n4. Calentamiento específico de movilidad articular antes de cada sesión."
+    },
+    {
+      "id": "well-02",
+      "title": "Calculadora Nutricional de Macros y Plan de Alimentación Flexible (IIFYM)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Nutrición",
+        "Macros",
+        "Calorías",
+        "Dieta",
+        "Proteína"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Calcula el gasto calórico total (TDEE), gramos exactos de proteína, carbohidratos y grasas, y menús diarios estructurados.",
+      "variables": [
+        {
+          "name": "DATOS_FISICOS_OBJETIVO",
+          "label": "Peso, Altura, Nivel de Actividad y Meta",
+          "placeholder": "ej. Hombre de 30 años, 80kg, 1.78m, sedentario en trabajo pero entrena 4h/semana, objetivo: perder grasa manteniendo masa muscular"
+        }
+      ],
+      "template": "Eres un Nutricionista Deportivo Certificado (CISSN).\nDatos: [DATOS_FISICOS_OBJETIVO].\nCalcula el plan nutricional:\n1. Gasto Energético Total Diario (TDEE) y Déficit/Superávit calórico recomendado.\n2. Desglose de Macronutrientes diarios (Gramos de Proteína, Carbohidratos, Grasas y Fibra).\n3. Ejemplo de Menú de 1 Día con 4 comidas balanceadas y timing de nutrientes pre/post-entrenamiento.\n4. Pautas de hidratación y micronutrientes clave."
+    },
+    {
+      "id": "well-03",
+      "title": "Protocolo de Optimización del Sueño Profundo y Ritmo Circadiano (Huberman Lab)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Sueño",
+        "Biohacking",
+        "Huberman",
+        "Descanso",
+        "Melatonina"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estrategias basadas en neurociencia para maximizar el sueño REM y de ondas lentas: exposición solar matutina, temperatura y luz roja.",
+      "variables": [
+        {
+          "name": "PROBLEMAS_SUENO",
+          "label": "Tus Dificultades de Sueño",
+          "placeholder": "ej. Me despierto a las 3 AM con la mente acelerada y tardo 1 hora en volver a dormir, me levanto sin energía"
+        }
+      ],
+      "template": "Actúa como Neurocientífico y Especialista en Medicina del Sueño (protocolos Andrew Huberman / Matthew Walker).\nSíntomas: [PROBLEMAS_SUENO].\nDiseña el protocolo de sueño:\n1. Ritual Matutino: Exposición a luz solar en los primeros 30-60 minutos y timing del café (esperar 90 min tras despertar).\n2. Ritual Nocturno (2 horas antes de dormir): Temperatura de la habitación (18°C), atenuación de luces azules y cena ligera.\n3. Protocolo de Emergencia si te despiertas en medio de la noche (Técnica de respiración NSDR / Non-Sleep Deep Rest)."
+    },
+    {
+      "id": "well-04",
+      "title": "Auditor de Ergonomía del Puesto de Trabajo y Prevención de Dolor de Espalda",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Ergonomía",
+        "Postura",
+        "Dolor de Espalda",
+        "Teletrabajo"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Corrige la altura del monitor, posición de la silla, soporte lumbar y diseña descansos activos para programadores.",
+      "variables": [
+        {
+          "name": "SETUP_Y_MOLESTIAS",
+          "label": "Tu Puesto de Trabajo y Dolores",
+          "placeholder": "ej. Trabajo 8 horas en laptop sobre mesa común, siento tensión constante en trapecios y dolor en zona lumbar baja"
+        }
+      ],
+      "template": "Eres un Fisioterapeuta y Especialista en Ergonomía Laboral.\nSituación: [SETUP_Y_MOLESTIAS].\nGuía de corrección ergonómica:\n1. Ajustes del Puesto Físico (Altura de ojos con el tercio superior de la pantalla, ángulo de 90° en codos y rodillas, apoyo lumbar).\n2. Rutina de 'Micro-Pausas' de 2 minutos cada 45 minutos (3 estiramientos específicos para abrir pectorales, activar glúteos y descomprimir cuello).\n3. Ejercicio correctivo diario de 5 minutos (Chin tucks y Cat-Cow)."
+    },
+    {
+      "id": "well-05",
+      "title": "Guía de Meditación Mindfulness y Respiración Antiestrés (Box Breathing / 4-7-8)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Mindfulness",
+        "Meditación",
+        "Respiración",
+        "Ansiedad",
+        "Estrés"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Sesión guiada de respiración y meditación para reducir el cortisol y activar el sistema nervioso parasimpático en 10 minutos.",
+      "variables": [
+        {
+          "name": "ESTADO_EMOCIONAL",
+          "label": "Cómo te sientes en este momento",
+          "placeholder": "ej. Sobrecarga mental intensa antes de una presentación importante con palpitaciones y respiración superficial"
+        }
+      ],
+      "template": "Actúa como Instructor de Mindfulness y Respiración Terapéutica.\nEstado actual: [ESTADO_EMOCIONAL].\nGuíame a través de una sesión escrita de 10 minutos paso a paso:\n1. Minuto 0-2: Escaneo Corporal (Body Scan) y relajación consciente de mandíbula, hombros y estómago.\n2. Minuto 2-7: Técnica de Respiración (ej. Box Breathing 4-4-4-4 o Suspiro Fisiológico de 2 inhalaciones nasales y 1 exhalación larga).\n3. Minuto 7-10: Anclaje de presencia y afirmación mental de calma y control."
+    },
+    {
+      "id": "well-06",
+      "title": "Planificador de Ayuno Intermitente Seguro y Sostenible (16/8 o 14/10)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Ayuno Intermitente",
+        "Autofagia",
+        "Salud Metabólica",
+        "Longevidad"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estructura ventanas de alimentación adaptadas a tu estilo de vida, evitando pérdidas de masa muscular y mareos.",
+      "variables": [
+        {
+          "name": "HORARIOS_RUTINA",
+          "label": "Horarios Habituales y Experiencia",
+          "placeholder": "ej. Principiante en ayuno, entreno a las 7 AM y tengo reuniones hasta las 6 PM"
+        }
+      ],
+      "template": "Eres un Médico Especialista en Salud Metabólica y Longevidad (Peter Attia / Jason Fung).\nHorarios: [HORARIOS_RUTINA].\nDiseña el protocolo de Ayuno Intermitente:\n1. Selección de la Ventana Óptima (ej. 16 horas de ayuno / 8 horas de ingesta de 12:00 a 20:00).\n2. Bebidas permitidas durante el ayuno (Agua con electrolitos, café solo, té sin edulcorantes) para no romper la autofagia.\n3. Cómo romper el ayuno adecuadamente para evitar picos de glucosa agresivos.\n4. Adaptación del timing de comidas en días de entrenamiento de fuerza."
+    },
+    {
+      "id": "well-07",
+      "title": "Entrenador de Corredores Principiantes: De 0 a 5K (Couch to 5K)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Running",
+        "5K",
+        "Cardio",
+        "Correr",
+        "Resistencia"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Plan progresivo de 8 semanas combinando intervalos de caminata y trote suave para correr 5km continuos sin lesiones.",
+      "variables": [
+        {
+          "name": "CONDICION_INICIAL",
+          "label": "Condición Física Actual",
+          "placeholder": "ej. Sedentario desde hace 2 años, puedo caminar 30 minutos sin problema pero me canso al correr 1 minuto"
+        }
+      ],
+      "template": "Actúa como Entrenador de Atletismo y Running Certificado.\nCondición inicial: [CONDICION_INICIAL].\nDiseña el plan de 8 semanas (3 sesiones por semana):\n- Semanas 1 a 3: Intervalos de Ca-Co (Caminar y Correr alternados).\n- Semanas 4 a 6: Aumento progresivo del tiempo de trote continuo.\n- Semanas 7 a 8: Consolidación de 30 minutos / 5km continuos.\n- Consejos indispensables sobre cadencia (170-180 pasos por minuto) y elección de zapatillas."
+    },
+    {
+      "id": "well-08",
+      "title": "Especialista en Salud Digestiva y Microbiota Intestinal (Alimentos Fermentados y Fibra)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Microbiota",
+        "Digestión",
+        "Probióticos",
+        "Salud Intestinal"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Protocolo para reducir hinchazón, gases y restaurar la flora intestinal mediante prebióticos y fermentados.",
+      "variables": [
+        {
+          "name": "MOLESTIAS_DIGESTIVAS",
+          "label": "Síntomas y Dieta Habitual",
+          "placeholder": "ej. Hinchazón abdominal por las tardes, digestiones pesadas tras comer carbohidratos o legumbres"
+        }
+      ],
+      "template": "Eres un Gastroenterólogo y Especialista en Microbioma Humano.\nSíntomas: [MOLESTIAS_DIGESTIVAS].\nDiseña el plan de restauración digestiva:\n1. Estrategia de los '30 Alimentos Vegetales Diferentes por Semana' para maximizar la diversidad bacteriana.\n2. Inclusión progresiva de Alimentos Fermentados (Kéfir, Chucrut, Kimchi, Miso).\n3. Suplementación recomendada (L-Glutamina, enzimas digestivas o cepas probióticas específicas).\n4. Alimentos inflamatorios a reducir temporalmente."
+    },
+    {
+      "id": "well-09",
+      "title": "Rutina de Movilidad Articular y Flexibilidad Diaria de 15 Minutos",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Movilidad",
+        "Flexibilidad",
+        "Cadera",
+        "Hombros",
+        "Yoga"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Desbloquea caderas rígidas, tobillos y columna torácica con ejercicios de rango articular activo (CARS / Kinstretch).",
+      "variables": [
+        {
+          "name": "ZONAS_RIGIDAS",
+          "label": "Zonas con Rigidez",
+          "placeholder": "ej. Caderas muy apretadas por estar sentado todo el día e incapacidad para hacer una sentadilla profunda"
+        }
+      ],
+      "template": "Actúa como Especialista en Acondicionamiento de Rango Articular (FRC / Kinstretch).\nZonas rígidas: [ZONAS_RIGIDAS].\nDiseña la rutina diaria de 15 minutos:\n1. 90/90 Hip Switches para rotación interna y externa de cadera.\n2. Rotaciones Articulares Controladas (CARs) para columna torácica y hombros.\n3. Sentadilla profunda asistida (Deep Squat hold con apertura de aductores).\n4. Explicación de cómo respirar durante cada ejercicio para relajar el sistema nervioso."
+    },
+    {
+      "id": "well-10",
+      "title": "Protocolo de Longevidad y Envejecimiento Saludable (Medicine 3.0 / Peter Attia)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Longevidad",
+        "VO2 Max",
+        "Fuerza de Agarre",
+        "Healthspan"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Los 4 pilares de la medicina preventiva: VO2 Max (Zona 2 de cardio), masa muscular, estabilidad y salud metabólica.",
+      "variables": [
+        {
+          "name": "EDAD_Y_OBJETIVO_LONGEVO",
+          "label": "Edad y Metas de Vida",
+          "placeholder": "ej. 40 años, buscando mantener agilidad, masa muscular y lucidez mental para cuando tenga 80 años"
+        }
+      ],
+      "template": "Eres un Médico Especialista en Medicina Preventiva y Longevidad (Healthspan vs. Lifespan).\nPerfil: [EDAD_Y_OBJETIVO_LONGEVO].\nEstructura el protocolo semanal de longevidad:\n1. Entrenamiento de Zona 2 de Cardio (3 horas semanales para optimizar la salud mitocondrial y reciclaje de lactato).\n2. 1 Sesión Semanal de VO2 Max (Intervalos 4x4 minutos al 90% de frecuencia cardíaca máxima).\n3. Entrenamiento de Fuerza enfocado en masa magra y Fuerza de Agarre (Grip Strength).\n4. Marcadores sanguíneos clave para monitorear anualmente (ApoB, HbA1c, Insulina en ayunas, PCR ultrasensible)."
+    },
+    {
+      "id": "well-11",
+      "title": "Entrenador de Calistenia y Dominio del Propio Peso Corporal (Street Workout)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Calistenia",
+        "Dominadas",
+        "Fondos",
+        "Flexiones",
+        "Handstand"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Progresiones paso a paso para dominar dominadas estrictas, fondos en paralelas, flexiones a una mano y muscle-up.",
+      "variables": [
+        {
+          "name": "MOVIMIENTO_OBJETIVO",
+          "label": "Habilidad o Ejercicio a Dominar",
+          "placeholder": "ej. Conseguir mi primera dominada estricta (Pull-up) sin bandas elásticas"
+        }
+      ],
+      "template": "Actúa como Entrenador Élite de Calistenia y Gimnasia.\nObjetivo: [MOVIMIENTO_OBJETIVO].\nDesglosa el plan de progresión en 4 etapas:\n- Etapa 1: Activación y fuerza de base (Colgadas pasivas/activas en barra y retracciones escapulares).\n- Etapa 2: Repeticiones excéntricas lentas (Bajar en 5 segundos desde la barra).\n- Etapa 3: Rango asistido o pausas isométricas en el punto más alto.\n- Etapa 4: La primera repetición estricta y protocolo de volumen para encadenar 5 repeticiones seguidas."
+    },
+    {
+      "id": "well-12",
+      "title": "Planificador de Batch Cooking / Meal Prep Saludable para Toda la Semana",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Meal Prep",
+        "Batch Cooking",
+        "Cocina",
+        "Organización",
+        "Salud"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Cocina en 2 horas los domingos todas las comidas de lunes a viernes con lista de compras unificada y conservación óptima.",
+      "variables": [
+        {
+          "name": "PREFERENCIAS_DIETA",
+          "label": "Preferencias y Número de Personas",
+          "placeholder": "ej. 2 personas, dieta mediterránea alta en proteínas, sin gluten, presupuesto moderado"
+        }
+      ],
+      "template": "Eres un Chef Nutricionista y Especialista en Batch Cooking.\nPreferencias: [PREFERENCIAS_DIETA].\nDiseña el plan de cocina de 2 horas:\n1. Lista de Compras Completa organizada por secciones del supermercado (Proteínas, Verduras, Carbohidratos complejos, Grasas saludables).\n2. Cronograma de Cocina Simultánea paso a paso (ej. Horno a 200°C con 3 bandejas mientras se cuecen granos en la hornilla).\n3. Menú Semanal de Lunes a Viernes ensamblando los ingredientes preparados.\n4. Guía de Conservación segura en tuppers de vidrio en nevera y congelador."
+    },
+    {
+      "id": "well-13",
+      "title": "Protocolo de Exposición al Frío y Termogénesis (Duchas Frías / Baños de Hielo)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Frío",
+        "Dopamina",
+        "Wim Hof",
+        "Biohacking",
+        "Inmunidad"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Cómo utilizar el frío para elevar la dopamina hasta un 250%, mejorar la resiliencia mental y activar la grasa parda de forma segura.",
+      "variables": [
+        {
+          "name": "EXPERIENCIA_FRIO",
+          "label": "Nivel de Tolerancia al Frío",
+          "placeholder": "ej. Principiante que nunca ha tomado duchas frías pero quiere mejorar su energía y disciplina"
+        }
+      ],
+      "template": "Actúa como Fisiólogo del Ejercicio y Especialista en Terapia de Frío.\nNivel: [EXPERIENCIA_FRIO].\nDiseña la progresión de 4 semanas:\n- Semana 1: Terminar las duchas calientes con 30 segundos de agua fría controlando la respiración.\n- Semanas 2-3: Aumento a 90-120 segundos de agua fría continua.\n- Semana 4: Protocolo completo (11 minutos totales de frío acumulados a la semana divididos en 2-4 sesiones).\n- Reglas de Seguridad: Por qué NO hiperventilar en el agua y cómo recalentarse de forma natural (Postura del Caballo / Horse Stance)."
+    },
+    {
+      "id": "well-14",
+      "title": "Especialista en Hidratación y Equilibrio de Electrolitos (Sodio, Potasio, Magnesio)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Electrolitos",
+        "Hidratación",
+        "Sodio",
+        "Magnesio",
+        "Rendimiento"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Por qué beber solo agua pura puede deshidratarte y cómo preparar suero casero para evitar calambres, fatiga y niebla mental.",
+      "variables": [
+        {
+          "name": "NIVEL_SUDORACION_ACTIVIDAD",
+          "label": "Actividad Física y Clima",
+          "placeholder": "ej. Entreno en clima caluroso, sudo profusamente y tengo calambres musculares nocturnos"
+        }
+      ],
+      "template": "Eres un Fisiólogo Deportivo experto en Hidratación Celular.\nSituación: [NIVEL_SUDORACION_ACTIVIDAD].\nGuía de electrolitos:\n1. Fórmulas de Electrolitos Caseras y Proporciones Exactas (Cloruro de sodio, Citrato de potasio y Bisglicinato de magnesio).\n2. Cuándo tomar electrolitos (Mañana al despertar, intra-entreno, antes de dormir).\n3. Señales de deficiencia de sodio vs. deshidratación por falta de agua."
+    },
+    {
+      "id": "well-15",
+      "title": "Rehabilitador de Lesiones Comunes (Tendinitis rotuliana, hombro doloroso, fascitis)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Fisioterapia",
+        "Tendinitis",
+        "Rehabilitación",
+        "Lesiones"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Ejercicios isométricos y de carga excéntrica para regenerar tendones sin dolor (Protocolo Heavy Slow Resistance).",
+      "variables": [
+        {
+          "name": "TIPO_MOLESTIA_LESION",
+          "label": "Lesión o Dolor Frecuente",
+          "placeholder": "ej. Dolor en el tendón rotuliano de la rodilla al bajar escaleras o hacer sentadillas (Rodilla de saltador)"
+        }
+      ],
+      "template": "Eres un Fisioterapeuta Deportivo Especialista en Tendinopatías.\nLesión: [TIPO_MOLESTIA_LESION].\nDiseña el protocolo de recuperación por fases:\n1. Fase 1 (Alivio del Dolor): Ejercicios isométricos sostenidos (ej. Wall sit a 90° durante 45 segundos, 5 repeticiones).\n2. Fase 2 (Remodelación del Colágeno): Entrenamiento de Resistencia Lenta y Pesada (HSR: 3 segundos de subida, 3 de bajada).\n3. Factores agravantes a evitar y prueba de carga diaria para medir la tolerancia del tendón."
+    },
+    {
+      "id": "well-16",
+      "title": "Entrenador de Salud Cerebral y Nootrópicos Naturales (Enfoque y Memoria)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Nootrópicos",
+        "Cerebro",
+        "Memoria",
+        "Melena de León",
+        "Enfoque"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Optimiza la neurogénesis y acetilcolina con suplementos naturales seguros (Melena de León, Bacopa, L-Tirosina, Omega-3).",
+      "variables": [
+        {
+          "name": "OBJETIVO_COGNITIVO",
+          "label": "Demanda Mental Específica",
+          "placeholder": "ej. Programador que necesita foco sostenido de 4 horas diarias sin sufrir ansiedad ni 'crash' de cafeína"
+        }
+      ],
+      "template": "Actúa como Neurofarmacólogo y Consultor de Rendimiento Cognitivo.\nObjetivo: [OBJETIVO_COGNITIVO].\nDiseña un 'Stack' Nootrópico Natural y Estrategia:\n1. El Stack Diario Matutino (L-Teanina + Cafeína en ratio 2:1 para foco limpio sin temblores).\n2. Suplementos para Neuroplasticidad a Largo Plazo (Melena de León / Hericium erinaceus para NGF, Bacopa Monnieri, DHA de alta concentración).\n3. Pautas de Ciclado de Nootrópicos para evitar tolerancia o dependencia."
+    },
+    {
+      "id": "well-17",
+      "title": "Diseñador de Rutinas de Gimnasio en Casa con Espacio y Equipamiento Mínimo",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Home Gym",
+        "Entrenamiento en Casa",
+        "Mancuernas",
+        "Bandas"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Rutinas completas de 30 minutos usando solo un par de mancuernas ajustables y bandas de resistencia en el salón.",
+      "variables": [
+        {
+          "name": "EQUIPAMIENTO_CASA",
+          "label": "Material Disponible",
+          "placeholder": "ej. Un juego de mancuernas ajustables de 2kg a 20kg y un juego de bandas elásticas tubulares"
+        }
+      ],
+      "template": "Eres un Entrenador Personal Especialista en Fitness en Casa.\nMaterial disponible: [EQUIPAMIENTO_CASA].\nDiseña una rutina Full-Body de 3 días:\n- Selección de ejercicios que maximizan la tensión muscular en casa (Búlgaras, RDL con mancuernas, Press militar, Remo unilateral).\n- Técnicas de intensidad sin pesos gigantes (Pausas de 2 segundos en el punto de máxima contracción, drop sets).\n- Tiempo de descanso entre series para mantener la sesión en menos de 35 minutos."
+    },
+    {
+      "id": "well-18",
+      "title": "Especialista en Control de la Glucosa en Sangre y Prevención de Picos de Insulina",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Glucosa",
+        "Insulina",
+        "Jessie Inchauspé",
+        "Metabolismo",
+        "Energía"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Estrategias de orden de alimentos (Fibra primero, Proteína segundo, Carbohidratos al final), vinagre y caminatas post-comida.",
+      "variables": [
+        {
+          "name": "SINTOMAS_BAJONES",
+          "label": "Tus Síntomas tras Comer",
+          "placeholder": "ej. Mucha somnolencia y deseo incontrolable de azúcar 45 minutos después de almorzar"
+        }
+      ],
+      "template": "Actúa como Bioquímico y Especialista en Curvas de Glucosa (método Glucose Goddess).\nSíntomas: [SINTOMAS_BAJONES].\nGuía de 'Hacks' de Glucosa:\n1. El Orden de los Alimentos en el Plato (1° Ensalada/Verduras -> 2° Proteínas y Grasas -> 3° Arroz/Pasta/Pan).\n2. El Truco del Vinagre de Manzana (1 cucharada en un vaso de agua 10 minutos antes de comer carbohidratos).\n3. Caminata de 10 minutos inmediatamente después de la comida principal para que los músculos absorban la glucosa sin picos de insulina."
+    },
+    {
+      "id": "well-19",
+      "title": "Entrenador de Salud Cardiovascular y Entrenamiento Polarizado (80/20)",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Cardio",
+        "Zona 2",
+        "Corazón",
+        "Polarizado",
+        "Resistencia"
+      ],
+      "models": [
+        "ChatGPT-4o",
+        "Claude 3.5 Sonnet"
+      ],
+      "description": "Distribuye el 80% de tu tiempo de cardio en intensidad conversacional baja (Zona 2) y el 20% en alta intensidad extrema (Zona 5).",
+      "variables": [
+        {
+          "name": "DEPORTE_CARDIO",
+          "label": "Deporte o Máquina Preferida",
+          "placeholder": "ej. Bicicleta estática / Ciclismo o Máquina de remo (Rower)"
+        }
+      ],
+      "template": "Eres un Fisiólogo de Atletas de Resistencia Olímpica (método Stephen Seiler).\nDeporte: [DEPORTE_CARDIO].\nDiseña el plan de entrenamiento polarizado:\n1. Cómo calcular tu Zona 2 sin laboratorio (Prueba de conversación: poder hablar en oraciones completas sin jadear / Frecuencia cardíaca MAF de Maffetone: 180 - edad).\n2. Distribución Semanal: 3 sesiones de 45 minutos en Zona 2 + 1 sesión de HIIT a máxima intensidad.\n3. Beneficios fisiológicos en el volumen sistólico del corazón y densidad capilar muscular."
+    },
+    {
+      "id": "well-20",
+      "title": "Protocolo de Gestión de la Fatiga Mental y Burnout para Profesionales del Conocimiento",
+      "category": "bienestar",
+      "categoryLabel": "Salud & Bienestar",
+      "icon": "activity",
+      "tags": [
+        "Burnout",
+        "Fatiga Mental",
+        "Estrés Laboral",
+        "Regeneración"
+      ],
+      "models": [
+        "Claude 3.5 Sonnet",
+        "ChatGPT-4o"
+      ],
+      "description": "Plan de recuperación psicológica y fisiológica cuando sientes agotamiento crónico, apatía y cinismo hacia tu trabajo.",
+      "variables": [
+        {
+          "name": "SINTOMAS_BURNOUT",
+          "label": "Síntomas de Agotamiento",
+          "placeholder": "ej. Llevo 6 meses trabajando 60 horas semanales, me siento vacío, irritable con mi equipo y no disfruto nada de lo que hago"
+        }
+      ],
+      "template": "Actúa como Psicólogo Clínico y Médico Especialista en Síndrome de Burnout.\nSituación: [SINTOMAS_BURNOUT].\nDiseña el plan de recuperación en 3 fases:\n1. Fase de Estabilización de Emergencia (Fijar un límite infranqueable de hora de desconexión diaria, delegar tareas críticas).\n2. Restauración del Eje HPA (Hipotálamo-Pituitaria-Adrenal): Suplementación con Ashwagandha KSM-66 y baños de sol sin pantallas.\n3. Reencuadre Psicológico: Reevaluar valores y diseñar un nuevo contrato psicológico con el trabajo."
+    }
+  ]
+};

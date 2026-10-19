@@ -112,36 +112,59 @@ Configuración ➔ Contexto personal ➔ "Instrucciones para Gemini"
 
 ---
 
+## 🗄️ Base de Datos Desacoplada en JSON (`prompts-database.json`)
+
+Todos los prompts, códigos secretos de Gemini e instrucciones de contexto personal están desacoplados del código de la interfaz y residen en una **base de datos unificada en formato JSON**:
+
+📁 **Archivo principal:** [`data/prompts-database.json`](file:///c:/Users/Rod/Desktop/code/Prompts/data/prompts-database.json)
+
+### 🚀 Funcionalidades Integradas:
+1. **✏️ Modificar**: Puedes abrir [`data/prompts-database.json`](file:///c:/Users/Rod/Desktop/code/Prompts/data/prompts-database.json) con cualquier editor de texto o IDE (VS Code, Cursor, Notepad), agregar o editar prompts, categorías o plantillas.
+2. **📥 Descargar**: Desde la barra superior o la sección de configuración de la app, pulsa el botón **"Base de Datos (JSON)"** y luego **"Descargar prompts-database.json"** para obtener una copia de respaldo completa con 1 solo clic.
+3. **📤 Actualizar o Reemplazar en Caliente**: Sube cualquier archivo `.json` directamente desde el modal de la app. El sistema validará los datos, actualizará el catálogo en caliente sin reiniciar nada y guardará los cambios en tu navegador (`localStorage`).
+4. **🔄 Restablecer**: Si realizaste cambios locales y deseas volver a los valores originales de fábrica, pulsa **"Restablecer a Valores Originales"**.
+5. **⚡ Sincronización Automática Offline**: Si editas el JSON manualmente y deseas sincronizar el script de respaldo offline (`data/prompts-database.js`), simplemente ejecuta:
+   ```bash
+   node scripts/sync-database.js
+   ```
+
+---
+
 ## 📁 Estructura del Proyecto
 
 ```
 Prompts/
-├── index.html          # Estructura semántica, accesibilidad, pestañas y meta tags SEO
+├── index.html                      # Estructura semántica, tabs, modal de DB y meta tags SEO
 ├── Mavericks_Gemini_Secret_Codes.pdf # Documento original de 100 códigos de Gemini
+├── data/
+│   ├── prompts-database.json       # 🗄️ BASE DE DATOS CENTRAL (Prompts, Códigos e Instrucciones)
+│   └── prompts-database.js         # Wrapper JS para compatibilidad offline y protocolo file://
+├── scripts/
+│   └── sync-database.js            # Script para sincronizar el JSON con el wrapper JS
 ├── css/
-│   ├── style.css       # Sistema de diseño: variables CSS, modo oscuro, layout mobile-first y estilos Gemini
-│   └── animations.css  # Animaciones, transiciones, toasts y microinteracciones
+│   ├── style.css                   # Variables CSS, modo oscuro, modal de DB y layout mobile-first
+│   └── animations.css              # Animaciones, transiciones y toasts
 ├── js/
-│   ├── data/           # Módulos de datos estructurados
-│   │   ├── desarrollo.js     # 20 prompts de Programación, DevOps y Arquitectura
-│   │   ├── redaccion.js      # 20 prompts de Copywriting, SEO, Guiones y Storytelling
-│   │   ├── marketing.js      # 20 prompts de Estrategia B2B/B2C, Ads, Funnels y Ventas
-│   │   ├── productividad.js  # 20 prompts de Gestión, Automatización, Minutas y Foco
-│   │   ├── aprendizaje.js    # 20 prompts de Pedagogía, Métodos de Estudio y Roleplay
-│   │   ├── creatividad.js    # 20 prompts de Brainstorming, SCAMPER e Ideación
-│   │   ├── metaprompt.js     # 20 prompts de Prompt Engineering y System Prompts
-│   │   ├── datos.js          # 20 prompts de Análisis Cuantitativo, SQL, Excel y Finanzas
-│   │   ├── imagenes.js       # 20 prompts de Generación Visual (Midjourney, Flux, DALL-E)
-│   │   ├── musica.js         # 20 prompts de Audio y Música IA (Suno, Udio, Producción)
-│   │   ├── video.js          # 20 prompts de Video y Animación (Runway, Sora, Luma)
-│   │   ├── ciberseguridad.js # 20 prompts de Hacking Ético, Pentesting y Hardening
-│   │   ├── legal.js          # 20 prompts de Contratos, Privacidad y Compliance
-│   │   ├── bienestar.js      # 20 prompts de Fitness, Nutrición, Sueño y Longevidad
-│   │   └── gemini-codes.js   # 100 Códigos Secretos para Gemini organizados en 9 categorías
-│   ├── prompts-data.js # Unificador del catálogo global de prompts
-│   └── app.js          # Lógica interactiva (búsqueda dual, tabs, filtros, personalizador, favoritos)
-├── .gitignore          # Archivos y carpetas ignorados por Git
-└── README.md           # Documentación detallada del proyecto
+│   ├── data/                       # Módulos de datos modulares de respaldo
+│   │   ├── desarrollo.js
+│   │   ├── redaccion.js
+│   │   ├── marketing.js
+│   │   ├── productividad.js
+│   │   ├── aprendizaje.js
+│   │   ├── creatividad.js
+│   │   ├── metaprompt.js
+│   │   ├── datos.js
+│   │   ├── imagenes.js
+│   │   ├── musica.js
+│   │   ├── video.js
+│   │   ├── ciberseguridad.js
+│   │   ├── legal.js
+│   │   ├── bienestar.js
+│   │   └── gemini-codes.js         # 100 Códigos Secretos para Gemini
+│   ├── prompts-data.js             # Priorizador de datos desde base de datos JSON
+│   └── app.js                      # Lógica interactiva y DatabaseManager (Import/Export/Reset)
+├── .gitignore                      # Archivos y carpetas ignorados por Git
+└── README.md                       # Documentación detallada del proyecto
 ```
 
 ---
