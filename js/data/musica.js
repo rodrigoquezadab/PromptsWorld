@@ -1,5 +1,5 @@
 /**
- * PROMPTS DE MÚSICA & AUDIO IA (20 Prompts)
+ * PROMPTS DE MÚSICA & AUDIO IA (22 Prompts)
  */
 const PROMPTS_MUSICA = [
   {
@@ -401,5 +401,64 @@ Diseña el sistema de música adaptativa:
 2. Capa de Tensión (Sospecha / Alerta): Entrada de percusión de reloj y sintetizadores en staccato.
 3. Capa de Combate Total: Metales potentes, batería completa y guitarras distorsionadas.
 4. Reglas de Transición (Stinger de alerta y compás de sincronización para que el cambio no se sienta cortado).`
+  },
+  {
+    id: "mus-21",
+    title: "Música de Meditación Instrumental en Loop Continuo (Suno, Udio & IA)",
+    category: "musica",
+    categoryLabel: "Música & Audio",
+    icon: "music",
+    tags: ["Meditación", "Seamless Loop", "Suno AI", "Udio", "Ambient", "Mindfulness"],
+    models: ["Suno v3.5 / v4", "Udio v1.5", "ChatGPT-4o", "Claude 3.5 Sonnet"],
+    description: "Genera música instrumental relajante para meditación, spa y yoga configurada en bucle infinito (seamless loop) sin cortes, saltos ni clímax.",
+    variables: [
+      { name: "ENFOQUE_MEDITACION", label: "Enfoque / Ambiente", placeholder: "ej. Deep relaxation, spa, yoga, mindfulness atmosphere" },
+      { name: "INSTRUMENTACION", label: "Instrumentos y Texturas", placeholder: "ej. Soft pads, gentle Tibetan singing bowls, warm analog synth textures, minimal percussion" },
+      { name: "TEMPO_TONALIDAD", label: "Tempo y Tonalidad", placeholder: "ej. 50–60 BPM, Key: D major or A minor" }
+    ],
+    template: `Actúa como Productor Musical Especialista en Música Ambient y Generación por IA (Suno / Udio).
+Enfoque: [ENFOQUE_MEDITACION].
+Instrumentación: [INSTRUMENTACION].
+Tempo/Tonalidad: [TEMPO_TONALIDAD].
+
+Genera la configuración y prompt sonoro optimizado:
+
+1. **Prompt Principal (Copy-Paste para Suno / Udio)**:
+"Instrumental meditation music, no vocals, no lyrics, seamless loop, ambient and calming. [INSTRUMENTACION], slow tempo ([TEMPO_TONALIDAD]). [ENFOQUE_MEDITACION]. Smooth fade-in and fade-out, consistent volume throughout, no sudden changes, no build-up or climax — designed to repeat infinitely without noticeable transitions. Ethereal and peaceful mood."
+
+2. **Variante Binaural / Ambient Profundo**:
+"Pure instrumental ambient meditation track, no voice, no lyrics, loopable. Deep drone bass, soft flute or pan flute, subtle 432Hz or 528Hz tuning, gentle nature textures (light wind, distant water) blended low in the mix. Extremely slow, static tempo, no drums, no percussion, no melodic progression — just sustained evolving tones. Seamless start and end points for perfect looping. Peaceful, spacious, meditative, healing atmosphere."
+
+3. **Tips de Producción para Loops Perfectos**:
+- Pide explícitamente "seamless loop" y "no build-up, no climax" para evitar que el modelo cree picos que rompan el bucle.
+- En herramientas con selección de duración, genera clips cortos (1–3 min) y duplícalos en tu editor/DAW para transiciones perfectas.
+- Define siempre el tempo en BPM para mantener coherencia métrica exacta en los puntos de corte.`
+  },
+  {
+    id: "mus-22",
+    title: "Generador de Frecuencias Binaurales y Ambient Curativo (432Hz / 528Hz Drone)",
+    category: "musica",
+    categoryLabel: "Música & Audio",
+    icon: "music",
+    tags: ["Binaural", "432Hz", "528Hz", "Drone", "Sound Healing", "Ambient"],
+    models: ["Suno v3.5 / v4", "Udio v1.5", "ChatGPT-4o", "Claude 3.5 Sonnet"],
+    description: "Crea paisajes sonoros estáticos y frecuencias de sanación (432Hz/528Hz) con texturas de la naturaleza y drones continuos para bucles sin fin.",
+    variables: [
+      { name: "FRECUENCIA_SOLFEGGIO", label: "Frecuencia o Sintonía", placeholder: "ej. 432Hz (Claridad mental) o 528Hz (Transformación y calma)" },
+      { name: "ELEMENTOS_ORGANICOS", label: "Elementos Orgánicos y Texturas", placeholder: "ej. Soft flute or pan flute, gentle nature textures (light wind, distant water) blended low in the mix" }
+    ],
+    template: `Actúa como Diseñador Sonoro de Frecuencias de Bienestar y Sound Healing para IA Musical.
+Frecuencia/Objetivo: [FRECUENCIA_SOLFEGGIO].
+Elementos: [ELEMENTOS_ORGANICOS].
+
+Entrega el prompt y directrices sonoras optimizadas:
+
+1. **Prompt para IA Sonora (Suno / Udio / Herramientas de Audio IA)**:
+"Pure instrumental ambient meditation track, no voice, no lyrics, loopable. Deep drone bass, [ELEMENTOS_ORGANICOS], subtle [FRECUENCIA_SOLFEGGIO] tuning. Extremely slow, static tempo, no drums, no percussion, no melodic progression — just sustained evolving tones. Seamless start and end points for perfect looping. Peaceful, spacious, meditative, healing atmosphere."
+
+2. **Parámetros Clave para el Loop**:
+- Mantener tempo estático y nula progresión melódica agresiva.
+- Puntos de inicio y fin continuos para repetición sin interrupción auditiva.
+- Mezcla con texturas orgánicas a bajo volumen (low in the mix).`
   }
 ];

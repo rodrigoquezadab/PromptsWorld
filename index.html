@@ -40,6 +40,32 @@
         </div>
       </a>
 
+      <!-- Navigation Tabs Switcher -->
+      <nav class="header-nav-tabs" aria-label="Secciones">
+        <button id="navTabPrompts" class="nav-tab active" data-view="prompts" aria-pressed="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+          <span>Prompts</span>
+          <span class="nav-count-badge">280+</span>
+        </button>
+        <button id="navTabGemini" class="nav-tab" data-view="gemini" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"></path>
+          </svg>
+          <span>Códigos Gemini</span>
+          <span class="nav-count-badge badge-gemini">100 Atajos</span>
+        </button>
+        <button id="navTabConfig" class="nav-tab" data-view="config" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Instrucciones Gemini</span>
+          <span class="nav-count-badge badge-config">Configuración</span>
+        </button>
+      </nav>
+
       <div class="header-actions">
         <button id="headerFavBtn" class="btn-icon" aria-label="Ver prompts favoritos" title="Ver Favoritos">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -61,75 +87,399 @@
   <!-- Main Content Container -->
   <main class="container">
     
-    <!-- Hero Banner -->
-    <section class="hero">
-      <div class="hero-pill">
-        <span class="hero-pill-dot"></span>
-        <span>Biblioteca Curada para Modelos de Última Generación</span>
-      </div>
-      <h1 class="hero-title">
-        Domina la IA con <span class="gradient-text">Prompts Maestros</span>
-      </h1>
-      <p class="hero-description">
-        Plantillas profesionales probadas para ChatGPT-4o, Claude 3.5, Gemini 1.5 Pro y DeepSeek. Rellena variables en vivo y optimiza tu flujo de trabajo al instante.
-      </p>
-    </section>
-
-    <!-- Search & Filter Controls -->
-    <section class="search-section" aria-label="Búsqueda y Filtros de Prompts">
+    <!-- ================================================================
+         SECCIÓN 1: BIBLIOTECA DE PROMPTS MAESTROS (280+ PROMPTS)
+         ================================================================ -->
+    <div id="sectionPrompts" class="app-section active">
       
-      <!-- Instant Search Input -->
-      <div class="search-bar-wrapper">
-        <span class="search-icon-left" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </span>
-        <input 
-          type="text" 
-          id="searchInput" 
-          class="search-input" 
-          placeholder="Buscar por tarea, etiqueta o modelo (ej. 'Code Review', 'SEO', 'SQL')..." 
-          autocomplete="off"
-          aria-label="Buscar prompts por palabras clave"
-        >
-        <button id="searchClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Categories Pills -->
-      <div class="categories-wrapper">
-        <nav class="categories-list" id="categoriesList" aria-label="Categorías de Prompts">
-          <!-- Rendered dynamically by app.js -->
-        </nav>
-      </div>
-
-      <!-- Status & Quick Filter -->
-      <div class="status-bar">
-        <div class="status-count">
-          Mostrando <strong id="promptsCount">0</strong> prompts disponibles
+      <!-- Hero Banner Prompts -->
+      <section class="hero">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>Biblioteca Curada para Modelos de Última Generación</span>
         </div>
-        <div class="filter-pills">
-          <button id="favFilterBtn" class="filter-pill-fav" aria-label="Filtrar solo favoritos">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        <h1 class="hero-title">
+          Domina la IA con <span class="gradient-text">Prompts Maestros</span>
+        </h1>
+        <p class="hero-description">
+          Plantillas profesionales probadas para ChatGPT-4o, Claude 3.5, Gemini 1.5 Pro y DeepSeek. Rellena variables en vivo y optimiza tu flujo de trabajo al instante.
+        </p>
+      </section>
+
+      <!-- Search & Filter Controls Prompts -->
+      <section class="search-section" aria-label="Búsqueda y Filtros de Prompts">
+        
+        <!-- Instant Search Input -->
+        <div class="search-bar-wrapper">
+          <span class="search-icon-left" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <span>Solo Favoritos</span>
+          </span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Buscar por tarea, etiqueta o modelo (ej. 'Code Review', 'SEO', 'SQL')..." 
+            autocomplete="off"
+            aria-label="Buscar prompts por palabras clave"
+          >
+          <button id="searchClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </button>
         </div>
-      </div>
 
-    </section>
+        <!-- Categories Pills Prompts -->
+        <div class="categories-wrapper">
+          <nav class="categories-list" id="categoriesList" aria-label="Categorías de Prompts">
+            <!-- Rendered dynamically by app.js -->
+          </nav>
+        </div>
 
-    <!-- Prompts Cards Grid -->
-    <section class="prompts-grid" id="promptsGrid" aria-label="Lista de Prompts">
-      <!-- Injected by app.js -->
-    </section>
+        <!-- Status & Quick Filter Prompts -->
+        <div class="status-bar">
+          <div class="status-count">
+            Mostrando <strong id="promptsCount">0</strong> prompts disponibles
+          </div>
+          <div class="filter-pills">
+            <button id="favFilterBtn" class="filter-pill-fav" aria-label="Filtrar solo favoritos">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span>Solo Favoritos</span>
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Prompts Cards Grid -->
+      <section class="prompts-grid" id="promptsGrid" aria-label="Lista de Prompts">
+        <!-- Injected by app.js -->
+      </section>
+
+    </div>
+
+    <!-- ================================================================
+         SECCIÓN 2: CÓDIGOS SECRETOS PARA GEMINI (100 CÓDIGOS DE MAVERICK)
+         ================================================================ -->
+    <div id="sectionGemini" class="app-section" style="display: none;">
+      
+      <!-- Hero Banner Gemini -->
+      <section class="hero hero-gemini">
+        <div class="hero-pill gemini-pill">
+          <span class="hero-pill-dot gemini-dot"></span>
+          <span>Google Gemini 1.5 & 2.0 • Maverick's Secret Codes</span>
+        </div>
+        <h1 class="hero-title">
+          Atajos Maestros & <span class="gradient-gemini">Códigos Secretos</span>
+        </h1>
+        <p class="hero-description">
+          100 atajos y modificadores organizados en 9 categorías. Cada código cambia la forma en que Gemini responde al forzar un modo de ejecución, formato estructurado o patrón de razonamiento específico.
+        </p>
+
+        <!-- Quick Syntax Guide Pills -->
+        <div class="gemini-tips-grid">
+          <div class="gemini-tip-card">
+            <div class="gemini-tip-icon">@</div>
+            <div class="gemini-tip-text">
+              <strong>Extensiones Workspace</strong>
+              <span>Conecta con Gmail, Drive, Docs, Sheets, Maps, YouTube y Calendario.</span>
+            </div>
+          </div>
+          <div class="gemini-tip-card">
+            <div class="gemini-tip-icon">/</div>
+            <div class="gemini-tip-text">
+              <strong>Comandos /Slash</strong>
+              <span>Activa Deep Research, Fact-Checking en vivo, tono de voz o mentoría.</span>
+            </div>
+          </div>
+          <div class="gemini-tip-card">
+            <div class="gemini-tip-icon">⚡</div>
+            <div class="gemini-tip-text">
+              <strong>Directivas de Formato</strong>
+              <span>Fuerza estructuras en MATRIX, SNAPSHOT, ONEPAGER, CANVAS o DASHBOARD.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search & Filter Controls Gemini -->
+      <section class="search-section" aria-label="Búsqueda y Filtros de Códigos Gemini">
+        
+        <!-- Search Input Gemini -->
+        <div class="search-bar-wrapper">
+          <span class="search-icon-left" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input 
+            type="text" 
+            id="searchGeminiInput" 
+            class="search-input" 
+            placeholder="Buscar códigos por nombre, función o caso de uso (ej. '/factcheck', '@Gmail', 'MATRIX')..." 
+            autocomplete="off"
+            aria-label="Buscar códigos de Gemini por palabras clave"
+          >
+          <button id="searchGeminiClearBtn" class="search-clear-btn" aria-label="Limpiar búsqueda de códigos">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Filter by Syntax Type -->
+        <div class="gemini-type-filters" id="geminiTypeFilters">
+          <button class="type-filter-chip active" data-type="all">Todos los Tipos (100)</button>
+          <button class="type-filter-chip" data-type="workspace">
+            <span class="type-dot type-dot-workspace"></span>
+            @Workspace (12)
+          </button>
+          <button class="type-filter-chip" data-type="command">
+            <span class="type-dot type-dot-command"></span>
+            /Comandos Slash (38)
+          </button>
+          <button class="type-filter-chip" data-type="directive">
+            <span class="type-dot type-dot-directive"></span>
+            Directivas & Modos (50)
+          </button>
+        </div>
+
+        <!-- Categories Pills Gemini (9 categories from PDF) -->
+        <div class="categories-wrapper">
+          <nav class="categories-list" id="geminiCategoriesList" aria-label="Categorías de Códigos Gemini">
+            <!-- Rendered dynamically by app.js -->
+          </nav>
+        </div>
+
+        <!-- Status & Favorites Filter Gemini -->
+        <div class="status-bar">
+          <div class="status-count">
+            Mostrando <strong id="geminiCount">100</strong> códigos disponibles
+          </div>
+          <div class="filter-pills">
+            <button id="geminiFavFilterBtn" class="filter-pill-fav" aria-label="Filtrar solo códigos favoritos">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span>Solo Favoritos</span>
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Gemini Codes Cards Grid -->
+      <section class="gemini-grid" id="geminiGrid" aria-label="Lista de Códigos Gemini">
+        <!-- Injected by app.js -->
+      </section>
+
+    </div>
+
+    <!-- ================================================================
+         SECCIÓN 3: CONFIGURACIÓN & INSTRUCCIONES PARA GEMINI
+         ================================================================ -->
+    <div id="sectionConfig" class="app-section" style="display: none;">
+      
+      <!-- Hero Banner Config -->
+      <section class="hero hero-config">
+        <div class="hero-pill config-pill">
+          <span class="hero-pill-dot config-dot"></span>
+          <span>Google Gemini • Guía de Contexto Personal Permanente</span>
+        </div>
+        <h1 class="hero-title">
+          Ruta de Configuración: <span class="gradient-gemini">Instrucciones para Gemini</span>
+        </h1>
+        <p class="hero-description">
+          Configura tus instrucciones permanentes en Google Gemini para que el modelo recuerde siempre tu profesión, tono preferido, restricciones y formato sin tener que repetirlo en cada nuevo chat.
+        </p>
+
+        <!-- Official Path Banner (Ruta Oficial Solicitada) -->
+        <div class="gemini-path-banner">
+          <div class="gemini-path-label">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>Ruta Oficial en Google Gemini:</span>
+          </div>
+          <div class="gemini-path-breadcrumbs">
+            <span class="path-step">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              Configuración
+            </span>
+            <span class="path-arrow">➔</span>
+            <span class="path-step">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              Contexto personal
+            </span>
+            <span class="path-arrow">➔</span>
+            <span class="path-step highlight">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              "Instrucciones para Gemini"
+            </span>
+          </div>
+          <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="btn-action-primary path-btn-open">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Abrir Google Gemini</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Step by Step Visual Flow -->
+      <section class="config-steps-section">
+        <h2 class="config-section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          Paso a Paso para Acceder en Google Gemini
+        </h2>
+        <div class="config-steps-grid">
+          
+          <div class="config-step-card">
+            <div class="config-step-number">1</div>
+            <div class="config-step-content">
+              <h3>Ingresa a Gemini</h3>
+              <p>Abre <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="inline-link">gemini.google.com</a> e inicia sesión con tu cuenta de Google.</p>
+            </div>
+          </div>
+
+          <div class="config-step-card">
+            <div class="config-step-number">2</div>
+            <div class="config-step-content">
+              <h3>Haz clic en Configuración</h3>
+              <p>Ubica el menú lateral izquierdo y haz clic en el ícono de <strong>⚙️ Configuración</strong> (abajo a la izquierda).</p>
+            </div>
+          </div>
+
+          <div class="config-step-card">
+            <div class="config-step-number">3</div>
+            <div class="config-step-content">
+              <h3>Selecciona "Contexto personal"</h3>
+              <p>En el panel de opciones de configuración, haz clic sobre <strong>👤 Contexto personal</strong>.</p>
+            </div>
+          </div>
+
+          <div class="config-step-card highlight-step">
+            <div class="config-step-number">4</div>
+            <div class="config-step-content">
+              <h3>Elige "Instrucciones para Gemini"</h3>
+              <p>Accede a la opción <strong>📝 "Instrucciones para Gemini"</strong> para abrir el editor de directrices fijas.</p>
+            </div>
+          </div>
+
+          <div class="config-step-card">
+            <div class="config-step-number">5</div>
+            <div class="config-step-content">
+              <h3>Pega tu Configuración y Guarda</h3>
+              <p>Pega tu instrucción personalizada generada o una de las plantillas de abajo y presiona <strong>Guardar</strong>.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Interactive Generator for Instructions -->
+      <section class="instructions-builder-section">
+        <div class="builder-header">
+          <div class="builder-badge">Generador Interactivo</div>
+          <h2 class="config-section-title">Genera tus Instrucciones para Gemini a Medida</h2>
+          <p class="config-section-desc">Personaliza tus reglas clave y copia el bloque de texto exacto listo para pegar en tu contexto personal.</p>
+        </div>
+
+        <div class="builder-card">
+          <div class="builder-form-grid">
+            
+            <div class="builder-field">
+              <label class="form-label" for="builderRole">Tu Perfil o Profesión:</label>
+              <select id="builderRole" class="form-input">
+                <option value="dev">Desarrollador de Software / Programador Senior</option>
+                <option value="pm">Product Manager / Fundador de Startups</option>
+                <option value="copy">Copywriter / Creador de Contenido</option>
+                <option value="data">Analista de Datos / Finanzas</option>
+                <option value="academic">Investigador / Académico & Fact-Checker</option>
+                <option value="general">Profesional General (Máxima Eficiencia & Sin Relleno)</option>
+              </select>
+            </div>
+
+            <div class="builder-field">
+              <label class="form-label" for="builderTone">Tono y Nivel de Profundidad:</label>
+              <select id="builderTone" class="form-input">
+                <option value="direct">Directo al grano, sin saludos vacíos ni rodeos</option>
+                <option value="technical">Técnico y riguroso, priorizando código limpio y arquitectura</option>
+                <option value="pedagogical">Didáctico y formativo, con analogías y explicaciones claras</option>
+                <option value="executive">Ejecutivo y estratégico, con viñetas y métricas de ROI</option>
+              </select>
+            </div>
+
+            <div class="builder-field full-width">
+              <label class="form-label">Reglas y Restricciones Obligatorias:</label>
+              <div class="builder-checkboxes">
+                <label class="checkbox-pill">
+                  <input type="checkbox" id="ruleNoFluff" checked>
+                  <span>Cero relleno y sin frases cliché de IA</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" id="ruleCodeBestPractices" checked>
+                  <span>Código listo para producción (SOLID / Clean Code)</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" id="ruleSources" checked>
+                  <span>Citar fuentes y enlaces cuando busque en tiempo real</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" id="ruleMarkdown" checked>
+                  <span>Formatear con Markdown limpio, tablas y viñetas</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" id="ruleSpanish" checked>
+                  <span>Responder en Español neutro, profesional y fluido</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" id="ruleAskBeforeAssuming">
+                  <span>Preguntar antes de asumir si falta información crítica</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Preview & Copy -->
+          <div class="builder-preview-box">
+            <div class="builder-preview-header">
+              <div class="preview-title-group">
+                <span class="preview-title">Texto listo para pegar en "Instrucciones para Gemini":</span>
+                <span class="preview-badge-status" id="builderCharCount">0 caracteres</span>
+              </div>
+              <button id="builderCopyBtn" class="btn-action-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copiar Instrucciones</span>
+              </button>
+            </div>
+            <pre id="builderPreviewText" class="builder-code-output"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ready-to-Use Templates for Gemini Instructions -->
+      <section class="instructions-templates-section">
+        <h2 class="config-section-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Plantillas Maestras Recomendadas
+        </h2>
+        <p class="config-section-desc">Plantillas completas testeadas para copiar con 1 solo clic y guardar en tu contexto personal:</p>
+
+        <div class="templates-grid" id="geminiInstructionsTemplates">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </section>
+
+    </div>
 
   </main>
 
@@ -151,12 +501,39 @@
       </div>
 
       <div class="modal-body">
-        <form id="modalFormFields" onsubmit="event.preventDefault();">
-          <!-- Inputs dynamically rendered -->
-        </form>
+        <!-- Columna Izquierda: Formulario de Variables -->
+        <div class="modal-col-form">
+          <div class="modal-section-header">
+            <span class="modal-section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+              Variables a Personalizar
+            </span>
+            <span class="modal-badge-count" id="modalVarsCount">0 variables</span>
+          </div>
+          <form id="modalFormFields" onsubmit="event.preventDefault();" class="modal-form-scroll">
+            <!-- Inputs dynamically rendered -->
+          </form>
+        </div>
 
-        <div class="modal-preview-title">Vista Previa en Tiempo Real:</div>
-        <pre class="modal-preview-content" id="modalPreview"></pre>
+        <!-- Columna Derecha: Vista Previa Amplia -->
+        <div class="modal-col-preview">
+          <div class="modal-section-header">
+            <span class="modal-section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              Vista Previa en Tiempo Real
+            </span>
+            <span class="modal-badge-stats" id="modalPreviewStats">0 líneas</span>
+          </div>
+          <div class="modal-preview-wrapper">
+            <pre class="modal-preview-content" id="modalPreview"></pre>
+          </div>
+        </div>
       </div>
 
       <div class="modal-footer">
@@ -179,10 +556,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-copy">
-        © 2026 <strong>PromptHub</strong>. Desarrollado con HTML5, Vanilla CSS y JS. Modo oscuro activado por defecto.
+        © 2026 <strong>PromptHub</strong>. Desarrollado con HTML5, Vanilla CSS y JS. Incluye 280+ Prompts Maestros y 100 Códigos Secretos para Gemini.
       </div>
       <div class="footer-links">
         <a href="#searchInput" class="footer-link">Buscar Prompts</a>
+        <a href="#searchGeminiInput" class="footer-link" id="footerGeminiLink">Códigos Gemini</a>
+        <a href="#config" class="footer-link" id="footerConfigLink">Instrucciones Gemini</a>
         <a href="https://github.com/rodrigoquezadab/PromptsWorld" target="_blank" rel="noopener noreferrer" class="footer-link">Contribuir en GitHub</a>
       </div>
     </div>
@@ -203,6 +582,9 @@
   <script src="js/data/ciberseguridad.js"></script>
   <script src="js/data/legal.js"></script>
   <script src="js/data/bienestar.js"></script>
+
+  <!-- Códigos Secretos para Gemini (100 Atajos Organizados de Maverick) -->
+  <script src="js/data/gemini-codes.js"></script>
   
   <!-- Scripts Principales de la Aplicación -->
   <script src="js/prompts-data.js"></script>

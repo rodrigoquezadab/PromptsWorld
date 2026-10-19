@@ -65,16 +65,64 @@ El repositorio incluye prompts organizados en 14 áreas de alta demanda (20 prom
 
 ---
 
+## ✨ Códigos Secretos para Google Gemini (Maverick's 100 Secret Codes)
+
+Además de los prompts maestros, la plataforma incorpora una sección exclusiva con los **100 Códigos Secretos y Atajos de Maverick para Google Gemini** (`Mavericks_Gemini_Secret_Codes.pdf`). Cada código altera el modo de respuesta, fuerza un formato o activa extensiones nativas de Gemini:
+
+| Categoría Gemini | Cantidad | Tipos de Códigos | Casos de Uso Destacados |
+| :--- | :---: | :--- | :--- |
+| 🌐 **Google Integration** | 12 | `@Workspace` | `@Gmail`, `@Drive`, `@Docs`, `@Sheets`, `@Calendar`, `@Maps`, `@YouTube`, `@Keep`, `@Tasks`, `@Flights`, `@Slides`, `@Contacts`. Sincroniza correos, citas y documentos en tiempo real. |
+| 🔍 **Research & Fact-Checking** | 11 | `/Comando` & `MODO` | `/factcheck`, `/deepresearch`, `/source`, `/trending`, `/latest`, `/crosscheck`, `/evidence`, `/mythbust`, `CITETHIS`, `DATAMINE`, `ORIGINSCAN`. Verificación en vivo y rigor analítico. |
+| ✍️ **Writing & Editing** | 11 | `/Comando` | `/polish`, `/tighten`, `/voice`, `/hook`, `/closer`, `/pivot`, `/warmup`, `/punch`, `/trim`, `/mirror`, `/deAI`. Modela el tono, elimina clichés de IA y redacta aperturas magnéticas. |
+| 💡 **Explanation & Learning** | 11 | `/Comando` & `MODO` | `EL5`, `ONEPAGER`, `/mentor`, `DUMBITDOWN`, `/gapfinder`, `WALKTHROUGH`, `METAPHOR`, `LAYERS`, `/masterclass`, `TEACHBACK`, `VISUALIZE`. Desglose pedagógico multinivel. |
+| 🎯 **Analysis & Strategy** | 11 | `/Comando` & `MODO` | `/compare`, `FUNNELMAP`, `/audit`, `BLINDSPOT`, `GAMEBOARD`, `/forecast`, `LEVERAGE`, `BATTLECARD`, `/diagnose`, `PLAYBOOK`, `COSTBENEFIT`. Matrices de decisión y diagnóstico de raíz. |
+| 🚀 **Creative & Content** | 11 | `/Comando` & `MODO` | `future`, `WHATIF`, `SCENARIOPLAY`, `/angle`, `CAPTIONGEN`, `HEADLINEGEN`, `/adspin`, `VIRALTEST`, `REPURPOSE`, `/mashup`, `PLOTTWIST`. Ideación disruptiva y creación omnicanal. |
+| 🧠 **Thinking & Reasoning** | 11 | `/Comando` & `MODO` | `INVERSION`, `PREMORTEM`, `/stakeholders`, `ROOTCAUSE`, `DOMINO`, `THINKTANK`, `CONTRARIAN`, `CONSTRAINTS`, `TRADEOFFS`, `FRAMEIT`, `BLINDTEST`. Modelos mentales avanzados. |
+| 📊 **Formatting & Output** | 11 | `/Comando` & `MODO` | `SNAPSHOT`, `MATRIX`, `SCORECARD`, `DASHBOARD`, `BRIEFING`, `ONESHEET`, `ACTIONPLAN`, `CHEATSHEET`, `CATALOG`, `/wireframe`, `CANVAS`. Formatos ejecutivos y paneles editables. |
+| ⚡ **Utility & Power Commands** | 11 | `/Comando` | `/persona`, `/template`, `/chain`, `/split`, `/extract`, `/track`, `/batch`, `/gemify`, `/lingua`, `/contextdump`, `/memorize`. Instrucciones de sistema, cadenas y memoria persistente. |
+
+---
+
+## ⚙️ Configuración y Contexto Personal: "Instrucciones para Gemini"
+
+Para que Gemini responda siempre según tus preferencias profesionales sin tener que recordárselo en cada conversación, la aplicación incluye una sección dedicada a las **Instrucciones Personalizadas** de Gemini:
+
+### 📍 Ruta Oficial en Google Gemini
+```text
+Configuración ➔ Contexto personal ➔ "Instrucciones para Gemini"
+(Settings ➔ Personal context ➔ "Instructions for Gemini")
+```
+
+### 🧭 Pasos para Configurarlo en Google Gemini:
+1. **Abrir Gemini**: Accede a [gemini.google.com](https://gemini.google.com).
+2. **Entrar en Configuración**: Haz clic en el ícono de engranaje ⚙️ **Configuración** en la esquina inferior izquierda del menú lateral.
+3. **Acceder a Contexto personal**: Selecciona la opción **Contexto personal** (*Personal context*).
+4. **Abrir "Instrucciones para Gemini"**: Haz clic sobre la opción **"Instrucciones para Gemini"** (*Instructions for Gemini*).
+5. **Pegar tu plantilla o instrucción personalizada**: Pega las directivas generadas con nuestro constructor o una de las plantillas maestras y guarda los cambios.
+
+### 🛠️ Constructor Interactivo & Plantillas Maestras Incluidas:
+- **Constructor en Vivo**: Selecciona tu rol (Desarrollador Senior, Copywriter, Investigador, etc.), tono de respuesta (Directo, Técnico, Ejecutivo, etc.), y reglas fijas (cero saludos, Markdown limpio, ejemplos ejecutables, citar fuentes) con vista previa instantánea y copiado con 1 clic.
+- **6 Plantillas Maestras Predefinidas**:
+  1. *Desarrollador & Arquitecto de Software Senior* (código limpio, tipado estricto, sin boilerplate innecesario).
+  2. *Anti-Fluff & Concisión Máxima Universal* (0% relleno, directo al grano).
+  3. *Product Manager & Estratega de Producto* (impacto de negocio, trade-offs, OKRs).
+  4. *Copywriter & Creador de Contenido de Alta Conversión* (ganchos irresistibles, sin clichés de IA).
+  5. *Investigador Académico & Fact-Checker* (fuentes verificadas, distinción entre hechos e hipótesis).
+  6. *Analista de Datos Cuantitativo & BI* (SQL optimizado, fórmulas explicadas y métricas clave).
+
+---
+
 ## 📁 Estructura del Proyecto
 
 ```
 Prompts/
-├── index.html          # Estructura semántica, accesibilidad y meta tags SEO
+├── index.html          # Estructura semántica, accesibilidad, pestañas y meta tags SEO
+├── Mavericks_Gemini_Secret_Codes.pdf # Documento original de 100 códigos de Gemini
 ├── css/
-│   ├── style.css       # Sistema de diseño: variables CSS, modo oscuro, layout mobile-first
+│   ├── style.css       # Sistema de diseño: variables CSS, modo oscuro, layout mobile-first y estilos Gemini
 │   └── animations.css  # Animaciones, transiciones, toasts y microinteracciones
 ├── js/
-│   ├── data/           # Módulos de prompts estructurados (20 por categoría = 280 total)
+│   ├── data/           # Módulos de datos estructurados
 │   │   ├── desarrollo.js     # 20 prompts de Programación, DevOps y Arquitectura
 │   │   ├── redaccion.js      # 20 prompts de Copywriting, SEO, Guiones y Storytelling
 │   │   ├── marketing.js      # 20 prompts de Estrategia B2B/B2C, Ads, Funnels y Ventas
@@ -88,9 +136,10 @@ Prompts/
 │   │   ├── video.js          # 20 prompts de Video y Animación (Runway, Sora, Luma)
 │   │   ├── ciberseguridad.js # 20 prompts de Hacking Ético, Pentesting y Hardening
 │   │   ├── legal.js          # 20 prompts de Contratos, Privacidad y Compliance
-│   │   └── bienestar.js      # 20 prompts de Fitness, Nutrición, Sueño y Longevidad
-│   ├── prompts-data.js # Unificador del catálogo global y categorías
-│   └── app.js          # Lógica interactiva (búsqueda, filtros, personalizador, favoritos)
+│   │   ├── bienestar.js      # 20 prompts de Fitness, Nutrición, Sueño y Longevidad
+│   │   └── gemini-codes.js   # 100 Códigos Secretos para Gemini organizados en 9 categorías
+│   ├── prompts-data.js # Unificador del catálogo global de prompts
+│   └── app.js          # Lógica interactiva (búsqueda dual, tabs, filtros, personalizador, favoritos)
 ├── .gitignore          # Archivos y carpetas ignorados por Git
 └── README.md           # Documentación detallada del proyecto
 ```
