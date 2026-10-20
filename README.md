@@ -44,7 +44,7 @@ Muchos usuarios y desarrolladores pierden tiempo redactando instrucciones genér
 
 ## 📚 Categorías Incluidas
 
-El repositorio incluye prompts organizados en 14 áreas de alta demanda (20 prompts por categoría = **280 prompts curados** en total):
+El repositorio incluye prompts organizados en 15 áreas temáticas especializadas (más de **280 prompts curados** en total):
 
 | Categoría | Casos de Uso Destacados | Modelos Recomendados |
 | :--- | :--- | :--- |
@@ -61,7 +61,7 @@ El repositorio incluye prompts organizados en 14 áreas de alta demanda (20 prom
 | 🎬 **Video & Animación IA** | Prompts con movimiento de cámara para Runway Gen-3 / Sora / Luma, Storyboards técnicos, Videos explicativos 2D, Edición de alta retención, FPV Drones. | Runway Gen-3, Sora, Luma, Kling |
 | 🛡️ **Ciberseguridad & Pentesting** | Auditoría OWASP Top 10, Modelado de amenazas STRIDE, Playbooks de Respuesta a Incidentes, Auditoría Smart Contracts Solidity, Hardening Linux, Forense RAM. | Claude 3.5 Sonnet, ChatGPT-4o, DeepSeek-V3 |
 | ⚖️ **Legal & Compliance** | Contratos de confidencialidad (NDA), Auditoría RGPD/GDPR, Master Services Agreement (MSA), Términos SaaS (ToS), Pactos de Socios Vesting, EU AI Act. | Claude 3.5 Sonnet, ChatGPT-4o |
-| 🏃 **Salud & Bienestar** | Planes de fuerza e hipertrofia, Cálculo de macros IIFYM, Protocolos de sueño circadiano, Ergonomía de escritorio, Longevidad (Peter Attia), Mindfulness. | Claude 3.5 Sonnet, ChatGPT-4o |
+| ⛪ **Parroquia San Patricio** | Comunicados y avisos parroquiales en 2 modalidades (completa con horarios de misas/confesiones o rápida con solo dirección y secretaría), sin asteriscos para copiar y pegar directamente, y directriz de uso exclusivo del logo oficial. | ChatGPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro |
 
 ---
 

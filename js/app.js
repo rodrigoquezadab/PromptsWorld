@@ -30,7 +30,8 @@
     scale: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"></path><path d="M2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>',
     activity: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>',
     globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>',
-    sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"></path></svg>'
+    sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z"></path></svg>',
+    church: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22V11l-6-5-6 5v11h12z"></path><path d="M12 2v4"></path><path d="M10 4h4"></path><path d="M10 22v-5a2 2 0 0 1 4 0v5"></path></svg>'
   };
 
   // --- State ---
@@ -394,7 +395,9 @@
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
-    return escaped.replace(/\[([A-Z0-9_ÁÉÍÓÚÑ]+)\]/g, '<span class="var-tag">[$1]</span>');
+    return escaped
+      .replace(/\[([A-Z0-9_ÁÉÍÓÚÑ]+)\]/g, '<span class="var-tag">[$1]</span>')
+      .replace(/\[(ESCRIBE AQUÍ EL TEMA, FECHA Y DETALLES DE LA ACTIVIDAD O NOTICIA)\]/g, '<span class="var-tag">[$1]</span>');
   }
 
   // --- Filtering & Searching ---
@@ -975,6 +978,9 @@ Directrices para tus respuestas:
       const placeholder = `[${varName}]`;
       if (val) {
         result = result.split(placeholder).join(val);
+        if (varName === 'TEMA_Y_DETALLES_ACTIVIDAD') {
+          result = result.split('[ESCRIBE AQUÍ EL TEMA, FECHA Y DETALLES DE LA ACTIVIDAD O NOTICIA]').join(val);
+        }
       }
     });
 
@@ -1023,8 +1029,14 @@ Directrices para tus respuestas:
         if (replacements[v.name]) {
           const valEscaped = escapeHtml(replacements[v.name]);
           formatted = formatted.split(placeholderEscaped).join(`<span class="preview-highlight-filled">${valEscaped}</span>`);
+          if (v.name === 'TEMA_Y_DETALLES_ACTIVIDAD') {
+            formatted = formatted.split(escapeHtml('[ESCRIBE AQUÍ EL TEMA, FECHA Y DETALLES DE LA ACTIVIDAD O NOTICIA]')).join(`<span class="preview-highlight-filled">${valEscaped}</span>`);
+          }
         } else {
           formatted = formatted.split(placeholderEscaped).join(`<span class="preview-highlight-placeholder">[${escapeHtml(v.name)}]</span>`);
+          if (v.name === 'TEMA_Y_DETALLES_ACTIVIDAD') {
+            formatted = formatted.split(escapeHtml('[ESCRIBE AQUÍ EL TEMA, FECHA Y DETALLES DE LA ACTIVIDAD O NOTICIA]')).join(`<span class="preview-highlight-placeholder">[${escapeHtml(v.name)}]</span>`);
+          }
         }
       });
     }

@@ -21,7 +21,8 @@ const CATEGORIES_DATA = (typeof window !== 'undefined' && window.PROMPTS_WORLD_D
       { id: "video", label: "Video & Animación", icon: "video" },
       { id: "ciberseguridad", label: "Ciberseguridad", icon: "shield" },
       { id: "legal", label: "Legal & Compliance", icon: "scale" },
-      { id: "bienestar", label: "Salud & Bienestar", icon: "activity" }
+      { id: "bienestar", label: "Salud & Bienestar", icon: "activity" },
+      { id: "parroquia-san-patricio", label: "Parroquia San Patricio", icon: "church" }
     ];
 
 const PROMPTS_DATA = (typeof window !== 'undefined' && window.PROMPTS_WORLD_DEFAULT_DATABASE && Array.isArray(window.PROMPTS_WORLD_DEFAULT_DATABASE.prompts))
@@ -40,6 +41,7 @@ const PROMPTS_DATA = (typeof window !== 'undefined' && window.PROMPTS_WORLD_DEFA
       ...(typeof PROMPTS_VIDEO !== 'undefined' ? PROMPTS_VIDEO : []),
       ...(typeof PROMPTS_CIBERSEGURIDAD !== 'undefined' ? PROMPTS_CIBERSEGURIDAD : []),
       ...(typeof PROMPTS_LEGAL !== 'undefined' ? PROMPTS_LEGAL : []),
-      ...(typeof PROMPTS_BIENESTAR !== 'undefined' ? PROMPTS_BIENESTAR : [])
+      ...(typeof PROMPTS_BIENESTAR !== 'undefined' ? PROMPTS_BIENESTAR : []),
+      ...(typeof PROMPTS_PARROQUIA !== 'undefined' ? PROMPTS_PARROQUIA : [])
     ];
 
